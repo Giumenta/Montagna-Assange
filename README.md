@@ -1,4 +1,18 @@
-# Montagna-Assange
+# Progetto Esame Game Programming
 
-voglio morire
+L’idea a cui avevamo pensato è la seguente:
+Il nostro pg parte dalla base di una montagna e tramite dei livelli , ognuno caratterizzato da un genere a sé, deve raggiungerne la cima.
+Parte 1: Schermata a scorrimento orizzontale con presentazione personaggio e ingresso in una grotta (primo livello) (Ingresso primo livello tramite rompicapo?)
+Primo Livello: Platform a scorrimento orizzontale
+Parte 2: Uscita dal primo livello e Platform a scorrimento verticale (con bioma diverso dalla base della montagna). Ingresso nel secondo livello (tramite secondo rompicapo?)
+Secondo Livello: Livello Dungeon (con nemici e oggetti da gestire??) 
+Parte 3: Uscita secondo livello e secondo platform verticale con bioma diverso e meccaniche diverse (aggiunta attrito diverso dovuto a neve/ghiaccio, strumenti da usare?) fino a raggiungere cima della montagna.
+Scena finale in cima alla montagna con alcune linee di dialogo 
+Livello extra: Discesa dalla montagna
+
+Alcuni dei livelli a cui abbiamo pensato sono rivisitazioni dei seguenti giochi:
+Candy crush (per i rompicapo)
+Super mario (per platform)
+https://www.youtube.com/watch?v=-Tc6dz8_DOM
+
 
