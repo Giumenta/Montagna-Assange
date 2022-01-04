@@ -15,9 +15,15 @@
 
 require "platformVerticale" --dovrebbe richiamare il file creato
 
-local createdButtons
-createdButtons = createButtons() --richiamo la funzione presente in platformVerticale, mezzo test che funga tutto
-print(createdButtons)
+local control = display.newGroup()
+local createdButtons = false
+control = createButtons() --richiamo la funzione presente in platformVerticale, mezzo test che funga tutto
+print(control.arrowUp)
+-- local arrowUp = display.newImageRect("arrowUp.png", 80, 80)
+-- local arrowUp = display.newText("10", 100, 200, native.systemFont, 100)
+--[[arrowUp.x = display.contentWidth-100
+arrowUp.y = display.contentCenterY
+arrowUp.name = "up" --]]
 
 
 --FINE PARTE PROVA CODICE PLATFORM VERTICALE (3 LIVELLO)
