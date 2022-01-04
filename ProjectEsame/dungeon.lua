@@ -24,8 +24,8 @@ arrowLeft.y = display.contentCenterY
 arrowLeft.name = "down"
 
 local button = display.newImageRect(control, "risorseTmp_perTest/arrows/redButton.png",80,80)
-button.x
-button.y
+button.x =contentCenterX
+button.y = contentCenterX
 button.name = "button"
 
 -- add event to arrows and button
