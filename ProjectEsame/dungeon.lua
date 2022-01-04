@@ -29,7 +29,7 @@ button.y = display.contentCenterX
 button.name = "button"
 
 -- add event to arrows and button
-arrowLeft:addEventListener("touch", movePg)
-arrowRight:addEventListener("touch", movePg)
-arrowDown:addEventListener("touch", movePg)
-arrowUp:addEventListener("touch", movePg)
+--arrowLeft:addEventListener("touch", movePg)
+--arrowRight:addEventListener("touch", movePg)
+--arrowDown:addEventListener("touch", movePg)
+--arrowUp:addEventListener("touch", movePg)
