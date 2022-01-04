@@ -1,6 +1,8 @@
+-- create group for non fixed obj (camera) and for fixed obj(control)
 local camera= display.newGroup()
 local control = display.newGroup()
 
+-- create obj arrows and button for interaction
 local arrowLeft = display.newImageRect(control,"risorseTmp_perTest/arrows/arrowLeft.png",80,80)
 arrowLeft.x = 100
 arrowLeft.y = display.contentCenterY
@@ -25,3 +27,10 @@ local button = display.newImageRect(control, "risorseTmp_perTest/arrows/redButto
 button.x
 button.y
 button.name = "button"
+
+-- add event to arrows and button
+arrowLeft:addEventListener("touch", movePg)
+arrowRight:addEventListener("touch", movePg)
+arrowDown:addEventListener("touch", movePg)
+arrowUp:addEventListener("touch", movePg)
+button
