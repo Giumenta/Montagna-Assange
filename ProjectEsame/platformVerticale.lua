@@ -27,4 +27,16 @@ function createButtons() -- crea le frecce utili per sx/dx/jmp
 	return control
 end
 
+local control = display.newGroup()
+
+control = createButtons() --richiamo la funzione presente in platformVerticale, mezzo test che funga tutto
+print(control)
+local prova = display.newImageRect("/risorseGrafiche/risorseTmp_perTest/arrows/arrowUp.png", 80, 80)
+-- local arrowUp = display.newText("10", 100, 200, native.systemFont, 100)
+--[[arrowUp.x = display.contentWidth-100
+arrowUp.y = display.contentCenterY
+arrowUp.name = "up" --]]
+
+print(prova)
+
 
