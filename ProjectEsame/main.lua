@@ -15,7 +15,7 @@ require "dungeon"
 -- fare e vedo di farlo funzionare. Commento il resto del codice e prima di finire dovrei ricordarmi sempre di 
 -- scommentarlo, però ehi non escludo di essere studpido e dimenticarmi di farlo quindi cheers non prendetevela	
 
---require "platformVerticale" --dovrebbe richiamare il file creato
+-- require "platformVerticale" --dovrebbe richiamare il file creato
 
 
 
