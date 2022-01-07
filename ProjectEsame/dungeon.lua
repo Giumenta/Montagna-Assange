@@ -4,8 +4,8 @@ physics.setGravity(0,0)
 
 local tiled = require "com.ponywolf.ponytiled"
 local json = require ("json")
-local mapData = json.decodeFile(system.pathForFile("/ProjectEsame/Map1.json",system.ResourceDirectory))
-local map = tiled.new(mapData, "ProjectEsame")
+local mapData = json.decodeFile(system.pathForFile("Maptiles/Map1.json",system.ResourceDirectory))
+local map = tiled.new(mapData, "Maptiles")
 
 -- create group for non fixed obj (camera) and for fixed obj(control)
 local camera= display.newGroup()
