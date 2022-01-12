@@ -181,7 +181,6 @@ function M.new(data, dir)
         end
       end
     end
-
     return false
   end
 
@@ -400,7 +399,6 @@ function M.new(data, dir)
     local objects = {}
     for layers = self.numChildren,1,-1 do
       local layer = self[layers]
-
       if layer.numChildren then
         for i = layer.numChildren,1,-1 do
           for j = 1, #arg do 
