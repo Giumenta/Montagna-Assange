@@ -2,10 +2,9 @@
 local tiled = require "com.ponywolf.ponytiled"
 local json = require "json"
 local mapData = json.decodeFile(
- system.pathForFile
- ("maps/tiles/tilemap.json", 
- system.ResourceDirectory)) 
-local map = tiled.new(mapData, "maps/tiles")
+ system.pathForFile("mappe/livello3/livelloPlatformVerticale.json", system.ResourceDirectory)) 
+local map = tiled.new(mapData, "mappe/livello3")
+
 
 --creo lo sfondo
 background = display.newRect(display.contentCenterX, display.contentCenterY, 1280, 720)
@@ -51,7 +50,7 @@ pg.name= "pg"
 
 --faccio partire la gravità così da poter muovere il pg
 physics.start()
-physics.setGravity(0,0)
+physics.setGravity(0,3)
 physics.addBody(pg, "dynamic")
 
 --funzione base per spostare il personaggio
@@ -87,10 +86,16 @@ local function movePg(event)
  	return true
 end
 
+local function moveCamera(event)
+
+end
+
 --associo alle frecce la funzione movePg
-arrowUp:addEventListener("touch", movePg)
+arrowUp:addEventListener("touch", movePg) --da modificare
 arrowLeft:addEventListener("touch", movePg)
 arrowRight:addEventListener("touch", movePg)
+
+--creo il fondo della mappa
 
 
 
