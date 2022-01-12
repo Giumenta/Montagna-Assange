@@ -275,7 +275,7 @@ function M.new(data, dir)
             --  image = display.newSprite(objectGroup, sheet, animation)
             --  image:play()
             --else
-            image = sheet and (display.newImage( objectGroup, sheet,dir .. gid, 0, 0) or display.newImage( objectGroup,dir .. gid, 0, 0))
+            image = sheet and display.newImage( objectGroup, sheet,dir .. gid, 0, 0) or display.newImage( objectGroup, dir .. gid, 0, 0)
             --end
             image.anchorX, image.anchorY = 0,1
             image.gid = tileNumber
