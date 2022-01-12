@@ -1,6 +1,7 @@
 physics = require("physics")
 physics.start()
 physics.setGravity(0,0)
+physics.setDrawMode("hybrid")
 
 local tiled = require "com.ponywolf.ponytiled"
 local json = require ("json")
@@ -85,3 +86,6 @@ arrowLeft:addEventListener("touch", movePg)
 arrowRight:addEventListener("touch", movePg)
 arrowDown:addEventListener("touch", movePg)
 arrowUp:addEventListener("touch", movePg)
+
+local dragable = require "com.ponywolf.plugins.dragable"
+map = dragable.new(map)
