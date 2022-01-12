@@ -1,8 +1,9 @@
 --link alla mappa
 local tiled = require "com.ponywolf.ponytiled"
 local json = require "json"
-local mapData = json.decodeFile(system.pathForFile("mappe/livello3/livelloPlatformVerticaleProva.json",system.ResourceDirectory))
-local map = tiled.new(mapData, "mappe/livello3")
+local mapData = json.decodeFile(system.pathForFile("mappe\\livello3\\livelloPlatformVerticaleProva.json",system.ResourceDirectory))
+local map = tiled.new(mapData, "mappe\\livello3")
+
 
 
 --creo lo sfondo
@@ -10,7 +11,9 @@ background = display.newRect(display.contentCenterX, display.contentCenterY, 128
 
 --richiamo la fisica
 physics = require("physics")
+physics.start()
 physics.pause()
+physics.setDrawMode("hybrid")
 
 --creo i gruppi che ci servono
 
@@ -18,11 +21,11 @@ local allArrows = display.newGroup()
 
 --link alle risorse grafiche (tutte qua così se c'è qualcosa da cambiare non si devediventare matti a cercarle nel file')
 
-local pg = display.newImageRect( "/risorseGrafiche/risorseTmp_perTest/stickyMan.png", 600,400 )
+local pg = display.newImageRect( "\\risorseGrafiche\\risorseTmp_perTest\\stickyMan.png", 600,400 )
 
-local arrowUp = display.newImageRect(allArrows, "/risorseGrafiche/risorseTmp_perTest/arrows/arrowUp.png", 100, 100)
-local arrowLeft = display.newImageRect(allArrows, "/risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",100, 100)
-local arrowRight = display.newImageRect(allArrows, "/risorseGrafiche/risorseTmp_perTest/arrows/arrowRight.png", 100, 100)
+local arrowUp = display.newImageRect(allArrows, "\\risorseGrafiche\\risorseTmp_perTest\\arrows\\arrowUp.png", 100, 100)
+local arrowLeft = display.newImageRect(allArrows, "\\risorseGrafiche\\risorseTmp_perTest\\arrows\\arrowLeft.png",100, 100)
+local arrowRight = display.newImageRect(allArrows, "\\risorseGrafiche\\risorseTmp_perTest\\arrows\\arrowRight.png", 100, 100)
 
 --setting base delle frecce
 arrowUp.name = "up"
@@ -49,8 +52,9 @@ pg.name= "pg"
 
 --faccio partire la gravità così da poter muovere il pg
 physics.start()
-physics.setGravity(0,3)
-physics.addBody(pg, "dynamic")
+physics.setGravity(0,9)
+local pgOutline = graphics.newOutline(1.2, "\\risorseGrafiche\\risorseTmp_perTest\\stickyMan.png")
+physics.addBody(pg, {outline=pgOutline, density=1.1}, {bounce = 0})
 
 --funzione base per spostare il personaggio
 local function movePg(event)
@@ -64,7 +68,7 @@ local function movePg(event)
         	pg:setLinearVelocity(200,0)
             
         elseif arrow.name == "up" then
-        	pg:setLinearVelocity(0,-200)   
+        	pg:applyLinearImpulse(20, 0)   
 	   end
 
     elseif event.phase == "moved" then
@@ -74,8 +78,8 @@ local function movePg(event)
 		elseif arrow.name == "right" then
         	pg:setLinearVelocity(200,0)
             
-        elseif arrow.name == "up" then
-        	pg:setLinearVelocity(0,-200)   
+        --elseif arrow.name == "up" then
+        --	pg:setLinearVelocity(0,-200)   
 	   end
 	
 	elseif event.phase == "ended" then

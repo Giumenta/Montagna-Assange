@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="428" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="16">
+ <editorsettings>
+  <export target="livelloPlatformVerticaleProva.json" format="json"/>
+ </editorsettings>
  <tileset firstgid="1" name="SET1_Mainlev_build_CON_NEVE" tilewidth="16" tileheight="16" tilecount="1020" columns="34">
-  <image source="../risorseGrafiche/risorseTmp_perTest/ipotesiPlatform/ip0/SET1_Mainlev_build_CON_NEVE.png" trans="ff00ff" width="544" height="480"/>
+  <image source="../../risorseGrafiche/risorseTmp_perTest/ipotesiPlatform/ip0/SET1_Mainlev_build_CON_NEVE.png" trans="ff00ff" width="544" height="480"/>
  </tileset>
  <layer id="1" name="Livello tile 1" width="80" height="428">
   <data encoding="csv">
