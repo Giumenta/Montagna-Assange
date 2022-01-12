@@ -95,8 +95,8 @@ arrowLeft:addEventListener("touch", movePg)
 arrowRight:addEventListener("touch", movePg)
 
 --creo il fondo della mappa
-
-
+floor = display.newRect(display.contentCenterX, display.contentCenterY*2, 1280, 1)
+physics.addBody(floor, static)
 
 	
 	
