@@ -1,8 +1,8 @@
 --link alla mappa
 local tiled = require "com.ponywolf.ponytiled"
 local json = require "json"
-local mapData = json.decodeFile(system.pathForFile("mappe\\livello3\\ilBuonoIlBruttoIlCattivo.json",system.ResourceDirectory))
-local map = tiled.new(mapData, "mappe\\livello3")
+local mapData = json.decodeFile(system.pathForFile("Maptiles/Map1.json"))
+local map = tiled.new(mapData, "Maptiles")
 
 
 
@@ -21,11 +21,11 @@ local allArrows = display.newGroup()
 
 --link alle risorse grafiche (tutte qua così se c'è qualcosa da cambiare non si devediventare matti a cercarle nel file')
 
-local pg = display.newImageRect( "\\risorseGrafiche\\risorseTmp_perTest\\stickyMan.png", 600,400 )
+local pg = display.newImageRect( "risorseGrafiche\\risorseTmp_perTest\\stickyMan.png", 600,400 )
 
-local arrowUp = display.newImageRect(allArrows, "\\risorseGrafiche\\risorseTmp_perTest\\arrows\\arrowUp.png", 100, 100)
-local arrowLeft = display.newImageRect(allArrows, "\\risorseGrafiche\\risorseTmp_perTest\\arrows\\arrowLeft.png",100, 100)
-local arrowRight = display.newImageRect(allArrows, "\\risorseGrafiche\\risorseTmp_perTest\\arrows\\arrowRight.png", 100, 100)
+local arrowUp = display.newImageRect(allArrows, "risorseGrafiche\\risorseTmp_perTest\\arrows\\arrowUp.png", 100, 100)
+local arrowLeft = display.newImageRect(allArrows, "risorseGrafiche\\risorseTmp_perTest\\arrows\\arrowLeft.png",100, 100)
+local arrowRight = display.newImageRect(allArrows, "risorseGrafiche\\risorseTmp_perTest\\arrows\\arrowRight.png", 100, 100)
 
 --setting base delle frecce
 arrowUp.name = "up"
