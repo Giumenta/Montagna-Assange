@@ -1,13 +1,16 @@
 physics = require("physics")
 physics.start()
 physics.setGravity(0,0)
-physics.setDrawMode("hybrid")
+--physics.setDrawMode("hybrid")
 
 local tiled = require "com.ponywolf.ponytiled"
 local json = require ("json")
 local mapData = json.decodeFile(system.pathForFile("Maptiles/Map1.json"))
 local map = tiled.new(mapData, "Maptiles")
 
+map:scale(3.5,3.5)
+map.x =-150
+map.y=-100
 -- create group for non fixed obj (camera) and for fixed obj(control)
 local camera= display.newGroup()
 local control = display.newGroup()
@@ -38,44 +41,47 @@ arrowDown.name = "down"
 --button.y = display.contentCenterY
 --button.name = "button"
 
-local pg = display.newImageRect(camera, "/risorseGrafiche/risorseTmp_perTest/alienYellow.png", 124,108 )
-pg.x= display.contentCenterX
-pg.y= display.contentCenterY
-pg.name= "pg"
-physics.addBody(pg, "dynamic")
+--local hero = display.newImageRect(camera, "/risorseGrafiche/risorseTmp_perTest/alienYellow.png", 124,108 )
+local hero =map:findObject("pg")
+hero:toFront()
+hero.isFixedRotation=true
+--hero.x= display.contentCenterX
+--hero.y= display.contentCenterY
+--hero.name= "hero"
+--physics.addBody(hero, "dynamic")
 
 local function movePg(event)
 	local arrow=event.target
 	
 	if event.phase == "began" then
         if arrow.name == "left" then
-			pg:setLinearVelocity(-200, 0)
+			hero:setLinearVelocity(-200, 0)
 	    	 
 		elseif arrow.name == "right" then
-        	pg:setLinearVelocity(200,0)
+        	hero:setLinearVelocity(200,0)
             
         elseif arrow.name == "up" then
-        	pg:setLinearVelocity(0,-200)
+        	hero:setLinearVelocity(0,-200)
             
         elseif arrow.name == "down" then
-        	pg:setLinearVelocity(0,200)    
+        	hero:setLinearVelocity(0,200)    
 	   end
     elseif event.phase == "moved" then
 		if arrow.name == "left" then
-			pg:setLinearVelocity(-200, 0)
+			hero:setLinearVelocity(-200, 0)
 	    	 
 		elseif arrow.name == "right" then
-        	pg:setLinearVelocity(200,0)
+        	hero:setLinearVelocity(200,0)
             
         elseif arrow.name == "up" then
-        	pg:setLinearVelocity(0,-200)
+        	hero:setLinearVelocity(0,-200)
             
         elseif arrow.name == "down" then
-        	pg:setLinearVelocity(0,200)    
+        	hero:setLinearVelocity(0,200)    
 	   end
 	
 	elseif event.phase == "ended" then
-			pg:setLinearVelocity(0,0)
+			hero:setLinearVelocity(0,0)
 	end
  	   	 
  	return true
