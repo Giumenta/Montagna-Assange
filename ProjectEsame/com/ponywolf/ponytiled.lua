@@ -270,13 +270,13 @@ function M.new(data, dir)
           local gid, flip, sheet, animation = gidLookup(tileNumber)
           if gid then
             local image
-            --if animation then
-            --  --print("Animating:", gid)
-            --  image = display.newSprite(objectGroup, sheet, animation)
-            --  image:play()
-            --else
-            image = sheet and display.newImage( objectGroup, sheet,dir .. gid, 0, 0) or display.newImage( objectGroup, dir .. gid, 0, 0)
-            --end
+            if animation then
+              --print("Animating:", gid)
+              image = display.newSprite(objectGroup, sheet, animation)
+              image:play()
+            else
+              image = sheet and display.newImage(objectGroup, sheet, gid, 0, 0) or display.newImage(objectGroup, dir .. gid, 0, 0)
+            end
             image.anchorX, image.anchorY = 0,1
             image.gid = tileNumber
             image.x, image.y = tx * data.tilewidth, (ty+1) * data.tileheight
