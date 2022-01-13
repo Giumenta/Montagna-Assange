@@ -54,8 +54,8 @@ pg.name= "pg"
 physics.start()
 physics.setGravity(0,9)
 local pgOutline = graphics.newOutline(1.2, "\\risorseGrafiche\\risorseTmp_perTest\\stickyMan.png")
-physics.addBody(pg, {outline=pgOutline, density=1.1}, {bounce = 0})
-
+physics.addBody(pg, "dynamic", {outline=pgOutline, density=1.1, bounce = 0})
+pg.isFixedRotation = true
 --funzione base per spostare il personaggio
 local function movePg(event)
 	local arrow=event.target
@@ -68,7 +68,7 @@ local function movePg(event)
         	pg:setLinearVelocity(200,0)
             
         elseif arrow.name == "up" then
-        	pg:applyLinearImpulse(20, 0)   
+        	pg:applyLinearImpulse(20, 0, pg.x, pg.y)   
 	   end
 
     elseif event.phase == "moved" then
@@ -78,8 +78,8 @@ local function movePg(event)
 		elseif arrow.name == "right" then
         	pg:setLinearVelocity(200,0)
             
-        --elseif arrow.name == "up" then
-        --	pg:setLinearVelocity(0,-200)   
+        elseif arrow.name == "up" then
+        	pg:applyLinearImpulse(20, 0, pg.x, pg.y)    
 	   end
 	
 	elseif event.phase == "ended" then
@@ -100,7 +100,7 @@ arrowRight:addEventListener("touch", movePg)
 
 --creo il fondo della mappa
 floor = display.newRect(display.contentCenterX, display.contentCenterY*2, 1280, 1)
-physics.addBody(floor, "static")
+physics.addBody(floor, "static", {bounce = 0})
 
 	
 	
