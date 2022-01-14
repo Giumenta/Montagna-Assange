@@ -11,6 +11,12 @@ local map = tiled.new(mapData, "Maptiles")
 map:scale(3.5,3.5)
 map.x =-150
 map.y=-100
+
+local mapBorderLeft = 0
+local mapBorderRight = 1280
+local mapBorderTop = 0
+local mapBorderBottom = 720
+
 -- create group for non fixed obj (camera) and for fixed obj(control)
 local camera= display.newGroup()
 local control = display.newGroup()
@@ -42,7 +48,7 @@ arrowDown.name = "down"
 --button.name = "button"
 
 --local hero = display.newImageRect(camera, "/risorseGrafiche/risorseTmp_perTest/alienYellow.png", 124,108 )
-local hero =map:findObject("pg")
+local hero = map:findObject("pg")
 hero:toFront()
 hero.isFixedRotation=true
 --hero.x= display.contentCenterX
@@ -86,12 +92,49 @@ local function movePg(event)
  	   	 
  	return true
 end
+------- FUNZIONE PER MOVIMENTO CAMERA DA METTERE A POSTO -------
+local function moveCamera(event)
+	local offsetX = hero.width*2
+	local offsetY = hero.height*2
+	
+	local displayLeft = -camera.x
+	local displayTop = -camera.y
+	
+	local nonScrollingWidth =  display.contentWidth-offsetX
+	local nonScrollingHeight = display.contentHeight-offsetY
+	
+	
+	if hero.x >= mapBorderLeft+offsetX 
+	   and hero.x <= mapBorderRight - offsetX then
+		  
+		  if hero.x>displayLeft+nonScrollingWidth then
+	        	    camera.x = -hero.x + nonScrollingWidth
+	      elseif hero.x < displayLeft+offsetX then
+	            	camera.x = -hero.x + offsetX	
+	      end
+	end
+    
+ 	if hero.y >= mapBorderTop+offsetY then
+	    
+	    if hero.y>displayTop+nonScrollingHeight then
+		    camera.y = -hero.y + nonScrollingHeight
+		elseif hero.y < displayTop+offsetY then
+		  camera.y = -hero.y + offsetY	
+	    end	 
+	end	 
+		
+	return true	
+end
+
 
 -- add event to arrows and button
 arrowLeft:addEventListener("touch", movePg)
 arrowRight:addEventListener("touch", movePg)
 arrowDown:addEventListener("touch", movePg)
 arrowUp:addEventListener("touch", movePg)
+
+Runtime:addEventListener("enterFrame",moveCamera)
+
 
 local dragable = require "com.ponywolf.plugins.dragable"
 map = dragable.new(map)
