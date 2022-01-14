@@ -61,29 +61,29 @@ local function movePg(event)
 	
 	if event.phase == "began" then
         if arrow.name == "left" then
-			hero:setLinearVelocity(-200, 0)
+			hero:setLinearVelocity(-75, 0)
 	    	 
 		elseif arrow.name == "right" then
-        	hero:setLinearVelocity(200,0)
+        	hero:setLinearVelocity(75,0)
             
         elseif arrow.name == "up" then
-        	hero:setLinearVelocity(0,-200)
+        	hero:setLinearVelocity(0,-75)
             
         elseif arrow.name == "down" then
-        	hero:setLinearVelocity(0,200)    
+        	hero:setLinearVelocity(0,75)    
 	   end
     elseif event.phase == "moved" then
 		if arrow.name == "left" then
-			hero:setLinearVelocity(-200, 0)
+			hero:setLinearVelocity(-75, 0)
 	    	 
 		elseif arrow.name == "right" then
-        	hero:setLinearVelocity(200,0)
+        	hero:setLinearVelocity(75,0)
             
         elseif arrow.name == "up" then
-        	hero:setLinearVelocity(0,-200)
+        	hero:setLinearVelocity(0,-75)
             
         elseif arrow.name == "down" then
-        	hero:setLinearVelocity(0,200)    
+        	hero:setLinearVelocity(0,75)    
 	   end
 	
 	elseif event.phase == "ended" then

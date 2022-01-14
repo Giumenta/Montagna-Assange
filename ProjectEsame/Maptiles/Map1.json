@@ -40,6 +40,40 @@
         }, 
         {
          "draworder":"topdown",
+         "id":16,
+         "name":"pg",
+         "objects":[
+                {
+                 "gid":323,
+                 "height":16,
+                 "id":158,
+                 "name":"pg",
+                 "properties":[
+                        {
+                         "name":"bodyType",
+                         "type":"string",
+                         "value":"dynamic"
+                        }, 
+                        {
+                         "name":"bounce",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":208.597712338769,
+                 "y":135.362699764744
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
          "id":6,
          "name":"BoxDown",
          "objects":[
@@ -92,6 +126,17 @@
                  "y":113.349
                 }],
          "opacity":1,
+         "properties":[
+                {
+                 "name":"bodyType",
+                 "type":"string",
+                 "value":"static"
+                }, 
+                {
+                 "name":"bounce",
+                 "type":"int",
+                 "value":0
+                }],
          "type":"objectgroup",
          "visible":true,
          "x":0,
@@ -219,35 +264,6 @@
                  "width":16,
                  "x":176.149,
                  "y":1034.2
-                }],
-         "opacity":1,
-         "type":"objectgroup",
-         "visible":true,
-         "x":0,
-         "y":0
-        }, 
-        {
-         "draworder":"topdown",
-         "id":16,
-         "name":"pg",
-         "objects":[
-                {
-                 "gid":323,
-                 "height":16,
-                 "id":158,
-                 "name":"pg",
-                 "properties":[
-                        {
-                         "name":"bodyType",
-                         "type":"string",
-                         "value":"dynamic"
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":210.220167112842,
-                 "y":135.362699764744
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1170,8 +1186,8 @@
                         }, 
                         {
                          "name":"isVisible",
-                         "type":"string",
-                         "value":""
+                         "type":"bool",
+                         "value":false
                         }],
                  "rotation":0,
                  "type":"wall",
@@ -2601,12 +2617,12 @@
                  "value":false
                 }],
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }],
  "nextlayerid":17,
- "nextobjectid":159,
+ "nextobjectid":160,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.7.2",
