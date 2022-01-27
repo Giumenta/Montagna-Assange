@@ -105,7 +105,7 @@ arrowRight:addEventListener("touch", movePg)
 arrowDown:addEventListener("touch", movePg)
 arrowUp:addEventListener("touch", movePg)
 
-Runtime:addEventListener("enterFrame",moveCamera)
+--Runtime:addEventListener("enterFrame",moveCamera)
 
 
 --local dragable = require "com.ponywolf.plugins.dragable"
