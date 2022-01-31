@@ -1,8 +1,11 @@
 --link alla mappa
 local tiled = require "com.ponywolf.ponytiled"
 local json = require "json"
-local mapData = json.decodeFile(system.pathForFile("mappe/livello3/ilBuonoIlBruttoIlCattivo.json"))
-local map = tiled.new(mapData, "mappe/livello3")
+--local mapData = json.decodeFile(system.pathForFile("mappe/livello3/ilBuonoIlBruttoIlCattivo.json"))
+--local map = tiled.new(mapData, "mappe/livello3")
+--un po' di sano debug
+local mapData = json.decodeFile(system.pathForFile("mappe/livello3_debug_robaProf/prova.json"))
+local map = tiled.new(mapData, "mappe/livello3_debug_robaProf")
 
 
 
