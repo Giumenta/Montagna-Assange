@@ -23,32 +23,32 @@ camera:insert(map)
 --local mapBorderBottom = 720
 
 -- create obj arrows and button for interaction
-local arrowLeft = display.newImageRect(control,"/risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
+local arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
 arrowLeft.x = 100
 arrowLeft.y = display.contentHeight-150
 arrowLeft.name = "left"
 
-local arrowRight = display.newImageRect(control,"/risorseGrafiche/risorseTmp_perTest/arrows/arrowRight.png",80,80)
+local arrowRight = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowRight.png",80,80)
 arrowRight.x = 260
 arrowRight.y = display.contentHeight-150
 arrowRight.name = "right"
 
-local arrowUp = display.newImageRect(control,"/risorseGrafiche/risorseTmp_perTest/arrows/arrowUp.png",80,80)
+local arrowUp = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowUp.png",80,80)
 arrowUp.x = 180
 arrowUp.y = display.contentHeight-200
 arrowUp.name = "up"
 
-local arrowDown = display.newImageRect(control,"/risorseGrafiche/risorseTmp_perTest/arrows/arrowDown.png",80,80)
+local arrowDown = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowDown.png",80,80)
 arrowDown.x = 180
 arrowDown.y = display.contentHeight-100
 arrowDown.name = "down"
 
---local button = display.newImageRect(control, "/risorseGrafiche/risorseTmp_perTest/arrows/redButton.png",80,80)
+--local button = display.newImageRect(control, "risorseGrafiche/risorseTmp_perTest/arrows/redButton.png",80,80)
 --button.x = display.contentCenterX
 --button.y = display.contentCenterY
 --button.name = "button"
 
---local hero = display.newImageRect(camera, "/risorseGrafiche/risorseTmp_perTest/alienYellow.png", 124,108 )
+--local hero = display.newImageRect(camera, "risorseGrafiche/risorseTmp_perTest/alienYellow.png", 124,108 )
 local hero = map:findObject("pg")
 hero:toFront()
 hero.isFixedRotation=true
