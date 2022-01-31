@@ -56,7 +56,7 @@ pg.name= "pg"
 --faccio partire la gravità così da poter muovere il pg
 physics.start()
 physics.setGravity(0,9)
-local pgOutline = graphics.newOutline(1.2, "\\risorseGrafiche\\risorseTmp_perTest\\stickyMan.png")
+local pgOutline = graphics.newOutline(1.2, "/risorseGrafiche/risorseTmp_perTest/stickyMan.png")
 physics.addBody(pg, "dynamic", {outline=pgOutline, density=1.1, bounce = 0})
 pg.isFixedRotation = true
 --funzione base per spostare il personaggio
