@@ -6,45 +6,32 @@ local M={}
 -- BEGIN INSERT CODE
 -- audioData are stored in the audioData module
 -- import the audioData module
-   local audioData=require("audioData")
+   --local audioData=require("audioData")
 -- END INSERT CODE
 
 -- The module function creates hero and handles his/her collisions with other game objects
 function M.new()
    -- Begin data for the penguin sprite 
-   local heroOpt ={ numFrames = 51, width =32, height= 32}
-   local heroSheet = graphics.newImageSheet("img/pensguinSheet.png",heroOpt)
+   local opt = { width = 93, height = 140, numFrames = 60}
+   local heroSheet = graphics.newImageSheet("risorseGrafiche/collezioneDiRoba/SpritePack/badGuySheet.png",opt)
 
-   local heroSeqs = { 
-    				 {count = 8,
-   				  	  start = 1,
-    				  name = "walk", 
-    				  loopCount = 0, 
-  					  loopDirection = "forward",
-    				  time = 600
-   			   	     },
-    				 {count = 8,
-   				  	  start = 9,
-    				  name = "climbUp", 
-    				  loopCount = 0, 
-  					  loopDirection = "forward",
-    				  time = 100
-   			   	     },
-    				 {count = 6,
-   				  	  start = 32,
-    				  name = "jump", 
-    				  loopCount = 0, 
-  					  loopDirection = "forward",
-    				  time = 600
-   			   	     },
-    				 {count = 8,
-   				  	  start = 44,
-    				  name = "die", 
-    				  loopCount = 1, 
-  					  loopDirection = "forward",
-    				  time = 800
-   			   	     }
-					} 
+   local seqs ={{
+    name = "runLeft",
+    start = 1,
+    count = 30,
+    time = 300,
+    loopCount = 0,
+    loopDirection ="forward"
+   },
+   {
+     name = "runRight",
+     start = 31,
+     count = 30,
+     time = 300,
+     loopCount = 0,
+     loopDirection ="forward"
+   }
+  }
 
     -- end data for the penguin sprite
 
