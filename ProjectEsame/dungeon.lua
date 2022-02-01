@@ -17,10 +17,10 @@ map.x =-150
 map.y=-100
 camera:insert(map)
 
---local mapBorderLeft = 0
---local mapBorderRight = 1280
---local mapBorderTop = 0
---local mapBorderBottom = 720
+local mapBorderLeft = 0
+local mapBorderRight = 1280
+local mapBorderTop = 0
+local mapBorderBottom = 720
 
 -- create obj arrows and button for interaction
 local arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
@@ -50,7 +50,7 @@ arrowDown.name = "down"
 
 --local hero = display.newImageRect(camera, "risorseGrafiche/risorseTmp_perTest/alienYellow.png", 124,108 )
 local hero = map:findObject("pg")
-hero:toFront()
+--hero:toFront()
 hero.isFixedRotation=true
 print(hero.x)
 print(hero.y)
@@ -96,7 +96,39 @@ local function movePg(event)
  	return true
 end
 ------- FUNZIONE PER MOVIMENTO CAMERA DA METTERE A POSTO -------
-
+local function moveCamera(event)
+	local offsetX = 200
+	local offsetY = 200
+	
+	local displayLeft = -camera.x
+	local displayTop = -camera.y
+	
+	local nonScrollingWidth =  display.contentWidth-200
+	local nonScrollingHeight = display.contentHeight-200
+	
+	
+	if alien.x >= mapBorderLeft+offsetX 
+	   and alien.x <= mapBorderRight - offsetX then
+		  
+		  if alien.x>displayLeft+nonScrollingWidth then
+	        	    camera.x = -alien.x + nonScrollingWidth
+	      elseif alien.x < displayLeft+offsetX then
+	            	camera.x = -alien.x + offsetX	
+	      end
+	end
+    
+ 	if alien.y >= mapBorderTop+offsetY 
+ 	   and alien.y <= mapBorderBottom - offsetY then
+	    
+	    if alien.y>displayTop+nonScrollingHeight then
+		    camera.y = -alien.y + nonScrollingHeight
+		elseif alien.y < displayTop+offsetY then
+		  camera.y = -alien.y + offsetY	
+	    end	 
+	end	 
+		
+	return true	
+end
 
 
 -- add event to arrows and button
@@ -108,5 +140,5 @@ arrowUp:addEventListener("touch", movePg)
 --Runtime:addEventListener("enterFrame",moveCamera)
 
 
---local dragable = require "com.ponywolf.plugins.dragable"
---map = dragable.new(map)
+local dragable = require "com.ponywolf.plugins.dragable"
+map = dragable.new(map)
