@@ -5,7 +5,7 @@ physics.setDrawMode("hybrid")
 
 local tiled = require "com.ponywolf.ponytiled"
 local json = require ("json")
-local mapData = json.decodeFile(system.pathForFile("Maptiles/Map1.json",system.ResourceDirectory))
+local mapData = json.decodeFile(system.pathForFile("Maptiles/Map2.json",system.ResourceDirectory))
 local map = tiled.new(mapData, "Maptiles")
 
 -- create group for non fixed obj (camera) and for fixed obj(control)
@@ -13,8 +13,8 @@ local camera= display.newGroup()
 local control = display.newGroup()
 
 map:scale(3.5,3.5)
-map.x =-150
-map.y=-100
+--map.x =-150
+--map.y=-100
 camera:insert(map)
 
 local mapBorderLeft = 0
