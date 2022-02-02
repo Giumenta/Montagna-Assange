@@ -57,17 +57,20 @@ function M.new()
 	
 	-- on precollison disable the collision between hero and ladderEnd
 	-- to allow hero to pass through the final part of the ladder
-	local function onPreCollision(self,event)
-		local heroBottom = self.y+16
-		local collidedObj=event.other
-		local collidedObjTop = collidedObj.y-collidedObj.height/2
+	
+	---NON SERVE---
+
+	--local function onPreCollision(self,event)
+	--	local heroBottom = self.y+16
+	--	local collidedObj=event.other
+	--	local collidedObjTop = collidedObj.y-collidedObj.height/2
 	 
-		if (collidedObj.type == "ladderEnd" ) then	
-			if (heroBottom >= collidedObjTop) then
-		       event.contact.isEnabled = false  --disable this specific collision   		
-			end	  
-		end
-	end
+	--	if (collidedObj.type == "ladderEnd" ) then	
+	--		if (heroBottom >= collidedObjTop) then
+	--	       event.contact.isEnabled = false  --disable this specific collision   		
+	--		end	  
+	--	end
+	--end
 
 
 
@@ -110,7 +113,7 @@ function M.new()
 		if event.phase=="began" then
 			print("CollidedObj start:"..collidedObj.type)
 			-- Collision hero-cat
-			if collidedObj.name == "cat" then
+			if collidedObj.name == "enemy" then
 				--BEGIN INSERT CODE
 				-- 1) pause the background music
 				audio.pause(audioData.bgMusic)
@@ -127,7 +130,7 @@ function M.new()
 				--END INSERT CODE
 			end	
 			-- Collision hero-door
-			if collidedObj.name == "door" then
+			if collidedObj.name == "ladder" then
 				--BEGIN INSERT CODE
 				-- 1) pause the background music
 				audio.pause(audioData.bgMusic)
@@ -142,7 +145,7 @@ function M.new()
 				--END INSERT CODE
 			end	 
 			-- Collision hero-egg
-			if collidedObj.name == "egg" then
+			if collidedObj.name == "door" then
 				--BEGIN INSERT CODE
 				-- 1) make the collided egg invisible
 				self.isVisible=false
@@ -167,34 +170,7 @@ function M.new()
 				audio.play(audioData.soundTable.ladder)
 				--END INSERT CODE 	
 			end
-			-- Collision hero-barrier
-		    if (collidedObj.type=="barrier") then 
-			  --START INSERT CODE
-			  -- 1) Invert the hero speedDir direction 
-			  self.speedDir=-self.speedDir
-			  --END INSERT CODE
-			  --set the new penguin speed
-	          self:setLinearVelocity(self.speedDir*self.speed,0)
-			  -- horizontally flip the penguin sprite 
-	  	      self.xScale = self.speedDir
-			  -- play the wall soundfx
-			  audio.play(audioData.soundTable.wall)
-			end  
-			-- Collision hero-platform
-		    if collidedObj.type=="platform" then
-				if event.contact.isTouching == true and heroBottom<=collidedObjTop then
-					--BEGIN INSERT CODE
-					--1) set jumpAllowed field of self to true
-					hero.jumpAllowed=true
-					--2) set the hero animation sequence to walk
-					hero:setSequence('walk')
-					--3) play the animation sequence
-					hero:play()
-					--4) set the hero linear velocity to (self.speedDir*self.speed,0)
-					hero:setLinearVelocity(self.speedDir*self.speed,0)
-					--END INSERT CODE
-				end	
-		    end		
+		    		
 	     end
 		 -- when the collision between hero and the end of the ladder ends, hero starts walking again
 		 -- and jumps are forbidden
@@ -209,13 +185,7 @@ function M.new()
 		 -- when collision between hero and platform ends, hero is jumping or falling,
 		 -- hence we disable jumps. 	 
 			 elseif collidedObj.type == "platform" then
-					 self.jumpAllowed = false	 	
-		 -- when collision hero-egg terminates, we remove the egg object from the memory, if any.		 
-			 elseif collidedObj.name == "egg" then
-				 if collidedObj~= nil then
-			    	display.remove(collidedObj)
-				    collidedObj=nil
-				 end	
+					 self.jumpAllowed = false	 		
 			end		 
 		 end	 
 	end
@@ -237,7 +207,7 @@ end
 --  speedDir: initial direction (1 = right, -1 = left)
 --  jumpAllowed: boolean value that establishes if jumps are initially allowed
 --  isOnLadder: boolean value that indicates if the initial hero position is on the ladder
-function M.init(hero,xStart,yStart,speed,speedDir,jumpAllowed,isOnLadder)
+function M.init(hero,xStart,yStart, isOnLadder)
 	-- initial hero position
     hero.x=xStart
     hero.y=yStart
@@ -248,8 +218,7 @@ function M.init(hero,xStart,yStart,speed,speedDir,jumpAllowed,isOnLadder)
 	
 	-- is initially hero on a ladder? (true or false)
 	hero.isOnLadder=isOnLadder 
-	-- are jumps  initially allowed? (true or false)
-	hero.jumpAllowed=jumpAllowed  
+	
 end	
 
 

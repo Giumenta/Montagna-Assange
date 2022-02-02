@@ -16,6 +16,8 @@ map:scale(3.5,3.5)
 --map.x =-150
 --map.y=-100
 camera:insert(map)
+print(camera.x)
+print(camera.y)
 
 local mapBorderLeft = 0
 local mapBorderRight = 1280
@@ -73,11 +75,13 @@ local function movePg(event)
         	hero:setLinearVelocity(0,-75)
             
         elseif arrow.name == "down" then
-        	hero:setLinearVelocity(0,75)    
+        	hero:setLinearVelocity(0,75)
 	   end
     elseif event.phase == "moved" then
 		if arrow.name == "left" then
 			hero:setLinearVelocity(-75, 0)
+			print(hero.x)
+			print(hero.y)
 	    	 
 		elseif arrow.name == "right" then
         	hero:setLinearVelocity(75,0)
@@ -86,7 +90,7 @@ local function movePg(event)
         	hero:setLinearVelocity(0,-75)
             
         elseif arrow.name == "down" then
-        	hero:setLinearVelocity(0,75)    
+        	hero:setLinearVelocity(0,75) 
 	   end
 	
 	elseif event.phase == "ended" then
@@ -97,33 +101,33 @@ local function movePg(event)
 end
 ------- FUNZIONE PER MOVIMENTO CAMERA DA METTERE A POSTO -------
 local function moveCamera(event)
-	local offsetX = 200
-	local offsetY = 200
+	local offsetX = 70
+	local offsetY = 70
 	
 	local displayLeft = -camera.x
 	local displayTop = -camera.y
 	
-	local nonScrollingWidth =  display.contentWidth-200
-	local nonScrollingHeight = display.contentHeight-200
+	local nonScrollingWidth =  display.contentWidth-70
+	local nonScrollingHeight = display.contentHeight-70
 	
 	
-	if alien.x >= mapBorderLeft+offsetX 
-	   and alien.x <= mapBorderRight - offsetX then
+	if hero.x >= mapBorderLeft+offsetX 
+	   and hero.x <= mapBorderRight - offsetX then
 		  
-		  if alien.x>displayLeft+nonScrollingWidth then
-	        	    camera.x = -alien.x + nonScrollingWidth
-	      elseif alien.x < displayLeft+offsetX then
-	            	camera.x = -alien.x + offsetX	
+		  if hero.x>displayLeft+nonScrollingWidth then
+	        	    camera.x = -hero.x + nonScrollingWidth
+	      elseif hero.x < displayLeft+offsetX then
+	            	camera.x = -hero.x + offsetX	
 	      end
 	end
     
- 	if alien.y >= mapBorderTop+offsetY 
- 	   and alien.y <= mapBorderBottom - offsetY then
+ 	if hero.y >= mapBorderTop+offsetY 
+ 	   and hero.y <= mapBorderBottom - offsetY then
 	    
-	    if alien.y>displayTop+nonScrollingHeight then
-		    camera.y = -alien.y + nonScrollingHeight
-		elseif alien.y < displayTop+offsetY then
-		  camera.y = -alien.y + offsetY	
+	    if hero.y>displayTop+nonScrollingHeight then
+		    camera.y = -hero.y + nonScrollingHeight
+		elseif hero.y < displayTop+offsetY then
+		  camera.y = -hero.y + offsetY	
 	    end	 
 	end	 
 		
