@@ -54,13 +54,11 @@ function M.new()
     -- define hero physics body
     local heroShape={-6,0,6,0,-6,16,6,16}
     
-    
-	-- BEGIN INSERT CODE
 	-- 1) add a dynamic, anaelastic physics body to hero  
 	physics.addBody(hero,"dynamic", {radius=32, bounce=0,density=1.5})
     -- 2) Make hero a display object not affected by off-balance rotations
     hero.isFixedRotation=true
-	-- END INSERT CODE
+
 	
 
 
