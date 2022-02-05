@@ -12,25 +12,41 @@ local M={}
 -- The module function creates hero and handles his/her collisions with other game objects
 function M.new()
    -- Begin data for the penguin sprite 
-   local opt = { width = 93, height = 140, numFrames = 60}
-   local heroSheet = graphics.newImageSheet("risorseGrafiche/collezioneDiRoba/SpritePack/badGuySheet.png",opt)
+   local opt = { width = 32, height = 32, numFrames = 12}
+   local heroSheet = graphics.newImageSheet("risorseGrafiche/PG/sprite-sheet.png",opt)
 
-   local seqs ={{
-    name = "runLeft",
+   local heroSeqs ={{
+    name = "Front",
     start = 1,
-    count = 30,
+    count = 3,
     time = 300,
     loopCount = 0,
     loopDirection ="forward"
    },
    {
-     name = "runRight",
-     start = 31,
-     count = 30,
+     name = "Left",
+     start = 4,
+     count = 6,
      time = 300,
      loopCount = 0,
      loopDirection ="forward"
-   }
+   },
+   {
+	name = "Right",
+	start = 7,
+	count = 9,
+	time = 300,
+	loopCount = 0,
+	loopDirection ="forward"
+  },
+  {
+	name = "Back",
+	start = 10,
+	count = 12,
+	time = 300,
+	loopCount = 0,
+	loopDirection ="forward"
+  }
   }
 
     -- end data for the penguin sprite

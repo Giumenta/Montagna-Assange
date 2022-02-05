@@ -8,6 +8,8 @@ local json = require ("json")
 local mapData = json.decodeFile(system.pathForFile("Maptiles/Map2.json",system.ResourceDirectory))
 local map = tiled.new(mapData, "Maptiles")
 
+local heroLib=require("herolib")
+
 -- create group for non fixed obj (camera) and for fixed obj(control)
 local camera= display.newGroup()
 local control = display.newGroup()
@@ -51,50 +53,75 @@ arrowDown.name = "down"
 --button.name = "button"
 
 --local hero = display.newImageRect(camera, "risorseGrafiche/risorseTmp_perTest/alienYellow.png", 124,108 )
-local hero = map:findObject("pg")
+--local hero = map:findObject("pg")
 --hero:toFront()
-hero.isFixedRotation=true
+local hero=heroLib.new()
+hero:scale(2,2)
+--hero.isFixedRotation=true
 print(hero.x)
 print(hero.y)
 --hero.x= display.contentCenterX
 --hero.y= display.contentCenterY
 --hero.name= "hero"
 --physics.addBody(hero, "dynamic")
+heroLib.init(hero,640,360,false)
 
 local function movePg(event)
 	local arrow=event.target
 	
 	if event.phase == "began" then
         if arrow.name == "left" then
-			hero:setLinearVelocity(-75, 0)
-	    	 
+			hero:setLinearVelocity(-100, 0)
+			hero:setSequence("Left")
+			hero:play()
+
 		elseif arrow.name == "right" then
-        	hero:setLinearVelocity(75,0)
-            
+        	hero:setLinearVelocity(100,0)
+            hero:setSequence("Right")
+			hero:play()
+
         elseif arrow.name == "up" then
-        	hero:setLinearVelocity(0,-75)
-            
+        	hero:setLinearVelocity(0,-100)
+            hero:setSequence("Back")
+			hero:play()
+
         elseif arrow.name == "down" then
-        	hero:setLinearVelocity(0,75)
+        	hero:setLinearVelocity(0,100)
+			hero:setSequence("Front")
+			hero:play()
+
 	   end
     elseif event.phase == "moved" then
 		if arrow.name == "left" then
-			hero:setLinearVelocity(-75, 0)
+			hero:setLinearVelocity(-100, 0)
+			hero:pause()
+			hero:setSequence("Left")
+			hero:play()
 			print(hero.x)
 			print(hero.y)
 	    	 
 		elseif arrow.name == "right" then
-        	hero:setLinearVelocity(75,0)
+        	hero:setLinearVelocity(100,0)
+			hero:pause()
+            hero:setSequence("Right")
+			hero:play()
             
         elseif arrow.name == "up" then
-        	hero:setLinearVelocity(0,-75)
+        	hero:setLinearVelocity(0,-100)
+			hero:pause()
+            hero:setSequence("Back")
+			hero:play()
             
         elseif arrow.name == "down" then
-        	hero:setLinearVelocity(0,75) 
+        	hero:setLinearVelocity(0,100)
+			hero:pause()
+			hero:setSequence("Front")
+			hero:play() 
 	   end
 	
 	elseif event.phase == "ended" then
 			hero:setLinearVelocity(0,0)
+			hero:pause()
 	end
  	   	 
  	return true
