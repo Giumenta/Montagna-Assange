@@ -16,37 +16,37 @@ function M.new()
    local heroSheet = graphics.newImageSheet("risorseGrafiche/PG/sprite-sheet.png",opt)
 
    local heroSeqs ={{
-    name = "Front",
-    start = 1,
-    count = 3,
-    time = 300,
-    loopCount = 0,
-    loopDirection ="forward"
-   },
-   {
-     name = "Left",
-     start = 4,
-     count = 6,
-     time = 300,
-     loopCount = 0,
-     loopDirection ="forward"
-   },
-   {
-	name = "Right",
-	start = 7,
-	count = 9,
-	time = 300,
-	loopCount = 0,
-	loopDirection ="forward"
-  },
-  {
-	name = "Back",
-	start = 10,
-	count = 12,
-	time = 300,
-	loopCount = 0,
-	loopDirection ="forward"
-  }
+		name = "Front",
+		start = 1,
+		count = 3,
+		time = 300,
+		loopCount = 0,
+		loopDirection ="forward"
+	},
+	{
+		name = "Left",
+		start = 4,
+		count = 6,
+		time = 300,
+		loopCount = 0,
+		loopDirection ="forward"
+	},
+	{
+		name = "Right",
+		start = 7,
+		count = 9,
+		time = 300,
+		loopCount = 0,
+		loopDirection ="forward"
+	},
+	{
+		name = "Back",
+		start = 10,
+		count = 12,
+		time = 300,
+		loopCount = 0,
+		loopDirection ="forward"
+	}
   }
 
     -- end data for the penguin sprite
@@ -58,13 +58,11 @@ function M.new()
     -- define hero physics body
     local heroShape={-6,0,6,0,-6,16,6,16}
     
-    
-	-- BEGIN INSERT CODE
 	-- 1) add a dynamic, anaelastic physics body to hero  
 	physics.addBody(hero,"dynamic", {shape=heroShape, bounce=0,density=1.5})
     -- 2) Make hero a display object not affected by off-balance rotations
     hero.isFixedRotation=true
-	-- END INSERT CODE
+
 	
 
 
