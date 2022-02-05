@@ -17,33 +17,29 @@ function M.new()
 
    local heroSeqs ={{
     name = "Front",
-    start = 1,
-    count = 3,
-    time = 300,
+    frames={1,2,3},
+    time = 1000,
     loopCount = 0,
     loopDirection ="forward"
    },
    {
      name = "Left",
-     start = 4,
-     count = 6,
-     time = 300,
+     frames={4,5,6},
+     time = 1000,
      loopCount = 0,
      loopDirection ="forward"
    },
    {
 	name = "Right",
-	start = 7,
-	count = 9,
-	time = 300,
+	frames={7,8,9},
+	time = 1000,
 	loopCount = 0,
 	loopDirection ="forward"
   },
   {
 	name = "Back",
-	start = 10,
-	count = 12,
-	time = 300,
+	frames={10,11,12},
+	time = 1000,
 	loopCount = 0,
 	loopDirection ="forward"
   }
@@ -61,37 +57,11 @@ function M.new()
     
 	-- BEGIN INSERT CODE
 	-- 1) add a dynamic, anaelastic physics body to hero  
-	physics.addBody(hero,"dynamic", {shape=heroShape, bounce=0,density=1.5})
+	physics.addBody(hero,"dynamic", {radius=32, bounce=0,density=1.5})
     -- 2) Make hero a display object not affected by off-balance rotations
     hero.isFixedRotation=true
 	-- END INSERT CODE
 	
-
-
-
-
-	
-	-- on precollison disable the collision between hero and ladderEnd
-	-- to allow hero to pass through the final part of the ladder
-	
-	---NON SERVE---
-
-	--local function onPreCollision(self,event)
-	--	local heroBottom = self.y+16
-	--	local collidedObj=event.other
-	--	local collidedObjTop = collidedObj.y-collidedObj.height/2
-	 
-	--	if (collidedObj.type == "ladderEnd" ) then	
-	--		if (heroBottom >= collidedObjTop) then
-	--	       event.contact.isEnabled = false  --disable this specific collision   		
-	--		end	  
-	--	end
-	--end
-
-
-
-
-
 
 
 
@@ -229,8 +199,7 @@ function M.init(hero,xStart,yStart, isOnLadder)
     hero.y=yStart
 
     -- initial hero speed (px/s) and speed direction  (1= right, -1=left) 
-    hero.speedDir=speedDir
-    hero.speed=speed
+    
 	
 	-- is initially hero on a ladder? (true or false)
 	hero.isOnLadder=isOnLadder 
@@ -243,19 +212,17 @@ end
 
 
 
-
 -- the activate function starts the movements of hero and its precollision and collision listeners
 function M.activate(hero)
 	--BEGIN INSERT CODE
 	--1) set the hero animation sequendce to walk
-	hero:setSequence("walk")
+	hero:setSequence("Left")
 	--2) play the animation sequence
 	hero:play()
 	--3) set hero linear velocity to (hero.speedDir*hero.speed,0)
-	hero:setLinearVelocity(hero.speedDir*hero.speed,0)
+	
 	--4) activate the precollision and collision listeners on hero.
-	hero:addEventListener("precollision",hero)
-	hero:addEventListener("collision",hero)
+	
 	--END INSERT CODE
 end
 

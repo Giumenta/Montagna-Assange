@@ -65,7 +65,7 @@ print(hero.y)
 --hero.name= "hero"
 --physics.addBody(hero, "dynamic")
 heroLib.init(hero,640,360,false)
-
+heroLib.activate(hero)
 local function movePg(event)
 	local arrow=event.target
 	
