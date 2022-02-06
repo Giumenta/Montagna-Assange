@@ -66,6 +66,7 @@ print(hero.y)
 --physics.addBody(hero, "dynamic")
 heroLib.init(hero,640,360,false)
 heroLib.activate(hero)
+
 local function movePg(event)
 	local arrow=event.target
 	
@@ -134,12 +135,11 @@ local function moveCamera(event)
 	local displayLeft = -camera.x
 	local displayTop = -camera.y
 	
-	local nonScrollingWidth =  display.contentWidth-70
-	local nonScrollingHeight = display.contentHeight-70
+	local nonScrollingWidth =  display.contentWidth- 140
+	local nonScrollingHeight = display.contentHeight- 140
 	
 	
-	if hero.x >= mapBorderLeft+offsetX 
-	   and hero.x <= mapBorderRight - offsetX then
+	if hero.x >= mapBorderLeft+offsetX and hero.x <= mapBorderRight - offsetX then
 		  
 		  if hero.x>displayLeft+nonScrollingWidth then
 	        	    camera.x = -hero.x + nonScrollingWidth
