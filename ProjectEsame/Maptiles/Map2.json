@@ -1189,7 +1189,7 @@
                  "gid":152,
                  "height":22,
                  "id":6,
-                 "name":"",
+                 "name":"boxUp",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1297,7 +1297,7 @@
          "y":0
         }],
  "nextlayerid":10,
- "nextobjectid":83,
+ "nextobjectid":84,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.7.2",
@@ -4008,11 +4008,11 @@
          "tilewidth":64
         }, 
         {
-         "columns":3,
+         "columns":12,
          "firstgid":663,
          "image":"..\/risorseGrafiche\/PG\/sprite-sheet.png",
-         "imageheight":128,
-         "imagewidth":96,
+         "imageheight":32,
+         "imagewidth":384,
          "margin":0,
          "name":"sprite-sheet",
          "spacing":0,

@@ -60,12 +60,17 @@ hero:scale(2,2)
 --hero.isFixedRotation=true
 print(hero.x)
 print(hero.y)
+
 --hero.x= display.contentCenterX
 --hero.y= display.contentCenterY
 --hero.name= "hero"
 --physics.addBody(hero, "dynamic")
 heroLib.init(hero,640,360,false)
 heroLib.activate(hero)
+local boxUp = map:findObject("boxUp")
+boxUp:toFront()
+
+
 local function movePg(event)
 	local arrow=event.target
 	
