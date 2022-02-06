@@ -86,7 +86,9 @@ function M.new()
 	-- Also, when a collision hero-platform ends, hero is falling or jumping, hence new jumps are not 
 	-- allowed.
 	-- Finally, note that when collision hero-egg terminates, we remove the egg from the device memory. 
-  	--[[
+  	
+	
+	--[[
 	local function onCollision(self,event)
 		local collidedObj = event.other
 		local collidedObjTop= collidedObj.y-collidedObj.height/2
@@ -179,10 +181,12 @@ function M.new()
 	
 	return hero
 end	  --]]
-local function onCollision(self,event)
+--[[
+	local function onCollision(self,event)
 	
 	
 end	
+--]]
 
 
 
@@ -197,11 +201,8 @@ function M.activate(hero)
 	hero:setSequence("Left")
 	--2) play the animation sequence
 	hero:play()
-	--3) set hero linear velocity to (hero.speedDir*hero.speed,0)
-	
+	--3) set hero linear velocity to (hero.speedDir*hero.speed,0)	
 	--4) activate the precollision and collision listeners on hero.
-	
-	
 end
 
 return M
