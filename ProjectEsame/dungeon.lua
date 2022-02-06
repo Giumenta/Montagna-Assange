@@ -52,12 +52,50 @@ arrowDown.name = "down"
 --button.y = display.contentCenterY
 --button.name = "button"
 
---local hero = display.newImageRect(camera, "risorseGrafiche/risorseTmp_perTest/alienYellow.png", 124,108 )
+
 --local hero = map:findObject("pg")
 --hero:toFront()
-local hero=heroLib.new()
+--local hero=heroLib.new()
+
+--per debug metto l'eroe direttamente qua
+local opt = { width = 32, height = 32, numFrames = 12}
+local heroSheet = graphics.newImageSheet("risorseGrafiche/PG/sprite-sheet.png",opt)
+
+   local heroSeqs ={
+	{
+		name = "Front",
+		frames={1,2,3},
+		time = 1000,
+		loopCount = 0,
+		loopDirection ="forward"
+   	},
+   	{
+		name = "Left",
+		frames={4,5,6},
+		time = 1000,
+		loopCount = 0,
+		loopDirection ="forward"
+   	},
+	{
+		name = "Right",
+		frames={7,8,9},
+		time = 1000,
+		loopCount = 0,
+		loopDirection ="forward"
+	},
+	{
+		name = "Back",
+		frames={10,11,12},
+		time = 1000,
+		loopCount = 0,
+		loopDirection ="forward"
+	}
+}
+local hero = display.newSprite(heroSheet,heroSeqs)
+local heroShape={-6,0,6,0,-6,16,6,16}
+physics.addBody(hero, "dynamic", heroShape)
 hero:scale(2,2)
---hero.isFixedRotation=true
+hero.isFixedRotation=true
 print(hero.x)
 print(hero.y)
 
@@ -172,7 +210,9 @@ arrowRight:addEventListener("touch", movePg)
 arrowDown:addEventListener("touch", movePg)
 arrowUp:addEventListener("touch", movePg)
 
---Runtime:addEventListener("enterFrame",moveCamera)
+
+--fromVeeko says: ho provato a scommentare il movecamera ma tanto non funge
+Runtime:addEventListener("enterFrame",moveCamera)
 
 
 local dragable = require "com.ponywolf.plugins.dragable"

@@ -51,11 +51,13 @@ function M.new()
     local hero = display.newSprite(heroSheet,heroSeqs)
   
 
-    -- define hero physics body
+    -- crea un quadrato 16x16 (la hitbox del pg)
     local heroShape={-6,0,6,0,-6,16,6,16}
     
 	-- 1) add a dynamic, anaelastic physics body to hero  
-	physics.addBody(hero,"dynamic", {radius=32, bounce=0,density=1.5})
+	--questa che segue è la linea di codice originale
+	--physics.addBody(hero,"dynamic", {radius=32, bounce=0,density=1.5})
+	physics.addBody(hero, "dynamic", heroShape)
     -- 2) Make hero a display object not affected by off-balance rotations
     hero.isFixedRotation=true
 
@@ -176,8 +178,8 @@ function M.new()
 		 end	 
 	end --]]
 	-- define precollision and collision handlers for hero	
-	hero.preCollision=onPreCollision
-	hero.collision = onCollision
+	--hero.preCollision=onPreCollision
+	--hero.collision = onCollision
 	
 	return hero 
 end	
