@@ -139,12 +139,11 @@ local function moveCamera(event)
 	local displayLeft = -camera.x
 	local displayTop = -camera.y
 	
-	local nonScrollingWidth =  display.contentWidth-70
-	local nonScrollingHeight = display.contentHeight-70
+	local nonScrollingWidth =  display.contentWidth- 140
+	local nonScrollingHeight = display.contentHeight- 140
 	
 	
-	if hero.x >= mapBorderLeft+offsetX 
-	   and hero.x <= mapBorderRight - offsetX then
+	if hero.x >= mapBorderLeft+offsetX and hero.x <= mapBorderRight - offsetX then
 		  
 		  if hero.x>displayLeft+nonScrollingWidth then
 	        	    camera.x = -hero.x + nonScrollingWidth

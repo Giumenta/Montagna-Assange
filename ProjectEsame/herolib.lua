@@ -86,7 +86,9 @@ function M.new()
 	-- Also, when a collision hero-platform ends, hero is falling or jumping, hence new jumps are not 
 	-- allowed.
 	-- Finally, note that when collision hero-egg terminates, we remove the egg from the device memory. 
-
+  	
+	
+	--[[
 	local function onCollision(self,event)
 		local collidedObj = event.other
 		local collidedObjTop= collidedObj.y-collidedObj.height/2
@@ -178,31 +180,13 @@ function M.new()
 	hero.collision = onCollision
 	
 	return hero
-end	  
-
-
-
-
-
-
--- The init function initializes the following hero parameters:
---  xStart,yStart: initial position of hero at the beginning of the execution.
---  speed: hero velocity (measured in pixel/seconds)
---  speedDir: initial direction (1 = right, -1 = left)
---  jumpAllowed: boolean value that establishes if jumps are initially allowed
---  isOnLadder: boolean value that indicates if the initial hero position is on the ladder
-function M.init(hero,xStart,yStart, isOnLadder)
-	-- initial hero position
-    hero.x=xStart
-    hero.y=yStart
-
-    -- initial hero speed (px/s) and speed direction  (1= right, -1=left) 
-    
+end	  --]]
+--[[
+	local function onCollision(self,event)
 	
-	-- is initially hero on a ladder? (true or false)
-	hero.isOnLadder=isOnLadder 
 	
 end	
+--]]
 
 
 
@@ -212,16 +196,13 @@ end
 
 -- the activate function starts the movements of hero and its precollision and collision listeners
 function M.activate(hero)
-	--BEGIN INSERT CODE
+	
 	--1) set the hero animation sequendce to walk
 	hero:setSequence("Left")
 	--2) play the animation sequence
 	hero:play()
-	--3) set hero linear velocity to (hero.speedDir*hero.speed,0)
-	
+	--3) set hero linear velocity to (hero.speedDir*hero.speed,0)	
 	--4) activate the precollision and collision listeners on hero.
-	
-	--END INSERT CODE
 end
 
 return M
