@@ -174,13 +174,13 @@ function M.new()
 					 self.jumpAllowed = false	 		
 			end		 
 		 end	 
-	end
+	end --]]
 	-- define precollision and collision handlers for hero	
 	hero.preCollision=onPreCollision
 	hero.collision = onCollision
 	
-	return hero
-end	  --]]
+	return hero 
+end	
 --[[
 	local function onCollision(self,event)
 	
@@ -188,7 +188,16 @@ end	  --]]
 end	
 --]]
 
+function M.init(hero,xStart,yStart,isOnLadder)
+	-- initial hero position
+    hero.x=xStart
+    hero.y=yStart
 
+	-- is initially hero on a ladder? (true or false)
+	hero.isOnLadder=isOnLadder 
+	-- are jumps  initially allowed? (true or false)
+	
+end	
 
 
 
