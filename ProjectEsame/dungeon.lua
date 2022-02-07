@@ -96,6 +96,8 @@ local heroShape={-6,0,6,0,-6,16,6,16}
 physics.addBody(hero, "dynamic", heroShape)
 hero:scale(2,2)
 hero.isFixedRotation=true
+hero.x = display.contentCenterX
+hero.y = display.contentCenterY
 print(hero.x)
 print(hero.y)
 
@@ -103,8 +105,11 @@ print(hero.y)
 --hero.y= display.contentCenterY
 --hero.name= "hero"
 --physics.addBody(hero, "dynamic")
-heroLib.init(hero,640,360,false)
-heroLib.activate(hero)
+
+--QUESTE RIGHE QUA LE COMMENTO PER PROVARE A SISTEMARE IL PG, MA LE AVEVI SCRITTE @davideMira
+--heroLib.init(hero,640,360,false)
+--heroLib.activate(hero)
+--FINE PARTE COMMENTATA DA NICOLA
 local boxUp = map:findObject("boxUp")
 boxUp:toFront()
 
@@ -171,6 +176,8 @@ local function movePg(event)
 end
 ------- FUNZIONE PER MOVIMENTO CAMERA DA METTERE A POSTO -------
 local function moveCamera(event)
+
+	--[[
 	local offsetX = 70
 	local offsetY = 70
 	
@@ -199,18 +206,94 @@ local function moveCamera(event)
 		  camera.y = -hero.y + offsetY	
 	    end	 
 	end	 
-		
+	--]]
+	camera.x = hero.x
+	camera.y = hero.y	
 	return true	
+end
+
+local function moveMap(event)
+	local arrow=event.target
+	
+	if event.phase == "began" then
+        if arrow.name == "left" then
+			camera.x = camera.x + 100
+			hero.x = hero.x - 100
+			hero:setSequence("Left")
+			hero:play()
+
+		elseif arrow.name == "right" then
+        	camera.x = camera.x - 100
+			hero.x = hero.x + 100
+            hero:setSequence("Right")
+			hero:play()
+
+        elseif arrow.name == "up" then
+        	camera.y = camera.y + 100
+			hero.y = hero.y - 100
+            hero:setSequence("Back")
+			hero:play()
+
+        elseif arrow.name == "down" then
+        	camera.y = camera.y - 100
+			hero.y = hero.y + 100
+			hero:setSequence("Front")
+			hero:play()
+
+	   end
+    elseif event.phase == "moved" then
+		if arrow.name == "left" then
+			camera.x = camera.x + 100
+			hero.x = hero.x - 100
+			hero:pause()
+			hero:setSequence("Left")
+			hero:play()
+			print(hero.x)
+			print(hero.y)
+	    	 
+		elseif arrow.name == "right" then
+        	camera.x = camera.x - 100
+			hero.x = hero.x + 100
+			hero:pause()
+            hero:setSequence("Right")
+			hero:play()
+            
+        elseif arrow.name == "up" then
+        	camera.y = camera.y + 100
+			hero.y = hero.y - 100
+			hero:pause()
+            hero:setSequence("Back")
+			hero:play()
+            
+        elseif arrow.name == "down" then
+        	camera.y = camera.y - 100
+			hero.y = hero.y + 100
+			hero:pause()
+			hero:setSequence("Front")
+			hero:play() 
+	   end
+	
+	elseif event.phase == "ended" then
+			hero:setLinearVelocity(0,0)
+			hero:pause()
+	end
+ 	   	 
+ 	return true
 end
 
 
 -- add event to arrows and button
+--NICOLA: COMMENTO ANCHE QUESTO PER ATTIVARE IL MOVEMAP
+--[[
 arrowLeft:addEventListener("touch", movePg)
 arrowRight:addEventListener("touch", movePg)
 arrowDown:addEventListener("touch", movePg)
 arrowUp:addEventListener("touch", movePg)
-
-
+--]]
+arrowLeft:addEventListener("touch", moveMap)
+arrowRight:addEventListener("touch", moveMap)
+arrowDown:addEventListener("touch", moveMap)
+arrowUp:addEventListener("touch", moveMap)
 --fromVeeko says: ho provato a scommentare il movecamera ma tanto non funge
 Runtime:addEventListener("enterFrame",moveCamera)
 
