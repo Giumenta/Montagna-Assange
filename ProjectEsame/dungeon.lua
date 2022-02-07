@@ -52,12 +52,52 @@ arrowDown.name = "down"
 --button.y = display.contentCenterY
 --button.name = "button"
 
---local hero = display.newImageRect(camera, "risorseGrafiche/risorseTmp_perTest/alienYellow.png", 124,108 )
+
 --local hero = map:findObject("pg")
 --hero:toFront()
-local hero=heroLib.new()
+--local hero=heroLib.new()
+
+--per debug metto l'eroe direttamente qua
+local opt = { width = 32, height = 32, numFrames = 12}
+local heroSheet = graphics.newImageSheet("risorseGrafiche/PG/sprite-sheet.png",opt)
+
+   local heroSeqs ={
+	{
+		name = "Front",
+		frames={1,2,3},
+		time = 1000,
+		loopCount = 0,
+		loopDirection ="forward"
+   	},
+   	{
+		name = "Left",
+		frames={4,5,6},
+		time = 1000,
+		loopCount = 0,
+		loopDirection ="forward"
+   	},
+	{
+		name = "Right",
+		frames={7,8,9},
+		time = 1000,
+		loopCount = 0,
+		loopDirection ="forward"
+	},
+	{
+		name = "Back",
+		frames={10,11,12},
+		time = 1000,
+		loopCount = 0,
+		loopDirection ="forward"
+	}
+}
+local hero = display.newSprite(heroSheet,heroSeqs)
+local heroShape={-6,0,6,0,-6,16,6,16}
+physics.addBody(hero, "dynamic", heroShape)
 hero:scale(2,2)
---hero.isFixedRotation=true
+hero.isFixedRotation=true
+hero.x = display.contentCenterX
+hero.y = display.contentCenterY
 print(hero.x)
 print(hero.y)
 
@@ -65,8 +105,11 @@ print(hero.y)
 --hero.y= display.contentCenterY
 --hero.name= "hero"
 --physics.addBody(hero, "dynamic")
-heroLib.init(hero,640,360,false)
-heroLib.activate(hero)
+
+--QUESTE RIGHE QUA LE COMMENTO PER PROVARE A SISTEMARE IL PG, MA LE AVEVI SCRITTE @davideMira
+--heroLib.init(hero,640,360,false)
+--heroLib.activate(hero)
+--FINE PARTE COMMENTATA DA NICOLA
 local boxUp = map:findObject("boxUp")
 boxUp:toFront()
 
@@ -133,6 +176,8 @@ local function movePg(event)
 end
 ------- FUNZIONE PER MOVIMENTO CAMERA DA METTERE A POSTO -------
 local function moveCamera(event)
+
+	--[[
 	local offsetX = 70
 	local offsetY = 70
 	
@@ -161,18 +206,96 @@ local function moveCamera(event)
 		  camera.y = -hero.y + offsetY	
 	    end	 
 	end	 
-		
+	--]]
+	camera.x = hero.x
+	camera.y = hero.y	
 	return true	
+end
+
+local function moveMap(event)
+	local arrow=event.target
+	
+	if event.phase == "began" then
+        if arrow.name == "left" then
+			camera.x = camera.x + 100
+			hero.x = hero.x - 100
+			hero:setSequence("Left")
+			hero:play()
+
+		elseif arrow.name == "right" then
+        	camera.x = camera.x - 100
+			hero.x = hero.x + 100
+            hero:setSequence("Right")
+			hero:play()
+
+        elseif arrow.name == "up" then
+        	camera.y = camera.y + 100
+			hero.y = hero.y - 100
+            hero:setSequence("Back")
+			hero:play()
+
+        elseif arrow.name == "down" then
+        	camera.y = camera.y - 100
+			hero.y = hero.y + 100
+			hero:setSequence("Front")
+			hero:play()
+
+	   end
+    elseif event.phase == "moved" then
+		if arrow.name == "left" then
+			camera.x = camera.x + 100
+			hero.x = hero.x - 100
+			hero:pause()
+			hero:setSequence("Left")
+			hero:play()
+			print(hero.x)
+			print(hero.y)
+	    	 
+		elseif arrow.name == "right" then
+        	camera.x = camera.x - 100
+			hero.x = hero.x + 100
+			hero:pause()
+            hero:setSequence("Right")
+			hero:play()
+            
+        elseif arrow.name == "up" then
+        	camera.y = camera.y + 100
+			hero.y = hero.y - 100
+			hero:pause()
+            hero:setSequence("Back")
+			hero:play()
+            
+        elseif arrow.name == "down" then
+        	camera.y = camera.y - 100
+			hero.y = hero.y + 100
+			hero:pause()
+			hero:setSequence("Front")
+			hero:play() 
+	   end
+	
+	elseif event.phase == "ended" then
+			hero:setLinearVelocity(0,0)
+			hero:pause()
+	end
+ 	   	 
+ 	return true
 end
 
 
 -- add event to arrows and button
+--NICOLA: COMMENTO ANCHE QUESTO PER ATTIVARE IL MOVEMAP
+--[[
 arrowLeft:addEventListener("touch", movePg)
 arrowRight:addEventListener("touch", movePg)
 arrowDown:addEventListener("touch", movePg)
 arrowUp:addEventListener("touch", movePg)
-
---Runtime:addEventListener("enterFrame",moveCamera)
+--]]
+arrowLeft:addEventListener("touch", moveMap)
+arrowRight:addEventListener("touch", moveMap)
+arrowDown:addEventListener("touch", moveMap)
+arrowUp:addEventListener("touch", moveMap)
+--fromVeeko says: ho provato a scommentare il movecamera ma tanto non funge
+Runtime:addEventListener("enterFrame",moveCamera)
 
 
 local dragable = require "com.ponywolf.plugins.dragable"
