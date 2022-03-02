@@ -8,7 +8,10 @@ local json = require ("json")
 local mapData = json.decodeFile(system.pathForFile("Maptiles/Map2.json",system.ResourceDirectory))
 local map = tiled.new(mapData, "Maptiles")
 
-local heroLib=require("herolib")
+local dragable = require "com.ponywolf.plugins.dragable"
+map = dragable.new(map)
+
+--local heroLib=require("herolib")
 
 -- create group for non fixed obj (camera) and for fixed obj(control)
 local camera= display.newGroup()
@@ -53,9 +56,9 @@ arrowDown.name = "down"
 --button.name = "button"
 
 
---local hero = map:findObject("pg")
+local hero = map:findObject("pg")
 --hero:toFront()
-local hero=heroLib.new()
+--local hero=heroLib.new()
 
 --per debug metto l'eroe direttamente qua
 --[[
@@ -92,27 +95,27 @@ local heroSheet = graphics.newImageSheet("risorseGrafiche/PG/sprite-sheet.png",o
 		loopDirection ="forward"
 	}
 }
-local hero = display.newSprite(heroSheet,heroSeqs)
-local heroShape={-6,0,6,0,-6,16,6,16}
-physics.addBody(hero, "dynamic", heroShape)
-hero:scale(2,2)
-hero.isFixedRotation=true
-hero.x = display.contentCenterX
-hero.y = display.contentCenterY
-print(hero.x)
-print(hero.y)
---]]
+--local hero = display.newSprite(heroSheet,heroSeqs)
+--local heroShape={-6,0,6,0,-6,16,6,16}
+--physics.addBody(hero, "dynamic", heroShape)
+--hero:scale(2,2)
+
+--hero.x = display.contentCenterX
+--hero.y = display.contentCenterY
+--print(hero.x)
+--print(hero.y)
+]]--
 --hero.x= display.contentCenterX
 --hero.y= display.contentCenterY
 --hero.name= "hero"
---physics.addBody(hero, "dynamic")
+physics.addBody(hero, "dynamic")
+hero.isFixedRotation=true
 
-
-heroLib.init(hero,640,360,false)
-heroLib.activate(hero)
+--heroLib.init(hero,640,360,false)
+--heroLib.activate(hero)
 
 local boxUp = map:findObject("boxUp")
-boxUp:toFront()
+--boxUp:toFront()
 
 
 local function movePg(event)
@@ -120,57 +123,57 @@ local function movePg(event)
 	
 	if event.phase == "began" then
         if arrow.name == "left" then
-			hero:setLinearVelocity(-100, 0)
-			hero:setSequence("Left")
-			hero:play()
+			--hero:setLinearVelocity(-100, 0)
+			--hero:setSequence("Left")
+			--hero:play()
 
 		elseif arrow.name == "right" then
         	hero:setLinearVelocity(100,0)
-            hero:setSequence("Right")
-			hero:play()
+            --hero:setSequence("Right")
+			--hero:play()
 
         elseif arrow.name == "up" then
         	hero:setLinearVelocity(0,-100)
-            hero:setSequence("Back")
-			hero:play()
+            --hero:setSequence("Back")
+			--hero:play()
 
         elseif arrow.name == "down" then
         	hero:setLinearVelocity(0,100)
-			hero:setSequence("Front")
-			hero:play()
+			--hero:setSequence("Front")
+			--hero:play()
 
 	   end
     elseif event.phase == "moved" then
 		if arrow.name == "left" then
 			hero:setLinearVelocity(-100, 0)
-			hero:pause()
-			hero:setSequence("Left")
-			hero:play()
+			--hero:pause()
+			--hero:setSequence("Left")
+			--hero:play()
 			print(hero.x)
 			print(hero.y)
 	    	 
 		elseif arrow.name == "right" then
         	hero:setLinearVelocity(100,0)
-			hero:pause()
-            hero:setSequence("Right")
-			hero:play()
+			--hero:pause()
+            --hero:setSequence("Right")
+			--hero:play()
             
         elseif arrow.name == "up" then
         	hero:setLinearVelocity(0,-100)
-			hero:pause()
-            hero:setSequence("Back")
-			hero:play()
+			--hero:pause()
+            --hero:setSequence("Back")
+			--hero:play()
             
         elseif arrow.name == "down" then
         	hero:setLinearVelocity(0,100)
-			hero:pause()
-			hero:setSequence("Front")
-			hero:play() 
+			--hero:pause()
+			--hero:setSequence("Front")
+			--hero:play() 
 	   end
 	
 	elseif event.phase == "ended" then
 			hero:setLinearVelocity(0,0)
-			hero:pause()
+			--hero:pause()
 	end
  	   	 
  	return true
@@ -294,8 +297,5 @@ arrowUp:addEventListener("touch", movePg)
 --arrowDown:addEventListener("touch", moveMap)
 --arrowUp:addEventListener("touch", moveMap)
 --fromVeeko says: ho provato a scommentare il movecamera ma tanto non funge
-Runtime:addEventListener("enterFrame",moveCamera)
+--Runtime:addEventListener("enterFrame",moveCamera)
 
-
-local dragable = require "com.ponywolf.plugins.dragable"
-map = dragable.new(map)

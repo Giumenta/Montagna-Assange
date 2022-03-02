@@ -67,6 +67,11 @@
                          "name":"bodyType",
                          "type":"string",
                          "value":"static"
+                        }, 
+                        {
+                         "name":"isVisible",
+                         "type":"bool",
+                         "value":false
                         }],
                  "rotation":0,
                  "type":"",
@@ -1254,7 +1259,30 @@
          "draworder":"topdown",
          "id":8,
          "name":"pg",
-         "objects":[],
+         "objects":[
+                {
+                 "gid":664,
+                 "height":16,
+                 "id":84,
+                 "name":"hero",
+                 "properties":[
+                        {
+                         "name":"bodyType",
+                         "type":"string",
+                         "value":"dynamic"
+                        }, 
+                        {
+                         "name":"bounce",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":150.88829787234,
+                 "y":80.4946808510638
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -1297,7 +1325,7 @@
          "y":0
         }],
  "nextlayerid":10,
- "nextobjectid":84,
+ "nextobjectid":85,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.7.2",
