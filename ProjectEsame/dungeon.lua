@@ -114,8 +114,6 @@ hero.isFixedRotation=true
 --heroLib.init(hero,640,360,false)
 --heroLib.activate(hero)
 
-local boxUp = map:findObject("boxUp")
---boxUp:toFront()
 
 
 local function movePg(event)
