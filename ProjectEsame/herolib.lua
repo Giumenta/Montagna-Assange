@@ -196,8 +196,7 @@ function M.init(hero,xStart,yStart,isOnLadder)
     hero.y=yStart
 
 	-- is initially hero on a ladder? (true or false)
-	hero.isOnLadder=isOnLadder 
-	-- are jumps  initially allowed? (true or false)
+	hero.isOnLadder=isOnLadder
 	
 end	
 
