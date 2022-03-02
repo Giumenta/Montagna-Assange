@@ -1351,6 +1351,16 @@
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="16" height="16" source="0x72_DungeonTilesetII_v1.4/hero/skelet_idle_anim_f0.png"/>
+   <animation>
+    <frame tileid="0" duration="100"/>
+    <frame tileid="1" duration="100"/>
+    <frame tileid="2" duration="100"/>
+    <frame tileid="3" duration="100"/>
+    <frame tileid="4" duration="100"/>
+    <frame tileid="5" duration="100"/>
+    <frame tileid="6" duration="100"/>
+    <frame tileid="7" duration="100"/>
+   </animation>
   </tile>
   <tile id="1">
    <image width="16" height="16" source="0x72_DungeonTilesetII_v1.4/hero/skelet_idle_anim_f1.png"/>

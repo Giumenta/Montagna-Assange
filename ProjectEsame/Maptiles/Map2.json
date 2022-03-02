@@ -1261,27 +1261,22 @@
          "name":"pg",
          "objects":[
                 {
-                 "gid":664,
+                 "gid":675,
                  "height":16,
-                 "id":84,
-                 "name":"hero",
+                 "id":91,
+                 "name":"",
                  "properties":[
                         {
-                         "name":"bodyType",
-                         "type":"string",
-                         "value":"dynamic"
-                        }, 
-                        {
-                         "name":"bounce",
-                         "type":"int",
-                         "value":0
+                         "name":"animation",
+                         "type":"bool",
+                         "value":false
                         }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":150.88829787234,
-                 "y":80.4946808510638
+                 "x":149.364,
+                 "y":83.1938
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1325,7 +1320,7 @@
          "y":0
         }],
  "nextlayerid":10,
- "nextobjectid":85,
+ "nextobjectid":92,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.7.2",
@@ -4047,6 +4042,104 @@
          "tilecount":12,
          "tileheight":32,
          "tilewidth":32
+        }, 
+        {
+         "columns":0,
+         "firstgid":675,
+         "grid":
+            {
+             "height":1,
+             "orientation":"orthogonal",
+             "width":1
+            },
+         "margin":0,
+         "name":"Hero",
+         "spacing":0,
+         "tilecount":8,
+         "tileheight":16,
+         "tiles":[
+                {
+                 "animation":[
+                        {
+                         "duration":100,
+                         "tileid":0
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":1
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":2
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":3
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":4
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":5
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":6
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":7
+                        }],
+                 "id":0,
+                 "image":"0x72_DungeonTilesetII_v1.4\/hero\/skelet_idle_anim_f0.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":1,
+                 "image":"0x72_DungeonTilesetII_v1.4\/hero\/skelet_idle_anim_f1.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":2,
+                 "image":"0x72_DungeonTilesetII_v1.4\/hero\/skelet_idle_anim_f2.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":3,
+                 "image":"0x72_DungeonTilesetII_v1.4\/hero\/skelet_idle_anim_f3.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":4,
+                 "image":"0x72_DungeonTilesetII_v1.4\/hero\/skelet_run_anim_f0.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":5,
+                 "image":"0x72_DungeonTilesetII_v1.4\/hero\/skelet_run_anim_f1.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":6,
+                 "image":"0x72_DungeonTilesetII_v1.4\/hero\/skelet_run_anim_f2.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":7,
+                 "image":"0x72_DungeonTilesetII_v1.4\/hero\/skelet_run_anim_f3.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }],
+         "tilewidth":16
         }],
  "tilewidth":16,
  "type":"map",
