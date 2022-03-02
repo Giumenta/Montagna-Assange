@@ -15,8 +15,8 @@ local camera= display.newGroup()
 local control = display.newGroup()
 
 map:scale(3.5,3.5)
---map.x =-150
---map.y=-100
+map.x =-150
+map.y=-100
 camera:insert(map)
 print(camera.x)
 print(camera.y)
