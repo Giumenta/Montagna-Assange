@@ -55,9 +55,10 @@ arrowDown.name = "down"
 
 --local hero = map:findObject("pg")
 --hero:toFront()
---local hero=heroLib.new()
+local hero=heroLib.new()
 
 --per debug metto l'eroe direttamente qua
+--[[
 local opt = { width = 32, height = 32, numFrames = 12}
 local heroSheet = graphics.newImageSheet("risorseGrafiche/PG/sprite-sheet.png",opt)
 
@@ -100,16 +101,16 @@ hero.x = display.contentCenterX
 hero.y = display.contentCenterY
 print(hero.x)
 print(hero.y)
-
+--]]
 --hero.x= display.contentCenterX
 --hero.y= display.contentCenterY
 --hero.name= "hero"
 --physics.addBody(hero, "dynamic")
 
---QUESTE RIGHE QUA LE COMMENTO PER PROVARE A SISTEMARE IL PG, MA LE AVEVI SCRITTE @davideMira
---heroLib.init(hero,640,360,false)
---heroLib.activate(hero)
---FINE PARTE COMMENTATA DA NICOLA
+
+heroLib.init(hero,640,360,false)
+heroLib.activate(hero)
+
 local boxUp = map:findObject("boxUp")
 boxUp:toFront()
 
@@ -177,7 +178,7 @@ end
 ------- FUNZIONE PER MOVIMENTO CAMERA DA METTERE A POSTO -------
 local function moveCamera(event)
 
-	--[[
+	
 	local offsetX = 70
 	local offsetY = 70
 	
@@ -206,12 +207,12 @@ local function moveCamera(event)
 		  camera.y = -hero.y + offsetY	
 	    end	 
 	end	 
-	--]]
+	
 	camera.x = hero.x
 	camera.y = hero.y	
 	return true	
 end
-
+--[[
 local function moveMap(event)
 	local arrow=event.target
 	
@@ -280,20 +281,18 @@ local function moveMap(event)
  	   	 
  	return true
 end
-
+--]]
 
 -- add event to arrows and button
---NICOLA: COMMENTO ANCHE QUESTO PER ATTIVARE IL MOVEMAP
---[[
 arrowLeft:addEventListener("touch", movePg)
 arrowRight:addEventListener("touch", movePg)
 arrowDown:addEventListener("touch", movePg)
 arrowUp:addEventListener("touch", movePg)
---]]
-arrowLeft:addEventListener("touch", moveMap)
-arrowRight:addEventListener("touch", moveMap)
-arrowDown:addEventListener("touch", moveMap)
-arrowUp:addEventListener("touch", moveMap)
+
+--arrowLeft:addEventListener("touch", moveMap)
+--arrowRight:addEventListener("touch", moveMap)
+--arrowDown:addEventListener("touch", moveMap)
+--arrowUp:addEventListener("touch", moveMap)
 --fromVeeko says: ho provato a scommentare il movecamera ma tanto non funge
 Runtime:addEventListener("enterFrame",moveCamera)
 

@@ -60,6 +60,7 @@ function M.new()
 	physics.addBody(hero, "dynamic", heroShape)
     -- 2) Make hero a display object not affected by off-balance rotations
     hero.isFixedRotation=true
+	hero:scale(2,2)
 
 	
 
