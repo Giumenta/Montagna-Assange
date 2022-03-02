@@ -1261,22 +1261,81 @@
          "name":"pg",
          "objects":[
                 {
-                 "gid":675,
+                 "gid":663,
                  "height":16,
-                 "id":91,
-                 "name":"",
+                 "id":102,
+                 "name":"front",
                  "properties":[
                         {
-                         "name":"animation",
+                         "name":"front",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"isVisible",
                          "type":"bool",
                          "value":false
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"hero",
                  "visible":true,
                  "width":16,
-                 "x":149.364,
-                 "y":83.1938
+                 "x":122.987654320988,
+                 "y":85.7407407407407
+                }, 
+                {
+                 "gid":666,
+                 "height":16,
+                 "id":103,
+                 "name":"left",
+                 "properties":[
+                        {
+                         "name":"isVisible",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"hero",
+                 "visible":true,
+                 "width":16,
+                 "x":110.024691358025,
+                 "y":118.765432098765
+                }, 
+                {
+                 "gid":669,
+                 "height":16,
+                 "id":104,
+                 "name":"right",
+                 "properties":[
+                        {
+                         "name":"isVisible",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"hero",
+                 "visible":true,
+                 "width":16,
+                 "x":155.703703703704,
+                 "y":120.617283950617
+                }, 
+                {
+                 "gid":672,
+                 "height":16,
+                 "id":105,
+                 "name":"back",
+                 "properties":[
+                        {
+                         "name":"isVisible",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"hero",
+                 "visible":true,
+                 "width":16,
+                 "x":162.802469135802,
+                 "y":88.5185185185185
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1320,7 +1379,7 @@
          "y":0
         }],
  "nextlayerid":10,
- "nextobjectid":92,
+ "nextobjectid":106,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.7.2",
@@ -4041,6 +4100,77 @@
          "spacing":0,
          "tilecount":12,
          "tileheight":32,
+         "tiles":[
+                {
+                 "animation":[
+                        {
+                         "duration":100,
+                         "tileid":0
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":1
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":2
+                        }],
+                 "id":0,
+                 "properties":[
+                        {
+                         "name":"front",
+                         "type":"bool",
+                         "value":true
+                        }]
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":100,
+                         "tileid":3
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":4
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":5
+                        }],
+                 "id":3
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":100,
+                         "tileid":6
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":7
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":8
+                        }],
+                 "id":6
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":100,
+                         "tileid":9
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":10
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":11
+                        }],
+                 "id":9
+                }],
          "tilewidth":32
         }, 
         {

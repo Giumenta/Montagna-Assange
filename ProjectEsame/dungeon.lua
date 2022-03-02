@@ -54,9 +54,17 @@ arrowDown.name = "down"
 --button.x = display.contentCenterX
 --button.y = display.contentCenterY
 --button.name = "button"
-
-
-local hero = map:findObject("pg")
+local hero = map:listTypes("hero")
+function createHero()
+	
+	local i
+	for i=1,4 do
+		physics.addBody(hero[i], "dynamic")
+		hero[i].isFixedRotation=true
+		hero[i].isVisible=false
+		
+	end
+end
 --hero:toFront()
 --local hero=heroLib.new()
 
@@ -108,8 +116,7 @@ local heroSheet = graphics.newImageSheet("risorseGrafiche/PG/sprite-sheet.png",o
 --hero.x= display.contentCenterX
 --hero.y= display.contentCenterY
 --hero.name= "hero"
-physics.addBody(hero, "dynamic")
-hero.isFixedRotation=true
+
 
 --heroLib.init(hero,640,360,false)
 --heroLib.activate(hero)
@@ -121,12 +128,14 @@ local function movePg(event)
 	
 	if event.phase == "began" then
         if arrow.name == "left" then
-			--hero:setLinearVelocity(-100, 0)
-			--hero:setSequence("Left")
+			hero[2].isVisible=true
+			hero[2]:setLinearVelocity(-100, 0)
+			
 			--hero:play()
 
 		elseif arrow.name == "right" then
-        	hero:setLinearVelocity(100,0)
+        	hero[1].isVisible=true
+			hero[1]:setLinearVelocity(100,0)
             --hero:setSequence("Right")
 			--hero:play()
 
@@ -143,7 +152,7 @@ local function movePg(event)
 	   end
     elseif event.phase == "moved" then
 		if arrow.name == "left" then
-			hero:setLinearVelocity(-100, 0)
+			--hero:setLinearVelocity(-100, 0)
 			--hero:pause()
 			--hero:setSequence("Left")
 			--hero:play()
@@ -170,8 +179,12 @@ local function movePg(event)
 	   end
 	
 	elseif event.phase == "ended" then
-			hero:setLinearVelocity(0,0)
-			--hero:pause()
+		local i
+		for i=1,4 do
+			hero[i]:setLinearVelocity(0,0)
+			hero[i].isVisible=false
+			
+		end
 	end
  	   	 
  	return true
@@ -285,6 +298,8 @@ end
 --]]
 
 -- add event to arrows and button
+
+createHero()
 arrowLeft:addEventListener("touch", movePg)
 arrowRight:addEventListener("touch", movePg)
 arrowDown:addEventListener("touch", movePg)
@@ -296,4 +311,3 @@ arrowUp:addEventListener("touch", movePg)
 --arrowUp:addEventListener("touch", moveMap)
 --fromVeeko says: ho provato a scommentare il movecamera ma tanto non funge
 --Runtime:addEventListener("enterFrame",moveCamera)
-
