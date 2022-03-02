@@ -245,7 +245,7 @@
 1021,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1021,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="4" name="piattaformeAutodistruggenti" visible="0">
+ <objectgroup id="4" name="piattaformeAutodistruggenti">
   <object id="6" type="autodistruggente" gid="1025" x="186" y="3127" width="44" height="9"/>
   <object id="7" type="autodistruggente" gid="1025" x="250.25" y="3078.75" width="44" height="9"/>
   <object id="8" type="autodistruggente" gid="1025" x="314" y="3031" width="44" height="9"/>
