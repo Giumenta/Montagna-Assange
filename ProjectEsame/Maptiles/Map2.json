@@ -1344,6 +1344,11 @@
                  "name":"idle",
                  "properties":[
                         {
+                         "name":"bounce",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
                          "name":"isVisible",
                          "type":"bool",
                          "value":true

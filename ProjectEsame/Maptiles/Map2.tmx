@@ -1835,6 +1835,7 @@
   </object>
   <object id="108" name="idle" type="hero" gid="664" x="152.406" y="65.9173" width="16" height="16">
    <properties>
+    <property name="bounce" type="int" value="0"/>
     <property name="isVisible" type="bool" value="true"/>
    </properties>
   </object>

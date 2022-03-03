@@ -57,7 +57,7 @@ arrowDown.name = "down"
 local hero = map:listTypes("hero")
 local idle=map:findObject("idle")
 function createHero()
-	physics.addBody(idle,"dynamic")
+	physics.addBody(idle,"dynamic",{bounce=0})
 	idle.isFixedRotation=true
 	local i
 	for i=2,5 do 
@@ -135,19 +135,30 @@ local function moveAnimation()
 		hero[i].y=idle.y
 	end 
 end
+local function chooseAnim(n)
+	local i
+	for i=2,5 do
+		if n~=i then
+			hero[i].isVisible=false
+		end
+	end
+	hero[n].isVisible=true
+end
 
 local function movePg(event)
 	local arrow=event.target
 	
-	if event.phase == "began" then
+--[[]]	if event.phase == "began" then
         if arrow.name == "left" then
-			hero[5].isVisible=true --rende visibile sprite left
+			--hero[5].isVisible=true --rende visibile sprite left
+			chooseAnim(5)
 			idle:setLinearVelocity(-100, 0)
 			moveAnimation()
 			--hero:play()
 
 		elseif arrow.name == "right" then
-        	hero[4].isVisible=true
+        	--hero[4].isVisible=true
+			chooseAnim(4)
 			idle:setLinearVelocity(100, 0)
 			moveAnimation()
 			
@@ -155,7 +166,8 @@ local function movePg(event)
 			--hero:play()
 
         elseif arrow.name == "up" then
-        	hero[2].isVisible=true
+        	--hero[2].isVisible=true
+			chooseAnim(2)
 			idle:setLinearVelocity(0,-100)
 			moveAnimation()
 			
@@ -163,7 +175,8 @@ local function movePg(event)
 			--hero:play()
 
         elseif arrow.name == "down" then
-        	hero[3].isVisible=true
+        	--hero[3].isVisible=true
+			chooseAnim(3)
 			idle:setLinearVelocity(0, 100)
 			moveAnimation()
 			
@@ -173,7 +186,8 @@ local function movePg(event)
 	   end
     elseif event.phase == "moved" then
 		if arrow.name == "left" then
-			hero[5].isVisible=true --rende visibile sprite left
+			--hero[5].isVisible=true --rende visibile sprite left
+			chooseAnim(5)
 			idle:setLinearVelocity(-100, 0)
 			moveAnimation()
 			--hero:pause()
@@ -183,7 +197,8 @@ local function movePg(event)
 			print(hero.y)
 	    	 
 		elseif arrow.name == "right" then
-        	hero[4].isVisible=true
+        	--hero[4].isVisible=true
+			chooseAnim(4)
 			idle:setLinearVelocity(100, 0)
 			moveAnimation()
 			--hero:pause()
@@ -191,7 +206,8 @@ local function movePg(event)
 			--hero:play()
             
         elseif arrow.name == "up" then
-        	hero[2].isVisible=true
+        	--hero[2].isVisible=true
+			chooseAnim(2)
 			idle:setLinearVelocity(0,-100)
 			moveAnimation()
 			--hero:pause()
@@ -199,7 +215,8 @@ local function movePg(event)
 			--hero:play()
             
         elseif arrow.name == "down" then
-        	hero[3].isVisible=true
+        	--hero[3].isVisible=true
+			chooseAnim(3)
 			idle:setLinearVelocity(0, 100)
 			moveAnimation()
 			--hero:pause()
