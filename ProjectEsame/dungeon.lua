@@ -18,8 +18,8 @@ local camera= display.newGroup()
 local control = display.newGroup()
 
 map:scale(3.5,3.5)
-map.x =-150
-map.y=-100
+--map.x =-150
+--map.y=-100
 camera:insert(map)
 print(camera.x)
 print(camera.y)
@@ -55,16 +55,23 @@ arrowDown.name = "down"
 --button.y = display.contentCenterY
 --button.name = "button"
 local hero = map:listTypes("hero")
+local idle=map:findObject("idle")
 function createHero()
-	
+	physics.addBody(idle,"dynamic")
+	idle.isFixedRotation=true
 	local i
-	for i=1,4 do
-		physics.addBody(hero[i], "dynamic")
-		hero[i].isFixedRotation=true
-		hero[i].isVisible=false
+	for i=2,5 do 
+		--lettura lista type hero da destra a sinistra quindi primo elemento è numero
 		
+		hero[i].isVisible=false
+		hero[i].x=idle.x
+		hero[i].y=idle.y
 	end
 end
+
+
+
+
 --hero:toFront()
 --local hero=heroLib.new()
 
@@ -121,41 +128,54 @@ local heroSheet = graphics.newImageSheet("risorseGrafiche/PG/sprite-sheet.png",o
 --heroLib.init(hero,640,360,false)
 --heroLib.activate(hero)
 
-
+local function moveAnimation()
+	for i=2,5 do
+		idle.isVisible=false
+		hero[i].x=idle.x
+		hero[i].y=idle.y
+	end 
+end
 
 local function movePg(event)
 	local arrow=event.target
 	
 	if event.phase == "began" then
         if arrow.name == "left" then
-			hero[2].isVisible=true
-			hero[2]:setLinearVelocity(-100, 0)
-			
+			hero[5].isVisible=true --rende visibile sprite left
+			idle:setLinearVelocity(-100, 0)
+			moveAnimation()
 			--hero:play()
 
 		elseif arrow.name == "right" then
-        	hero[1].isVisible=true
-			hero[1]:setLinearVelocity(100,0)
+        	hero[4].isVisible=true
+			idle:setLinearVelocity(100, 0)
+			moveAnimation()
+			
             --hero:setSequence("Right")
 			--hero:play()
 
         elseif arrow.name == "up" then
-        	hero[3].isVisible=true
-			hero[3]:setLinearVelocity(0,-100)
+        	hero[2].isVisible=true
+			idle:setLinearVelocity(0,-100)
+			moveAnimation()
+			
             --hero:setSequence("Back")
 			--hero:play()
 
         elseif arrow.name == "down" then
-        	hero[4].isVisible=true
-			hero[4]:setLinearVelocity(0,100)
+        	hero[3].isVisible=true
+			idle:setLinearVelocity(0, 100)
+			moveAnimation()
+			
 			--hero:setSequence("Front")
 			--hero:play()
 
 	   end
     elseif event.phase == "moved" then
 		if arrow.name == "left" then
-			hero[2].isVisible=true
-			hero[2]:setLinearVelocity(-100, 0)
+			hero[5].isVisible=true --rende visibile sprite left
+			idle:setLinearVelocity(-100, 0)
+			moveAnimation()
 			--hero:pause()
 			--hero:setSequence("Left")
 			--hero:play()
@@ -163,22 +183,25 @@ local function movePg(event)
 			print(hero.y)
 	    	 
 		elseif arrow.name == "right" then
-        	hero[1].isVisible=true
-			hero[1]:setLinearVelocity(100,0)
+        	hero[4].isVisible=true
+			idle:setLinearVelocity(100, 0)
+			moveAnimation()
 			--hero:pause()
             --hero:setSequence("Right")
 			--hero:play()
             
         elseif arrow.name == "up" then
-        	hero[3].isVisible=true
-			hero[3]:setLinearVelocity(0,-100)
+        	hero[2].isVisible=true
+			idle:setLinearVelocity(0,-100)
+			moveAnimation()
 			--hero:pause()
             --hero:setSequence("Back")
 			--hero:play()
             
         elseif arrow.name == "down" then
-        	hero[4].isVisible=true
-			hero[4]:setLinearVelocity(0,100)
+        	hero[3].isVisible=true
+			idle:setLinearVelocity(0, 100)
+			moveAnimation()
 			--hero:pause()
 			--hero:setSequence("Front")
 			--hero:play() 
@@ -186,11 +209,14 @@ local function movePg(event)
 	
 	elseif event.phase == "ended" then
 		local i
-		for i=1,4 do
-			hero[i]:setLinearVelocity(0,0)
+		for i=2,5 do
 			hero[i].isVisible=false
-			
+			--hero[i].x=idle.x
+			--hero[i].y=idle.y
 		end
+			idle:setLinearVelocity(0,0)
+			idle.isVisible=true
+		
 	end
  	   	 
  	return true

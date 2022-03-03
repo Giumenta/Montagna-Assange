@@ -1280,8 +1280,8 @@
                  "type":"hero",
                  "visible":true,
                  "width":16,
-                 "x":122.988,
-                 "y":85.7407
+                 "x":73.7356042173561,
+                 "y":16.4444444444444
                 }, 
                 {
                  "gid":666,
@@ -1298,8 +1298,8 @@
                  "type":"hero",
                  "visible":true,
                  "width":16,
-                 "x":110.025,
-                 "y":118.765
+                 "x":46.566098945661,
+                 "y":16.0389294403893
                 }, 
                 {
                  "gid":669,
@@ -1316,8 +1316,8 @@
                  "type":"hero",
                  "visible":true,
                  "width":16,
-                 "x":155.704,
-                 "y":120.617
+                 "x":21.8296836982968,
+                 "y":16.0389294403893
                 }, 
                 {
                  "gid":672,
@@ -1334,8 +1334,26 @@
                  "type":"hero",
                  "visible":true,
                  "width":16,
-                 "x":162.802,
-                 "y":88.5185
+                 "x":-0.0681265206812611,
+                 "y":16.8499594484996
+                }, 
+                {
+                 "gid":664,
+                 "height":16,
+                 "id":108,
+                 "name":"idle",
+                 "properties":[
+                        {
+                         "name":"isVisible",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"hero",
+                 "visible":true,
+                 "width":16,
+                 "x":152.405515004055,
+                 "y":65.9172749391728
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1402,7 +1420,7 @@
          "y":0
         }],
  "nextlayerid":12,
- "nextobjectid":108,
+ "nextobjectid":109,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.7.2",
