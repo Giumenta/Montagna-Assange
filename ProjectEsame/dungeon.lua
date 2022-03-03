@@ -140,19 +140,22 @@ local function movePg(event)
 			--hero:play()
 
         elseif arrow.name == "up" then
-        	hero:setLinearVelocity(0,-100)
+        	hero[3].isVisible=true
+			hero[3]:setLinearVelocity(0,-100)
             --hero:setSequence("Back")
 			--hero:play()
 
         elseif arrow.name == "down" then
-        	hero:setLinearVelocity(0,100)
+        	hero[4].isVisible=true
+			hero[4]:setLinearVelocity(0,100)
 			--hero:setSequence("Front")
 			--hero:play()
 
 	   end
     elseif event.phase == "moved" then
 		if arrow.name == "left" then
-			--hero:setLinearVelocity(-100, 0)
+			hero[2].isVisible=true
+			hero[2]:setLinearVelocity(-100, 0)
 			--hero:pause()
 			--hero:setSequence("Left")
 			--hero:play()
@@ -160,19 +163,22 @@ local function movePg(event)
 			print(hero.y)
 	    	 
 		elseif arrow.name == "right" then
-        	hero:setLinearVelocity(100,0)
+        	hero[1].isVisible=true
+			hero[1]:setLinearVelocity(100,0)
 			--hero:pause()
             --hero:setSequence("Right")
 			--hero:play()
             
         elseif arrow.name == "up" then
-        	hero:setLinearVelocity(0,-100)
+        	hero[3].isVisible=true
+			hero[3]:setLinearVelocity(0,-100)
 			--hero:pause()
             --hero:setSequence("Back")
 			--hero:play()
             
         elseif arrow.name == "down" then
-        	hero:setLinearVelocity(0,100)
+        	hero[4].isVisible=true
+			hero[4]:setLinearVelocity(0,100)
 			--hero:pause()
 			--hero:setSequence("Front")
 			--hero:play() 
