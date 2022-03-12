@@ -18,16 +18,17 @@ local camera= display.newGroup()
 local control = display.newGroup()
 
 map:scale(3.5,3.5)
---map.x =-150
---map.y=-100
+
 camera:insert(map)
+map.x =200
+map.y=100
 print(camera.x)
 print(camera.y)
 
 local mapBorderLeft = 0
-local mapBorderRight = 1280
+local mapBorderRight = 4480
 local mapBorderTop = 0
-local mapBorderBottom = 720
+local mapBorderBottom = 2520
 
 -- create obj arrows and button for interaction
 local arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
@@ -152,14 +153,14 @@ local function movePg(event)
         if arrow.name == "left" then
 			--hero[5].isVisible=true --rende visibile sprite left
 			chooseAnim(5)
-			idle:setLinearVelocity(-100, 0)
+			idle:setLinearVelocity(-50, 0)
 			moveAnimation()
 			--hero:play()
 
 		elseif arrow.name == "right" then
         	--hero[4].isVisible=true
 			chooseAnim(4)
-			idle:setLinearVelocity(100, 0)
+			idle:setLinearVelocity(50, 0)
 			moveAnimation()
 			
             --hero:setSequence("Right")
@@ -168,7 +169,7 @@ local function movePg(event)
         elseif arrow.name == "up" then
         	--hero[2].isVisible=true
 			chooseAnim(2)
-			idle:setLinearVelocity(0,-100)
+			idle:setLinearVelocity(0,-50)
 			moveAnimation()
 			
             --hero:setSequence("Back")
@@ -177,7 +178,7 @@ local function movePg(event)
         elseif arrow.name == "down" then
         	--hero[3].isVisible=true
 			chooseAnim(3)
-			idle:setLinearVelocity(0, 100)
+			idle:setLinearVelocity(0, 50)
 			moveAnimation()
 			
 			--hero:setSequence("Front")
@@ -188,7 +189,7 @@ local function movePg(event)
 		if arrow.name == "left" then
 			--hero[5].isVisible=true --rende visibile sprite left
 			chooseAnim(5)
-			idle:setLinearVelocity(-100, 0)
+			idle:setLinearVelocity(-50, 0)
 			moveAnimation()
 			--hero:pause()
 			--hero:setSequence("Left")
@@ -199,7 +200,7 @@ local function movePg(event)
 		elseif arrow.name == "right" then
         	--hero[4].isVisible=true
 			chooseAnim(4)
-			idle:setLinearVelocity(100, 0)
+			idle:setLinearVelocity(50, 0)
 			moveAnimation()
 			--hero:pause()
             --hero:setSequence("Right")
@@ -208,7 +209,7 @@ local function movePg(event)
         elseif arrow.name == "up" then
         	--hero[2].isVisible=true
 			chooseAnim(2)
-			idle:setLinearVelocity(0,-100)
+			idle:setLinearVelocity(0,-50)
 			moveAnimation()
 			--hero:pause()
             --hero:setSequence("Back")
@@ -217,7 +218,7 @@ local function movePg(event)
         elseif arrow.name == "down" then
         	--hero[3].isVisible=true
 			chooseAnim(3)
-			idle:setLinearVelocity(0, 100)
+			idle:setLinearVelocity(0, 50)
 			moveAnimation()
 			--hero:pause()
 			--hero:setSequence("Front")
@@ -242,39 +243,39 @@ end
 local function moveCamera(event)
 
 	
-	local offsetX = 70
-	local offsetY = 70
+	local offsetX = 100
+	local offsetY = 100
 	
 	local displayLeft = -camera.x
 	local displayTop = -camera.y
 	
-	local nonScrollingWidth =  display.contentWidth- 140
-	local nonScrollingHeight = display.contentHeight- 140
+	local nonScrollingWidth =  display.contentWidth- 100
+	local nonScrollingHeight = display.contentHeight- 100
 	
 	
-	if hero.x >= mapBorderLeft+offsetX and hero.x <= mapBorderRight - offsetX then
+	if idle.x >= mapBorderLeft+offsetX and idle.x <= mapBorderRight - offsetX then
 		  
-		  if hero.x>displayLeft+nonScrollingWidth then
-	        	    camera.x = -hero.x + nonScrollingWidth
-	      elseif hero.x < displayLeft+offsetX then
-	            	camera.x = -hero.x + offsetX	
+		  if idle.x>displayLeft+nonScrollingWidth then
+	        	    camera.x = -idle.x + nonScrollingWidth
+	      elseif idle.x < displayLeft+offsetX then
+	            	camera.x = -idle.x + offsetX	
 	      end
 	end
     
- 	if hero.y >= mapBorderTop+offsetY 
- 	   and hero.y <= mapBorderBottom - offsetY then
+ 	if idle.y >= mapBorderTop+offsetY and idle.y <= mapBorderBottom - offsetY then
 	    
-	    if hero.y>displayTop+nonScrollingHeight then
-		    camera.y = -hero.y + nonScrollingHeight
-		elseif hero.y < displayTop+offsetY then
-		  camera.y = -hero.y + offsetY	
+	    if idle.y>displayTop+nonScrollingHeight then
+		    camera.y = -idle.y + nonScrollingHeight
+		elseif idle.y < displayTop+offsetY then
+		  camera.y = -idle.y + offsetY	
 	    end	 
 	end	 
 	
-	camera.x = hero.x
-	camera.y = hero.y	
+	camera.x = -idle.x
+	camera.y = -idle.y	
 	return true	
 end
+
 --[[
 local function moveMap(event)
 	local arrow=event.target
@@ -359,4 +360,12 @@ arrowUp:addEventListener("touch", movePg)
 --arrowDown:addEventListener("touch", moveMap)
 --arrowUp:addEventListener("touch", moveMap)
 --fromVeeko says: ho provato a scommentare il movecamera ma tanto non funge
---Runtime:addEventListener("enterFrame",moveCamera)
+Runtime:addEventListener("enterFrame",moveCamera)
+
+
+
+--[[
+SE DIMINUISCO VELOCITà PG DIMINUISCE ANCHE LA VELOCITà DEL MOVIMENTO DELLA MAPPA 
+MENTRE SE TOLGO LA SCALE *3.5 ALLA MAPPA PG E MAPPA SI SPOSTANO ALLA STESSA VELOCITà 
+PERCHè???????
+]]--
