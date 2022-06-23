@@ -5,6 +5,8 @@ physics.setDrawMode("hybrid")
 
 --creo giusto un gruppo
 local control = display.newGroup()
+local camera= display.newGroup()
+
 --preparazione frecce
 local arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
 arrowLeft.x = 100
@@ -31,28 +33,28 @@ local opt = { width = 32, height = 32, numFrames = 12}
 local heroSheet = graphics.newImageSheet("risorseGrafiche/PG/sprite-sheet.png", opt); 
 local heroSeqs = {
 	{
-		name = "Front",
+		name = "front",
 		frames={1,2,3},
 		time = 1000,
 		loopCount = 0,
 		loopDirection ="forward"
    	},
    	{
-		name = "Left",
+		name = "left",
 		frames={4,5,6},
 		time = 1000,
 		loopCount = 0,
 		loopDirection ="forward"
    	},
 	{
-		name = "Right",
+		name = "right",
 		frames={7,8,9},
 		time = 1000,
 		loopCount = 0,
 		loopDirection ="forward"
 	},
 	{
-		name = "Back",
+		name = "back",
 		frames={10,11,12},
 		time = 1000,
 		loopCount = 0,
@@ -67,32 +69,41 @@ hero:scale(2,2)
 hero.x = display.contentCenterX
 hero.y = display.contentCenterY
 
-local movePg(event)
-
+local function movePg(event)
 	local arrow = event.target
+	local ciao = 'ciao'
 
 	if event.phase == "began" then
 		if arrow.name == "up" then
-			hero:setLinearVelocity(-50, 0)
+			hero:setSequence("back")
+			hero:play()
+			hero:setLinearVelocity(0, -150)			
 		elseif arrow.name == "left" then
-			hero:setLinearVelocity(0, -50)
-		elseif arrow.name == "right" then 
-			hero:setLinearVelocity(0, 50)
+			hero:setSequence("left")
+			hero:play()
+			hero:setLinearVelocity(-150, 0)
+		elseif arrow.name == "right" then
+			hero:setSequence("right") 
+			hero:play()
+			hero:setLinearVelocity(150, 0)
 		else --arrow.name == down
-			hero:setLinearVelocity(50, 0)
+			hero:setSequence("front")
+			hero:play()
+			hero:setLinearVelocity(0, 150)
 		end
 	elseif event.phase == "moved" then
 		if arrow.name == "up" then
-			hero:setLinearVelocity(-50, 0)
+			hero:setLinearVelocity(0, -150)
 		elseif arrow.name == "left" then
-			hero:setLinearVelocity(0, -50)
+			hero:setLinearVelocity(-150, 0)
 		elseif arrow.name == "right" then 
-			hero:setLinearVelocity(0, 50)
+			hero:setLinearVelocity(150, 0)
 		else --arrow.name == down
-			hero:setLinearVelocity(50, 0)
+			hero:setLinearVelocity(0, 150)
 		end
 	elseif event.phase == "ended" then
 		hero:setLinearVelocity(0,0)
+		hero:pause()
 	end
 
 	return true
