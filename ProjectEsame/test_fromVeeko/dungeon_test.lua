@@ -3,9 +3,32 @@ physics.start()
 physics.setGravity(0,0) --almeno possiamo lavorare in 'verticale' nel dungeon 
 physics.setDrawMode("hybrid")
 
+--robe varie della mappa
+local tiled = require "com.ponywolf.ponytiled"
+local json = require ("json")
+local mapData = json.decodeFile(system.pathForFile("Maptiles/Map2.json",system.ResourceDirectory))
+local map = tiled.new(mapData, "Maptiles")
+
+local dragable = require "com.ponywolf.plugins.dragable"
+map = dragable.new(map)
+--map:scale(3.5,3.5) <-sballa tutto il goddamn di fisica dei muri
+
+--questo è temp, ma non ho cassi ora di andare a modificare la mappa
+-- quindi faccio hide di tutti i babici presenti sulla mappa
+local toHide = map:listTypes("hero")
+for i=1,5 do
+	toHide[i].isVisible = false
+end
+
 --creo giusto un gruppo
 local control = display.newGroup()
 local camera= display.newGroup()
+
+--sistemo robe per il POV
+camera:insert(map)
+camera.x = 200
+camera.y = 300
+camera:scale(3,3)
 
 --preparazione frecce
 local arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
@@ -63,7 +86,11 @@ local heroSeqs = {
 }
 
 local hero = display.newSprite(heroSheet,heroSeqs)
-local heroShape={-6,0,6,0,-6,16,6,16}
+hero:scale(0.2, 0.2)
+hero.x = 500
+hero.y = 300
+
+local heroShape= {-2, 0, 2, 0, -2, 5, 2, 5}
 physics.addBody(hero, "dynamic", heroShape)
 hero:scale(2,2)
 hero.x = display.contentCenterX
