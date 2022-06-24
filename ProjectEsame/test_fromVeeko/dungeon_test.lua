@@ -26,8 +26,8 @@ local camera= display.newGroup()
 
 --sistemo robe per il POV
 camera:insert(map)
-camera.x = 0
-camera.y = 0
+camera.x = 1000
+camera.y = 500
 -- camera:scale(1.2, 1.2)
 
 --preparazione frecce
@@ -94,6 +94,7 @@ hero.y = 5550
 
 local heroShape= {-2, 0, 2, 0, -2, 5, 2, 5}
 physics.addBody(hero, "dynamic", heroShape)
+hero.isFixedRotation = true
 hero:scale(2,2)
 hero.x = display.contentCenterX
 hero.y = display.contentCenterY
