@@ -26,9 +26,9 @@ local camera= display.newGroup()
 
 --sistemo robe per il POV
 camera:insert(map)
-camera.x = 200
-camera.y = 300
-camera:scale(3,3)
+camera.x = 0
+camera.y = 0
+-- camera:scale(1.2, 1.2)
 
 --preparazione frecce
 local arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
@@ -50,6 +50,8 @@ local arrowDown = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTe
 arrowDown.x = 180
 arrowDown.y = display.contentHeight-100
 arrowDown.name = "down"
+
+control:toFront()
 
 -- preparo per la creazione dello sheet dell' eroe
 local opt = { width = 32, height = 32, numFrames = 12}
@@ -87,8 +89,8 @@ local heroSeqs = {
 
 local hero = display.newSprite(heroSheet,heroSeqs)
 hero:scale(0.2, 0.2)
-hero.x = 500
-hero.y = 300
+hero.x = 5550
+hero.y = 5550
 
 local heroShape= {-2, 0, 2, 0, -2, 5, 2, 5}
 physics.addBody(hero, "dynamic", heroShape)
