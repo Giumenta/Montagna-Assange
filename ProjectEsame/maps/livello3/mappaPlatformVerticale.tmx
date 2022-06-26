@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="40" height="214" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="10">
+<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="40" height="214" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="20">
  <editorsettings>
   <export target="mappaPlatformVerticale.json" format="json"/>
  </editorsettings>
@@ -27,6 +27,43 @@
    <image width="44" height="9" source="../../risorseGrafiche/risorseTmp_perTest/ipotesiPlatform/ip0/obj/oggettoPiattaformaEsplosa.png"/>
   </tile>
  </tileset>
+ <objectgroup id="6" name="piattStatiche">
+  <properties>
+   <property name="bodyType" value="static"/>
+  </properties>
+  <object id="11" x="296" y="3394"/>
+  <object id="13" type="piattStatica" x="2.24417" y="3377.47" width="637.343" height="47.1275">
+   <properties>
+    <property name="bodyType " value="static"/>
+   </properties>
+  </object>
+  <object id="14" type="piattStatica" x="525.135" y="3278.73" width="118.941" height="22.4417">
+   <properties>
+    <property name="bodyType" value="static"/>
+   </properties>
+  </object>
+  <object id="15" x="345.601" y="3285.46" width="44.8833" height="94.2549">
+   <properties>
+    <property name="bodyType" value="static"/>
+   </properties>
+  </object>
+  <object id="16" x="0" y="3278.73" width="228.905" height="26.93">
+   <properties>
+    <property name="bodyType" value="static"/>
+   </properties>
+  </object>
+  <object id="17" x="-2.24417" y="3366.25" width="644.075" height="58.3483">
+   <properties>
+    <property name="bodyType" value="static"/>
+   </properties>
+  </object>
+  <object id="18" x="388.241" y="3395.42"/>
+  <object id="19" x="4.48833" y="132.406" width="626.122" height="190.754">
+   <properties>
+    <property name="bodyType" value="static"/>
+   </properties>
+  </object>
+ </objectgroup>
  <layer id="3" name="sfondo" width="40" height="214">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

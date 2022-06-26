@@ -1,18 +1,27 @@
+local physics = require("physics")
+physics.start()
+physics.setGravity(0, 9)
+physics.setDrawMode("hybrid")
+-- physics.pause()
+
+--robe varie della mappa
 local tiled = require "com.ponywolf.ponytiled"
 local json = require ("json")
 local mapData = json.decodeFile(system.pathForFile("maps/livello3/mappaPlatformVerticale.json",system.ResourceDirectory))
 local map = tiled.new(mapData, "maps/livello3")
 
+local dragable = require "com.ponywolf.plugins.dragable"
+map = dragable.new(map)
 
 --provo a caricare
-map:scale(2,2)
+--map:scale(2,2)
 --dimensioni display (utili in vari momenti)
-dispWidth = display.contentWidth
-dispHeight = display.contentHeight
+local dispWidth = display.contentWidth
+local dispHeight = display.contentHeight
 --aggancio il fondo mappa
 --428*16 = 6848
-local mapHeight = 6848
-map.y = -6848 + dispHeight
+local mapHeight = 6848/2
+map.y =  -mapHeight+dispHeight
 
 --creo i gruppi
 local camera = display.newGroup() --gruppo dove metto dentro tutta la roba che debe essere sempre visibile
@@ -21,7 +30,7 @@ local control = display.newGroup() --gruppo per le freccette
 local opt = { width = 32, height = 32, numFrames = 12}
 local heroSheet = graphics.newImageSheet("risorseGrafiche/PG/sprite-sheet.png",opt)
 
-   local heroSeqs ={
+local heroSeqs ={
 	{
 		name = "Front",
 		frames={1,2,3},
@@ -51,10 +60,18 @@ local heroSheet = graphics.newImageSheet("risorseGrafiche/PG/sprite-sheet.png",o
 		loopDirection ="forward"
 	}
 }
+
 local hero = display.newSprite(heroSheet,heroSeqs)
 local heroShape={-6,0,6,0,-6,16,6,16}
 physics.addBody(hero, "dynamic", heroShape)
-hero:scale(2,2)
+-- hero:scale(2,2)
 hero.isFixedRotation=true
-hero.x = (display.dispWidth) / 2
-hero.y = -mapHeight + 200
+hero.x = display.contentCenterX - 50
+hero.y = display.contentCenterY
+
+if hero.y < display.contentHeight*2 then
+	hero.y = 0
+end
+
+	print(hero.x)
+	print(hero.y)

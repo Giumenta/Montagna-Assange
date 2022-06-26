@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="12" nextobjectid="109">
+<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="12" nextobjectid="110">
  <editorsettings>
   <export target="Map2.json" format="json"/>
  </editorsettings>
@@ -1746,6 +1746,7 @@
   <object id="81" name="ladder" x="1168.71" y="100.276" width="14.0548" height="7.02741">
    <ellipse/>
   </object>
+  <object id="109" x="203.5" y="40.5"/>
  </objectgroup>
  <layer id="3" name="Floor" width="80" height="45">
   <data encoding="csv">
@@ -1811,7 +1812,7 @@
   <object id="8" gid="467" x="1016.4" y="430.271" width="16" height="16"/>
   <object id="9" gid="467" x="1168.1" y="71.3406" width="16" height="16"/>
  </objectgroup>
- <objectgroup id="8" name="pg">
+ <objectgroup id="8" name="pg" visible="0">
   <object id="102" name="front" type="hero" gid="663" x="73.7356" y="16.4444" width="16" height="16">
    <properties>
     <property name="front" type="bool" value="false"/>

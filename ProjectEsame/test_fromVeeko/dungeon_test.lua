@@ -89,8 +89,8 @@ local heroSeqs = {
 
 local hero = display.newSprite(heroSheet,heroSeqs)
 hero:scale(0.2, 0.2)
-hero.x = 5550
-hero.y = 5550
+hero.x = 0
+hero.y = 0
 
 local heroShape= {-2, 0, 2, 0, -2, 5, 2, 5}
 physics.addBody(hero, "dynamic", heroShape)
