@@ -70,7 +70,7 @@ if ( event.keyName == "down" ) then
 			end
 		end
 		 
-		print('empty x: '..emptyX..', empty y: '..emptyY)
+		print('riga libera: '..emptyX..', colonna libera: '..emptyY)
 		end
 	
 end
