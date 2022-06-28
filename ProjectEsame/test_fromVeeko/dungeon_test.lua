@@ -11,7 +11,8 @@ local map = tiled.new(mapData, "Maptiles")
 
 local dragable = require "com.ponywolf.plugins.dragable"
 map = dragable.new(map)
---map:scale(3.5,3.5) <-sballa tutto il goddamn di fisica dei muri
+map.isZoomEnabled = true
+map:scale(3.5,3.5) --<-sballa tutto il goddamn di fisica dei muri
 
 --questo è temp, ma non ho cassi ora di andare a modificare la mappa
 -- quindi faccio hide di tutti i babici presenti sulla mappa
@@ -19,6 +20,11 @@ local toHide = map:listTypes("hero")
 for i=1,5 do
 	toHide[i].isVisible = false
 end
+
+--sistemiamo sta dannata fisica
+local walls = map:findLayer('Wall')
+for el in walls do
+	
 
 --creo giusto un gruppo
 local control = display.newGroup()
@@ -96,8 +102,8 @@ local heroShape= {-2, 0, 2, 0, -2, 5, 2, 5}
 physics.addBody(hero, "dynamic", heroShape)
 hero.isFixedRotation = true
 hero:scale(2,2)
-hero.x = display.contentCenterX
-hero.y = display.contentCenterY
+-- hero.x = display.contentCenterX
+-- hero.y = display.contentCenterY
 
 local function movePg(event)
 	local arrow = event.target
