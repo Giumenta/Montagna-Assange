@@ -26,7 +26,7 @@ local function creaGriglia()
     for colonna=1,GRID_HEIGHT do
         
         for riga=1,GRID_WIDTH do
-			if grid[colonna][riga] ~= GRID_WIDTH*GRID_HEIGHT then
+			if grid[colonna][riga] ~= GRID_WIDTH*GRID_HEIGHT then -- rimuovo 16° tassello
 		   
         local tassello = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassellogioco15_stondato.jpg",dimtassello, dimtassello)
         tassello.anchorX=0
@@ -35,7 +35,7 @@ local function creaGriglia()
         tassello.x=display.contentWidth/2-(larghezzaGriglia)/2 + (colonna-1)*dimtassello + colonna*spaziaturaTasselli
         
 		
-		
+		--disegno i numeri sui tasselli
 			local numeri = display.newText (
                ((riga - 1) * 4) + colonna,
 			   --grid[colonna][riga];
@@ -52,8 +52,28 @@ local function creaGriglia()
 		
     end
 end
+--creo una funzione per verificare la posizione di un tassello libero
+local function onKeyEvent (event)
+if ( event.keyName == "down" ) then
+	local emptyX
+	local emptyY
+		for colonna = 1, GRID_HEIGHT do
+			for riga = 1, GRID_WIDTH do
+				if grid[colonna][riga] == GRID_WIDTH * GRID_HEIGHT then
+                emptyX = riga
+                emptyY = colonna
+				end
+			end
+		end
+		 
+		print('empty x: '..emptyX..', empty y: '..emptyY)
+		end
+	return false
+end
 
 
+Runtime:addEventListener( "key", onKeyEvent )
+		
 creaGriglia()
 --legare i numeri ai tasselli
 --randomizzare i numeri sui tasselli
