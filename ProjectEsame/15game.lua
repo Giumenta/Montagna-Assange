@@ -23,9 +23,11 @@ local function creaGriglia()
 	
     --for riga=1, 4 do
         --for colonna=1,4 do
-		for riga=1,GRID_WIDTH do
+    for colonna=1,GRID_HEIGHT do
+        
+        for riga=1,GRID_WIDTH do
 		
-		for colonna=1,GRID_HEIGHT do
+		   
         local tassello = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassellogioco15_stondato.jpg",dimtassello, dimtassello)
         tassello.anchorX=0
         tassello.anchorY=0
@@ -35,12 +37,12 @@ local function creaGriglia()
 		
 		
 			local numeri = display.newText (
-               ((colonna - 1) * 4) + riga,
+               ((riga - 1) * 4) + colonna,
 			   --grid[colonna][riga];
                 (riga - 1) * dimtassello,
-                (colonna - 1) * dimtassello, native.systemFont, 55
+                (colonna - 1) * dimtassello, native.systemFont, 70
             )
-			--myText:setFillColor( 1, 0, 0 ) --dovrebbere essere giusto ma non va
+			--numeri:setFillColor( 1, 1, 1 ) --dovrebbere essere giusto ma non va
 		numeri.anchorX=0
         numeri.anchorY=0
 		numeri.y=display.contentHeight/2-(larghezzaGriglia)/2 + (riga-1)*dimtassello + riga*spaziaturaTasselli
