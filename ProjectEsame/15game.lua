@@ -18,7 +18,7 @@ local function creaGriglia()
     local riga=1
     local spaziaturaTasselli=(larghezzaGriglia-display.contentHeight*0.88)/5
 	
-
+-- disegno i tasselli
       --for riga=1, 4 do
         --for colonna=1,4 do
     for colonna=1,GRID_HEIGHT do
@@ -40,7 +40,7 @@ local function creaGriglia()
                 (riga - 1) * dimtassello,
                 (colonna - 1) * dimtassello, native.systemFont, 70
             )
-			--numeri:setFillColor( 1, 1, 1 ) --dovrebbere essere giusto ma non va
+			--numeri:setFillColor( 1, 0.5, .5 ) --dovrebbere essere giusto ma non va
 		numeri.anchorX=0
         numeri.anchorY=0
 		numeri.y=display.contentHeight/2-(larghezzaGriglia)/2 + (riga-1)*dimtassello + riga*spaziaturaTasselli
@@ -56,7 +56,7 @@ local function onKeyEvent (event)
 	local emptyY
 	--local message = "Key '" .. event.keyName .. "' was pressed " .. event.phase
    -- print( message )
-		if ( event.keyName == "down" ) then
+		--if ( event.keyName == "down" ) then
 
 			for colonna=1, GRID_HEIGHT do
         
@@ -67,14 +67,14 @@ local function onKeyEvent (event)
 					
 					end
 				end
-			end
-		  
+			--end
+		  end
 			print('riga libera: '..emptyX..', colonna libera: '..emptyY)--stampo sulla console la posizione del tassello libero
 		--sposto un tassello libero verso il basso se possibile
 		if grid[emptyY - 1] then
         grid[emptyY - 1][emptyX], grid[emptyY][emptyX] =
         grid[emptyY][emptyX], grid[emptyY - 1][emptyX]
-    end
+    
 		end
 
 	return false
