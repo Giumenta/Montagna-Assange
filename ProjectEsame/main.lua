@@ -7,8 +7,8 @@
 -- Your code here
 
 --//yooo
-require "15game"
--- require "test_fromVeeko.dungeon_test"
+-- require "15game"
+require "test_fromVeeko.dungeon_test"
 --require "platformVerticale"
 
 -- PARTE DI CODICE PER IL PLATFORM VERTICALE (3 LIVELLO)

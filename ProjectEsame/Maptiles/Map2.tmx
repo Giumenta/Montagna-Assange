@@ -1429,193 +1429,193 @@
   <properties>
    <property name="bodyType" value="static"/>
   </properties>
-  <object id="12" x="18.8511" y="33.3019" width="1.7001" height="130.908">
+  <object id="12" type="wall" x="18.8511" y="33.3019" width="1.7001" height="130.908">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="13" x="140.643" y="164.5" width="1.7001" height="106.449">
+  <object id="13" type="wall" x="140.643" y="164.5" width="1.7001" height="106.449">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="14" x="19.0784" y="164.5" width="122.297" height="10.7622">
+  <object id="14" type="wall" x="19.0784" y="164.5" width="122.297" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="15" x="178.554" y="164.5" width="138.44" height="10.7622">
+  <object id="15" type="wall" x="178.554" y="164.5" width="138.44" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
     <property name="isVisible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="16" x="315.655" y="37.8523" width="1.7001" height="126.554">
+  <object id="16" type="wall" x="315.655" y="37.8523" width="1.7001" height="126.554">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="17" x="176.388" y="164.5" width="1.7001" height="58.8504">
+  <object id="17" type="wall" x="176.388" y="164.5" width="1.7001" height="58.8504">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="18" x="143.064" y="260.889" width="127.689" height="10.7622">
+  <object id="18" type="wall" x="143.064" y="260.889" width="127.689" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="19" x="177.149" y="212.393" width="138.44" height="10.7622">
+  <object id="19" type="wall" x="177.149" y="212.393" width="138.44" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="20" x="212.377" y="293" width="59.0622" height="10.7622">
+  <object id="20" type="wall" x="212.377" y="293" width="59.0622" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="21" x="315.545" y="293" width="175.956" height="10.7622">
+  <object id="21" type="wall" x="315.545" y="293" width="175.956" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="22" x="491.686" y="389.22" width="163.832" height="10.7622">
+  <object id="22" type="wall" x="491.686" y="389.22" width="163.832" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="23" x="493.287" y="453.043" width="159.714" height="10.7622">
+  <object id="23" type="wall" x="493.287" y="453.043" width="159.714" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="24" x="130.711" y="453.272" width="81.7089" height="10.7622">
+  <object id="24" type="wall" x="130.711" y="453.272" width="81.7089" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="25" x="177.377" y="500.852" width="237.201" height="10.7622">
+  <object id="25" type="wall" x="177.377" y="500.852" width="237.201" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="26" x="36.2358" y="565" width="96.1204" height="10.7622">
+  <object id="26" type="wall" x="36.2358" y="565" width="96.1204" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="27" x="176.234" y="565" width="91.0878" height="10.7622">
+  <object id="27" type="wall" x="176.234" y="565" width="91.0878" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="28" x="32.5757" y="693.464" width="238.863" height="10.7622">
+  <object id="28" type="wall" x="32.5757" y="693.464" width="238.863" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="29" x="459.484" y="565.095" width="384.08" height="10.7622">
+  <object id="29" type="wall" x="459.484" y="565.095" width="384.08" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="30" x="384.344" y="692.856" width="463.059" height="10.7622">
+  <object id="30" type="wall" x="384.344" y="692.856" width="463.059" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="31" x="843.592" y="613.232" width="243.648" height="10.7622">
+  <object id="31" type="wall" x="843.592" y="613.232" width="243.648" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="32" x="844.032" y="661.264" width="307.68" height="10.7622">
+  <object id="32" type="wall" x="844.032" y="661.264" width="307.68" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="33" x="992.641" y="548.76" width="94.2764" height="10.7622">
+  <object id="33" type="wall" x="992.641" y="548.76" width="94.2764" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="34" x="1148.34" y="549.082" width="99.1118" height="10.7622">
+  <object id="34" type="wall" x="1148.34" y="549.082" width="99.1118" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="35" x="651.754" y="501.187" width="260.532" height="10.7622">
+  <object id="35" type="wall" x="651.754" y="501.187" width="260.532" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="36" x="655.394" y="133.586" width="112.301" height="10.7622">
+  <object id="36" type="wall" x="655.394" y="133.586" width="112.301" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="37" x="800.568" y="133.255" width="107.086" height="10.7622">
+  <object id="37" type="wall" x="800.568" y="133.255" width="107.086" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="38" x="688.481" y="101" width="78.221" height="10.7622">
+  <object id="38" type="wall" x="688.481" y="101" width="78.221" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="39" x="801.385" y="101" width="78.221" height="10.7622">
+  <object id="39" type="wall" x="801.385" y="101" width="78.221" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="40" x="692.452" y="21.0888" width="182.777" height="10.7622">
+  <object id="40" type="wall" x="692.452" y="21.0888" width="182.777" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="43" x="315.023" y="212.546" width="1.7001" height="91.2753">
+  <object id="43" type="wall" x="315.023" y="212.546" width="1.7001" height="91.2753">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="44" x="269.712" y="260.961" width="1.7001" height="42.8399">
+  <object id="44" type="wall" x="269.712" y="260.961" width="1.7001" height="42.8399">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="45" x="210.917" y="293.19" width="1.7001" height="170.833">
+  <object id="45" type="wall" x="210.917" y="293.19" width="1.7001" height="170.833">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="46" x="130.794" y="453.566" width="1.7001" height="122.172">
+  <object id="46" type="wall" x="130.794" y="453.566" width="1.7001" height="122.172">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="47" x="176.418" y="500.916" width="1.7001" height="74.9723">
+  <object id="47" type="wall" x="176.418" y="500.916" width="1.7001" height="74.9723">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="48" x="34.334" y="565.262" width="1.7001" height="136.915">
+  <object id="48" type="wall" x="34.334" y="565.262" width="1.7001" height="136.915">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="49" x="267.606" y="565.262" width="1.7001" height="136.915">
+  <object id="49" type="wall" x="267.606" y="565.262" width="1.7001" height="136.915">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="50" x="412.736" y="501.137" width="1.7001" height="74.349">
+  <object id="50" type="wall" x="412.736" y="501.137" width="1.7001" height="74.349">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="51" x="385.922" y="560.859" width="1.7001" height="136.915">
+  <object id="51" type="wall" x="385.922" y="560.859" width="1.7001" height="136.915">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
@@ -1625,117 +1625,117 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="55" x="459.682" y="501.354" width="35.7636" height="10.7622">
+  <object id="55" type="wall" x="459.682" y="501.354" width="35.7636" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="56" x="492.113" y="453.169" width="1.7001" height="57.965">
+  <object id="56" type="wall" x="492.113" y="453.169" width="1.7001" height="57.965">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="57" x="653.012" y="453.097" width="2.79082" height="54.8509">
+  <object id="57" type="wall" x="653.012" y="453.097" width="2.79082" height="54.8509">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="58" x="907.472" y="134.839" width="1.7001" height="372.947">
+  <object id="58" type="wall" x="907.472" y="134.839" width="1.7001" height="372.947">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="59" x="653.799" y="140.528" width="1.7001" height="255.594">
+  <object id="59" type="wall" x="653.799" y="140.528" width="1.7001" height="255.594">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="60" x="766.312" y="101.059" width="1.7001" height="43.3228">
+  <object id="60" type="wall" x="766.312" y="101.059" width="1.7001" height="43.3228">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="61" x="800.367" y="101.045" width="1.7001" height="42.9554">
+  <object id="61" type="wall" x="800.367" y="101.045" width="1.7001" height="42.9554">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="62" x="875.436" y="21.2248" width="1.7001" height="80.8321">
+  <object id="62" type="wall" x="875.436" y="21.2248" width="1.7001" height="80.8321">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="63" x="690.773" y="21.2248" width="1.7001" height="80.8321">
+  <object id="63" type="wall" x="690.773" y="21.2248" width="1.7001" height="80.8321">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="64" x="994.898" y="386.263" width="1.7001" height="164.03">
+  <object id="64" type="wall" x="994.898" y="386.263" width="1.7001" height="164.03">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="65" x="1243.66" y="385.203" width="1.7001" height="163.954">
+  <object id="65" type="wall" x="1243.66" y="385.203" width="1.7001" height="163.954">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="66" x="1147.4" y="549.155" width="1.7001" height="112.178">
+  <object id="66" type="wall" x="1147.4" y="549.155" width="1.7001" height="112.178">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="67" x="1085.57" y="548.862" width="1.7001" height="74.0888">
+  <object id="67" type="wall" x="1085.57" y="548.862" width="1.7001" height="74.0888">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="68" x="844.086" y="661.446" width="1.7001" height="31.7738">
+  <object id="68" type="wall" x="844.086" y="661.446" width="1.7001" height="31.7738">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="69" x="843.501" y="565.311" width="1.7001" height="57.3188">
+  <object id="69" type="wall" x="843.501" y="565.311" width="1.7001" height="57.3188">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="71" x="386.095" y="565.195" width="28.2658" height="10.7622">
+  <object id="71" type="wall" x="386.095" y="565.195" width="28.2658" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="72" x="491.764" y="293.482" width="1.7001" height="105.858">
+  <object id="72" type="wall" x="491.764" y="293.482" width="1.7001" height="105.858">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="73" x="997.161" y="385.516" width="247.547" height="14.9425">
+  <object id="73" type="wall" x="997.161" y="385.516" width="247.547" height="14.9425">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="74" x="1091.19" y="32.7788" width="168.335" height="15.9797">
+  <object id="74" type="wall" x="1091.19" y="32.7788" width="168.335" height="15.9797">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="75" x="1088.9" y="33.5983" width="3.27788" height="102.844">
+  <object id="75" type="wall" x="1088.9" y="33.5983" width="3.27788" height="102.844">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="76" x="1259.62" y="38.66" width="3.27788" height="102.844">
+  <object id="76" type="wall" x="1259.62" y="38.66" width="3.27788" height="102.844">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="77" x="1088.58" y="133.084" width="172.986" height="10.7622">
+  <object id="77" type="wall" x="1088.58" y="133.084" width="172.986" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="78" x="20.3392" y="36.779" width="295.999" height="10.7622">
+  <object id="78" type="wall" x="20.3392" y="36.779" width="295.999" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
@@ -1746,7 +1746,7 @@
   <object id="81" name="ladder" x="1168.71" y="100.276" width="14.0548" height="7.02741">
    <ellipse/>
   </object>
-  <object id="109" x="203.5" y="40.5"/>
+  <object id="109" type="wall" x="203.5" y="40.5"/>
  </objectgroup>
  <layer id="3" name="Floor" width="80" height="45">
   <data encoding="csv">
@@ -1812,7 +1812,7 @@
   <object id="8" gid="467" x="1016.4" y="430.271" width="16" height="16"/>
   <object id="9" gid="467" x="1168.1" y="71.3406" width="16" height="16"/>
  </objectgroup>
- <objectgroup id="8" name="pg" visible="0">
+ <objectgroup id="8" name="pg">
   <object id="102" name="front" type="hero" gid="663" x="73.7356" y="16.4444" width="16" height="16">
    <properties>
     <property name="front" type="bool" value="false"/>

@@ -12,7 +12,8 @@ local map = tiled.new(mapData, "Maptiles")
 local dragable = require "com.ponywolf.plugins.dragable"
 map = dragable.new(map)
 map.isZoomEnabled = true
-map:scale(3.5,3.5) --<-sballa tutto il goddamn di fisica dei muri
+local scaleFactor = 0.8
+map:scale(scaleFactor, scaleFactor) --<-sballa tutto il goddamn di fisica dei muri
 
 --questo è temp, ma non ho cassi ora di andare a modificare la mappa
 -- quindi faccio hide di tutti i babici presenti sulla mappa
@@ -22,9 +23,16 @@ for i=1,5 do
 end
 
 --sistemiamo sta dannata fisica
-local walls = map:findLayer('Wall')
-for el in walls do
-	
+local walls = map:listTypes('wall')
+for i=1, #walls do
+	--print(el)
+	local el = walls[i]
+	local h = el.height*scaleFactor
+	local w = el.width*scaleFactor
+	physics.removeBody(el)
+	local wallShape = {-w/2, -h/2, w/2, -h/2, w/2, h/2, -w/2, -h/2}
+	physics.addBody(el, wallShape)
+end
 
 --creo giusto un gruppo
 local control = display.newGroup()
@@ -32,8 +40,8 @@ local camera= display.newGroup()
 
 --sistemo robe per il POV
 camera:insert(map)
-camera.x = 1000
-camera.y = 500
+camera.x = 0
+camera.y = 0
 -- camera:scale(1.2, 1.2)
 
 --preparazione frecce
