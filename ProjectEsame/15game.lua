@@ -54,13 +54,16 @@ local function creaGriglia()
 end
 --creo una funzione per verificare la posizione di un tassello libero
 local function onKeyEvent (event)
-if ( event.keyName == "down" ) then
-	local emptyX
+    local emptyX
 	local emptyY
+	local message = "Key '" .. event.keyName .. "' was pressed " .. event.phase
+    print( message )
+if ( event.keyName == "down" ) then
+
 		for colonna=1,GRID_HEIGHT do
         
-        for riga=1,GRID_WIDTH do
-			if grid[colonna][riga] == GRID_WIDTH*GRID_HEIGHT  then
+			for riga=1,GRID_WIDTH do
+				if grid[colonna][riga] == GRID_WIDTH*GRID_HEIGHT  then
                 emptyX = riga
                 emptyY = colonna
 				end
@@ -69,7 +72,7 @@ if ( event.keyName == "down" ) then
 		 
 		print('empty x: '..emptyX..', empty y: '..emptyY)
 		end
-	return false
+	
 end
 
 
