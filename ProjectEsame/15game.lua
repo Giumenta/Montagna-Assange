@@ -1,5 +1,14 @@
-
-
+local colonna=1
+    local riga=1
+	local GRID_WIDTH = 4
+	local GRID_HEIGHT = 4
+	local grid = {} -- creo una griglia 4x4
+		for  colonna = 1, GRID_HEIGHT do
+			grid[colonna] = {}
+				for riga = 1, GRID_WIDTH do
+				grid[colonna][riga] = ((colonna - 1) * GRID_WIDTH) + riga
+				end
+    end
 local function creaGriglia() 
     local tasselli={}--dichiaro che tasselli è una tabella
     local larghezzaGriglia = display.contentHeight*0.9
@@ -9,19 +18,8 @@ local function creaGriglia()
     local riga=1
     local spaziaturaTasselli=(larghezzaGriglia-display.contentHeight*0.88)/5
 	
-	local GRID_WIDTH = 4
-	local GRID_HEIGHT = 4
-  
-  local grid = {} -- creo una griglia 4x4
-		for  colonna = 1, GRID_HEIGHT do
-			grid[colonna] = {}
-				for riga = 1, GRID_WIDTH do
-				grid[colonna][riga] = ((colonna - 1) * GRID_WIDTH) + riga
-				end
-    end
 
-	
-    --for riga=1, 4 do
+      --for riga=1, 4 do
         --for colonna=1,4 do
     for colonna=1,GRID_HEIGHT do
         
@@ -56,31 +54,38 @@ end
 local function onKeyEvent (event)
     local emptyX
 	local emptyY
-	local message = "Key '" .. event.keyName .. "' was pressed " .. event.phase
-    print( message )
-if ( event.keyName == "down" ) then
+	--local message = "Key '" .. event.keyName .. "' was pressed " .. event.phase
+   -- print( message )
+		if ( event.keyName == "down" ) then
 
-		for colonna=1,GRID_HEIGHT do
+			for colonna=1, GRID_HEIGHT do
         
-			for riga=1,GRID_WIDTH do
-				if grid[colonna][riga] == GRID_WIDTH*GRID_HEIGHT  then
-                emptyX = riga
-                emptyY = colonna
+				for riga=1, GRID_WIDTH do
+					if grid[colonna][riga] == GRID_WIDTH*GRID_HEIGHT  then
+					emptyX = riga
+					emptyY = colonna
+					
+					end
 				end
 			end
+		  
+			print('riga libera: '..emptyX..', colonna libera: '..emptyY)--stampo sulla console la posizione del tassello libero
+		--sposto un tassello libero verso il basso se possibile
+		if grid[emptyY - 1] then
+        grid[emptyY - 1][emptyX], grid[emptyY][emptyX] =
+        grid[emptyY][emptyX], grid[emptyY - 1][emptyX]
+    end
 		end
-		 
-		print('riga libera: '..emptyX..', colonna libera: '..emptyY)
-		end
-	
+
+	return false
 end
 
 
 Runtime:addEventListener( "key", onKeyEvent )
 		
 creaGriglia()
---legare i numeri ai tasselli
+
 --randomizzare i numeri sui tasselli
---eliminare il 16° tassello
+
 --rendere spostabili i tasselli
 --aggiungere sfondo
