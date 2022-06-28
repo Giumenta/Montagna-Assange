@@ -26,7 +26,7 @@ local function creaGriglia()
     for colonna=1,GRID_HEIGHT do
         
         for riga=1,GRID_WIDTH do
-		
+			if grid[colonna][riga] ~= GRID_WIDTH*GRID_HEIGHT then
 		   
         local tassello = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassellogioco15_stondato.jpg",dimtassello, dimtassello)
         tassello.anchorX=0
@@ -47,7 +47,7 @@ local function creaGriglia()
         numeri.anchorY=0
 		numeri.y=display.contentHeight/2-(larghezzaGriglia)/2 + (riga-1)*dimtassello + riga*spaziaturaTasselli
         numeri.x=display.contentWidth/2-(larghezzaGriglia)/2 + (colonna-1)*dimtassello + colonna*spaziaturaTasselli
-		
+			end
 		end
 		
     end
