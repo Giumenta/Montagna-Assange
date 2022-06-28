@@ -7,9 +7,9 @@
 -- Your code here
 
 --//yooo
---require "15game"
+require "15game"
 -- require "test_fromVeeko.dungeon_test"
-require "platformVerticale"
+--require "platformVerticale"
 
 -- PARTE DI CODICE PER IL PLATFORM VERTICALE (3 LIVELLO)
 -- fromVeeko says: non so di preciso come fare a testare la roba, quindi linko qua il file che sto iniziando a
