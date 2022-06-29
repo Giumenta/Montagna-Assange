@@ -8,16 +8,9 @@ local tiled = require "com.ponywolf.ponytiled"
 local json = require ("json")
 local mapData = json.decodeFile(system.pathForFile("maps/Dungeon/Map_Zoom.json",system.ResourceDirectory))
 local map = tiled.new(mapData, "maps/Dungeon")
-<<<<<<< HEAD
-
-local dragable = require "com.ponywolf.plugins.dragable"
-map = dragable.new(map)
-map.isZoomEnabled = true
-=======
 --local dragable = require "com.ponywolf.plugins.dragable"
 --map = dragable.new(map)
 --map.isZoomEnabled = true
->>>>>>> 1e18d2e1413f3362b8715cc730aef6c7e98ed4ca
 local scaleFactor = 1
 local mapWidth = 5120
 local mapHeight = 2880
