@@ -12,7 +12,7 @@ local map = tiled.new(mapData, "Maptiles")
 local dragable = require "com.ponywolf.plugins.dragable"
 map = dragable.new(map)
 map.isZoomEnabled = true
-local scaleFactor = 2
+local scaleFactor = 4
 map:scale(scaleFactor, scaleFactor) --<-sballa tutto il goddamn di fisica dei muri
 
 --questo è temp, ma non ho cassi ora di andare a modificare la mappa
@@ -102,7 +102,7 @@ local heroSeqs = {
 }
 
 local hero = display.newSprite(heroSheet,heroSeqs)
-hero:scale(0.2, 0.2)
+-- hero:scale(0.2, 0.2)
 hero.x = 0
 hero.y = 0
 
