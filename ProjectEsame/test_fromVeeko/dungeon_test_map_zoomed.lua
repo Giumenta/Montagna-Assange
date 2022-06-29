@@ -7,7 +7,7 @@ physics.setDrawMode("hybrid")
 local tiled = require "com.ponywolf.ponytiled"
 local json = require ("json")
 local mapData = json.decodeFile(system.pathForFile("maps/Dungeon/Map_Zoom.json",system.ResourceDirectory))
-local map = tiled.new(mapData, "maps/Dungeon")
+-- local map = tiled.new(mapData, "maps/Dungeon")
 --local dragable = require "com.ponywolf.plugins.dragable"
 --map = dragable.new(map)
 --map.isZoomEnabled = true
@@ -42,10 +42,16 @@ local control = display.newGroup()
 local camera= display.newGroup()
 
 --sistemo robe per il POV
-camera:insert(map)
-map.x = 0
-map.y = 0
+--camera:insert(map)
+-- map.x = 0
+-- map.y = 0
 -- camera:scale(1.2, 1.2)
+
+local wallsOutline = graphics.newOutline(2, "maps/Dungeon/Wall_Zoom.bmp")
+local walls = display.newImage("maps/Dungeon/Wall_Zoom.bmp", mapWidth, mapHeight)
+walls.x = 0
+walls.y = 0
+physics.addBody(walls, {outline = wallsOutline})
 
 --preparazione frecce
 local arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
