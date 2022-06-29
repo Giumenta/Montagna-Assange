@@ -7,9 +7,9 @@ physics.setDrawMode("hybrid")
 local tiled = require "com.ponywolf.ponytiled"
 local json = require ("json")
 local mapData = json.decodeFile(system.pathForFile("maps/Dungeon/Map_Zoom.json",system.ResourceDirectory))
--- local map = tiled.new(mapData, "maps/Dungeon")
---local dragable = require "com.ponywolf.plugins.dragable"
---map = dragable.new(map)
+local map = tiled.new(mapData, "maps/Dungeon")
+local dragable = require "com.ponywolf.plugins.dragable"
+map = dragable.new(map)
 --map.isZoomEnabled = true
 local scaleFactor = 1
 local mapWidth = 5120
@@ -49,9 +49,12 @@ local camera= display.newGroup()
 
 local wallsOutline = graphics.newOutline(2, "maps/Dungeon/wallZoom.png")
 local walls = display.newImage("maps/Dungeon/wallZoom.png", mapWidth, mapHeight)
-walls.x = 0
-walls.y = 0
-physics.addBody(walls, {outline = wallsOutline})
+walls.anchorX = 0
+walls.anchorY = 0
+walls.x=0
+walls.y=0
+
+physics.addBody(walls, "static", {outline = wallsOutline})
 
 --preparazione frecce
 local arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
