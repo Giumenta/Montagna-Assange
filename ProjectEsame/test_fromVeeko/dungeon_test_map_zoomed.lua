@@ -47,8 +47,8 @@ local camera= display.newGroup()
 -- map.y = 0
 -- camera:scale(1.2, 1.2)
 
-local wallsOutline = graphics.newOutline(2, "maps/Dungeon/Wall_Zoom.bmp")
-local walls = display.newImage("maps/Dungeon/Wall_Zoom.bmp", mapWidth, mapHeight)
+local wallsOutline = graphics.newOutline(2, "maps/Dungeon/wallZoom.png")
+local walls = display.newImage("maps/Dungeon/wallZoom.png", mapWidth, mapHeight)
 walls.x = 0
 walls.y = 0
 physics.addBody(walls, {outline = wallsOutline})
