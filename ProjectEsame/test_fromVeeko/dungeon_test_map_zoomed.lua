@@ -42,20 +42,32 @@ local control = display.newGroup()
 local camera= display.newGroup()
 
 --sistemo robe per il POV
---camera:insert(map)
+camera:insert(map)
 -- map.x = 0
 -- map.y = 0
 -- camera:scale(1.2, 1.2)
 
-local wallsOutline = graphics.newOutline(2, "maps/Dungeon/wallZoom.png")
-local walls = display.newImage("maps/Dungeon/wallZoom.png", mapWidth, mapHeight)
-walls.anchorX = 0
-walls.anchorY = 0
-walls.x=0
-walls.y=0
+--figura troppo complessa shiiiit
+-- PoC con una parte di mappa
+--[[
+local walls_q1_Outline = graphics.newOutline(1, "maps/Dungeon/wallZoom_q1.png")
+local walls_q1 = display.newImage("maps/Dungeon/wallZoom_q1.png", mapWidth, mapHeight)
+walls_q1.anchorX = 0
+walls_q1.anchorY = 0
+walls_q1.x=0
+walls_q1.y=0
+physics.addBody(walls_q1, "static", {outline = walls_q1_Outline})
+]]
 
-physics.addBody(walls, "static", {outline = wallsOutline})
+local walls = map:listTypes('wall')
 
+for i = 1, #walls do
+	local w = walls[i].width
+	local h = walls[i].height
+	physics.removeBody(walls[i])
+	local shape = {-w/2, h2, w/2, h2, w/2, -h/2, -w/2, -h/2}
+	physics.addBody(walls[i], 'static', {outline=shape})
+end
 --preparazione frecce
 local arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
 arrowLeft.x = 100
@@ -178,17 +190,14 @@ local function moveCamera(event)
 
 	if diffX > 0 then
 		camera.x = camera.x - diffX
-		physics.x = physics.x - diffX
 	else
 		camera.x = camera.x + diffX
-		physics.x = physics.x + diffX
 	end
 
 	if diffY > 0 then
 		camera.y = camera.y - diffY
-		physics.y = physics.y - diffY
 	else
-		physics.y = physics.y + diffY
+		camera.y = camera.y + diffY
 	end
 
 	preX = hero.x 
@@ -202,4 +211,4 @@ arrowLeft:addEventListener("touch", movePg)
 arrowRight:addEventListener("touch", movePg)
 arrowDown:addEventListener("touch", movePg)
 arrowUp:addEventListener("touch", movePg)
---Runtime:addEventListener("enterFrame", moveCamera)
+Runtime:addEventListener("enterFrame", moveCamera)
