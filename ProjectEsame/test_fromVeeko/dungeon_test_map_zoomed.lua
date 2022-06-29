@@ -7,11 +7,10 @@ physics.setDrawMode("hybrid")
 local tiled = require "com.ponywolf.ponytiled"
 local json = require ("json")
 local mapData = json.decodeFile(system.pathForFile("maps/Dungeon/Map_Zoom.json",system.ResourceDirectory))
-local map = tiled.new(mapData, "Maptiles")
-
-local dragable = require "com.ponywolf.plugins.dragable"
-map = dragable.new(map)
-map.isZoomEnabled = true
+local map = tiled.new(mapData, "maps/Dungeon")
+--local dragable = require "com.ponywolf.plugins.dragable"
+--map = dragable.new(map)
+--map.isZoomEnabled = true
 local scaleFactor = 1
 local mapWidth = 5120
 local mapHeight = 2880
@@ -44,8 +43,8 @@ local camera= display.newGroup()
 
 --sistemo robe per il POV
 camera:insert(map)
-camera.x = -100
-camera.y = 0
+map.x = -100
+map.y = 0
 -- camera:scale(1.2, 1.2)
 
 --preparazione frecce
@@ -141,12 +140,20 @@ local function movePg(event)
 		end
 	elseif event.phase == "moved" then
 		if arrow.name == "up" then
+			hero:setSequence("back")
+			hero:play()
 			hero:setLinearVelocity(0, -150)
 		elseif arrow.name == "left" then
+			hero:setSequence("left")
+			hero:play()
 			hero:setLinearVelocity(-150, 0)
 		elseif arrow.name == "right" then 
+			hero:setSequence("right") 
+			hero:play()
 			hero:setLinearVelocity(150, 0)
 		else --arrow.name == down
+			hero:setSequence("front")
+			hero:play()
 			hero:setLinearVelocity(0, 150)
 		end
 	elseif event.phase == "ended" then
