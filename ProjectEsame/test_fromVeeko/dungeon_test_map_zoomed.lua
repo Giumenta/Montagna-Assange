@@ -6,18 +6,21 @@ physics.setDrawMode("hybrid")
 --robe varie della mappa
 local tiled = require "com.ponywolf.ponytiled"
 local json = require ("json")
-local mapData = json.decodeFile(system.pathForFile("Maptiles/Map2.json",system.ResourceDirectory))
+local mapData = json.decodeFile(system.pathForFile("maps/Dungeon/Map_Zoom.json",system.ResourceDirectory))
 local map = tiled.new(mapData, "Maptiles")
 
 local dragable = require "com.ponywolf.plugins.dragable"
 map = dragable.new(map)
 map.isZoomEnabled = true
-local scaleFactor = 4
-map:scale(scaleFactor, scaleFactor) --<-sballa tutto il goddamn di fisica dei muri
+local scaleFactor = 1
+local mapWidth = 5120
+local mapHeight = 2880
+
+--map:scale(scaleFactor, scaleFactor) --<-sballa tutto il goddamn di fisica dei muri
 
 --questo è temp, ma non ho cassi ora di andare a modificare la mappa
 -- quindi faccio hide di tutti i babici presenti sulla mappa
-local toHide = map:listTypes("hero")
+--[[local toHide = map:listTypes("hero")
 for i=1,5 do
 	toHide[i].isVisible = false
 end
@@ -33,6 +36,7 @@ for i=1, #walls do
 	local wallShape = {-w/2, -h/2, w/2, -h/2, w/2, h/2, -w/2, -h/2}
 	physics.addBody(el, "static", wallShape)
 end
+]]
 
 --creo giusto un gruppo
 local control = display.newGroup()
@@ -40,7 +44,7 @@ local camera= display.newGroup()
 
 --sistemo robe per il POV
 camera:insert(map)
-camera.x = 0
+camera.x = -100
 camera.y = 0
 -- camera:scale(1.2, 1.2)
 
@@ -102,7 +106,7 @@ local heroSeqs = {
 }
 
 local hero = display.newSprite(heroSheet,heroSeqs)
-hero:scale(0.2, 0.2)
+hero:scale(1,1)
 hero.x = 150
 hero.y = 150
 
@@ -110,8 +114,8 @@ local heroShape= {-2, 0, 2, 0, -2, 5, 2, 5}
 physics.addBody(hero, "dynamic", heroShape)
 hero.isFixedRotation = true
 hero:scale(2,2)
--- hero.x = display.contentCenterX
--- hero.y = display.contentCenterY
+hero.x = display.contentCenterX
+hero.y = display.contentCenterY
 
 local function movePg(event)
 	local arrow = event.target
@@ -149,6 +153,33 @@ local function movePg(event)
 		hero:setLinearVelocity(0,0)
 		hero:pause()
 	end
+	return true
+end
+
+local preX = hero.x
+local preY = hero.y
+
+local function moveCamera(event)
+	local diffX = preX - hero.x
+	local diffY = preY - hero.y
+
+	if diffX > 0 then
+		camera.x = camera.x - diffX
+		physics.x = physics.x - diffX
+	else
+		camera.x = camera.x + diffX
+		physics.x = physics.x + diffX
+	end
+
+	if diffY > 0 then
+		camera.y = camera.y - diffY
+		physics.y = physics.y - diffY
+	else
+		physics.y = physics.y + diffY
+	end
+
+	preX = hero.x 
+	preY = hero.y
 
 	return true
 end
@@ -158,3 +189,4 @@ arrowLeft:addEventListener("touch", movePg)
 arrowRight:addEventListener("touch", movePg)
 arrowDown:addEventListener("touch", movePg)
 arrowUp:addEventListener("touch", movePg)
+--Runtime:addEventListener("enterFrame", moveCamera)
