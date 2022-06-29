@@ -12,7 +12,7 @@ local map = tiled.new(mapData, "Maptiles")
 local dragable = require "com.ponywolf.plugins.dragable"
 map = dragable.new(map)
 map.isZoomEnabled = true
-local scaleFactor = 1
+local scaleFactor = 2
 map:scale(scaleFactor, scaleFactor) --<-sballa tutto il goddamn di fisica dei muri
 
 --questo è temp, ma non ho cassi ora di andare a modificare la mappa
@@ -31,7 +31,7 @@ for i=1, #walls do
 	local w = el.width*scaleFactor
 	physics.removeBody(el)
 	local wallShape = {-w/2, -h/2, w/2, -h/2, w/2, h/2, -w/2, -h/2}
-	physics.addBody(el,"static", wallShape)
+	physics.addBody(el, "static", wallShape)
 end
 
 --creo giusto un gruppo
