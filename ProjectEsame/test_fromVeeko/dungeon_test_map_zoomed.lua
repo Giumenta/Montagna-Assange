@@ -8,10 +8,16 @@ local tiled = require "com.ponywolf.ponytiled"
 local json = require ("json")
 local mapData = json.decodeFile(system.pathForFile("maps/Dungeon/Map_Zoom.json",system.ResourceDirectory))
 local map = tiled.new(mapData, "maps/Dungeon")
+<<<<<<< HEAD
 
 local dragable = require "com.ponywolf.plugins.dragable"
 map = dragable.new(map)
 map.isZoomEnabled = true
+=======
+--local dragable = require "com.ponywolf.plugins.dragable"
+--map = dragable.new(map)
+--map.isZoomEnabled = true
+>>>>>>> 1e18d2e1413f3362b8715cc730aef6c7e98ed4ca
 local scaleFactor = 1
 local mapWidth = 5120
 local mapHeight = 2880
@@ -44,8 +50,8 @@ local camera= display.newGroup()
 
 --sistemo robe per il POV
 camera:insert(map)
-camera.x = 0
-camera.y = 0
+map.x = 0
+map.y = 0
 -- camera:scale(1.2, 1.2)
 
 --preparazione frecce
@@ -106,9 +112,6 @@ local heroSeqs = {
 }
 
 local hero = display.newSprite(heroSheet,heroSeqs)
-hero:scale(1,1)
-hero.x = 150
-hero.y = 150
 
 local heroShape= {-2, 0, 2, 0, -2, 5, 2, 5}
 physics.addBody(hero, "dynamic", heroShape)
@@ -141,12 +144,20 @@ local function movePg(event)
 		end
 	elseif event.phase == "moved" then
 		if arrow.name == "up" then
+			hero:setSequence("back")
+			hero:play()
 			hero:setLinearVelocity(0, -150)
 		elseif arrow.name == "left" then
+			hero:setSequence("left")
+			hero:play()
 			hero:setLinearVelocity(-150, 0)
 		elseif arrow.name == "right" then 
+			hero:setSequence("right") 
+			hero:play()
 			hero:setLinearVelocity(150, 0)
 		else --arrow.name == down
+			hero:setSequence("front")
+			hero:play()
 			hero:setLinearVelocity(0, 150)
 		end
 	elseif event.phase == "ended" then
