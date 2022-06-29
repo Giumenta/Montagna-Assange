@@ -19,6 +19,4 @@ require "test_fromVeeko.dungeon_test"
 --require "platformVerticale" --dovrebbe richiamare il file creato
 
 
-
-
 --FINE PARTE PROVA CODICE PLATFORM VERTICALE (3 LIVELLO)
