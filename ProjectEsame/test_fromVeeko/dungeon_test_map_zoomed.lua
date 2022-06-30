@@ -134,6 +134,7 @@ hero:scale(2,2)
 hero.x = display.contentCenterX
 hero.y = display.contentCenterY
 
+--[[
 local function movePg(event)
 	local arrow = event.target
 	local ciao = 'ciao'
@@ -180,11 +181,52 @@ local function movePg(event)
 	end
 	return true
 end
+]]
+
+local function movePg(event)
+	local arrow = event.target
+	local ciao = 'ciao'
+
+	if event.phase == "began" then
+		if arrow.name == "up" then
+			hero:setSequence("back")
+			hero:play()		
+		elseif arrow.name == "left" then
+			hero:setSequence("left")
+			hero:play()
+		elseif arrow.name == "right" then
+			hero:setSequence("right") 
+			hero:play()
+		else --arrow.name == down
+			hero:setSequence("front")
+			hero:play()
+		end
+	elseif event.phase == "moved" then
+		if arrow.name == "up" then
+			hero:setSequence("back")
+			hero:play()
+		elseif arrow.name == "left" then
+			hero:setSequence("left")
+			hero:play()
+		elseif arrow.name == "right" then 
+			hero:setSequence("right") 
+			hero:play()
+		else --arrow.name == down
+			hero:setSequence("front")
+			hero:play()
+		end
+	elseif event.phase == "ended" then
+		hero:setLinearVelocity(0,0)
+		hero:pause()
+	end
+	return true
+end
+
 
 local preX = hero.x
 local preY = hero.y
 
-local function moveCamera(event)
+--[[local function moveCamera(event)
 	local diffX = preX - hero.x
 	local diffY = preY - hero.y
 
@@ -205,10 +247,52 @@ local function moveCamera(event)
 
 	return true
 end
+]]--
 
+local heroRadius=50
+local mapBorderLeft = 0
+local mapBorderRight = 4480
+local mapBorderTop = 0
+local mapBorderBottom = 2520
+
+local function moveMap(event)
+	local offsetX = heroRadius*2
+	local offsetY = heroRadius*2
+	
+	local displayLeft = -camera.x
+	local displayTop = -camera.y
+	
+	local nonScrollingWidth =  display.contentCenterX
+	local nonScrollingHeight = display.contentCenterY
+	
+	--movimento ORIZZONTALE
+	if hero.x >= mapBorderLeft+offsetX 
+	   and hero.x <= mapBorderRight - offsetX then
+		  
+		  if hero.x>displayLeft+nonScrollingWidth then
+	        	    camera.x = -hero.x + nonScrollingWidth
+	      elseif hero.x < displayLeft+offsetX then
+	            	camera.x = -hero.x + offsetX	
+	      end
+	end
+
+    -- movimento VERTICALE
+ 	if hero.y >= mapBorderTop+offsetY 
+ 	   and hero.y <= mapBorderBottom - offsetY then
+	    
+	    if hero.y>displayTop+nonScrollingHeight then
+		    camera.y = -hero.y + nonScrollingHeight
+		elseif hero.y < displayTop+offsetY then
+		  camera.y = -hero.y + offsetY	
+	    end	 
+	end	 
+		
+	return true	
+end
 
 arrowLeft:addEventListener("touch", movePg)
 arrowRight:addEventListener("touch", movePg)
 arrowDown:addEventListener("touch", movePg)
 arrowUp:addEventListener("touch", movePg)
-Runtime:addEventListener("enterFrame", moveCamera)
+--Runtime:addEventListener("enterFrame", moveCamera)
+Runtime:addEventListener("enterFrame", moveMap)
