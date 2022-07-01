@@ -67,6 +67,7 @@ for i = 1, #walls do
 	physics.removeBody(walls[i])
 	local shape = {-w/2, h2, w/2, h2, w/2, -h/2, -w/2, -h/2}
 	physics.addBody(walls[i], 'static', {outline=shape})
+	camera:insert(walls[i])
 end
 --preparazione frecce
 local arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
@@ -189,15 +190,15 @@ local function moveCamera(event)
 	local diffY = preY - hero.y
 
 	if diffX > 0 then
-		camera.x = camera.x - diffX
+		camera:moveTo({diffX, 0}, 0.2)
 	else
-		camera.x = camera.x + diffX
+		camera:moveTo({-diffX, 0}, 0.2)
 	end
 
 	if diffY > 0 then
-		camera.y = camera.y - diffY
+		camera:moveTo(0, diffY)
 	else
-		camera.y = camera.y + diffY
+		camera:moveTo(0, -diffY)
 	end
 
 	preX = hero.x 
@@ -206,9 +207,14 @@ local function moveCamera(event)
 	return true
 end
 
+local function printOnCollision(event)
+	print(hero.x .." : " .. hero.y)
+end
 
-arrowLeft:addEventListener("touch", movePg)
-arrowRight:addEventListener("touch", movePg)
-arrowDown:addEventListener("touch", movePg)
-arrowUp:addEventListener("touch", movePg)
-Runtime:addEventListener("enterFrame", moveCamera)
+ arrowLeft:addEventListener("touch", movePg)
+ arrowRight:addEventListener("touch", movePg)
+ arrowDown:addEventListener("touch", movePg)
+ arrowUp:addEventListener("touch", movePg)
+
+ Runtime:addEventListener("enterFrame", moveCamera)
+ hero:addEventListener("collision", printOnCollision)
