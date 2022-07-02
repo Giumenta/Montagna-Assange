@@ -6,6 +6,7 @@ local isMobile = ("ios" == system.getInfo("platform")) or ("android" == system.g
 local stage = display.getCurrentStage()
 
 local function inBounds(event, object)
+  --
   local ex, ey = event.x or 0, event.y or 0
   local bounds = object.contentBounds or {}
   if bounds then
