@@ -135,7 +135,7 @@ hero:scale(2,2)
 hero.x = display.contentCenterX
 hero.y = display.contentCenterY
 
---[[
+----[[
 local function movePg(event)
 	local arrow = event.target
 	local ciao = 'ciao'
@@ -182,8 +182,8 @@ local function movePg(event)
 	end
 	return true
 end
-]]
-
+--]]
+--[[
 local function movePg(event)
 	local arrow = event.target
 	local ciao = 'ciao'
@@ -221,7 +221,7 @@ local function movePg(event)
 	end
 	return true
 end
-
+]]
 
 local preX = hero.x
 local preY = hero.y
@@ -255,7 +255,7 @@ local mapBorderRight = 4480
 local mapBorderTop = 0
 local mapBorderBottom = 2520
 ---- FARE IN QUALCHE MODO UN FOREACH CHE PRENDA TUTTI GLI ELEMENTI IN WALLS E LI SPOSTI CON setLinearVelocity ------
-local walls=listTypes("wall")
+local walls=map:listTypes("wall")
 
 local function moveMap(event)
 	local arrow = event.target
@@ -301,4 +301,4 @@ arrowRight:addEventListener("touch", movePg)
 arrowDown:addEventListener("touch", movePg)
 arrowUp:addEventListener("touch", movePg)
 --Runtime:addEventListener("enterFrame", moveCamera)
-Runtime:addEventListener("enterFrame", moveMap)
+-- Runtime:addEventListener("enterFrame", moveMap)
