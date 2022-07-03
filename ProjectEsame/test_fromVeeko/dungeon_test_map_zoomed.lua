@@ -190,8 +190,7 @@ local function movePg(event)
 
 	if event.phase == "began" then
 		if arrow.name == "up" then
-			hero:setSequence("back")
-			hero:play()		
+			hero:setLinearVelocity(0, -150)	
 		elseif arrow.name == "left" then
 			hero:setSequence("left")
 			hero:play()
@@ -255,40 +254,46 @@ local mapBorderLeft = 0
 local mapBorderRight = 4480
 local mapBorderTop = 0
 local mapBorderBottom = 2520
+---- FARE IN QUALCHE MODO UN FOREACH CHE PRENDA TUTTI GLI ELEMENTI IN WALLS E LI SPOSTI CON setLinearVelocity ------
+local walls=listTypes("wall")
 
 local function moveMap(event)
-	local offsetX = heroRadius*2
-	local offsetY = heroRadius*2
-	
-	local displayLeft = -camera.x
-	local displayTop = -camera.y
-	
-	local nonScrollingWidth =  display.contentCenterX
-	local nonScrollingHeight = display.contentCenterY
-	
-	--movimento ORIZZONTALE
-	if hero.x >= mapBorderLeft+offsetX 
-	   and hero.x <= mapBorderRight - offsetX then
-		  
-		  if hero.x>displayLeft+nonScrollingWidth then
-	        	    camera.x = -hero.x + nonScrollingWidth
-	      elseif hero.x < displayLeft+offsetX then
-	            	camera.x = -hero.x + offsetX	
-	      end
-	end
+	local arrow = event.target
+	local ciao = 'ciao'
 
-    -- movimento VERTICALE
- 	if hero.y >= mapBorderTop+offsetY 
- 	   and hero.y <= mapBorderBottom - offsetY then
-	    
-	    if hero.y>displayTop+nonScrollingHeight then
-		    camera.y = -hero.y + nonScrollingHeight
-		elseif hero.y < displayTop+offsetY then
-		  camera.y = -hero.y + offsetY	
-	    end	 
-	end	 
-		
-	return true	
+	if event.phase == "began" then
+		if arrow.name == "up" then
+			 walls:setLinearVelocity(0, -150)
+			hero:play()		
+		elseif arrow.name == "left" then
+			hero:setSequence("left")
+			hero:play()
+		elseif arrow.name == "right" then
+			hero:setSequence("right") 
+			hero:play()
+		else --arrow.name == down
+			hero:setSequence("front")
+			hero:play()
+		end
+	elseif event.phase == "moved" then
+		if arrow.name == "up" then
+			hero:setSequence("back")
+			hero:play()
+		elseif arrow.name == "left" then
+			hero:setSequence("left")
+			hero:play()
+		elseif arrow.name == "right" then 
+			hero:setSequence("right") 
+			hero:play()
+		else --arrow.name == down
+			hero:setSequence("front")
+			hero:play()
+		end
+	elseif event.phase == "ended" then
+		hero:setLinearVelocity(0,0)
+		hero:pause()
+	end
+	return true
 end
 
 arrowLeft:addEventListener("touch", movePg)
