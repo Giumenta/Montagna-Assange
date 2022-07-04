@@ -7,7 +7,8 @@
 -- Your code here
 
 --//yooo
- require "15game"
+--require "15game"
+require "gioco15"
 --require "test_fromVeeko.dungeon_test"
 --require "platformVerticale"
 --require "test_fromVeeko.dungeon_test_map_zoomed"

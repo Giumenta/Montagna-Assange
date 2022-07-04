@@ -27,26 +27,26 @@ local function creaGriglia()
         for riga=1,GRID_WIDTH do
 			if grid[colonna][riga] ~= GRID_WIDTH*GRID_HEIGHT then -- rimuovo 16° tassello
 		   
-				local tassello = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassellogioco15_stondato.jpg",dimtassello, dimtassello )
-				tassello.anchorX=0
-				tassello.anchorY=0
-				tassello.y=display.contentHeight/2-(larghezzaGriglia)/2 + (riga-1)*dimtassello + riga*spaziaturaTasselli
-				tassello.x=display.contentWidth/2-(larghezzaGriglia)/2 + (colonna-1)*dimtassello + colonna*spaziaturaTasselli
-        
+				grid[colonna][riga] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassellogioco15_stondato.jpg",dimtassello, dimtassello )
+				grid[colonna][riga].anchorX=0
+				grid[colonna][riga].anchorY=0
+				grid[colonna][riga].y=display.contentHeight/2-(larghezzaGriglia)/2 + (riga-1)*dimtassello + riga*spaziaturaTasselli
+				grid[colonna][riga].x=display.contentWidth/2-(larghezzaGriglia)/2 + (colonna-1)*dimtassello + colonna*spaziaturaTasselli
+				grid[colonna][riga].valore= riga * colonna
 		
 		--disegno i numeri sui tasselli
-				local numeri = display.newText (
-				   ((riga - 1) * 4) + colonna,
-				   --grid[colonna][riga];
-					(riga - 1) * dimtassello,
-					(colonna - 1) * dimtassello, native.systemFont, 70
+				grid[colonna][riga] = display.newText (
+				((riga - 1) * 4) + colonna,
+				--grid[riga][colonna].valore,
+				(riga - 1) * dimtassello,
+                (colonna - 1) * dimtassello, native.systemFont, 70
 				)
 			--numeri:setFillColor( 1, 0.5, .5 ) --dovrebbere essere giusto ma non va
 		
-		numeri.anchorX=0
-        numeri.anchorY=0
-		numeri.y=display.contentHeight/2-(larghezzaGriglia)/2 + (riga-1)*dimtassello + riga*spaziaturaTasselli
-        numeri.x=display.contentWidth/2-(larghezzaGriglia)/2 + (colonna-1)*dimtassello + colonna*spaziaturaTasselli
+				grid[colonna][riga].anchorX=0
+				grid[colonna][riga].anchorY=0
+				grid[colonna][riga].y=display.contentHeight/2-(larghezzaGriglia)/2 + (riga-1)*dimtassello + riga*spaziaturaTasselli
+				grid[colonna][riga].x=display.contentWidth/2-(larghezzaGriglia)/2 + (colonna-1)*dimtassello + colonna*spaziaturaTasselli
 			end
 		end
 		
@@ -71,27 +71,30 @@ local function onKeyEvent (event)
 				end
 			--end
 		  end
-			print('riga libera: '..emptyX..', colonna libera: '..emptyY)--stampo sulla console la posizione del tassello libero
+			print('x libera: '..emptyX..', y libera: '..emptyY)--stampo sulla console la posizione del tassello libero
 		
 		local newEmptyY = emptyY
 		
 		
 		if ( event.keyName == "down" ) then -- sposto verso il basso un tassello
 			newEmptyY = emptyY - 1
-		elseif ( event.keyName == "up" ) then -- sposto verso l'alto un tassello
-			newEmptyY = emptyY + 1
-		end
-			if grid[newEmptyY] then
-			grid[newEmptyY][emptyX], grid[emptyY][emptyX] =
-			grid[emptyY][emptyX], grid[newEmptyY][emptyX]
-			
+			elseif ( event.keyName == "up" ) then -- sposto verso l'alto un tassello
+				newEmptyY = emptyY + 1
 			end
+				if grid[newEmptyY] then
+				grid[newEmptyY][emptyX], grid[emptyY][emptyX] =
+				grid[emptyY][emptyX], grid[newEmptyY][emptyX]
+				riga=emptyX
+				colonna=emptyY
+				end
 	--return false
 end
 
+Runtime:addEventListener( "key", onKeyEvent )
+
 creaGriglia()
 
-Runtime:addEventListener( "key", onKeyEvent )
+
 		
 
 
