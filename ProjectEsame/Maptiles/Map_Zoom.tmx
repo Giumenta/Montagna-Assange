@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="71">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="71">
  <editorsettings>
   <export target="../maps/Dungeon/Map_Zoom.json" format="json"/>
  </editorsettings>
@@ -7,294 +7,294 @@
   <image source="0x72_DungeonTilesetII_v1.4/0x72_DungeonTilesetII_v1.4_zoom.png" width="2048" height="2048"/>
  </tileset>
  <objectgroup id="4" name="BodyWall">
-  <object id="11" name="wall" type="wall" x="66.0377" y="116.981" width="1145.28" height="73.5849">
+  <object id="11" name="wall" class="wall" x="66.0377" y="116.981" width="1145.28" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="12" name="wall" type="wall" x="68.8694" y="627.358" width="503.771" height="73.5849">
+  <object id="12" name="wall" class="wall" x="68.8694" y="627.358" width="503.771" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="13" name="wall" type="wall" x="705.662" y="629.245" width="505.657" height="73.5849">
+  <object id="13" name="wall" class="wall" x="705.662" y="629.245" width="505.657" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="14" name="wall" type="wall" x="705.662" y="1014.15" width="505.657" height="73.5849">
+  <object id="14" name="wall" class="wall" x="705.662" y="1014.15" width="505.657" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="15" name="wall" type="wall" x="556.605" y="1204.72" width="462.261" height="73.5849">
+  <object id="15" name="wall" class="wall" x="556.605" y="1204.72" width="462.261" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="16" name="wall" type="wall" x="767.926" y="1331.13" width="252.827" height="73.5849">
+  <object id="16" name="wall" class="wall" x="767.926" y="1331.13" width="252.827" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="17" name="wall" type="wall" x="1200" y="1333.02" width="777.355" height="73.5849">
+  <object id="17" name="wall" class="wall" x="1200" y="1333.02" width="777.355" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="18" name="wall" type="wall" x="705.662" y="1974.53" width="954.714" height="73.5849">
+  <object id="18" name="wall" class="wall" x="705.662" y="1974.53" width="954.714" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="19" name="wall" type="wall" x="513.209" y="1778.3" width="271.695" height="73.5849">
+  <object id="19" name="wall" class="wall" x="513.209" y="1778.3" width="271.695" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="20" name="wall" type="wall" x="132.077" y="2225.47" width="396.223" height="73.5849">
+  <object id="20" name="wall" class="wall" x="132.077" y="2225.47" width="396.223" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="21" name="wall" type="wall" x="707.549" y="2229.25" width="377.355" height="73.5849">
+  <object id="21" name="wall" class="wall" x="707.549" y="2229.25" width="377.355" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="22" name="wall" type="wall" x="130.19" y="2740.57" width="954.714" height="73.5849">
+  <object id="22" name="wall" class="wall" x="130.19" y="2740.57" width="954.714" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="23" name="wall" type="wall" x="1473.59" y="2740.57" width="1850.94" height="73.5849">
+  <object id="23" name="wall" class="wall" x="1473.59" y="2740.57" width="1850.94" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="24" name="wall" type="wall" x="1839.62" y="2227.36" width="1483.02" height="73.5849">
+  <object id="24" name="wall" class="wall" x="1839.62" y="2227.36" width="1483.02" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="25" name="wall" type="wall" x="1473.59" y="2229.25" width="186.789" height="73.5849">
+  <object id="25" name="wall" class="wall" x="1473.59" y="2229.25" width="186.789" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="26" name="wall" type="wall" x="1841.51" y="1972.64" width="141.506" height="73.5849">
+  <object id="26" name="wall" class="wall" x="1841.51" y="1972.64" width="141.506" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="27" name="wall" type="wall" x="1967.93" y="1780.19" width="650.94" height="73.5849">
+  <object id="27" name="wall" class="wall" x="1967.93" y="1780.19" width="650.94" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="28" name="wall" type="wall" x="2609.44" y="1974.53" width="1035.85" height="73.5849">
+  <object id="28" name="wall" class="wall" x="2609.44" y="1974.53" width="1035.85" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="29" name="wall" type="wall" x="2607.55" y="563.208" width="460.374" height="73.5849">
+  <object id="29" name="wall" class="wall" x="2607.55" y="563.208" width="460.374" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="30" name="wall" type="wall" x="3201.89" y="565.094" width="445.28" height="73.5849">
+  <object id="30" name="wall" class="wall" x="3201.89" y="565.094" width="445.28" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="31" name="wall" type="wall" x="2754.72" y="436.792" width="315.091" height="73.5849">
+  <object id="31" name="wall" class="wall" x="2754.72" y="436.792" width="315.091" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="32" name="wall" type="wall" x="3203.78" y="436.792" width="311.317" height="73.5849">
+  <object id="32" name="wall" class="wall" x="3203.78" y="436.792" width="311.317" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="33" name="wall" type="wall" x="2754.72" y="53.7736" width="762.261" height="73.5849">
+  <object id="33" name="wall" class="wall" x="2754.72" y="53.7736" width="762.261" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="34" name="wall" type="wall" x="3971.7" y="1527.36" width="1018.86" height="73.5849">
+  <object id="34" name="wall" class="wall" x="3971.7" y="1527.36" width="1018.86" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="35" name="wall" type="wall" x="3971.7" y="2163.21" width="377.355" height="73.5849">
+  <object id="35" name="wall" class="wall" x="3971.7" y="2163.21" width="377.355" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="36" name="wall" type="wall" x="4592.45" y="2161.32" width="398.11" height="73.5849">
+  <object id="36" name="wall" class="wall" x="4592.45" y="2161.32" width="398.11" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="37" name="wall" type="wall" x="3311.32" y="2612.26" width="1294.34" height="73.5849">
+  <object id="37" name="wall" class="wall" x="3311.32" y="2612.26" width="1294.34" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="38" name="wall" type="wall" x="3313.21" y="2417.92" width="1035.85" height="73.5849">
+  <object id="38" name="wall" class="wall" x="3313.21" y="2417.92" width="1035.85" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="39" name="wall" type="wall" x="1967.63" y="1588.75" width="654.881" height="73.5849">
+  <object id="39" name="wall" class="wall" x="1967.63" y="1588.75" width="654.881" height="73.5849">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="40" name="wall" type="wall" x="65.2529" y="125.068" width="18.1258" height="531.086">
+  <object id="40" name="wall" class="wall" x="65.2529" y="125.068" width="18.1258" height="531.086">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="41" name="wall" type="wall" x="1198.11" y="116.911" width="18.1258" height="531.086">
+  <object id="41" name="wall" class="wall" x="1198.11" y="116.911" width="18.1258" height="531.086">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="43" name="wall" type="wall" x="556.462" y="693.311" width="18.1258" height="531.086">
+  <object id="43" name="wall" class="wall" x="556.462" y="693.311" width="18.1258" height="531.086">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="44" name="wall" type="wall" x="706.906" y="633.496" width="18.1258" height="451.333">
+  <object id="44" name="wall" class="wall" x="706.906" y="633.496" width="18.1258" height="451.333">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="45" name="wall" type="wall" x="1000.54" y="1217.15" width="18.1258" height="186.696">
+  <object id="45" name="wall" class="wall" x="1000.54" y="1217.15" width="18.1258" height="186.696">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="46" name="wall" type="wall" x="1196.3" y="1039.51" width="18.1258" height="366.141">
+  <object id="46" name="wall" class="wall" x="1196.3" y="1039.51" width="18.1258" height="366.141">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="47" name="wall" type="wall" x="764.908" y="1336.78" width="18.1258" height="511.148">
+  <object id="47" name="wall" class="wall" x="764.908" y="1336.78" width="18.1258" height="511.148">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="48" name="wall" type="wall" x="1966.65" y="1338.59" width="18.1258" height="322.639">
+  <object id="48" name="wall" class="wall" x="1966.65" y="1338.59" width="18.1258" height="322.639">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="49" name="wall" type="wall" x="1968.46" y="1782.67" width="18.1258" height="264.637">
+  <object id="49" name="wall" class="wall" x="1968.46" y="1782.67" width="18.1258" height="264.637">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="50" name="wall" type="wall" x="509.335" y="1780.86" width="18.1258" height="518.398">
+  <object id="50" name="wall" class="wall" x="509.335" y="1780.86" width="18.1258" height="518.398">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="51" name="wall" type="wall" x="125.068" y="2243.07" width="18.1258" height="531.086">
+  <object id="51" name="wall" class="wall" x="125.068" y="2243.07" width="18.1258" height="531.086">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="52" name="wall" type="wall" x="1073.05" y="2248.5" width="18.1258" height="531.086">
+  <object id="52" name="wall" class="wall" x="1073.05" y="2248.5" width="18.1258" height="531.086">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="53" name="wall" type="wall" x="1470" y="2248.5" width="18.1258" height="531.086">
+  <object id="53" name="wall" class="wall" x="1470" y="2248.5" width="18.1258" height="531.086">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="54" name="wall" type="wall" x="706.906" y="1978.43" width="18.1258" height="320.827">
+  <object id="54" name="wall" class="wall" x="706.906" y="1978.43" width="18.1258" height="320.827">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="55" name="wall" type="wall" x="1642.2" y="1980.24" width="18.1258" height="320.827">
+  <object id="55" name="wall" class="wall" x="1642.2" y="1980.24" width="18.1258" height="320.827">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="56" name="wall" type="wall" x="1841.58" y="1978.43" width="18.1258" height="319.014">
+  <object id="56" name="wall" class="wall" x="1841.58" y="1978.43" width="18.1258" height="319.014">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="57" name="wall" type="wall" x="2601.05" y="1782.67" width="18.1258" height="264.637">
+  <object id="57" name="wall" class="wall" x="2601.05" y="1782.67" width="18.1258" height="264.637">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="58" name="wall" type="wall" x="3313.39" y="2228.57" width="18.1258" height="264.637">
+  <object id="58" name="wall" class="wall" x="3313.39" y="2228.57" width="18.1258" height="264.637">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="59" name="wall" type="wall" x="3313.39" y="2612.83" width="18.1258" height="201.197">
+  <object id="59" name="wall" class="wall" x="3313.39" y="2612.83" width="18.1258" height="201.197">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="60" name="wall" type="wall" x="4330.25" y="2172.38" width="18.1258" height="315.389">
+  <object id="60" name="wall" class="wall" x="4330.25" y="2172.38" width="18.1258" height="315.389">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="61" name="wall" type="wall" x="4594.89" y="2168.75" width="18.1258" height="516.585">
+  <object id="61" name="wall" class="wall" x="4594.89" y="2168.75" width="18.1258" height="516.585">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="62" name="wall" type="wall" x="4975.53" y="1552.47" width="18.1258" height="630.778">
+  <object id="62" name="wall" class="wall" x="4975.53" y="1552.47" width="18.1258" height="630.778">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="63" name="wall" type="wall" x="3965.92" y="1556.1" width="18.1258" height="628.965">
+  <object id="63" name="wall" class="wall" x="3965.92" y="1556.1" width="18.1258" height="628.965">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="64" name="wall" type="wall" x="3631.21" y="592.717" width="18.1258" height="1403.03">
+  <object id="64" name="wall" class="wall" x="3631.21" y="592.717" width="18.1258" height="1403.03">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="65" name="wall" type="wall" x="2600.91" y="606.402" width="18.1258" height="1000.29">
+  <object id="65" name="wall" class="wall" x="2600.91" y="606.402" width="18.1258" height="1000.29">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="66" name="wall" type="wall" x="3052.52" y="446.089" width="18.1258" height="190.91">
+  <object id="66" name="wall" class="wall" x="3052.52" y="446.089" width="18.1258" height="190.91">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="67" name="wall" type="wall" x="3205.01" y="438.269" width="18.1258" height="198.73">
+  <object id="67" name="wall" class="wall" x="3205.01" y="438.269" width="18.1258" height="198.73">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="68" name="wall" type="wall" x="2751.45" y="76.5881" width="18.1258" height="386.413">
+  <object id="68" name="wall" class="wall" x="2751.45" y="76.5881" width="18.1258" height="386.413">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="69" name="wall" type="wall" x="3504.13" y="82.4533" width="18.1258" height="386.413">
+  <object id="69" name="wall" class="wall" x="3504.13" y="82.4533" width="18.1258" height="386.413">
    <properties>
-    <property name="bodyType" value="kinematic"/>
+    <property name="bodyType" value="static"/>
    </properties>
   </object>
  </objectgroup>
