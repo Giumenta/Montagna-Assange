@@ -102,7 +102,7 @@ local function muovitassello (event)
 		
 		local arrow=event.target
 	
-	
+	if event.phase == "began" then
         if arrow.name == "left" then
 			newEmptyX = emptyX + 1
 
@@ -114,6 +114,9 @@ local function muovitassello (event)
 
         elseif arrow.name == "down" then
         	newEmptyY = emptyY - 1
+		
+		elseif event.phase == "ended" then
+		return false
 		end
 		if grid[newEmptyY] then
 			grid[newEmptyY][newEmptyX], grid[emptyY][emptyX] =
@@ -122,7 +125,7 @@ local function muovitassello (event)
 			--colonna = emptyY
 			transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
 		end
-	
+	end
 		--[[if ( event.keyName == "down" ) then -- sposto verso il basso un tassello
 			newEmptyY = emptyY - 1
 		elseif ( event.keyName == "up" ) then -- sposto verso l'alto un tassello
@@ -139,13 +142,13 @@ local function muovitassello (event)
 			--colonna = emptyY
 			transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
 		end]]--
-	return false
+	return true
 end
 
-arrowLeft:addEventListener("touch", movePg)
-arrowRight:addEventListener("touch", movePg)
-arrowDown:addEventListener("touch", movePg)
-arrowUp:addEventListener("touch", movePg)
+arrowLeft:addEventListener("touch", muovitassello)
+arrowRight:addEventListener("touch", muovitassello)
+arrowDown:addEventListener("touch", muovitassello)
+arrowUp:addEventListener("touch", muovitassello)
 
 creaGriglia()
 
