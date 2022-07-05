@@ -1779,7 +1779,7 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="80" name="ladder1" type="ladder" x="144.873" y="644.44" width="14.0548" height="7.02741">
+  <object id="80" name="ladder1" type="ladder" x="242.402" y="130.063" width="14.0548" height="7.02741">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
