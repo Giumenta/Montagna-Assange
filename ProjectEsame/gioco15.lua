@@ -76,21 +76,24 @@ local function onKeyEvent (event)
 		--end
 			print('x libera: '..emptyX..', y libera: '..emptyY)--stampo sulla console la posizione del tassello libero
 		
-		local newEmptyY = empty
-		
+		local newEmptyY = emptyY
+		local newEmptyX = emptyX
 		
 		if ( event.keyName == "down" ) then -- sposto verso il basso un tassello
 			newEmptyY = emptyY - 1
 		elseif ( event.keyName == "up" ) then -- sposto verso l'alto un tassello
 			newEmptyY = emptyY + 1
-		end
-			
+		elseif ( event.keyName == "right" ) then
+			newEmptyX = emptyX - 1
+		elseif ( event.keyName == "left" ) then
+			newEmptyX = emptyX + 1
+		end	
 		if grid[newEmptyY] then
-			grid[newEmptyY][emptyX], grid[emptyY][emptyX] =
-			grid[emptyY][emptyX], grid[newEmptyY][emptyX]
+			grid[newEmptyY][newEmptyX], grid[emptyY][emptyX] =
+			grid[emptyY][emptyX], grid[newEmptyY][newEmptyX]
 			--riga = emptyX
 			--colonna = emptyY
-			transition.moveTo(grid[emptyY][4], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
+			transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
 		end
 	return false
 end
