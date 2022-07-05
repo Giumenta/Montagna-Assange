@@ -21,6 +21,7 @@ local function creaGriglia()
     local colonna=1
     local riga=1
     local spaziaturaTasselli=(larghezzaGriglia-display.contentHeight*0.88)/5
+	local tassello
 	--assegno ad ogni posizione nella griglia un tassello specifico
 	grid[1][1] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello1.png",dimtassello, dimtassello )
 	grid[2][1] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello2.png",dimtassello, dimtassello )
@@ -42,7 +43,7 @@ local function creaGriglia()
         
         for riga=1,4 do
 			if grid[colonna][riga] ~= 4*4 then -- rimuovo 16° tassello
-				local tassello = grid[colonna][riga]
+				tassello = grid[colonna][riga]
 				tassello.anchorX=0
 				tassello.anchorY=0
 				tassello.y=display.contentHeight/2-(larghezzaGriglia)/2 + (riga-1)*dimtassello + riga*spaziaturaTasselli
@@ -54,7 +55,41 @@ local function creaGriglia()
 end
 --creo una funzione per verificare la posizione di un tassello libero
 local function onKeyEvent (event)
- 
+    local emptyX
+	local emptyY
+	--local message = "Key '" .. event.keyName .. "' was pressed " .. event.phase
+   -- print( message )
+		--if ( event.keyName == "down" ) then
+
+			for colonna=1, GRID_HEIGHT do
+        
+				for riga=1, GRID_WIDTH do
+					if grid[colonna][riga] == GRID_WIDTH*GRID_HEIGHT  then
+					emptyX = riga
+					emptyY = colonna
+					
+					end
+				end
+			--end
+		  end
+			print('x libera: '..emptyX..', y libera: '..emptyY)--stampo sulla console la posizione del tassello libero
+		
+		local newEmptyY = emptyY
+		
+		
+		if ( event.keyName == "down" ) then -- sposto verso il basso un tassello
+			newEmptyY = emptyY - 1
+			elseif ( event.keyName == "up" ) then -- sposto verso l'alto un tassello
+				newEmptyY = emptyY + 1
+			end
+				if grid[newEmptyY] then
+				grid[newEmptyY][emptyX], grid[emptyY][emptyX] =
+				grid[emptyY][emptyX], grid[newEmptyY][emptyX]
+				--local tassello2 = grid[emptyY][emptyX]
+				tassello = grid[newEmptyY][emptyX]
+				transition.moveTo(tassello, {x=100, y= 11, time=100})
+				end
+	--return false
 end
 
 Runtime:addEventListener( "key", onKeyEvent )
