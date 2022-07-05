@@ -13,6 +13,27 @@ local grid = {} -- creo una griglia 4x4
 local larghezzaGriglia = display.contentHeight*0.9
 local dimtassello= (display.contentHeight*0.88)/4
 local spaziaturaTasselli=(larghezzaGriglia-display.contentHeight*0.88)/5
+local control = display.newGroup()
+-- create obj arrows and button for interaction
+local arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
+arrowLeft.x = 100
+arrowLeft.y = display.contentHeight-150
+arrowLeft.name = "left"
+
+local arrowRight = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowRight.png",80,80)
+arrowRight.x = 260
+arrowRight.y = display.contentHeight-150
+arrowRight.name = "right"
+
+local arrowUp = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowUp.png",80,80)
+arrowUp.x = 180
+arrowUp.y = display.contentHeight-200
+arrowUp.name = "up"
+
+local arrowDown = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowDown.png",80,80)
+arrowDown.x = 180
+arrowDown.y = display.contentHeight-100
+arrowDown.name = "down"
 local function creaGriglia() 
      
     local griglia= display.newRect(display.contentCenterX,display.contentCenterY, larghezzaGriglia,larghezzaGriglia)
@@ -56,7 +77,7 @@ local function creaGriglia()
 end
 
 --creo una funzione per verificare la posizione di un tassello libero
-local function onKeyEvent (event)
+local function muovitassello (event)
     local emptyX
 	local emptyY
 	--local message = "Key '" .. event.keyName .. "' was pressed " .. event.phase
@@ -79,7 +100,30 @@ local function onKeyEvent (event)
 		local newEmptyY = emptyY
 		local newEmptyX = emptyX
 		
-		if ( event.keyName == "down" ) then -- sposto verso il basso un tassello
+		local arrow=event.target
+	
+	
+        if arrow.name == "left" then
+			newEmptyX = emptyX + 1
+
+		elseif arrow.name == "right" then
+        	newEmptyX = emptyX - 1
+
+        elseif arrow.name == "up" then
+        	newEmptyY = emptyY + 1
+
+        elseif arrow.name == "down" then
+        	newEmptyY = emptyY - 1
+		end
+		if grid[newEmptyY] then
+			grid[newEmptyY][newEmptyX], grid[emptyY][emptyX] =
+			grid[emptyY][emptyX], grid[newEmptyY][newEmptyX]
+			--riga = emptyX
+			--colonna = emptyY
+			transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
+		end
+	
+		--[[if ( event.keyName == "down" ) then -- sposto verso il basso un tassello
 			newEmptyY = emptyY - 1
 		elseif ( event.keyName == "up" ) then -- sposto verso l'alto un tassello
 			newEmptyY = emptyY + 1
@@ -94,11 +138,14 @@ local function onKeyEvent (event)
 			--riga = emptyX
 			--colonna = emptyY
 			transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
-		end
+		end]]--
 	return false
 end
 
-Runtime:addEventListener( "key", onKeyEvent )
+arrowLeft:addEventListener("touch", movePg)
+arrowRight:addEventListener("touch", movePg)
+arrowDown:addEventListener("touch", movePg)
+arrowUp:addEventListener("touch", movePg)
 
 creaGriglia()
 
