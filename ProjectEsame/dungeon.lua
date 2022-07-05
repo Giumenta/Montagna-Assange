@@ -18,12 +18,9 @@ local camera= display.newGroup()
 local control = display.newGroup()
 
 map:scale(3.5,3.5)
-
+map.x=50
 camera:insert(map)
---map.x =200
---map.y=100
-print(camera.x)
-print(camera.y)
+
 
 local mapBorderLeft = 0
 local mapBorderRight = 4480
@@ -102,14 +99,14 @@ local function movePg(event)
 			--hero[5].isVisible=true --rende visibile sprite left
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
-			moveAnimation()
+			 
 			--hero:play()
 
 		elseif arrow.name == "right" then
         	--hero[4].isVisible=true
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
-			moveAnimation()
+			 
 			
             --hero:setSequence("Right")
 			--hero:play()
@@ -118,7 +115,7 @@ local function movePg(event)
         	--hero[2].isVisible=true
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
-			moveAnimation()
+			 
 			
             --hero:setSequence("Back")
 			--hero:play()
@@ -127,7 +124,7 @@ local function movePg(event)
         	--hero[3].isVisible=true
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
-			moveAnimation()
+			 
 			
 			--hero:setSequence("Front")
 			--hero:play()
@@ -135,50 +132,30 @@ local function movePg(event)
 	   end
     elseif event.phase == "moved" then
 		if arrow.name == "left" then
-			--hero[5].isVisible=true --rende visibile sprite left
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
-			moveAnimation()
-			--hero:pause()
-			--hero:setSequence("Left")
-			--hero:play()
-			print(hero.x)
-			print(hero.y)
+			 
 	    	 
 		elseif arrow.name == "right" then
-        	--hero[4].isVisible=true
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
-			moveAnimation()
-			--hero:pause()
-            --hero:setSequence("Right")
-			--hero:play()
+			 
             
         elseif arrow.name == "up" then
-        	--hero[2].isVisible=true
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
-			moveAnimation()
-			--hero:pause()
-            --hero:setSequence("Back")
-			--hero:play()
+			 
             
         elseif arrow.name == "down" then
-        	--hero[3].isVisible=true
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
-			moveAnimation()
-			--hero:pause()
-			--hero:setSequence("Front")
-			--hero:play() 
+			 
 	   end
 	
 	elseif event.phase == "ended" then
 		local i
 		for i=2,5 do
 			hero[i].isVisible=false
-			--hero[i].x=idle.x
-			--hero[i].y=idle.y
 		end
 			idle:setLinearVelocity(0,0)
 			hero[1].isVisible = true
@@ -205,6 +182,18 @@ local function moveCamera2(event)
 	return true
 end
 
+local ladder=map:listTypes("ladder")
+
+local function teleport(event)
+	if event.target==ladder[1] then
+		idle.x= ladder[2].x+10
+		idle.y=ladder[2].y
+	else 
+		idle.x=ladder[1].x
+		idle.y=ladder[1].y -10
+	end
+
+end
 
 -- add event to arrows and button
 
@@ -217,8 +206,8 @@ arrowUp:addEventListener("touch", movePg)
 --fromVeeko says: ho provato a scommentare il movecamera ma tanto non funge
 Runtime:addEventListener("enterFrame",moveCamera2)
 Runtime:addEventListener("enterFrame", moveAnimation)
-
-
+ladder[1]:addEventListener("collision",teleport)
+ladder[2]:addEventListener("collision",teleport)
 
 --[[
 SE DIMINUISCO VELOCITà PG DIMINUISCE ANCHE LA VELOCITà DEL MOVIMENTO DELLA MAPPA 
