@@ -10,17 +10,19 @@ local grid = {} -- creo una griglia 4x4
 				end
 		end
 
-
+local larghezzaGriglia = display.contentHeight*0.9
+local dimtassello= (display.contentHeight*0.88)/4
+local spaziaturaTasselli=(larghezzaGriglia-display.contentHeight*0.88)/5
 local function creaGriglia() 
-     local larghezzaGriglia = display.contentHeight*0.9
+     
     local griglia= display.newRect(display.contentCenterX,display.contentCenterY, larghezzaGriglia,larghezzaGriglia)
 	local background = display.newImageRect( "risorseGrafiche/montagnaGenericoAmbiente/sfondogioco15.jpg", larghezzaGriglia,larghezzaGriglia)
     background.x = display.contentCenterX
 	background.y = display.contentCenterY
-	local dimtassello= (display.contentHeight*0.88)/4
+	
     local colonna=1
     local riga=1
-    local spaziaturaTasselli=(larghezzaGriglia-display.contentHeight*0.88)/5
+
 	local tassello
 	--assegno ad ogni posizione nella griglia un tassello specifico
 	grid[1][1] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello1.png",dimtassello, dimtassello )
@@ -65,8 +67,8 @@ local function onKeyEvent (event)
         
 				for riga=1, GRID_WIDTH do
 					if grid[riga][colonna] == GRID_WIDTH*GRID_HEIGHT  then
-					emptyX = riga
-					emptyY = colonna
+					emptyX = colonna
+					emptyY = riga
 					
 					end
 				end
@@ -75,22 +77,25 @@ local function onKeyEvent (event)
 			print('x libera: '..emptyX..', y libera: '..emptyY)--stampo sulla console la posizione del tassello libero
 		
 		local newEmptyY = emptyY
-		
+		local newEmptyX = emptyX
 		
 		if ( event.keyName == "down" ) then -- sposto verso il basso un tassello
 			newEmptyY = emptyY - 1
 		elseif ( event.keyName == "up" ) then -- sposto verso l'alto un tassello
 			newEmptyY = emptyY + 1
-		end
-			
+		elseif ( event.keyName == "right" ) then
+			newEmptyX = emptyX - 1
+		elseif ( event.keyName == "left" ) then
+			newEmptyX = emptyX + 1
+		end	
 		if grid[newEmptyY] then
-			grid[newEmptyY][emptyX], grid[emptyY][emptyX] =
-			grid[emptyY][emptyX], grid[newEmptyY][emptyX]
-			--local tassello2 = grid[emptyY][emptyX]
-			--local tassello = grid[newEmptyY][emptyX]
-			transition.moveTo(grid[3][4], {x=100, y= 11, time=100})
+			grid[newEmptyY][newEmptyX], grid[emptyY][emptyX] =
+			grid[emptyY][emptyX], grid[newEmptyY][newEmptyX]
+			--riga = emptyX
+			--colonna = emptyY
+			transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
 		end
-	--return false
+	return false
 end
 
 Runtime:addEventListener( "key", onKeyEvent )
