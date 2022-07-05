@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="142">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="151">
  <editorsettings>
   <export target="Map2.json" format="json"/>
  </editorsettings>
@@ -1447,6 +1447,22 @@
  </tileset>
  <tileset firstgid="683" name="bat-orig" tilewidth="32" tileheight="32" tilecount="16" columns="4">
   <image source="bat-1.3/PNG/32x32/bat-orig.png" width="128" height="128"/>
+  <tile id="1">
+   <animation>
+    <frame tileid="1" duration="100"/>
+    <frame tileid="2" duration="100"/>
+    <frame tileid="3" duration="100"/>
+    <frame tileid="2" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="13">
+   <animation>
+    <frame tileid="13" duration="100"/>
+    <frame tileid="14" duration="100"/>
+    <frame tileid="15" duration="100"/>
+    <frame tileid="14" duration="100"/>
+   </animation>
+  </tile>
  </tileset>
  <objectgroup id="9" name="BodyWall">
   <properties>
@@ -2020,7 +2036,7 @@
     <property name="isVisible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="108" name="idle" type="hero" gid="664" x="152.406" y="65.9173" width="16" height="16">
+  <object id="108" name="idle" type="hero" gid="664" x="155.507" y="76.77" width="16" height="16">
    <properties>
     <property name="bounce" type="int" value="0"/>
     <property name="isVisible" type="bool" value="true"/>
@@ -2041,6 +2057,10 @@
   <object id="7" gid="467" x="775.547" y="61.1749" width="16" height="16"/>
   <object id="8" gid="467" x="1016.4" y="430.271" width="16" height="16"/>
   <object id="9" gid="467" x="1168.1" y="71.3406" width="16" height="16"/>
+  <object id="142" name="bat" type="enemy" gid="684" x="547.566" y="608.248" width="32" height="32"/>
+  <object id="143" name="bat" type="enemy" gid="684" x="643.69" y="664.837" width="32" height="32"/>
+  <object id="144" name="bat" type="enemy" gid="696" x="711.907" y="616.775" width="32" height="32"/>
+  <object id="145" name="bat" type="enemy" gid="696" x="498.729" y="679.566" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="7" name="Enemy"/>
  <layer id="1" name="Wall" width="80" height="45">
