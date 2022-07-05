@@ -185,9 +185,10 @@ end
 local ladder=map:listTypes("ladder")
 
 local function teleport(event)
-	if event.target==ladder[1] then
+	if event.other==ladder[1] then
 		idle.x= ladder[2].x+10
 		idle.y=ladder[2].y
+		
 	else 
 		idle.x=ladder[1].x
 		idle.y=ladder[1].y -10
@@ -206,8 +207,8 @@ arrowUp:addEventListener("touch", movePg)
 --fromVeeko says: ho provato a scommentare il movecamera ma tanto non funge
 Runtime:addEventListener("enterFrame",moveCamera2)
 Runtime:addEventListener("enterFrame", moveAnimation)
-ladder[1]:addEventListener("collision",teleport)
-ladder[2]:addEventListener("collision",teleport)
+ladder[1]:addEventListener("postCollision",teleport)
+ladder[2]:addEventListener("postCollision",teleport)
 
 --[[
 SE DIMINUISCO VELOCITà PG DIMINUISCE ANCHE LA VELOCITà DEL MOVIMENTO DELLA MAPPA 
