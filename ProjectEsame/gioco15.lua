@@ -65,7 +65,7 @@ local function creaGriglia()
 	for colonna=1,4 do        
         for riga=1,4 do
 			if grid[riga][colonna] ~= 4*4 then -- rimuovo 16° tassello
-				tassello = grid[riga][colonna]
+				tassello = grid[riga][colonna] --creo i 15 tasselli
 				tassello.anchorX=0
 				tassello.anchorY=0
 				tassello.y=display.contentHeight/2-(larghezzaGriglia)/2 + (riga-1)*dimtassello + riga*spaziaturaTasselli
@@ -118,7 +118,7 @@ local function muovitassello (event)
 		elseif event.phase == "ended" then
 		return false
 		end
-		if grid[newEmptyY] then
+		if grid[newEmptyY] and grid[newEmptyY][newEmptyX] then
 			grid[newEmptyY][newEmptyX], grid[emptyY][emptyX] =
 			grid[emptyY][emptyX], grid[newEmptyY][newEmptyX]
 			--riga = emptyX
