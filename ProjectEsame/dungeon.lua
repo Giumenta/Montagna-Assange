@@ -20,8 +20,8 @@ local control = display.newGroup()
 map:scale(3.5,3.5)
 
 camera:insert(map)
-map.x =200
-map.y=100
+--map.x =200
+--map.y=100
 print(camera.x)
 print(camera.y)
 
@@ -75,62 +75,6 @@ for i = 1,#enemy do
 	physics.addBody(enemy[i],"dynamic")
 end
 
-
---hero:toFront()
---local hero=heroLib.new()
-
---per debug metto l'eroe direttamente qua
---[[
-local opt = { width = 32, height = 32, numFrames = 12}
-local heroSheet = graphics.newImageSheet("risorseGrafiche/PG/sprite-sheet.png",opt)
-
-   local heroSeqs ={
-	{
-		name = "Front",
-		frames={1,2,3},
-		time = 1000,
-		loopCount = 0,
-		loopDirection ="forward"
-   	},
-   	{
-		name = "Left",
-		frames={4,5,6},
-		time = 1000,
-		loopCount = 0,
-		loopDirection ="forward"
-   	},
-	{
-		name = "Right",
-		frames={7,8,9},
-		time = 1000,
-		loopCount = 0,
-		loopDirection ="forward"
-	},
-	{
-		name = "Back",
-		frames={10,11,12},
-		time = 1000,
-		loopCount = 0,
-		loopDirection ="forward"
-	}
-}
---local hero = display.newSprite(heroSheet,heroSeqs)
---local heroShape={-6,0,6,0,-6,16,6,16}
---physics.addBody(hero, "dynamic", heroShape)
---hero:scale(2,2)
-
---hero.x = display.contentCenterX
---hero.y = display.contentCenterY
---print(hero.x)
---print(hero.y)
-]]--
---hero.x= display.contentCenterX
---hero.y= display.contentCenterY
---hero.name= "hero"
-
-
---heroLib.init(hero,640,360,false)
---heroLib.activate(hero)
 
 local function moveAnimation()
 	for i=2,5 do
@@ -244,42 +188,6 @@ local function movePg(event)
  	   	 
  	return true
 end
-------- FUNZIONE PER MOVIMENTO CAMERA DA METTERE A POSTO -------
-local function moveCamera(event)
-
-	
-	local offsetX = 100
-	local offsetY = 100
-	
-	local displayLeft = -camera.x
-	local displayTop = -camera.y
-	
-	local nonScrollingWidth =  display.contentWidth- 100
-	local nonScrollingHeight = display.contentHeight- 100
-	
-	
-	if idle.x >= mapBorderLeft+offsetX and idle.x <= mapBorderRight - offsetX then
-		  
-		  if idle.x>displayLeft+nonScrollingWidth then
-	        	    camera.x = -idle.x + nonScrollingWidth
-	      elseif idle.x < displayLeft+offsetX then
-	            	camera.x = -idle.x + offsetX	
-	      end
-	end
-    
- 	if idle.y >= mapBorderTop+offsetY and idle.y <= mapBorderBottom - offsetY then
-	    
-	    if idle.y>displayTop+nonScrollingHeight then
-		    camera.y = -idle.y + nonScrollingHeight
-		elseif idle.y < displayTop+offsetY then
-		  camera.y = -idle.y + offsetY	
-	    end	 
-	end	 
-	
-	camera.x = -idle.x
-	camera.y = -idle.y	
-	return true	
-end
 
 local preX = idle.x
 local preY = idle.y
@@ -297,76 +205,6 @@ local function moveCamera2(event)
 	return true
 end
 
---[[
-local function moveMap(event)
-	local arrow=event.target
-	
-	if event.phase == "began" then
-        if arrow.name == "left" then
-			camera.x = camera.x + 100
-			hero.x = hero.x - 100
-			hero:setSequence("Left")
-			hero:play()
-
-		elseif arrow.name == "right" then
-        	camera.x = camera.x - 100
-			hero.x = hero.x + 100
-            hero:setSequence("Right")
-			hero:play()
-
-        elseif arrow.name == "up" then
-        	camera.y = camera.y + 100
-			hero.y = hero.y - 100
-            hero:setSequence("Back")
-			hero:play()
-
-        elseif arrow.name == "down" then
-        	camera.y = camera.y - 100
-			hero.y = hero.y + 100
-			hero:setSequence("Front")
-			hero:play()
-
-	   end
-    elseif event.phase == "moved" then
-		if arrow.name == "left" then
-			camera.x = camera.x + 100
-			hero.x = hero.x - 100
-			hero:pause()
-			hero:setSequence("Left")
-			hero:play()
-			print(hero.x)
-			print(hero.y)
-	    	 
-		elseif arrow.name == "right" then
-        	camera.x = camera.x - 100
-			hero.x = hero.x + 100
-			hero:pause()
-            hero:setSequence("Right")
-			hero:play()
-            
-        elseif arrow.name == "up" then
-        	camera.y = camera.y + 100
-			hero.y = hero.y - 100
-			hero:pause()
-            hero:setSequence("Back")
-			hero:play()
-            
-        elseif arrow.name == "down" then
-        	camera.y = camera.y - 100
-			hero.y = hero.y + 100
-			hero:pause()
-			hero:setSequence("Front")
-			hero:play() 
-	   end
-	
-	elseif event.phase == "ended" then
-			hero:setLinearVelocity(0,0)
-			hero:pause()
-	end
- 	   	 
- 	return true
-end
---]]
 
 -- add event to arrows and button
 
@@ -376,10 +214,6 @@ arrowRight:addEventListener("touch", movePg)
 arrowDown:addEventListener("touch", movePg)
 arrowUp:addEventListener("touch", movePg)
 
---arrowLeft:addEventListener("touch", moveMap)
---arrowRight:addEventListener("touch", moveMap)
---arrowDown:addEventListener("touch", moveMap)
---arrowUp:addEventListener("touch", moveMap)
 --fromVeeko says: ho provato a scommentare il movecamera ma tanto non funge
 Runtime:addEventListener("enterFrame",moveCamera2)
 Runtime:addEventListener("enterFrame", moveAnimation)
