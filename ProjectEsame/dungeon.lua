@@ -166,6 +166,45 @@ local function movePg(event)
  	return true
 end
 
+local function movePg_arrows(event)
+	local arrowKey=event.keyName
+	
+--[[]]	if event.phase == "began" then
+        if arrowKey == "left" then
+			--hero[5].isVisible=true --rende visibile sprite left
+			chooseAnim(5)
+			idle:setLinearVelocity(-50, 0)
+			moveAnimation()
+			--hero:play()
+
+		elseif arrowKey == "right" then
+        	--hero[4].isVisible=true
+			chooseAnim(4)
+			idle:setLinearVelocity(50, 0)
+			moveAnimation()
+			
+            --hero:setSequence("Right")
+			--hero:play()
+
+        elseif arrowKey == "up" then
+        	--hero[2].isVisible=true
+			chooseAnim(2)
+			idle:setLinearVelocity(0,-50)
+			moveAnimation()
+			
+            --hero:setSequence("Back")
+			--hero:play()
+
+        elseif arrowKey == "down" then
+        	--hero[3].isVisible=true
+			chooseAnim(3)
+			idle:setLinearVelocity(0, 50)
+			moveAnimation()
+	   end
+    
+ 	return true
+end
+
 local preX = idle.x
 local preY = idle.y
 
@@ -207,6 +246,9 @@ arrowUp:addEventListener("touch", movePg)
 --fromVeeko says: ho provato a scommentare il movecamera ma tanto non funge
 Runtime:addEventListener("enterFrame",moveCamera2)
 Runtime:addEventListener("enterFrame", moveAnimation)
+Runtime:addEventListener("key", movePg_arrows)
+
+
 ladder[1]:addEventListener("postCollision",teleport)
 ladder[2]:addEventListener("postCollision",teleport)
 
