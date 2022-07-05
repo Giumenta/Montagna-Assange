@@ -52,6 +52,7 @@ local function creaGriglia()
 		end
 	end
 end
+
 --creo una funzione per verificare la posizione di un tassello libero
 local function onKeyEvent (event)
     local emptyX
@@ -69,8 +70,8 @@ local function onKeyEvent (event)
 					
 					end
 				end
-			--end
-		  end
+			end
+		--end
 			print('x libera: '..emptyX..', y libera: '..emptyY)--stampo sulla console la posizione del tassello libero
 		
 		local newEmptyY = emptyY
@@ -78,16 +79,17 @@ local function onKeyEvent (event)
 		
 		if ( event.keyName == "down" ) then -- sposto verso il basso un tassello
 			newEmptyY = emptyY - 1
-			elseif ( event.keyName == "up" ) then -- sposto verso l'alto un tassello
-				newEmptyY = emptyY + 1
-			end
-				if grid[newEmptyY] then
-				grid[newEmptyY][emptyX], grid[emptyY][emptyX] =
-				grid[emptyY][emptyX], grid[newEmptyY][emptyX]
-				--local tassello2 = grid[emptyY][emptyX]
-				tassello = grid[newEmptyY][emptyX]
-				transition.moveTo(tassello, {x=100, y= 11, time=100})
-				end
+		elseif ( event.keyName == "up" ) then -- sposto verso l'alto un tassello
+			newEmptyY = emptyY + 1
+		end
+			
+		if grid[newEmptyY] then
+			grid[newEmptyY][emptyX], grid[emptyY][emptyX] =
+			grid[emptyY][emptyX], grid[newEmptyY][emptyX]
+			--local tassello2 = grid[emptyY][emptyX]
+			local tassello = grid[newEmptyY][emptyX]
+			transition.moveTo(tassello, {x=100, y= 11, time=100})
+		end
 	--return false
 end
 
