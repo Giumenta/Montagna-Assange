@@ -7,6 +7,7 @@ local tiled = require "com.ponywolf.ponytiled"
 local json = require ("json")
 local mapData = json.decodeFile(system.pathForFile("Maptiles/Map2.json",system.ResourceDirectory))
 local map = tiled.new(mapData, "Maptiles")
+local scaleFactor = 3.5
 
 local dragable = require "com.ponywolf.plugins.dragable"
 map = dragable.new(map)
@@ -17,7 +18,7 @@ map = dragable.new(map)
 local camera= display.newGroup()
 local control = display.newGroup()
 
-map:scale(3.5,3.5)
+map:scale(scaleFactor,scaleFactor)
 map.x=50
 camera:insert(map)
 
@@ -169,7 +170,7 @@ end
 local function movePg_arrows(event)
 	local arrowKey=event.keyName
 	
---[[]]	if event.phase == "began" then
+	if event.phase == "began" then
         if arrowKey == "left" then
 			--hero[5].isVisible=true --rende visibile sprite left
 			chooseAnim(5)
@@ -201,7 +202,7 @@ local function movePg_arrows(event)
 			idle:setLinearVelocity(0, 50)
 			moveAnimation()
 	   end
-    
+    end
  	return true
 end
 
@@ -210,8 +211,8 @@ local preY = idle.y
 
 local function moveCamera2(event)
 	--calcola la diff di pos della camera (*3.5 che è lo scaling)
-	local diffX = (preX - idle.x)*3.5
-	local diffY = (preY - idle.y)*3.5
+	local diffX = (preX - idle.x)*scaleFactor
+	local diffY = (preY - idle.y)*scaleFactor
 	--aggiorna il posizionamento della camera
 	camera.x = camera.x + diffX
 	camera.y = camera.y + diffY
@@ -224,17 +225,27 @@ end
 local ladder=map:listTypes("ladder")
 
 local function teleport(event)
-	if event.other==ladder[1] then
-		idle.x= ladder[2].x+10
+	if event.target==ladder[1] then
+		idle.x= ladder[2].x +100
 		idle.y=ladder[2].y
 		
 	else 
 		idle.x=ladder[1].x
 		idle.y=ladder[1].y -10
 	end
-
 end
 
+local function waitNTeleport(event)
+	timer.performWithDelay(1500, teleport)
+end
+
+local function testColl(event)
+	if event.other == ladder[1] then
+		print("a")
+	elseif event.other == ladder[2] then
+		print("b")
+	end
+end
 -- add event to arrows and button
 
 createHero()
@@ -246,11 +257,12 @@ arrowUp:addEventListener("touch", movePg)
 --fromVeeko says: ho provato a scommentare il movecamera ma tanto non funge
 Runtime:addEventListener("enterFrame",moveCamera2)
 Runtime:addEventListener("enterFrame", moveAnimation)
-Runtime:addEventListener("key", movePg_arrows)
+--Runtime:addEventListener("key", movePg_arrows)
 
 
-ladder[1]:addEventListener("postCollision",teleport)
-ladder[2]:addEventListener("postCollision",teleport)
+ladder[1]:addEventListener("collision",waitNTeleport)
+ladder[2]:addEventListener("collision",waitNTeleport)
+-- idle:addEventListener("postCollision", testColl)
 
 --[[
 SE DIMINUISCO VELOCITà PG DIMINUISCE ANCHE LA VELOCITà DEL MOVIMENTO DELLA MAPPA 
