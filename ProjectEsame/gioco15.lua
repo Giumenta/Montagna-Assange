@@ -38,8 +38,7 @@ local function creaGriglia()
 	grid[2][4] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello14.png",dimtassello, dimtassello )
 	grid[3][4] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello15.png",dimtassello, dimtassello )
 	
-	 for colonna=1,4 do
-        
+	for colonna=1,4 do        
         for riga=1,4 do
 			if grid[colonna][riga] ~= 4*4 then -- rimuovo 16° tassello
 				local tassello = grid[colonna][riga]
