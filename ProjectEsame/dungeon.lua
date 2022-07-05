@@ -361,6 +361,7 @@ arrowUp:addEventListener("touch", movePg)
 --arrowUp:addEventListener("touch", moveMap)
 --fromVeeko says: ho provato a scommentare il movecamera ma tanto non funge
 Runtime:addEventListener("enterFrame",moveCamera)
+Runtime:addEventListener("enterFrame", moveAnimation)
 
 
 
