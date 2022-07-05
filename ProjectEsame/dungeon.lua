@@ -131,14 +131,15 @@ local heroSheet = graphics.newImageSheet("risorseGrafiche/PG/sprite-sheet.png",o
 
 local function moveAnimation()
 	for i=2,5 do
-		idle.isVisible=false
+		--idle.isVisible=false
 		hero[i].x=idle.x
 		hero[i].y=idle.y
 	end 
 end
+
 local function chooseAnim(n)
 	local i
-	for i=2,5 do
+	for i=1,5 do
 		if n~=i then
 			hero[i].isVisible=false
 		end
@@ -233,6 +234,7 @@ local function movePg(event)
 			--hero[i].y=idle.y
 		end
 			idle:setLinearVelocity(0,0)
+			hero[1].isVisible = true
 			idle.isVisible=true
 		
 	end
