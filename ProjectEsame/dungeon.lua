@@ -278,6 +278,22 @@ local function moveCamera(event)
 	return true	
 end
 
+local preX = idle.x
+local preY = idle.y
+
+local function moveCamera2(event)
+	--calcola la diff di pos della camera (*3.5 che è lo scaling)
+	local diffX = (preX - idle.x)*3.5
+	local diffY = (preY - idle.y)*3.5
+	--aggiorna il posizionamento della camera
+	camera.x = camera.x + diffX
+	camera.y = camera.y + diffY
+	preX = idle.x 
+	preY = idle.y
+
+	return true
+end
+
 --[[
 local function moveMap(event)
 	local arrow=event.target
@@ -362,7 +378,7 @@ arrowUp:addEventListener("touch", movePg)
 --arrowDown:addEventListener("touch", moveMap)
 --arrowUp:addEventListener("touch", moveMap)
 --fromVeeko says: ho provato a scommentare il movecamera ma tanto non funge
-Runtime:addEventListener("enterFrame",moveCamera)
+Runtime:addEventListener("enterFrame",moveCamera2)
 Runtime:addEventListener("enterFrame", moveAnimation)
 
 
