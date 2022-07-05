@@ -225,13 +225,14 @@ end
 local ladder=map:listTypes("ladder")
 
 local function teleport(event)
-	if event.target==ladder[1] then
+	print(event.target)
+	if event.target.name == "ladder1" then
 		idle.x= ladder[2].x +100
 		idle.y=ladder[2].y
 		
 	else 
 		idle.x=ladder[1].x
-		idle.y=ladder[1].y -10
+		idle.y=ladder[1].y -25
 	end
 end
 
