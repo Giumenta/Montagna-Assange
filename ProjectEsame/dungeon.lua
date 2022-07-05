@@ -70,7 +70,10 @@ function createHero()
 	end
 end
 
-
+local enemy= map:listTypes("enemy")
+for i = 1,#enemy do
+	physics.addBody(enemy[i],"dynamic")
+end
 
 
 --hero:toFront()
