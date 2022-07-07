@@ -169,40 +169,32 @@ end
 
 local function movePg_arrows(event)
 	local arrowKey=event.keyName
-	
-	if event.phase == "began" then
-        if arrowKey == "left" then
-			--hero[5].isVisible=true --rende visibile sprite left
+	if event.phase == "down" then
+        if arrowKey == "a" or arrowKey == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
 			moveAnimation()
-			--hero:play()
-
-		elseif arrowKey == "right" then
-        	--hero[4].isVisible=true
+		elseif arrowKey == "d" or arrowKey == "right" then
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
 			moveAnimation()
-			
-            --hero:setSequence("Right")
-			--hero:play()
-
-        elseif arrowKey == "up" then
-        	--hero[2].isVisible=true
+        elseif arrowKey == "w" or arrowKey == "up" then
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
 			moveAnimation()
-			
-            --hero:setSequence("Back")
-			--hero:play()
-
-        elseif arrowKey == "down" then
-        	--hero[3].isVisible=true
+        elseif arrowKey == "s" or arrowKey == "down" then
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
 			moveAnimation()
 	   end
-    end
+    elseif event.phase == "up" then
+		local i
+		for i=2,5 do
+			hero[i].isVisible=false
+		end
+			idle:setLinearVelocity(0,0)
+			idle.isVisible=true
+	end
  	return true
 end
 
@@ -237,7 +229,7 @@ local function teleport(event)
 end
 
 local function waitNTeleport(event)
-	timer.performWithDelay(1500, teleport)
+	timer.performWithDelay(500, teleport(event))
 end
 
 local function testColl(event)
@@ -258,7 +250,7 @@ arrowUp:addEventListener("touch", movePg)
 --fromVeeko says: ho provato a scommentare il movecamera ma tanto non funge
 Runtime:addEventListener("enterFrame",moveCamera2)
 Runtime:addEventListener("enterFrame", moveAnimation)
---Runtime:addEventListener("key", movePg_arrows)
+Runtime:addEventListener("key", movePg_arrows)
 
 
 ladder[1]:addEventListener("collision",waitNTeleport)
