@@ -295,7 +295,7 @@ local function activateBat()
 		local velX = math.random(0, 20)
 		local velY = math.random(0,20)
 
-		physics.addBody(enemy[i],"dynamic", {bounce = 2})
+		physics.addBody(bat[i],"dynamic", {bounce = 2})
 		bat[i].isFixedRotation = true
 		bat[i]:applyLinearImpulse(velX, velY)
 	end
@@ -310,10 +310,4 @@ local function isInTheRoom(objX, objY, wallTop, wallRight, wallBottom, wallLeft)
 	return true 
 end
 
-activateBat
-
-
-local enemy= map:listTypes("bat")
-for i = 1,#enemy do
-	physics.addBody(enemy[i],"dynamic", {bounce = 2})
-end
+activateBat()
