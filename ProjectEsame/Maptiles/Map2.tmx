@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="151">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="167">
  <editorsettings>
   <export target="Map2.json" format="json"/>
  </editorsettings>
@@ -1514,7 +1514,7 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="21" type="wall" x="315.545" y="293" width="175.956" height="10.7622">
+  <object id="21" name="wallUp1" type="wall" x="315.545" y="293" width="175.956" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
@@ -1534,7 +1534,7 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="25" type="wall" x="177.377" y="500.852" width="237.201" height="10.7622">
+  <object id="25" name="wallBottom1" type="wall" x="177.377" y="500.852" width="237.201" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
@@ -1554,12 +1554,12 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="29" type="wall" x="459.484" y="565.095" width="384.08" height="10.7622">
+  <object id="29" name="wallUp2" type="wall" x="459.484" y="565.095" width="384.08" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="30" type="wall" x="384.344" y="692.856" width="463.059" height="10.7622">
+  <object id="30" name="wallBottom2" type="wall" x="384.344" y="692.856" width="463.059" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
@@ -1584,12 +1584,12 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="35" type="wall" x="651.754" y="501.187" width="260.532" height="10.7622">
+  <object id="35" name="wallBottom3" type="wall" x="651.754" y="501.187" width="260.532" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="36" type="wall" x="655.394" y="133.586" width="112.301" height="10.7622">
+  <object id="36" name="wallUp3" type="wall" x="655.394" y="133.586" width="112.301" height="10.7622">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
@@ -1624,7 +1624,7 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="45" type="wall" x="210.917" y="293.19" width="1.7001" height="170.833">
+  <object id="45" name="wallLeft1" type="wall" x="210.917" y="293.19" width="1.7001" height="170.833">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
@@ -1654,7 +1654,7 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="51" type="wall" x="385.922" y="560.859" width="1.7001" height="136.915">
+  <object id="51" name="wallLeft2" type="wall" x="385.922" y="560.859" width="1.7001" height="136.915">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
@@ -1679,12 +1679,12 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="58" type="wall" x="907.472" y="134.839" width="1.7001" height="372.947">
+  <object id="58" name="wallRight3" type="wall" x="907.472" y="134.839" width="1.7001" height="372.947">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="59" type="wall" x="653.799" y="140.528" width="1.7001" height="255.594">
+  <object id="59" name="wallLeft3" type="wall" x="653.799" y="140.528" width="1.7001" height="255.594">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
@@ -1709,12 +1709,12 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="64" type="wall" x="994.898" y="386.263" width="1.7001" height="164.03">
+  <object id="64" name="wallLeft4" type="wall" x="994.898" y="386.263" width="1.7001" height="164.03">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="65" type="wall" x="1243.66" y="385.203" width="1.7001" height="163.954">
+  <object id="65" name="wallRight4" type="wall" x="1243.66" y="385.203" width="1.7001" height="163.954">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
@@ -1734,7 +1734,7 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="69" type="wall" x="843.501" y="565.311" width="1.7001" height="57.3188">
+  <object id="69" name="wallRight2" type="wall" x="843.501" y="565.311" width="1.7001" height="57.3188">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
@@ -1744,7 +1744,7 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="72" type="wall" x="491.764" y="293.482" width="1.7001" height="105.858">
+  <object id="72" name="wallRight1" type="wall" x="491.764" y="293.482" width="1.7001" height="105.858">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
@@ -1779,7 +1779,7 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="80" name="ladder1" type="ladder" x="242.402" y="130.063" width="14.0548" height="7.02741">
+  <object id="80" name="ladder1" type="ladder" x="144.653" y="644.732" width="14.0548" height="7.02741">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
@@ -1791,6 +1791,11 @@
    </properties>
    <ellipse/>
   </object>
+  <object id="151" name="doorExit" type="door" x="1105.07" y="398.551" width="29.9307" height="4.7259"/>
+  <object id="160" type="invisibleWall" x="421.67" y="501.722" width="29.7868" height="0.930839"/>
+  <object id="161" type="invisibleWall" x="491.483" y="411.431" width="2.79252" height="23.271"/>
+  <object id="162" type="invisibleWall" x="209.904" y="468.677" width="2.79252" height="23.271"/>
+  <object id="166" type="invisibleWall" x="274.597" y="302.988" width="29.7868" height="0.930839"/>
  </objectgroup>
  <objectgroup id="13" name="ColumnHoleBody">
   <object id="114" type="hole" x="689.076" y="180.94" width="13.5884" height="3.75192">
@@ -2057,12 +2062,19 @@
   <object id="7" gid="467" x="775.547" y="61.1749" width="16" height="16"/>
   <object id="8" gid="467" x="1016.4" y="430.271" width="16" height="16"/>
   <object id="9" gid="467" x="1168.1" y="71.3406" width="16" height="16"/>
-  <object id="142" name="bat" type="enemy" gid="684" x="547.566" y="608.248" width="32" height="32"/>
-  <object id="143" name="bat" type="enemy" gid="684" x="643.69" y="664.837" width="32" height="32"/>
-  <object id="144" name="bat" type="enemy" gid="696" x="711.907" y="616.775" width="32" height="32"/>
-  <object id="145" name="bat" type="enemy" gid="696" x="498.729" y="679.566" width="32" height="32"/>
  </objectgroup>
- <objectgroup id="7" name="Enemy"/>
+ <objectgroup id="7" name="Enemy">
+  <object id="152" type="skeleton" gid="675" x="502.397" y="606.471" width="16" height="16"/>
+  <object id="153" type="skeleton" gid="675" x="639.877" y="639.552" width="16" height="16"/>
+  <object id="154" type="skeleton" gid="675" x="770.34" y="689.07" width="16" height="16"/>
+  <object id="155" type="finalBoss" gid="332" x="1100.89" y="501.617" width="32" height="36"/>
+  <object id="142" type="bat" gid="684" x="272.676" y="386.131" width="32" height="32"/>
+  <object id="143" type="bat" gid="684" x="369.588" y="437.206" width="32" height="32"/>
+  <object id="156" type="demon" gid="348" x="711.538" y="217.715" width="16" height="24"/>
+  <object id="157" type="demon" gid="348" x="838.132" y="288.459" width="16" height="24"/>
+  <object id="158" type="demon" gid="348" x="712.469" y="348.964" width="16" height="24"/>
+  <object id="159" type="demon" gid="348" x="849.302" y="175.828" width="16" height="24"/>
+ </objectgroup>
  <layer id="1" name="Wall" width="80" height="45">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,156,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,298,299,299,299,299,299,299,299,299,299,299,300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
