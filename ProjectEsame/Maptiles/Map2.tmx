@@ -2064,9 +2064,9 @@
   <object id="9" gid="467" x="1168.1" y="71.3406" width="16" height="16"/>
  </objectgroup>
  <objectgroup id="7" name="Enemy">
-  <object id="152" type="skeleton" gid="675" x="502.397" y="606.471" width="16" height="16"/>
-  <object id="153" type="skeleton" gid="675" x="639.877" y="639.552" width="16" height="16"/>
-  <object id="154" type="skeleton" gid="675" x="770.34" y="689.07" width="16" height="16"/>
+  <object id="152" type="skeleton" gid="2147484323" x="502.397" y="606.471" width="16" height="16"/>
+  <object id="153" type="skeleton" gid="2147484323" x="639.877" y="639.552" width="16" height="16"/>
+  <object id="154" type="skeleton" gid="2147484323" x="770.34" y="689.07" width="16" height="16"/>
   <object id="155" type="finalBoss" gid="332" x="1100.89" y="501.617" width="32" height="36"/>
   <object id="142" type="bat" gid="684" x="272.676" y="386.131" width="32" height="32"/>
   <object id="143" type="bat" gid="684" x="369.588" y="437.206" width="32" height="32"/>
