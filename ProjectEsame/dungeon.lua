@@ -1,3 +1,5 @@
+math.randomSeed(os.time())
+
 physics = require("physics")
 physics.start()
 physics.setGravity(0,0)
@@ -62,19 +64,11 @@ function createHero()
 	idle.isFixedRotation=true
 	local i
 	for i=2,5 do 
-		--lettura lista type hero da destra a sinistra quindi primo elemento è numero
-		
 		hero[i].isVisible=false
 		hero[i].x=idle.x
 		hero[i].y=idle.y
 	end
 end
-
-local enemy= map:listTypes("enemy")
-for i = 1,#enemy do
-	physics.addBody(enemy[i],"dynamic")
-end
-
 
 local function moveAnimation()
 	for i=2,5 do
@@ -226,7 +220,7 @@ local ladder=map:listTypes("ladder")
 
 
 ---------------------------------- COLLISION -------------------------------------
-
+-- Usiamo .performWithDelay in quanto è l'unico modo per modificare i valori x e y di un oggetto per una limitazione di box2D
 -- abbiamo notato che definendo la funzione 'teleport' e richiamandola in .performWithDelay solar3D ci dava 
 --come errore "ERROR: Cannot translate an object before collision is resolved." mentre scrivendola direttamente 
 --come parametro di .performWithDelay l'esercizio funziona
@@ -270,7 +264,6 @@ arrowDown:addEventListener("touch", movePg)
 arrowUp:addEventListener("touch", movePg)
 Runtime:addEventListener("key", movePg_arrows)
 
---fromVeeko says: ho provato a scommentare il movecamera ma tanto non funge
 Runtime:addEventListener("enterFrame",moveCamera)
 Runtime:addEventListener("enterFrame", moveAnimation)
 
@@ -287,3 +280,40 @@ SE DIMINUISCO VELOCITà PG DIMINUISCE ANCHE LA VELOCITà DEL MOVIMENTO DELLA MAP
 MENTRE SE TOLGO LA SCALE *3.5 ALLA MAPPA PG E MAPPA SI SPOSTANO ALLA STESSA VELOCITà 
 PERCHè???????
 ]]--
+
+--mi memorizzo i confini della stanza 1 (pipistrelli)
+
+local room1_wallUp = map:findObject("wallUp1")
+local room1_wallLeft = map:findObject("wallLeft1")
+local room1_wallRight = map:findObject("wallRight1")
+local room1_wallBottom = map:findObject("wallBottom1")
+
+local function activateBat()
+	local bats = map:listTypes("bat")
+
+	for i=1,#bats do
+		local velX = math.random(0, 20)
+		local velY = math.random(0,20)
+
+		physics.addBody(enemy[i],"dynamic", {bounce = 2})
+		bat[i].isFixedRotation = true
+		bat[i]:applyLinearImpulse(velX, velY)
+	end
+end
+
+local function isInTheRoom(objX, objY, wallTop, wallRight, wallBottom, wallLeft)
+	if(objX < wallLeft.x or objX > wallRight.x)
+		return false
+	if(objY < wallTop.y or objY > wallBottom.y)
+		return false
+	
+	return true 
+end
+
+activateBat
+
+
+local enemy= map:listTypes("bat")
+for i = 1,#enemy do
+	physics.addBody(enemy[i],"dynamic", {bounce = 2})
+end
