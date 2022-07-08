@@ -339,3 +339,8 @@ local function invisibleWallCollision(self, event)
 		end
 	end
 end
+
+for i=1,#invisibleWall_batRoom do
+	invisibleWall_batRoom[i].collision = invisibleWallCollision
+	invisibleWall_batRoom[i]:addEventListener("collision", invisibleWallCollision[i])
+end
