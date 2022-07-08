@@ -235,7 +235,7 @@ local function waitNTeleport(self, event)
 				500, 
 				function()
 					 if target == "ladder1" then
-						hero[1].x= ladder[2].x +100
+						hero[1].x= ladder[2].x +25
 						hero[1].y=ladder[2].y				
 					else 
 						hero[1].x=ladder[1].x
