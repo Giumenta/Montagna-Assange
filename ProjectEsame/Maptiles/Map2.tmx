@@ -1792,10 +1792,26 @@
    <ellipse/>
   </object>
   <object id="151" name="doorExit" x="1105.07" y="398.551" width="29.9307" height="4.7259"/>
-  <object id="160" x="421.67" y="501.722" width="40" height="1"/>
-  <object id="161" x="491.483" y="401.431" width="1" height="45"/>
-  <object id="162" x="209.904" y="468.677" width="1" height="23.271"/>
-  <object id="166" x="274.597" y="302.988" width="42.4535" height="1"/>
+  <object id="160" x="421.67" y="501.722" width="40" height="1">
+   <properties>
+    <property name="bodyType" value="static"/>
+   </properties>
+  </object>
+  <object id="161" x="491.483" y="401.431" width="1" height="45">
+   <properties>
+    <property name="bodyType" value="static"/>
+   </properties>
+  </object>
+  <object id="162" x="209.904" y="468.677" width="1" height="23.271">
+   <properties>
+    <property name="bodyType" value="static"/>
+   </properties>
+  </object>
+  <object id="166" x="274.597" y="302.988" width="42.4535" height="1">
+   <properties>
+    <property name="bodyType" value="static"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="13" name="ColumnHoleBody">
   <object id="114" x="689.076" y="180.94" width="13.5884" height="3.75192">

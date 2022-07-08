@@ -1117,6 +1117,12 @@
                  "height":1,
                  "id":160,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"bodyType",
+                         "type":"string",
+                         "value":"static"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1128,6 +1134,12 @@
                  "height":45,
                  "id":161,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"bodyType",
+                         "type":"string",
+                         "value":"static"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1139,6 +1151,12 @@
                  "height":23.271,
                  "id":162,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"bodyType",
+                         "type":"string",
+                         "value":"static"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1150,6 +1168,12 @@
                  "height":1,
                  "id":166,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"bodyType",
+                         "type":"string",
+                         "value":"static"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
