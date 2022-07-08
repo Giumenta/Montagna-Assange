@@ -164,7 +164,7 @@ local function onKeyEvent( event )
 			local newEmptyY = emptyY
 			local newEmptyX = emptyX
 			
-			local roll math.random(4)
+			local roll = math.random(4)
 			if roll == 1 then
 				newEmptyY = emptyY - 1
 			elseif roll == 2 then
@@ -178,10 +178,11 @@ local function onKeyEvent( event )
 			if grid[newEmptyY] and grid[newEmptyY][newEmptyX] then
 				grid[newEmptyY][newEmptyX], grid[emptyY][emptyX] =
 				grid[emptyY][emptyX], grid[newEmptyY][newEmptyX]
-	--			transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
+				transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
 			end
 		end
 	end
+	return true
 end
 
 arrowLeft:addEventListener("touch", muovitassello)
