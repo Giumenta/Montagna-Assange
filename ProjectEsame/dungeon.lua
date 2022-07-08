@@ -319,6 +319,7 @@ local invisibleWall_batRoom = map:listTypes("invisibleWall")
 local function invisibleWallCollision(self, event)
 	local collider = event.other.name
 	if collider == "idle" then
+		print("yay")
 		if self.width > self.height then -- il muro è orizzontale
 			timer.performWithDelay(
 				10, 
