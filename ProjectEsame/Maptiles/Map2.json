@@ -1124,7 +1124,7 @@
                          "value":"static"
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"invisibleWall",
                  "visible":true,
                  "width":40,
                  "x":421.67,
@@ -1141,7 +1141,7 @@
                          "value":"static"
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"invisibleWall",
                  "visible":true,
                  "width":1,
                  "x":491.483,
@@ -1158,7 +1158,7 @@
                          "value":"static"
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"invisibleWall",
                  "visible":true,
                  "width":1,
                  "x":209.904,
@@ -1175,7 +1175,7 @@
                          "value":"static"
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"invisibleWall",
                  "visible":true,
                  "width":42.4535,
                  "x":274.597,
