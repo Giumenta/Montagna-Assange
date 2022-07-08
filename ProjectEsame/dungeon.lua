@@ -318,6 +318,7 @@ local invisibleWall_batRoom = map:listTypes("invisibleWall")
 
 local function invisibleWallCollision(self, event)
 	local collider = event.other.name
+	print(collider)
 	if collider == "idle" then
 		print("yay")
 		if self.width > self.height then -- il muro è orizzontale
@@ -341,6 +342,7 @@ local function invisibleWallCollision(self, event)
 end
 
 for i=1,#invisibleWall_batRoom do
+
 	invisibleWall_batRoom[i].collision = invisibleWallCollision
-	invisibleWall_batRoom[i]:addEventListener("collision", invisibleWallCollision[i])
+	invisibleWall_batRoom[i]:addEventListener("collision", invisibleWall_batRoom[i])
 end
