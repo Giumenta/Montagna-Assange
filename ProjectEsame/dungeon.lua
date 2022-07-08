@@ -1,5 +1,3 @@
-math.randomSeed(os.time())
-
 physics = require("physics")
 physics.start()
 physics.setGravity(0,0)
@@ -59,6 +57,7 @@ arrowDown.name = "down"
 --button.name = "button"
 local hero = map:listTypes("hero")
 local idle=map:findObject("idle")
+
 function createHero()
 	physics.addBody(idle,"dynamic",{bounce=0})
 	idle.isFixedRotation=true
@@ -302,12 +301,40 @@ local function activateBat()
 end
 
 local function isInTheRoom(objX, objY, wallTop, wallRight, wallBottom, wallLeft)
-	if(objX < wallLeft.x or objX > wallRight.x)
+	if(objX < wallLeft.x or objX > wallRight.x) then
 		return false
-	if(objY < wallTop.y or objY > wallBottom.y)
+	end
+	if(objY < wallTop.y or objY > wallBottom.y) then
 		return false
-	
+	end
 	return true 
 end
 
 activateBat()
+
+--aggancio i muri invisibili della stanza dei pipistrelli
+
+local invisibleWall_batRoom = map:listTypes("invisibleWall")
+
+local function invisibleWallCollision(self, event)
+	local collider = event.other.name
+	if collider == "idle" then
+		if self.width > self.height then -- il muro è orizzontale
+			timer.performWithDelay(
+				10, 
+				function()
+					collider.y = collider.y + 5
+				end,
+				1
+			)
+		else -- il muro è verticale
+			timer.performWithDelay(
+				10,
+				function()
+					collider.x = collider.x + 5
+				end, 
+				1
+			)
+		end
+	end
+end
