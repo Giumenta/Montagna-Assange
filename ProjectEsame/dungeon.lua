@@ -49,6 +49,19 @@ arrowDown.x = 180
 arrowDown.y = display.contentHeight-100
 arrowDown.name = "down"
 
+---------- CREATE LIFES CONTROL ---------
+local life=display.newGroup()
+local hearts = {}
+
+for i=1, 3 do
+	hearts[i] = display.newImageRect(control,"risorseGrafiche/PG/heart.png",128,128)
+	hearts[i].x = i * 100
+	hearts[i].y = 50
+	life:insert(hearts[i])
+end
+
+--local shield = display.newImageRect(control,"risorseGrafiche/PG/shield.png",128,128)
+
 ----------------- FIND & GIVE BODY/ANIMATION TO THE HERO ---------------------
 
 --local button = display.newImageRect(control, "risorseGrafiche/risorseTmp_perTest/arrows/redButton.png",80,80)
