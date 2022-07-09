@@ -359,3 +359,19 @@ for i=1,#invisibleWall_batRoom do
 	invisibleWall_batRoom[i].collision = invisibleWallCollision
 	invisibleWall_batRoom[i]:addEventListener("collision", invisibleWall_batRoom[i])
 end
+
+------- GESTIONE VITE -------
+
+local function damage()
+	if --[[l'eroe collide con un nemico]] do
+		table.remove(life, #life)
+	end
+end
+
+local function gameOver()
+	--[[grafica game over e rilanciare il livello]]
+end
+
+if #life<=0 then
+	Runtime.addEventListener(enterFrame, gameOver)
+end
