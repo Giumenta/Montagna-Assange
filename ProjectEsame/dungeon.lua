@@ -235,11 +235,11 @@ local function waitNTeleport(self, event)
 				500, 
 				function()
 					 if target == "ladder1" then
-						hero[1].x= ladder[2].x +25
-						hero[1].y=ladder[2].y				
+						idle.x= ladder[2].x +25
+						idle.y=ladder[2].y				
 					else 
-						hero[1].x=ladder[1].x
-						hero[1].y=ladder[1].y -25
+						idle.x=ladder[1].x
+						idle.y=ladder[1].y -25
 					end
 				end, 
 				1)
@@ -316,33 +316,16 @@ activateBat()
 
 local invisibleWall_batRoom = map:listTypes("invisibleWall")
 
-local function invisibleWallCollision(self, event)
-	local collider = event.other.name
-	print(collider)
-	if collider == "idle" then
-		print("yay")
-		if self.width > self.height then -- il muro è orizzontale
-			timer.performWithDelay(
-				10, 
-				function()
-					collider.y = collider.y + 5
-				end,
-				1
-			)
-		else -- il muro è verticale
-			timer.performWithDelay(
-				10,
-				function()
-					collider.x = collider.x + 5
-				end, 
-				1
-			)
-		end
+local function invisibleWallPreCollision(self, event)
+	if event.other.name == "idle" then
+		event.contact.isEnabled = false
 	end
+	return true
 end
 
 for i=1,#invisibleWall_batRoom do
-
-	invisibleWall_batRoom[i].collision = invisibleWallCollision
-	invisibleWall_batRoom[i]:addEventListener("collision", invisibleWall_batRoom[i])
+	invisibleWall_batRoom[i].preCollision = invisibleWallPreCollision
+	invisibleWall_batRoom[i]:addEventListener("preCollision", invisibleWall_batRoom[i])
 end
+
+
