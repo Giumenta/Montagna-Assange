@@ -64,7 +64,7 @@ local function creaGriglia()
 	
 	for colonna=1,4 do        
         for riga=1,4 do
-			if grid[riga][colonna] ~= 4*4 then -- rimuovo 16° tassello
+			if grid[riga][colonna] ~= GRID_HEIGHT*GRID_WIDTH then -- rimuovo 16° tassello
 				tassello = grid[riga][colonna] --creo i 15 tasselli
 				tassello.anchorX=0
 				tassello.anchorY=0
@@ -184,6 +184,29 @@ local function onKeyEvent( event )
 	end
 	return true
 end
+--controllo se il puzzle è risolto
+local function risolto(event)
+
+local complete=true
+	if
+	grid[1][1] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello1.png",dimtassello, dimtassello ),
+	grid[1][2] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello2.png",dimtassello, dimtassello ),
+	grid[1][3] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello3.png",dimtassello, dimtassello ),
+	grid[1][4] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello4.png",dimtassello, dimtassello ),
+	grid[2][1] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello5.png",dimtassello, dimtassello ),
+	grid[2][2] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello6.png",dimtassello, dimtassello ),
+	grid[2][3] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello7.png",dimtassello, dimtassello ),
+	grid[2][4] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello8.png",dimtassello, dimtassello ),
+	grid[3][1] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello9.png",dimtassello, dimtassello ),
+	grid[3][2] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello10.png",dimtassello, dimtassello ),
+	grid[3][3] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello11.png",dimtassello, dimtassello ),
+	grid[3][4] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello12.png",dimtassello, dimtassello ),
+	grid[4][1] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello13.png",dimtassello, dimtassello ),
+	grid[4][2] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello14.png",dimtassello, dimtassello ),
+	grid[4][3] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello15.png",dimtassello, dimtassello ),
+	print('finito')
+	end
+end
 
 arrowLeft:addEventListener("touch", muovitassello)
 arrowRight:addEventListener("touch", muovitassello)
@@ -191,6 +214,7 @@ arrowDown:addEventListener("touch", muovitassello)
 arrowUp:addEventListener("touch", muovitassello)
 
 Runtime:addEventListener( "key", onKeyEvent )
+Runtime:addEventListener( "key", risolto )
 
 creaGriglia()
 
@@ -198,37 +222,3 @@ creaGriglia()
 		
 
 
---randomizzare i numeri sui tasselli
---[[
-		local emptyX
-        local emptyY
-        
-        for riga = 1, 4 do
-            for colonna = 1, 4 do
-                if grid[riga][colonna] == 4 * 4 then
-                    emptyX = colonna
-                    emptyY = riga
-                end
-            end
-        end
-        
-        local newEmptyY = emptyY
-        local newEmptyX = emptyX
-        
-        local roll math.random(4)
-        if roll == 1 then
-            newEmptyY = emptyY - 1
-        elseif roll == 2 then
-            newEmptyY = emptyY + 1
-        elseif roll == 3 then
-            newEmptyX = emptyX - 1
-        elseif roll == 4 then
-            newEmptyX = emptyX + 1
-        end
-        
-        if grid[newEmptyY] and grid[newEmptyY][newEmptyX] then
-            grid[newEmptyY][newEmptyX], grid[emptyY][emptyX] =
-            grid[emptyY][emptyX], grid[newEmptyY][newEmptyX]
-			transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
-
-        end ]]--
