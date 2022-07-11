@@ -355,5 +355,5 @@ local function gameOver()
 end
 
 if #life<=0 then
-	Runtime.addEventListener(enterFrame, gameOver)
+	Runtime:addEventListener(enterFrame, gameOver)
 end
