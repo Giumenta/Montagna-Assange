@@ -64,7 +64,7 @@ local function creaGriglia()
 	
 	for colonna=1,4 do        
         for riga=1,4 do
-			if grid[riga][colonna] ~= 4*4 then -- rimuovo 16° tassello
+			if grid[riga][colonna] ~= GRID_HEIGHT*GRID_WIDTH then -- rimuovo 16° tassello
 				tassello = grid[riga][colonna] --creo i 15 tasselli
 				tassello.anchorX=0
 				tassello.anchorY=0
@@ -184,6 +184,24 @@ local function onKeyEvent( event )
 	end
 	return true
 end
+--controllo se il puzzle è risolto
+local function risolto(event)
+
+local complete=true
+
+	for  colonna = 1, GRID_HEIGHT do
+		
+		for riga = 1, GRID_WIDTH do
+			if grid[riga][colonna] ~= ((colonna - 1) * GRID_WIDTH) + 1 then
+				complete= false
+			end
+		end
+	end
+
+	if complete then
+	print('finito')
+	end
+end
 
 arrowLeft:addEventListener("touch", muovitassello)
 arrowRight:addEventListener("touch", muovitassello)
@@ -191,6 +209,7 @@ arrowDown:addEventListener("touch", muovitassello)
 arrowUp:addEventListener("touch", muovitassello)
 
 Runtime:addEventListener( "key", onKeyEvent )
+Runtime:addEventListener( "key", risolto )
 
 creaGriglia()
 
@@ -198,37 +217,3 @@ creaGriglia()
 		
 
 
---randomizzare i numeri sui tasselli
---[[
-		local emptyX
-        local emptyY
-        
-        for riga = 1, 4 do
-            for colonna = 1, 4 do
-                if grid[riga][colonna] == 4 * 4 then
-                    emptyX = colonna
-                    emptyY = riga
-                end
-            end
-        end
-        
-        local newEmptyY = emptyY
-        local newEmptyX = emptyX
-        
-        local roll math.random(4)
-        if roll == 1 then
-            newEmptyY = emptyY - 1
-        elseif roll == 2 then
-            newEmptyY = emptyY + 1
-        elseif roll == 3 then
-            newEmptyX = emptyX - 1
-        elseif roll == 4 then
-            newEmptyX = emptyX + 1
-        end
-        
-        if grid[newEmptyY] and grid[newEmptyY][newEmptyX] then
-            grid[newEmptyY][newEmptyX], grid[emptyY][emptyX] =
-            grid[emptyY][emptyX], grid[newEmptyY][newEmptyX]
-			transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
-
-        end ]]--
