@@ -344,10 +344,11 @@ end
 ------- GESTIONE VITE -------
 
 local function damage()
-	if --[[l'eroe collide con un nemico]] do
-		table.remove(life, #life)
-	end
+	table.remove(life, #life)
 end
+
+idle.collision = damage
+idle:addEventListener("collision", idle)
 
 local function gameOver()
 	--[[grafica game over e rilanciare il livello]]
