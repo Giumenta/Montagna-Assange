@@ -343,17 +343,20 @@ end
 
 ------- GESTIONE VITE -------
 
-local function damage()
-	table.remove(life, #life)
+local function damage(event)
+	if event.other.isEnemy then
+		table.remove(hearts, #hearts)
+	
 end
 
 idle.collision = damage
 idle:addEventListener("collision", idle)
 
+
 local function gameOver()
-	--[[grafica game over e rilanciare il livello]]
+	--grafica game over e rilanciare il livello
 end
 
-if #life<=0 then
-	Runtime:addEventListener(enterFrame, gameOver)
+if #hearts<=0 then
+	Runtime:addEventListener("enterFrame", gameOver)
 end
