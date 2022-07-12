@@ -304,12 +304,38 @@ local function activateBat()
 	local bats = map:listTypes("bat")
 
 	for i=1,#bats do
-		local velX = math.random(0, 20)
-		local velY = math.random(0,20)
+		local velX = math.random(0.5, 1)*0.02
+		local velY = math.random(0.5,1)*0.02
 
-		physics.addBody(bat[i],"dynamic", {bounce = 2})
-		bat[i].isFixedRotation = true
-		bat[i]:applyLinearImpulse(velX, velY)
+		physics.addBody(bats[i],"dynamic", {bounce = 1})
+		bats[i].isFixedRotation = true
+		bats[i]:applyLinearImpulse(velX, velY)
+	end
+end
+
+local function activateSkeleton()
+	local skeletons = map:listTypes("skeleton")
+
+	for i=1,#skeletons do
+		--local velX = math.random(0.5, 1)*0.02
+		local velY = math.random(0.5,1)*0.01
+
+		physics.addBody(skeletons[i],"dynamic", {bounce = 1})
+		skeletons[i].isFixedRotation = true
+		skeletons[i]:applyLinearImpulse(0, velY)
+	end
+end
+
+local function activateDemons()
+	local demons = map:listTypes("demon")
+
+	for i=1,#demons do
+		local velX = math.random(0.5, 1)*0.01
+		--local velY = math.random(0.5,1)*0.02
+
+		physics.addBody(demons[i],"dynamic", {bounce = 1})
+		demons[i].isFixedRotation = true
+		demons[i]:applyLinearImpulse(velX, 0)
 	end
 end
 
@@ -324,7 +350,8 @@ local function isInTheRoom(objX, objY, wallTop, wallRight, wallBottom, wallLeft)
 end
 
 activateBat()
-
+activateSkeleton()
+activateDemons()
 --aggancio i muri invisibili della stanza dei pipistrelli
 
 local invisibleWall_batRoom = map:listTypes("invisibleWall")
@@ -343,16 +370,28 @@ end
 
 ------- GESTIONE VITE -------
 
-local function damage()
-	if --[[l'eroe collide con un nemico]] do
-		table.remove(life, #life)
+local function damage(self, event)
+	print("test")
+	print(event.other.name)
+	
+	if event.other.isEnemy ~= nil then
+		
+		display.remove(hearts[#hearts])
+		hearts[#hearts] = nil
+		print(#hearts)
+		--table.remove(hearts, #hearts)
+		--hearts[#hearts].isVisible = false
 	end
 end
 
+idle.postCollision = damage
+idle:addEventListener("postCollision", idle)
+
+
 local function gameOver()
-	--[[grafica game over e rilanciare il livello]]
+	if #hearts <= 0 then
+		print("GAME OVER")
+	end
 end
 
-if #life<=0 then
-	Runtime.addEventListener(enterFrame, gameOver)
-end
+Runtime:addEventListener("enterFrame", gameOver)
