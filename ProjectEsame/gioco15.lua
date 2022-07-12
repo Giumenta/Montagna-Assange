@@ -234,24 +234,6 @@ local function shuffle( event )
 	end
 	return true
 end
---controllo se il puzzle è risolto
-local function risolto(event)
-
-local complete=true
-
-	for  colonna = 1, GRID_HEIGHT do
-		
-		for riga = 1, GRID_WIDTH do
-			if grid[riga][colonna] ~= ((colonna - 1) * GRID_WIDTH) + riga then
-				complete= false
-			end
-		end
-	end
-
-	if complete then
-	print('finito')
-	end
-end
 
 arrowLeft:addEventListener("touch", muovitassello)
 arrowRight:addEventListener("touch", muovitassello)
