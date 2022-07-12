@@ -254,22 +254,23 @@ local function onKeyEvent (event)
 		
 		local newEmptyY = emptyY
 		local newEmptyX = emptyX
-		
-		if ( event.keyName == "down" ) then -- sposto verso il basso un tassello
-			newEmptyY = emptyY - 1
-			elseif ( event.keyName == "up" ) then -- sposto verso l'alto un tassello
-				newEmptyY = emptyY + 1
-			elseif ( event.keyName == "left" ) then -- sposto verso sinistra un tassello
-				newEmptyX = emptyX + 1
-			elseif ( event.keyName == "right" ) then -- sposto verso destra un tassello
-				newEmptyX = emptyX - 1
-		end
-			if grid[newEmptyY] and grid[newEmptyY][newEmptyX] then
-				grid[newEmptyY][newEmptyX], grid[emptyY][emptyX] =
-				grid[emptyY][emptyX], grid[newEmptyY][newEmptyX]
-				transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
-			end
-		
+			if event.phase == "down" then
+
+				if ( event.keyName == "down" ) then -- sposto verso il basso un tassello
+					newEmptyY = emptyY - 1
+					elseif ( event.keyName == "up" ) then -- sposto verso l'alto un tassello
+						newEmptyY = emptyY + 1
+					elseif ( event.keyName == "left" ) then -- sposto verso sinistra un tassello
+						newEmptyX = emptyX + 1
+					elseif ( event.keyName == "right" ) then -- sposto verso destra un tassello
+						newEmptyX = emptyX - 1
+				end
+					if grid[newEmptyY] and grid[newEmptyY][newEmptyX] then
+						grid[newEmptyY][newEmptyX], grid[emptyY][emptyX] =
+						grid[emptyY][emptyX], grid[newEmptyY][newEmptyX]
+						transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
+					end
+				end
 	--return false
 end
 
