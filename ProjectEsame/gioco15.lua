@@ -192,7 +192,7 @@ local complete=true
 	for  colonna = 1, GRID_HEIGHT do
 		
 		for riga = 1, GRID_WIDTH do
-			if grid[riga][colonna] ~= ((colonna - 1) * GRID_WIDTH) + 1 then
+			if grid[riga][colonna] ~= ((colonna - 1) * GRID_WIDTH) + riga then
 				complete= false
 			end
 		end
