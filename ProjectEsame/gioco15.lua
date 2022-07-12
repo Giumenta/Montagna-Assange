@@ -196,39 +196,41 @@ local function muovitassello (event)
 end
 --creo una funzione per lo shuffle dei tasselli
 local function shuffle( event )
-	if ( event.keyName == "space" ) then
-		local moveNumber
-		for moveNumber = 1, 1000 do
-			local emptyX
-			local emptyY
-			
-			for colonna = 1, GRID_HEIGHT do
-				for riga = 1, GRID_WIDTH do
-					if grid[riga][colonna] == nil then
-						emptyX = colonna
-						emptyY = riga
+	if event.phase == "down" then
+		if ( event.keyName == "space" ) then
+			local moveNumber
+			for moveNumber = 1, 1000 do
+				local emptyX
+				local emptyY
+				
+				for colonna = 1, GRID_HEIGHT do
+					for riga = 1, GRID_WIDTH do
+						if grid[riga][colonna] == nil then
+							emptyX = colonna
+							emptyY = riga
+						end
 					end
 				end
-			end
-			
-			local newEmptyY = emptyY
-			local newEmptyX = emptyX
-			
-			local roll = math.random(4)
-			if roll == 1 then
-				newEmptyY = emptyY - 1
-			elseif roll == 2 then
-				newEmptyY = emptyY + 1
-			elseif roll == 3 then
-				newEmptyX = emptyX - 1
-			elseif roll == 4 then
-				newEmptyX = emptyX + 1
-			end
-			
-			if grid[newEmptyY] and grid[newEmptyY][newEmptyX] then
-				grid[newEmptyY][newEmptyX], grid[emptyY][emptyX] =
-				grid[emptyY][emptyX], grid[newEmptyY][newEmptyX]
-				transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=10})
+				
+				local newEmptyY = emptyY
+				local newEmptyX = emptyX
+				
+				local roll = math.random(4)
+				if roll == 1 then
+					newEmptyY = emptyY - 1
+				elseif roll == 2 then
+					newEmptyY = emptyY + 1
+				elseif roll == 3 then
+					newEmptyX = emptyX - 1
+				elseif roll == 4 then
+					newEmptyX = emptyX + 1
+				end
+				
+				if grid[newEmptyY] and grid[newEmptyY][newEmptyX] then
+					grid[newEmptyY][newEmptyX], grid[emptyY][emptyX] =
+					grid[emptyY][emptyX], grid[newEmptyY][newEmptyX]
+					transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=10})
+				end
 			end
 		end
 	end
