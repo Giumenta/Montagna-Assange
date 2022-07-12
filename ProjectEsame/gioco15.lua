@@ -192,7 +192,7 @@ local function muovitassello (event)
 			transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
 		end
 	end
-	--risolto()
+	risolto()
 end
 --creo una funzione per lo shuffle dei tasselli
 local function shuffle( event )
