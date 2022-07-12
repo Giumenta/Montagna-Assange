@@ -34,6 +34,7 @@ local arrowDown = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTe
 arrowDown.x = 180
 arrowDown.y = display.contentHeight-100
 arrowDown.name = "down"
+
 local function creaGriglia() 
      
     local griglia= display.newRect(display.contentCenterX,display.contentCenterY, larghezzaGriglia,larghezzaGriglia)
@@ -62,45 +63,114 @@ local function creaGriglia()
 	grid[4][2] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello14.png",dimtassello, dimtassello )
 	grid[4][3] = display.newImageRect("risorseGrafiche/montagnaGenericoAmbiente/tassello15.png",dimtassello, dimtassello )
 	
-	for colonna=1,4 do        
-        for riga=1,4 do
+	for riga=1,4 do        
+        for colonna=1,4 do
 			if grid[riga][colonna] ~= GRID_HEIGHT*GRID_WIDTH then -- rimuovo 16° tassello
 				tassello = grid[riga][colonna] --creo i 15 tasselli
 				tassello.anchorX=0
 				tassello.anchorY=0
 				tassello.y=display.contentHeight/2-(larghezzaGriglia)/2 + (riga-1)*dimtassello + riga*spaziaturaTasselli
 				tassello.x=display.contentWidth/2-(larghezzaGriglia)/2 + (colonna-1)*dimtassello + colonna*spaziaturaTasselli
-				
+				grid[riga][colonna].value = (riga-1)*4 + colonna
+				print(grid[riga][colonna].value)
+			else 
+				grid[riga][colonna] = nil
 			end
 		end
 	end
+	print("---")
+end
+
+
+--controllo se il puzzle è risolto
+local function risolto()
+
+	local complete=true
+	--[[
+	for  colonna = 1, GRID_HEIGHT do		
+		for riga = 1, GRID_WIDTH do
+		end
+	end
+	--]]
+	local riga = 1
+	local colonna = 1
+	local contaCaselle = 0
+	
+	local r = 1
+	local c = 1
+	--print(grid[r][c].value)
+
+	-- for r =1,4 do
+	-- 	for c = 1,4 do
+	-- 		--print(grid[r][c])
+	-- 		if grid[r][c] ~= nil then 
+	-- 			print(grid[r][c].value)
+	-- 		else
+	-- 			print("sono magico: sono nil")
+	-- 		end
+-- 
+	-- 	end
+	-- end
+	
+	r = 1
+	c = 1
+
+	while complete and c < 5 and r < 5 do
+		
+		if grid[r][c] ~= nil then 
+			print(grid[r][c].value)
+		else
+			print("sono magico: sono nil")
+		end
+		c = (r*c + 1) % 4
+		r = math.floor((r*c + 1) / 4)
+		--[[
+		if grid[r][c] ~= nil then  
+			if grid[r][c].value == (r-1)*4 + c then
+				print(grid[r][c].value)
+				contaCaselle = contaCaselle + 1
+				c = (r*c + 1) % 4
+				r = math.floor((r*c + 1) / 4)
+			else
+				complete = false
+			end
+		else
+			if r ~= 4 and c ~= 4 then
+				complete = false
+			end
+		end
+		]]
+	end
+
+	if complete then
+		print('finito')
+	else
+		print("nope")
+	end
+	print("--")
 end
 
 --creo una funzione per verificare la posizione di un tassello libero
 local function muovitassello (event)
     local emptyX
 	local emptyY
-	--local message = "Key '" .. event.keyName .. "' was pressed " .. event.phase
-   -- print( message )
-		--if ( event.keyName == "down" ) then
 
-			for colonna=1, GRID_HEIGHT do
-        
-				for riga=1, GRID_WIDTH do
-					if grid[riga][colonna] == GRID_WIDTH*GRID_HEIGHT  then
-					emptyX = colonna
-					emptyY = riga
-					
-					end
-				end
+	for colonna=1, GRID_HEIGHT do
+
+		for riga=1, GRID_WIDTH do
+			if grid[riga][colonna] == nil  then
+			emptyX = colonna
+			emptyY = riga
+			
 			end
-		--end
-			print('x libera: '..emptyX..', y libera: '..emptyY)--stampo sulla console la posizione del tassello libero
+		end
+	end
+	--print('x libera: '..emptyX..', y libera: '..emptyY)--stampo sulla console la posizione del tassello libero
 		
-		local newEmptyY = emptyY
-		local newEmptyX = emptyX
-		
-		local arrow=event.target
+	local newEmptyY = emptyY
+	local newEmptyX = emptyX
+	
+	local arrow=event.target
 	
 	if event.phase == "began" then
         if arrow.name == "left" then
@@ -114,38 +184,18 @@ local function muovitassello (event)
 
         elseif arrow.name == "down" then
         	newEmptyY = emptyY - 1
-		
-		elseif event.phase == "ended" then
-		return false
 		end
 		if grid[newEmptyY] and grid[newEmptyY][newEmptyX] then
-			grid[newEmptyY][newEmptyX], grid[emptyY][emptyX] =
-			grid[emptyY][emptyX], grid[newEmptyY][newEmptyX]
+			grid[newEmptyY][newEmptyX], grid[emptyY][emptyX] = grid[emptyY][emptyX], grid[newEmptyY][newEmptyX]
 			--riga = emptyX
 			--colonna = emptyY
 			transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
 		end
 	end
-		--[[if ( event.keyName == "down" ) then -- sposto verso il basso un tassello
-			newEmptyY = emptyY - 1
-		elseif ( event.keyName == "up" ) then -- sposto verso l'alto un tassello
-			newEmptyY = emptyY + 1
-		elseif ( event.keyName == "right" ) then
-			newEmptyX = emptyX - 1
-		elseif ( event.keyName == "left" ) then
-			newEmptyX = emptyX + 1
-		end	
-		if grid[newEmptyY] then
-			grid[newEmptyY][newEmptyX], grid[emptyY][emptyX] =
-			grid[emptyY][emptyX], grid[newEmptyY][newEmptyX]
-			--riga = emptyX
-			--colonna = emptyY
-			transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
-		end]]--
-	return true
+	risolto()
 end
 --creo una funzione per lo shuffle dei tasselli
-local function onKeyEvent( event )
+local function shuffle( event )
 	if ( event.keyName == "space" ) then
 		local moveNumber
 		for moveNumber = 1, 1000 do
@@ -178,29 +228,11 @@ local function onKeyEvent( event )
 			if grid[newEmptyY] and grid[newEmptyY][newEmptyX] then
 				grid[newEmptyY][newEmptyX], grid[emptyY][emptyX] =
 				grid[emptyY][emptyX], grid[newEmptyY][newEmptyX]
-				transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
+				transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=10})
 			end
 		end
 	end
 	return true
-end
---controllo se il puzzle è risolto
-local function risolto(event)
-
-local complete=true
-
-	for  colonna = 1, GRID_HEIGHT do
-		
-		for riga = 1, GRID_WIDTH do
-			if grid[riga][colonna] ~= ((colonna - 1) * GRID_WIDTH) + 1 then
-				complete= false
-			end
-		end
-	end
-
-	if complete then
-	print('finito')
-	end
 end
 
 arrowLeft:addEventListener("touch", muovitassello)
@@ -208,8 +240,7 @@ arrowRight:addEventListener("touch", muovitassello)
 arrowDown:addEventListener("touch", muovitassello)
 arrowUp:addEventListener("touch", muovitassello)
 
-Runtime:addEventListener( "key", onKeyEvent )
-Runtime:addEventListener( "key", risolto )
+Runtime:addEventListener( "key", shuffle )
 
 creaGriglia()
 
