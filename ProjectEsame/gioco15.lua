@@ -192,7 +192,7 @@ local function muovitassello (event)
 			transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
 		end
 	end
-	risolto()
+	--risolto()
 end
 --creo una funzione per lo shuffle dei tasselli
 local function shuffle( event )
@@ -204,7 +204,7 @@ local function shuffle( event )
 			
 			for colonna = 1, GRID_HEIGHT do
 				for riga = 1, GRID_WIDTH do
-					if grid[riga][colonna] == GRID_WIDTH*GRID_HEIGHT then
+					if grid[riga][colonna] == nil then
 						emptyX = colonna
 						emptyY = riga
 					end
@@ -235,12 +235,51 @@ local function shuffle( event )
 	return true
 end
 
+--funzione per spostare i tasselli con la tastiera
+local function onKeyEvent (event)
+    local emptyX
+	local emptyY
+
+			for colonna=1, GRID_HEIGHT do
+        
+				for riga=1, GRID_WIDTH do
+					if grid[riga][colonna] == nil  then
+					emptyX = colonna
+					emptyY = riga
+					
+					end
+				end
+			end
+			--print('x libera: '..emptyX..', y libera: '..emptyY)--stampo sulla console la posizione del tassello libero
+		
+		local newEmptyY = emptyY
+		local newEmptyX = emptyX
+		
+		if ( event.keyName == "down" ) then -- sposto verso il basso un tassello
+			newEmptyY = emptyY - 1
+			elseif ( event.keyName == "up" ) then -- sposto verso l'alto un tassello
+				newEmptyY = emptyY + 1
+			elseif ( event.keyName == "left" ) then -- sposto verso sinistra un tassello
+				newEmptyX = emptyX + 1
+			elseif ( event.keyName == "right" ) then -- sposto verso destra un tassello
+				newEmptyX = emptyX - 1
+		end
+			if grid[newEmptyY] and grid[newEmptyY][newEmptyX] then
+				grid[newEmptyY][newEmptyX], grid[emptyY][emptyX] =
+				grid[emptyY][emptyX], grid[newEmptyY][newEmptyX]
+				transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
+			end
+		
+	--return false
+end
+
 arrowLeft:addEventListener("touch", muovitassello)
 arrowRight:addEventListener("touch", muovitassello)
 arrowDown:addEventListener("touch", muovitassello)
 arrowUp:addEventListener("touch", muovitassello)
 
 Runtime:addEventListener( "key", shuffle )
+Runtime:addEventListener( "key", onKeyEvent )
 
 creaGriglia()
 
