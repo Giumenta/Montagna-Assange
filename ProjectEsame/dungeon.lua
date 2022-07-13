@@ -100,6 +100,31 @@ local function chooseAnim(n)
 	hero[n].isVisible=true
 end
 
+
+-----------CHEST---------
+
+local openChest=map:listTypes("openChest")
+openChest[1].x = map:findObject("chest0").x
+openChest[1].y = map:findObject("chest0").y
+
+openChest[2].x = map:findObject("chest1").x
+openChest[2].y = map:findObject("chest1").y
+
+openChest[3].x = map:findObject("chest2").x
+openChest[3].y = map:findObject("chest2").y
+
+openChest[3].x = map:findObject("chest3").x
+openChest[3].y = map:findObject("chest3").y
+
+--openChest[4].x = map:findObject("chest4").x
+--openChest[4].y = map:findObject("chest4").y
+
+for i=1,4 do
+	openChest[i].isVisible=false
+end
+
+
+
 -------------------- MOVE THE HERO ---------------------
 
 local function movePg(event)
@@ -369,6 +394,21 @@ for i=1,#invisibleWall_batRoom do
 end
 
 ------- GESTIONE VITE -------
+local function gameOver()
+	if #hearts == 0 then
+		print("GAME OVER")
+		--hearts:removeSelf()
+		--hearts = nil
+		local go = display.newImageRect("risorseGrafiche/PG/GameOver.png",412,78)
+			go.x = display.contentCenterX
+			go.y = -40
+			go.alpha = 0
+			local move_down = transition.to(go,{delay=420, time = 600,
+                                    			y = display.contentCenterY,
+								   				alpha = 1})
+		
+	end
+end
 
 local function damage(self, event)
 	print("test")
@@ -382,16 +422,13 @@ local function damage(self, event)
 		--table.remove(hearts, #hearts)
 		--hearts[#hearts].isVisible = false
 	end
+	Runtime:addEventListener("enterFrame", gameOver)
 end
 
 idle.postCollision = damage
 idle:addEventListener("postCollision", idle)
 
 
-local function gameOver()
-	if #hearts <= 0 then
-		print("GAME OVER")
-	end
-end
+
 
 Runtime:addEventListener("enterFrame", gameOver)
