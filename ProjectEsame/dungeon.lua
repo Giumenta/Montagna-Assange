@@ -60,9 +60,12 @@ for i=1, 3 do
 	life:insert(hearts[i])
 end
 
+table.insert(hearts, shield)
+print("number of life:".. #hearts)
 -------- OBJECTS IN CHESTS ---------
 
 local shield = display.newImageRect(control,"risorseGrafiche/PG/shield.png",128,128)
+shield.isVisible=false
 
 local key = display.newImageRect(control,"risorseGrafiche/PG/key.png",128,128)
 key.x = display.contentWidth - 100
@@ -391,8 +394,8 @@ for i=1,#invisibleWall_batRoom do
 	invisibleWall_batRoom[i]:addEventListener("preCollision", invisibleWall_batRoom[i])
 end
 
-------- OPEN THE CHEST ------
 
+------- OPEN THE CHEST ------
 local function chestCollision(self, event)
 	print(event.other.name)
 	
@@ -405,12 +408,16 @@ local function chestCollision(self, event)
 				elseif self.name == "chest2" then
 					openChest[2].isVisible=true
 					print("YOU FIND A KEY")
+					key.isVisible = true
 
 				elseif self.name == "chest3" then
 					openChest[3].isVisible=true
 
 				elseif self.name == "chest4" then
 					openChest[4].isVisible=true
+					--table.insert(hearts, shield)
+					--shield.isVisible=true
+					--print(#hearts)
 				end
 			
 		end
@@ -426,9 +433,10 @@ closedChest[2]:addEventListener("collision",closedChest[2])
 closedChest[3]:addEventListener("collision",closedChest[3])
 closedChest[4]:addEventListener("collision",closedChest[4])
 
----------- EXIT THE DUNGEON -------
-local exitDoor = map.findObject("doorExit")
 
+---------- EXIT THE DUNGEON -------
+local exitDoor = map:findObject("doorExit")
+print(exitDoor)
 local function exit(self, event)
 	--local target = event.target.name
 	local other = event.other.name
@@ -443,6 +451,9 @@ end
 
 exitDoor.collision = exit
 exitDoor:addEventListener("collision", exitDoor)
+
+
+
 ------- GESTIONE VITE -------
 local function gameOver()
 	if #hearts == 0 then
@@ -482,3 +493,8 @@ idle:addEventListener("postCollision", idle)
 
 
 Runtime:addEventListener("enterFrame", gameOver)
+
+
+-- aggiungere scudo quando si apre il forziere nascosto, in modo che venga aggiunto solo quando lo si apre la prima volta,
+-- aggiungerlo a tabella hearts (???)
+-- 
