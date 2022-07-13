@@ -53,20 +53,18 @@ arrowDown.name = "down"
 local life=display.newGroup()
 local hearts = {}
 
-for i=1, 3 do
+for i=1, 4 do
 	hearts[i] = display.newImageRect(control,"risorseGrafiche/PG/heart.png",128,128)
 	hearts[i].x = i * 100
 	hearts[i].y = 50
 	life:insert(hearts[i])
 end
-
-table.insert(hearts, shield)
+--togliamo il cuore bonus che troverà poi nella stanza segreta
+print("number of life:".. #hearts)
+hearts[4].isVisible = false
+table.remove(hearts, #hearts)
 print("number of life:".. #hearts)
 -------- OBJECTS IN CHESTS ---------
-
-local shield = display.newImageRect(control,"risorseGrafiche/PG/shield.png",128,128)
-shield.isVisible=false
-
 local key = display.newImageRect(control,"risorseGrafiche/PG/key.png",128,128)
 key.x = display.contentWidth - 100
 key.y = display.contentHeight - 100
@@ -428,6 +426,16 @@ local function activateAnimation(self, event)
 	arrowUp:addEventListener("touch", movePg)
 	Runtime:addEventListener("key", movePg_arrows)
 end
+
+
+local function addHeart()
+	if openChest[4].isVisible == false then
+		table.insert(hearts, display.newImageRect(control,"risorseGrafiche/PG/heart.png",128,128))
+		hearts[#hearts].x = #hearts * 100
+		hearts[#hearts].y = 50
+		print("Ti è stata donata una nuova vita! Ora hai: " .. #hearts .. "vite")
+	end
+end
 ------- OPEN THE CHEST ------
 local function chestCollision(self, event)
 	print("The trigger of the chest is: " .. event.other.name)
@@ -446,10 +454,8 @@ local function chestCollision(self, event)
 					openChest[3].isVisible=true
 
 				elseif self.name == "chest4" then
-					openChest[4].isVisible=true
-					--table.insert(hearts, shield)
-					--shield.isVisible=true
-					--print(#hearts)
+					addHeart()
+					openChest[4].isVisible=true					
 				end
 			
 		end
