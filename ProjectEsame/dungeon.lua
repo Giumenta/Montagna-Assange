@@ -60,7 +60,17 @@ for i=1, 3 do
 	life:insert(hearts[i])
 end
 
---local shield = display.newImageRect(control,"risorseGrafiche/PG/shield.png",128,128)
+table.insert(hearts, shield)
+print("number of life:".. #hearts)
+-------- OBJECTS IN CHESTS ---------
+
+local shield = display.newImageRect(control,"risorseGrafiche/PG/shield.png",128,128)
+shield.isVisible=false
+
+local key = display.newImageRect(control,"risorseGrafiche/PG/key.png",128,128)
+key.x = display.contentWidth - 100
+key.y = display.contentHeight - 100
+key.isVisible =false
 
 ----------------- FIND & GIVE BODY/ANIMATION TO THE HERO ---------------------
 
@@ -102,26 +112,17 @@ end
 
 
 -----------CHEST---------
-
+local closedChest=map:listTypes("chest")
 local openChest=map:listTypes("openChest")
-openChest[1].x = map:findObject("chest0").x
-openChest[1].y = map:findObject("chest0").y
-
-openChest[2].x = map:findObject("chest1").x
-openChest[2].y = map:findObject("chest1").y
-
-openChest[3].x = map:findObject("chest2").x
-openChest[3].y = map:findObject("chest2").y
-
-openChest[3].x = map:findObject("chest3").x
-openChest[3].y = map:findObject("chest3").y
-
---openChest[4].x = map:findObject("chest4").x
---openChest[4].y = map:findObject("chest4").y
-
-for i=1,4 do
+local chest
+for i= 1,#openChest do
+	local name = "chest" .. i
+	chest=map:findObject(name)
+	openChest[i].x = chest.x
+	openChest[i].y = chest.y
 	openChest[i].isVisible=false
 end
+
 
 
 
@@ -393,6 +394,66 @@ for i=1,#invisibleWall_batRoom do
 	invisibleWall_batRoom[i]:addEventListener("preCollision", invisibleWall_batRoom[i])
 end
 
+
+------- OPEN THE CHEST ------
+local function chestCollision(self, event)
+	print(event.other.name)
+	
+	if event.target.isChest ~= nil then
+		if event.other.name == "idle" then
+			
+				if self.name == "chest1" then
+					openChest[1].isVisible=true
+
+				elseif self.name == "chest2" then
+					openChest[2].isVisible=true
+					print("YOU FIND A KEY")
+					key.isVisible = true
+
+				elseif self.name == "chest3" then
+					openChest[3].isVisible=true
+
+				elseif self.name == "chest4" then
+					openChest[4].isVisible=true
+					--table.insert(hearts, shield)
+					--shield.isVisible=true
+					--print(#hearts)
+				end
+			
+		end
+	end
+end
+
+closedChest[1].collision = chestCollision
+closedChest[2].collision = chestCollision
+closedChest[3].collision = chestCollision
+closedChest[4].collision = chestCollision
+closedChest[1]:addEventListener("collision",closedChest[1])
+closedChest[2]:addEventListener("collision",closedChest[2])
+closedChest[3]:addEventListener("collision",closedChest[3])
+closedChest[4]:addEventListener("collision",closedChest[4])
+
+
+---------- EXIT THE DUNGEON -------
+local exitDoor = map:findObject("doorExit")
+print(exitDoor)
+local function exit(self, event)
+	--local target = event.target.name
+	local other = event.other.name
+	if other == "idle" then
+		if key.isVisible == true then
+			print("YOU WIN")
+		else
+			print("IT'S LOCKED, FIND THE KEY")
+		end
+	end 
+end
+
+exitDoor.collision = exit
+exitDoor:addEventListener("collision", exitDoor)
+
+
+
 ------- GESTIONE VITE -------
 local function gameOver()
 	if #hearts == 0 then
@@ -432,3 +493,8 @@ idle:addEventListener("postCollision", idle)
 
 
 Runtime:addEventListener("enterFrame", gameOver)
+
+
+-- aggiungere scudo quando si apre il forziere nascosto, in modo che venga aggiunto solo quando lo si apre la prima volta,
+-- aggiungerlo a tabella hearts (???)
+-- 

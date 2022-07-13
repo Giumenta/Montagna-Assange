@@ -1791,7 +1791,11 @@
    </properties>
    <ellipse/>
   </object>
-  <object id="151" name="doorExit" x="1105.07" y="398.551" width="29.9307" height="4.7259"/>
+  <object id="151" name="doorExit" x="1105.07" y="398.551" width="29.9307" height="4.7259">
+   <properties>
+    <property name="bodyType" value="static"/>
+   </properties>
+  </object>
   <object id="160" type="invisibleWall" x="421.67" y="501.722" width="40" height="1">
    <properties>
     <property name="bodyType" value="static"/>
@@ -1970,14 +1974,16 @@
   </object>
  </objectgroup>
  <objectgroup id="11" name="BodyChest">
-  <object id="110" name="chest1" x="776.823" y="49.5433" width="13.934" height="11.6117">
+  <object id="110" name="chest2" type="chest" x="776.823" y="49.5433" width="13.934" height="11.6117">
    <properties>
     <property name="bodyType" value="static"/>
+    <property name="isChest" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="111" name="chest3" x="1168.91" y="59.9938" width="14.3211" height="10.8376">
+  <object id="111" name="chest4" type="chest" x="1168.91" y="59.9938" width="14.3211" height="10.8376">
    <properties>
     <property name="bodyType" value="static"/>
+    <property name="isChest" type="bool" value="true"/>
    </properties>
   </object>
   <object id="112" name="box" x="43.6981" y="110.53" width="25.7047" height="16.7081">
@@ -1990,12 +1996,18 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="138" name="chest2" x="1017.06" y="418.956" width="14.881" height="10.3022">
+  <object id="138" name="chest3" x="1017.06" y="418.956" width="14.881" height="10.3022">
    <properties>
     <property name="bodyType" value="static"/>
+    <property name="isChest" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="172" name="chest0" x="79.824" y="225.656" width="15.8625" height="12.2806"/>
+  <object id="172" name="chest1" type="chest" x="79.824" y="225.656" width="15.8625" height="12.2806">
+   <properties>
+    <property name="bodyType" value="static"/>
+    <property name="isChest" type="bool" value="true"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer id="3" name="Floor" width="80" height="45">
   <data encoding="csv">
@@ -2087,13 +2099,29 @@
  </objectgroup>
  <objectgroup id="6" name="Chest">
   <object id="7" gid="467" x="775.547" y="61.1749" width="16" height="16"/>
-  <object id="8" gid="467" x="1016.4" y="430.271" width="16" height="16"/>
+  <object id="8" type="chest" gid="467" x="1016.4" y="430.271" width="16" height="16"/>
   <object id="9" gid="467" x="1168.1" y="71.3406" width="16" height="16"/>
-  <object id="168" type="openChest" gid="469" x="4.41505" y="398.094" width="16" height="16"/>
-  <object id="169" type="openChest" gid="469" x="36.4328" y="398.747" width="16" height="16"/>
-  <object id="170" type="openChest" gid="469" x="67.7971" y="398.094" width="16" height="16"/>
+  <object id="168" type="openChest" gid="469" x="4.41505" y="398.094" width="16" height="16">
+   <properties>
+    <property name="isVisible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="169" type="openChest" gid="469" x="36.4328" y="398.747" width="16" height="16">
+   <properties>
+    <property name="isVisible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="170" type="openChest" gid="469" x="67.7971" y="398.094" width="16" height="16">
+   <properties>
+    <property name="isVisible" type="bool" value="false"/>
+   </properties>
+  </object>
   <object id="171" gid="467" x="80.0111" y="238.261" width="16" height="16"/>
-  <object id="177" type="openChest" gid="469" x="99.3437" y="399.224" width="16" height="16"/>
+  <object id="177" type="openChest" gid="469" x="99.3437" y="399.224" width="16" height="16">
+   <properties>
+    <property name="isVisible" type="bool" value="false"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="7" name="Enemy">
   <object id="152" type="skeleton" gid="675" x="502.397" y="606.471" width="16" height="16">
