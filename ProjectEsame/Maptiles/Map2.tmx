@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="178">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="178">
  <editorsettings>
   <export target="Map2.json" format="json"/>
  </editorsettings>
@@ -1996,7 +1996,7 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="138" name="chest3" x="1017.06" y="418.956" width="14.881" height="10.3022">
+  <object id="138" name="chest3" type="chest" x="1017.06" y="418.956" width="14.881" height="10.3022">
    <properties>
     <property name="bodyType" value="static"/>
     <property name="isChest" type="bool" value="true"/>
@@ -2101,27 +2101,7 @@
   <object id="7" gid="467" x="775.547" y="61.1749" width="16" height="16"/>
   <object id="8" type="chest" gid="467" x="1016.4" y="430.271" width="16" height="16"/>
   <object id="9" gid="467" x="1168.1" y="71.3406" width="16" height="16"/>
-  <object id="168" type="openChest" gid="469" x="4.41505" y="398.094" width="16" height="16">
-   <properties>
-    <property name="isVisible" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="169" type="openChest" gid="469" x="36.4328" y="398.747" width="16" height="16">
-   <properties>
-    <property name="isVisible" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="170" type="openChest" gid="469" x="67.7971" y="398.094" width="16" height="16">
-   <properties>
-    <property name="isVisible" type="bool" value="false"/>
-   </properties>
-  </object>
   <object id="171" gid="467" x="80.0111" y="238.261" width="16" height="16"/>
-  <object id="177" type="openChest" gid="469" x="99.3437" y="399.224" width="16" height="16">
-   <properties>
-    <property name="isVisible" type="bool" value="false"/>
-   </properties>
-  </object>
  </objectgroup>
  <objectgroup id="7" name="Enemy">
   <object id="152" type="skeleton" gid="675" x="502.397" y="606.471" width="16" height="16">
@@ -2182,6 +2162,28 @@
   <object id="176" type="bat" gid="684" x="309.866" y="447.848" width="24.3029" height="24.3029">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="14" name="OpenChest">
+  <object id="168" type="openChest" gid="469" x="4.41505" y="398.094" width="16" height="16">
+   <properties>
+    <property name="isVisible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="169" type="openChest" gid="469" x="36.4328" y="398.747" width="16" height="16">
+   <properties>
+    <property name="isVisible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="170" type="openChest" gid="469" x="67.7971" y="398.094" width="16" height="16">
+   <properties>
+    <property name="isVisible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="177" type="openChest" gid="469" x="99.3437" y="399.224" width="16" height="16">
+   <properties>
+    <property name="isVisible" type="bool" value="false"/>
    </properties>
   </object>
  </objectgroup>

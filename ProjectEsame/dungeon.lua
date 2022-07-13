@@ -114,10 +114,10 @@ end
 -----------CHEST---------
 local closedChest=map:listTypes("chest")
 local openChest=map:listTypes("openChest")
-local chest
+
 for i= 1,#openChest do
 	local name = "chest" .. i
-	chest=map:findObject(name)
+	local chest=map:findObject(name)
 	openChest[i].x = chest.x
 	openChest[i].y = chest.y
 	openChest[i].isVisible=false
@@ -335,7 +335,7 @@ local function activateBat()
 
 		physics.addBody(bats[i],"dynamic", {bounce = 1})
 		bats[i].isFixedRotation = true
-		bats[i]:applyLinearImpulse(velX, velY)
+		-- bats[i]:applyLinearImpulse(velX, velY)
 	end
 end
 
@@ -397,23 +397,23 @@ end
 
 ------- OPEN THE CHEST ------
 local function chestCollision(self, event)
-	print(event.other.name)
+	print("The trigger of the chest is: " .. event.other.name)
 	
 	if event.target.isChest ~= nil then
 		if event.other.name == "idle" then
-			
 				if self.name == "chest1" then
+					--closedChest[1].isVisible = false
 					openChest[1].isVisible=true
-
 				elseif self.name == "chest2" then
+					--closedChest[2].isVisible = false
 					openChest[2].isVisible=true
 					print("YOU FIND A KEY")
 					key.isVisible = true
-
 				elseif self.name == "chest3" then
+					--closedChest[3].isVisible = false
 					openChest[3].isVisible=true
-
 				elseif self.name == "chest4" then
+					--closedChest[4].isVisible = false
 					openChest[4].isVisible=true
 					--table.insert(hearts, shield)
 					--shield.isVisible=true
@@ -424,15 +424,19 @@ local function chestCollision(self, event)
 	end
 end
 
-closedChest[1].collision = chestCollision
-closedChest[2].collision = chestCollision
-closedChest[3].collision = chestCollision
-closedChest[4].collision = chestCollision
-closedChest[1]:addEventListener("collision",closedChest[1])
-closedChest[2]:addEventListener("collision",closedChest[2])
-closedChest[3]:addEventListener("collision",closedChest[3])
-closedChest[4]:addEventListener("collision",closedChest[4])
-
+--[[for i = 1,4 do
+	closedChest[i].postCollision = chestCollision
+	closedChest[i]:addEventListener("postCollision", closedChest[i])
+end]]
+ closedChest[1].collision = chestCollision
+ closedChest[2].collision = chestCollision
+ closedChest[3].collision = chestCollision
+ closedChest[4].collision = chestCollision
+ closedChest[1]:addEventListener("collision",closedChest[1])
+ closedChest[2]:addEventListener("collision",closedChest[2])
+ closedChest[3]:addEventListener("collision",closedChest[3])
+ closedChest[4]:addEventListener("collision",closedChest[4])
+ 
 
 ---------- EXIT THE DUNGEON -------
 local exitDoor = map:findObject("doorExit")
@@ -452,34 +456,35 @@ end
 exitDoor.collision = exit
 exitDoor:addEventListener("collision", exitDoor)
 
-
-
 ------- GESTIONE VITE -------
+local countGO = 0 --TODO: usare un sistema migliore
 local function gameOver()
 	if #hearts == 0 then
-		print("GAME OVER")
+		if countGO == 0 then
+			print("GAME OVER")
 		--hearts:removeSelf()
 		--hearts = nil
-		local go = display.newImageRect("risorseGrafiche/PG/GameOver.png",412,78)
+			local go = display.newImageRect("risorseGrafiche/PG/GameOver.png",412,78)
 			go.x = display.contentCenterX
 			go.y = -40
 			go.alpha = 0
 			local move_down = transition.to(go,{delay=420, time = 600,
                                     			y = display.contentCenterY,
 								   				alpha = 1})
-		
+			countGO = countGO + 1
+		end
 	end
 end
 
 local function damage(self, event)
-	print("test")
-	print(event.other.name)
+	-- print("test")
+	print("Idle collided with: " .. event.other.name)
 	
 	if event.other.isEnemy ~= nil then
 		
 		display.remove(hearts[#hearts])
 		hearts[#hearts] = nil
-		print(#hearts)
+		print("The remaining lifes are: " .. #hearts)
 		--table.remove(hearts, #hearts)
 		--hearts[#hearts].isVisible = false
 	end
