@@ -1106,6 +1106,12 @@
                  "height":4.7259,
                  "id":151,
                  "name":"doorExit",
+                 "properties":[
+                        {
+                         "name":"bodyType",
+                         "type":"string",
+                         "value":"static"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,

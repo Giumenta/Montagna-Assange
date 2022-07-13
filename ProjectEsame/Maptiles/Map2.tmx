@@ -1791,7 +1791,11 @@
    </properties>
    <ellipse/>
   </object>
-  <object id="151" name="doorExit" x="1105.07" y="398.551" width="29.9307" height="4.7259"/>
+  <object id="151" name="doorExit" x="1105.07" y="398.551" width="29.9307" height="4.7259">
+   <properties>
+    <property name="bodyType" value="static"/>
+   </properties>
+  </object>
   <object id="160" type="invisibleWall" x="421.67" y="501.722" width="40" height="1">
    <properties>
     <property name="bodyType" value="static"/>

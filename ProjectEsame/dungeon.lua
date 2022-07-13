@@ -60,7 +60,14 @@ for i=1, 3 do
 	life:insert(hearts[i])
 end
 
---local shield = display.newImageRect(control,"risorseGrafiche/PG/shield.png",128,128)
+-------- OBJECTS IN CHESTS ---------
+
+local shield = display.newImageRect(control,"risorseGrafiche/PG/shield.png",128,128)
+
+local key = display.newImageRect(control,"risorseGrafiche/PG/key.png",128,128)
+key.x = display.contentWidth - 100
+key.y = display.contentHeight - 100
+key.isVisible =false
 
 ----------------- FIND & GIVE BODY/ANIMATION TO THE HERO ---------------------
 
@@ -397,6 +404,7 @@ local function chestCollision(self, event)
 
 				elseif self.name == "chest2" then
 					openChest[2].isVisible=true
+					print("YOU FIND A KEY")
 
 				elseif self.name == "chest3" then
 					openChest[3].isVisible=true
@@ -418,6 +426,23 @@ closedChest[2]:addEventListener("collision",closedChest[2])
 closedChest[3]:addEventListener("collision",closedChest[3])
 closedChest[4]:addEventListener("collision",closedChest[4])
 
+---------- EXIT THE DUNGEON -------
+local exitDoor = map.findObject("doorExit")
+
+local function exit(self, event)
+	--local target = event.target.name
+	local other = event.other.name
+	if other == "idle" then
+		if key.isVisible == true then
+			print("YOU WIN")
+		else
+			print("IT'S LOCKED, FIND THE KEY")
+		end
+	end 
+end
+
+exitDoor.collision = exit
+exitDoor:addEventListener("collision", exitDoor)
 ------- GESTIONE VITE -------
 local function gameOver()
 	if #hearts == 0 then
