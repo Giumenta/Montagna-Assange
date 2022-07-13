@@ -116,8 +116,6 @@ openChest[3].y = map:findObject("chest2").y
 openChest[3].x = map:findObject("chest3").x
 openChest[3].y = map:findObject("chest3").y
 
---openChest[4].x = map:findObject("chest4").x
---openChest[4].y = map:findObject("chest4").y
 
 for i=1,4 do
 	openChest[i].isVisible=false
