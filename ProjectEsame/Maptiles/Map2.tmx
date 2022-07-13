@@ -1974,7 +1974,7 @@
   </object>
  </objectgroup>
  <objectgroup id="11" name="BodyChest">
-  <object id="110" name="chest2" type="chest" x="776.823" y="49.5433" width="13.934" height="11.6117">
+  <object id="110" name="chest2" type="chest" x="775.842" y="48.4961" width="13.934" height="11.6117">
    <properties>
     <property name="bodyType" value="static"/>
     <property name="isChest" type="bool" value="true"/>
