@@ -104,10 +104,10 @@ end
 -----------CHEST---------
 local closedChest=map:listTypes("chest")
 local openChest=map:listTypes("openChest")
-
+local chest
 for i= 1,#openChest do
 	local name = "chest" .. i
-	local chest=map:findObject(name)
+	chest=map:findObject(name)
 	openChest[i].x = chest.x
 	openChest[i].y = chest.y
 	openChest[i].isVisible=false
@@ -391,19 +391,20 @@ local function chestCollision(self, event)
 	
 	if event.target.isChest ~= nil then
 		if event.other.name == "idle" then
-			if chest.name == "chest1" then
-				openChest[1].isVisible=true
+			
+				if self.name == "chest1" then
+					openChest[1].isVisible=true
 
-			elseif chest.name == "chest2" then
-				openChest[2].isVisible=true
+				elseif self.name == "chest2" then
+					openChest[2].isVisible=true
 
-			elseif chest.name == "chest3" then
-				openChest[3].isVisible=true
+				elseif self.name == "chest3" then
+					openChest[3].isVisible=true
 
-			elseif chest.name == "chest4" then
-				openChest[4].isVisible=true
-
-			end
+				elseif self.name == "chest4" then
+					openChest[4].isVisible=true
+				end
+			
 		end
 	end
 end
