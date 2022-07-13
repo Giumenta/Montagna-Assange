@@ -115,6 +115,11 @@ end
 local closedChest=map:listTypes("chest")
 local openChest=map:listTypes("openChest")
 
+local chest1 = map:findObject("chest1")
+local chest2 = map:findObject("chest2")
+local chest3 = map:findObject("chest3")
+local chest4 = map:findObject("chest4")
+
 for i= 1,#openChest do
 	local name = "chest" .. i
 	local chest=map:findObject(name)
@@ -402,18 +407,17 @@ local function chestCollision(self, event)
 	if event.target.isChest ~= nil then
 		if event.other.name == "idle" then
 				if self.name == "chest1" then
-					--closedChest[1].isVisible = false
 					openChest[1].isVisible=true
+
 				elseif self.name == "chest2" then
-					--closedChest[2].isVisible = false
 					openChest[2].isVisible=true
 					print("YOU FIND A KEY")
 					key.isVisible = true
+
 				elseif self.name == "chest3" then
-					--closedChest[3].isVisible = false
 					openChest[3].isVisible=true
+
 				elseif self.name == "chest4" then
-					--closedChest[4].isVisible = false
 					openChest[4].isVisible=true
 					--table.insert(hearts, shield)
 					--shield.isVisible=true
@@ -424,18 +428,14 @@ local function chestCollision(self, event)
 	end
 end
 
---[[for i = 1,4 do
-	closedChest[i].postCollision = chestCollision
-	closedChest[i]:addEventListener("postCollision", closedChest[i])
-end]]
- closedChest[1].collision = chestCollision
- closedChest[2].collision = chestCollision
- closedChest[3].collision = chestCollision
- closedChest[4].collision = chestCollision
- closedChest[1]:addEventListener("collision",closedChest[1])
- closedChest[2]:addEventListener("collision",closedChest[2])
- closedChest[3]:addEventListener("collision",closedChest[3])
- closedChest[4]:addEventListener("collision",closedChest[4])
+ chest1.collision = chestCollision
+ chest2.collision = chestCollision
+ chest3.collision = chestCollision
+ chest4.collision = chestCollision
+ chest1:addEventListener("collision",chest1)
+ chest2:addEventListener("collision",chest2)
+ chest3:addEventListener("collision",chest3)
+ chest4:addEventListener("collision",chest4)
  
 
 ---------- EXIT THE DUNGEON -------
