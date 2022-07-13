@@ -1684,9 +1684,14 @@
                          "name":"bodyType",
                          "type":"string",
                          "value":"static"
+                        }, 
+                        {
+                         "name":"isChest",
+                         "type":"bool",
+                         "value":true
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"chest",
                  "visible":true,
                  "width":13.934,
                  "x":776.823,
@@ -1701,9 +1706,14 @@
                          "name":"bodyType",
                          "type":"string",
                          "value":"static"
+                        }, 
+                        {
+                         "name":"isChest",
+                         "type":"bool",
+                         "value":true
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"chest",
                  "visible":true,
                  "width":14.3211,
                  "x":1168.91,
@@ -1752,6 +1762,11 @@
                          "name":"bodyType",
                          "type":"string",
                          "value":"static"
+                        }, 
+                        {
+                         "name":"isChest",
+                         "type":"bool",
+                         "value":true
                         }],
                  "rotation":0,
                  "type":"",
@@ -1764,8 +1779,19 @@
                  "height":12.2806,
                  "id":172,
                  "name":"chest1",
+                 "properties":[
+                        {
+                         "name":"bodyType",
+                         "type":"string",
+                         "value":"static"
+                        }, 
+                        {
+                         "name":"isChest",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "rotation":0,
-                 "type":"",
+                 "type":"chest",
                  "visible":true,
                  "width":15.8625,
                  "x":79.824,
@@ -2017,7 +2043,7 @@
                  "id":8,
                  "name":"",
                  "rotation":0,
-                 "type":"",
+                 "type":"chest",
                  "visible":true,
                  "width":16,
                  "x":1016.4,

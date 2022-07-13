@@ -102,25 +102,14 @@ end
 
 
 -----------CHEST---------
-
+local closedChest=map:listTypes("chest")
 local openChest=map:listTypes("openChest")
---[[openChest[1].x = map:findObject("chest0").x
-openChest[1].y = map:findObject("chest0").y
 
-openChest[2].x = map:findObject("chest1").x
-openChest[2].y = map:findObject("chest1").y
-
-openChest[3].x = map:findObject("chest2").x
-openChest[3].y = map:findObject("chest2").y
-
-openChest[3].x = map:findObject("chest3").x
-openChest[3].y = map:findObject("chest3").y
-]]
-
-for i,#openChest do
+for i= 1,#openChest do
 	local name = "chest" .. i
-	openChest[i].x = map:findObject(name).x
-	openChest[i].y = map:findObject(name).y
+	local chest=map:findObject(name)
+	openChest[i].x = chest.x
+	openChest[i].y = chest.y
 	openChest[i].isVisible=false
 end
 
@@ -394,6 +383,39 @@ for i=1,#invisibleWall_batRoom do
 	invisibleWall_batRoom[i].preCollision = invisibleWallPreCollision
 	invisibleWall_batRoom[i]:addEventListener("preCollision", invisibleWall_batRoom[i])
 end
+
+------- OPEN THE CHEST ------
+
+local function chestCollision(self, event)
+	print(event.other.name)
+	
+	if event.target.isChest ~= nil then
+		if event.other.name == "idle" then
+			if chest.name == "chest1" then
+				openChest[1].isVisible=true
+
+			elseif chest.name == "chest2" then
+				openChest[2].isVisible=true
+
+			elseif chest.name == "chest3" then
+				openChest[3].isVisible=true
+
+			elseif chest.name == "chest4" then
+				openChest[4].isVisible=true
+
+			end
+		end
+	end
+end
+
+closedChest[1].collision = chestCollision
+closedChest[2].collision = chestCollision
+closedChest[3].collision = chestCollision
+closedChest[4].collision = chestCollision
+closedChest[1]:addEventListener("collision",closedChest[1])
+closedChest[2]:addEventListener("collision",closedChest[2])
+closedChest[3]:addEventListener("collision",closedChest[3])
+closedChest[4]:addEventListener("collision",closedChest[4])
 
 ------- GESTIONE VITE -------
 local function gameOver()
