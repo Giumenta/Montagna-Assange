@@ -136,62 +136,35 @@ end
 local function movePg(event)
 	local arrow=event.target
 	
---[[]]	if event.phase == "began" then
+	if event.phase == "began" then
         if arrow.name == "left" then
-			--hero[5].isVisible=true --rende visibile sprite left
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
-			 
-			--hero:play()
-
 		elseif arrow.name == "right" then
-        	--hero[4].isVisible=true
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
-			 
-			
-            --hero:setSequence("Right")
-			--hero:play()
-
+		
         elseif arrow.name == "up" then
-        	--hero[2].isVisible=true
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
 			 
-			
-            --hero:setSequence("Back")
-			--hero:play()
-
         elseif arrow.name == "down" then
-        	--hero[3].isVisible=true
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
-			 
-			
-			--hero:setSequence("Front")
-			--hero:play()
-
 	   end
     elseif event.phase == "moved" then
 		if arrow.name == "left" then
 			chooseAnim(5)
-			idle:setLinearVelocity(-50, 0)
-			 
-	    	 
+			idle:setLinearVelocity(-50, 0)	    	 
 		elseif arrow.name == "right" then
 			chooseAnim(4)
-			idle:setLinearVelocity(50, 0)
-			 
-            
+			idle:setLinearVelocity(50, 0)            
         elseif arrow.name == "up" then
 			chooseAnim(2)
-			idle:setLinearVelocity(0,-50)
-			 
-            
+			idle:setLinearVelocity(0,-50)            
         elseif arrow.name == "down" then
 			chooseAnim(3)
-			idle:setLinearVelocity(0, 50)
-			 
+			idle:setLinearVelocity(0, 50)			 
 	   end
 	
 	elseif event.phase == "ended" then
@@ -201,11 +174,35 @@ local function movePg(event)
 		end
 			idle:setLinearVelocity(0,0)
 			hero[1].isVisible = true
-			idle.isVisible=true
-		
-	end
- 	   	 
+			idle.isVisible=true		
+	end 	   	 
  	return true
+end
+
+local function movePg_noAnim(event)
+	local arrow=event.target
+	
+	if event.phase == "began" then
+        if arrow.name == "left" then
+			idle:setLinearVelocity(-50, 0)
+		elseif arrow.name == "right" then
+			idle:setLinearVelocity(50, 0)		
+        elseif arrow.name == "up" then
+			idle:setLinearVelocity(0,-50)			 
+        elseif arrow.name == "down" then
+			idle:setLinearVelocity(0, 50)
+	   end
+    elseif event.phase == "moved" then
+		if arrow.name == "left" then
+			idle:setLinearVelocity(-50, 0)	    	 
+		elseif arrow.name == "right" then
+			idle:setLinearVelocity(50, 0)            
+        elseif arrow.name == "up" then
+			idle:setLinearVelocity(0,-50)            
+        elseif arrow.name == "down" then
+			idle:setLinearVelocity(0, 50)			 
+	   end
+	end
 end
 
 local function movePg_arrows(event)
@@ -214,19 +211,38 @@ local function movePg_arrows(event)
         if arrowKey == "a" or arrowKey == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
-			moveAnimation()
 		elseif arrowKey == "d" or arrowKey == "right" then
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
-			moveAnimation()
         elseif arrowKey == "w" or arrowKey == "up" then
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
-			moveAnimation()
         elseif arrowKey == "s" or arrowKey == "down" then
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
-			moveAnimation()
+	   end
+    elseif event.phase == "up" then
+		local i
+		for i=2,5 do
+			hero[i].isVisible=false
+		end
+			idle:setLinearVelocity(0,0)
+			idle.isVisible=true
+	end
+ 	return true
+end
+
+local function movePg_arrows_noAnim(event)
+	local arrowKey=event.keyName
+	if event.phase == "down" then
+        if arrowKey == "a" or arrowKey == "left" then
+			idle:setLinearVelocity(-50, 0)
+		elseif arrowKey == "d" or arrowKey == "right" then
+			idle:setLinearVelocity(50, 0)
+        elseif arrowKey == "w" or arrowKey == "up" then
+			idle:setLinearVelocity(0,-50)
+        elseif arrowKey == "s" or arrowKey == "down" then
+			idle:setLinearVelocity(0, 50)
 	   end
     elseif event.phase == "up" then
 		local i
@@ -301,11 +317,12 @@ end
 
 createHero()
 -- muovi il pg
-arrowLeft:addEventListener("touch", movePg)
-arrowRight:addEventListener("touch", movePg)
-arrowDown:addEventListener("touch", movePg)
-arrowUp:addEventListener("touch", movePg)
-Runtime:addEventListener("key", movePg_arrows)
+ arrowLeft:addEventListener("touch",    movePg_noAnim)
+arrowRight:addEventListener("touch",   movePg_noAnim)
+ arrowDown:addEventListener("touch",   movePg_noAnim)
+   arrowUp:addEventListener("touch",   movePg_noAnim)
+   Runtime:addEventListener("key",     movePg_arrows_noAnim)
+
 
 Runtime:addEventListener("enterFrame",moveCamera)
 Runtime:addEventListener("enterFrame", moveAnimation)
@@ -399,7 +416,18 @@ for i=1,#invisibleWall_batRoom do
 	invisibleWall_batRoom[i]:addEventListener("preCollision", invisibleWall_batRoom[i])
 end
 
-
+local function activateAnimation(self, event)
+	 arrowLeft:removeEventListener("touch",    movePg_noAnim)
+	arrowRight:removeEventListener("touch",   movePg_noAnim)
+	 arrowDown:removeEventListener("touch",   movePg_noAnim)
+	   arrowUp:removeEventListener("touch",   movePg_noAnim)
+	   Runtime:removeEventListener("key",     movePg_arrows_noAnim)
+	arrowLeft:addEventListener("touch", movePg)
+	arrowRight:addEventListener("touch", movePg)
+	arrowDown:addEventListener("touch", movePg)
+	arrowUp:addEventListener("touch", movePg)
+	Runtime:addEventListener("key", movePg_arrows)
+end
 ------- OPEN THE CHEST ------
 local function chestCollision(self, event)
 	print("The trigger of the chest is: " .. event.other.name)
@@ -408,7 +436,7 @@ local function chestCollision(self, event)
 		if event.other.name == "idle" then
 				if self.name == "chest1" then
 					openChest[1].isVisible=true
-
+					activateAnimation()
 				elseif self.name == "chest2" then
 					openChest[2].isVisible=true
 					print("YOU FIND A KEY")
