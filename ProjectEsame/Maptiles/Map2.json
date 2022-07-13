@@ -1678,7 +1678,7 @@
                 {
                  "height":11.6117,
                  "id":110,
-                 "name":"chest1",
+                 "name":"chest2",
                  "properties":[
                         {
                          "name":"bodyType",
@@ -1695,7 +1695,7 @@
                 {
                  "height":10.8376,
                  "id":111,
-                 "name":"chest3",
+                 "name":"chest4",
                  "properties":[
                         {
                          "name":"bodyType",
@@ -1746,7 +1746,7 @@
                 {
                  "height":10.3022,
                  "id":138,
-                 "name":"chest2",
+                 "name":"chest3",
                  "properties":[
                         {
                          "name":"bodyType",
@@ -1763,7 +1763,7 @@
                 {
                  "height":12.2806,
                  "id":172,
-                 "name":"chest0",
+                 "name":"chest1",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2040,6 +2040,12 @@
                  "height":16,
                  "id":168,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"isVisible",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"openChest",
                  "visible":true,
@@ -2052,6 +2058,12 @@
                  "height":16,
                  "id":169,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"isVisible",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"openChest",
                  "visible":true,
@@ -2064,6 +2076,12 @@
                  "height":16,
                  "id":170,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"isVisible",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"openChest",
                  "visible":true,
@@ -2088,12 +2106,18 @@
                  "height":16,
                  "id":177,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"isVisible",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"openChest",
                  "visible":true,
                  "width":16,
-                 "x":99.3436701311978,
-                 "y":399.224399386608
+                 "x":99.3437,
+                 "y":399.224
                 }],
          "opacity":1,
          "type":"objectgroup",

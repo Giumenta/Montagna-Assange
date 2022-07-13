@@ -104,7 +104,7 @@ end
 -----------CHEST---------
 
 local openChest=map:listTypes("openChest")
-openChest[1].x = map:findObject("chest0").x
+--[[openChest[1].x = map:findObject("chest0").x
 openChest[1].y = map:findObject("chest0").y
 
 openChest[2].x = map:findObject("chest1").x
@@ -115,11 +115,15 @@ openChest[3].y = map:findObject("chest2").y
 
 openChest[3].x = map:findObject("chest3").x
 openChest[3].y = map:findObject("chest3").y
+]]
 
-
-for i=1,4 do
+for i,#openChest do
+	local name = "chest" .. i
+	openChest[i].x = map:findObject(name).x
+	openChest[i].y = map:findObject(name).y
 	openChest[i].isVisible=false
 end
+
 
 
 
