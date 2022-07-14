@@ -3,12 +3,12 @@ local riga=1
 local GRID_WIDTH = 4
 local GRID_HEIGHT = 4
 local grid = {} -- creo una griglia 4x4
-	for  riga = 1, GRID_HEIGHT do
-		grid[riga] = {}
-		for colonna = 1, GRID_WIDTH do
-			grid[riga][colonna] = ((colonna - 1) * GRID_WIDTH) + riga
-		end
+for  riga = 1, GRID_HEIGHT do
+	grid[riga] = {}
+	for colonna = 1, GRID_WIDTH do
+		grid[riga][colonna] = ((colonna - 1) * GRID_WIDTH) + riga
 	end
+end
 
 local larghezzaGriglia = display.contentHeight*0.9
 local dimtassello= (display.contentHeight*0.88)/4
@@ -36,7 +36,7 @@ arrowDown.y = display.contentHeight-100
 arrowDown.name = "down"
 --creo una funzione per lo shuffle dei tasselli
 
-local function shuffle(--[[event]] )
+local function shuffle()
 
 	local moveNumber
 		for moveNumber = 1, 1000 do
