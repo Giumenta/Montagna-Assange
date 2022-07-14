@@ -469,12 +469,19 @@ end
  end
  
 local function createText(case)
-	local box=display.newRect(350,display.contentHeight-200,display.contentWidth-500,200)
+	local box=display.newImageRect("risorseGrafiche/boxmessaggi.png",display.contentHeight*2-125,display.contentWidth/2)
+	box.x=0
+	box.y=display.contentCenterY -80
 	box.anchorX=0
 	box.anchorY=0
+	box.alpha=0
+	transition.fadeIn( box, { time=2000 })
 	local quote
+
 	if case == 1 then
-		quote = "???: Caro Padawan ora sei pronto per muovere\n i tuoi primi passi. XD"
+		quote = "???: Giovane Padawan ora sei pronto per muovere\n i tuoi primi passi. XD"
+			--quote.x=0
+			--quote.y=display.contentCenterY -80
 	elseif case == 2 then
 		quote = "???: Prendi sta vita e vai. Sisghè"
 	elseif case == 3 then
