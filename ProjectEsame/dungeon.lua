@@ -462,21 +462,25 @@ local function addHeart()
 end
 
 ------- BOX TEXT ---------
- local function deleteText()
+ --[[local function deleteText()
 	display.remove(box)
 	box = nil
 	display.remove(chestText)
 	chestText = nil
  end
+ ]]
+ local box
+ local chestText
  
 local function createText(case)
-	local box=display.newImageRect("risorseGrafiche/boxmessaggi.png",display.contentHeight*2-125,display.contentWidth/2)
+	box=display.newImageRect("risorseGrafiche/boxmessaggi.png",display.contentHeight*2-125,display.contentWidth/2)
 	box.x=0
 	box.y=display.contentCenterY -80
 	box.anchorX=0
 	box.anchorY=0
 	box.alpha=0
 	transition.fadeIn( box, { time=500 })
+	
 	local quote
 
 	if case == 1 then
@@ -494,7 +498,7 @@ local function createText(case)
 		end
 	end
 
-	local chestText = display.newText({text="",fontSize=30, font = fontDir})
+	chestText = display.newText({text="",fontSize=30, font = fontDir})
 	chestText:setFillColor(0,0,0)
 	chestText.text = quote
 	chestText.anchorX = 0
@@ -534,8 +538,8 @@ local function chestCollision(self, event)
 			end
 		end
 	elseif event.phase == "ended" then
-		createText()
-		deleteText()
+		transition.fadeOut( box, { time=500 })
+		transition.fadeOut( chestText, { time=500 })
 	end
 end
 
