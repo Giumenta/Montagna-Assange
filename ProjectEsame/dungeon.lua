@@ -127,8 +127,6 @@ for i= 1,#openChest do
 end
 
 
-
-
 -------------------- MOVE THE HERO ---------------------
 
 local function movePg(event)
@@ -445,6 +443,8 @@ local function chestCollision(self, event)
 				if self.name == "chest1" then
 					openChest[1].isVisible=true
 					activateAnimation()
+					--createText()
+
 				elseif self.name == "chest2" then
 					openChest[2].isVisible=true
 					print("YOU FIND A KEY")
@@ -489,6 +489,13 @@ end
 
 exitDoor.collision = exit
 exitDoor:addEventListener("collision", exitDoor)
+
+------- BOX TEXT ---------
+local function createText()
+	local box=display.newRect(350,display.contentHeight-200,display.contentWidth-500,200)
+	box.anchorX=0
+	box.anchorY=0
+end
 
 ------- GESTIONE VITE -------
 local countGO = 0 --TODO: usare un sistema migliore
