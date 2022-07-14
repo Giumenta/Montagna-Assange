@@ -364,18 +364,18 @@ local room1_wallBottom = map:findObject("wallBottom1")
 local function activateBat()
 	local bats = map:listTypes("bat")
 	local values = {4, 2, 6, 1}
-	for i=1,#bats do
-		local velX = 0.7 * math.sin(values[i]*math.pi*math.random(0.3, 0.5)) + 2
-		local velY = 0.6*math.cos(values[((i+1)%4) +1]*math.pi*math.random(0.3, 0.5)) + 3
-		bats[i]:scale(0.75, 0.75)
-		physics.addBody(bats[i],"dynamic", {bounce = 1})
-		bats[i].isFixedRotation = true
-		bats[i].collision = collisionEnemy
-		bats[i].preCollision = preCollisionEnemy
-		bats[i]:addEventListener("collision", bats[i])
-		bats[i]:addEventListener("preCollision", bats[i])
-		bats[i]:applyForce(velX, velY, bats[i].x, bats[i].y)
-	end
+	--for i=1,#bats do
+	--	local velX = 0.7 * math.sin(values[i]*math.pi*math.random(0.3, 0.5)) + 2
+	--	local velY = 0.6*math.cos(values[((i+1)%4) +1]*math.pi*math.random(0.3, 0.5)) + 3
+	--	bats[i]:scale(0.75, 0.75)
+	--	physics.addBody(bats[i],"dynamic", {bounce = 1})
+	--	bats[i].isFixedRotation = true
+	--	bats[i].collision = collisionEnemy
+	--	bats[i].preCollision = preCollisionEnemy
+	--	bats[i]:addEventListener("collision", bats[i])
+	--	bats[i]:addEventListener("preCollision", bats[i])
+	--	bats[i]:applyForce(velX, velY, bats[i].x, bats[i].y)
+	--end
 end
 
 local function activateSkeleton()
@@ -455,6 +455,37 @@ local function addHeart()
 		print("Ti è stata donata una nuova vita! Ora hai: " .. #hearts .. "vite")
 	end
 end
+
+------- BOX TEXT ---------
+ 
+local function createText(case)
+	local box=display.newRect(350,display.contentHeight-200,display.contentWidth-500,200)
+	box.anchorX=0
+	box.anchorY=0
+	local quote
+	if case == 1 then
+		quote = "???: Caro Padawan ora sei pronto per muovere i tuoi primi passi. XD"
+	elseif case == 2 then
+		quote = "???: Prendi sta vita e vaffanculo. Sisghè"
+	elseif case == 3 then
+		quote = "???: Hai trovato una chiave misteriosa. Pog" 
+	elseif case == 4 then
+		if key.isVisible == false then
+			quote = "???: Prova ad uscire se ci riesci"
+		else
+			quote = "Mr. B: Posso finalmente dirti chi sono "
+		end
+	end
+	local chestText = display.newText({text="",fontSize=30})
+	chestText:setFillColor(0,0,0)
+	chestText.text = quote
+	chestText.anchorX = 0
+	chestText.anchorY = 0
+	chestText.x = 400
+	chestText.y = 600
+
+end
+
 ------- OPEN THE CHEST ------
 local function chestCollision(self, event)
 	print("The trigger of the chest is: " .. event.other.name)
@@ -464,19 +495,22 @@ local function chestCollision(self, event)
 				if self.name == "chest1" then
 					openChest[1].isVisible=true
 					activateAnimation()
-					--createText()
+					createText(1)
 
 				elseif self.name == "chest2" then
 					openChest[2].isVisible=true
 					print("YOU FIND A KEY")
 					key.isVisible = true
+					createText(3)
 
 				elseif self.name == "chest3" then
 					openChest[3].isVisible=true
+					createText(4)
 
 				elseif self.name == "chest4" then
 					addHeart()
-					openChest[4].isVisible=true					
+					openChest[4].isVisible=true	
+					createText(2)				
 				end
 			
 		end
@@ -511,12 +545,6 @@ end
 exitDoor.collision = exit
 exitDoor:addEventListener("collision", exitDoor)
 
-------- BOX TEXT ---------
-local function createText()
-	local box=display.newRect(350,display.contentHeight-200,display.contentWidth-500,200)
-	box.anchorX=0
-	box.anchorY=0
-end
 
 ------- GESTIONE VITE -------
 local countGO = 0 --TODO: usare un sistema migliore
