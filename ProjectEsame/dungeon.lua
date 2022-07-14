@@ -456,6 +456,7 @@ local function addHeart()
 		table.insert(hearts, display.newImageRect(control,"risorseGrafiche/PG/heart.png",128,128))
 		hearts[#hearts].x = #hearts * 100
 		hearts[#hearts].y = 50
+		hearts[#hearts]:scale(0.5, 0.5)
 		print("Ti è stata donata una nuova vita! Ora hai: " .. #hearts .. "vite")
 	end
 end
