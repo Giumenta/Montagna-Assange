@@ -212,7 +212,16 @@ local function movePg_noAnim(event)
 			idle:setLinearVelocity(0,-50)            
         elseif arrow.name == "down" then
 			idle:setLinearVelocity(0, 50)			 
-	   end
+		end
+	elseif event.phase == "ended" then
+		local i
+		for i=2,5 do
+			hero[i].isVisible=false
+		end
+			idle:setLinearVelocity(0,0)
+			hero[1].isVisible = true
+			idle.isVisible=true		
+			 
 	end
 end
 
