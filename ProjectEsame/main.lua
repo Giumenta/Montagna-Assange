@@ -8,7 +8,8 @@
 
 --//yooo
 
-require "gestioneScene"
+--require "gestioneScene"
+require "dungeon"
 --require "gioco15"
 
 
