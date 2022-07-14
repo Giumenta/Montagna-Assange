@@ -473,8 +473,8 @@ end
  local chestText
  
 local function createText(case)
-	box=display.newImageRect("risorseGrafiche/boxmessaggi.png",display.contentHeight*2-125,display.contentWidth/2)
-	box.x=0
+	box=display.newImageRect("risorseGrafiche/boxmessaggi.png",display.contentHeight+300,display.contentWidth/2)
+	box.x=display.contentCenterX/2-50
 	box.y=display.contentCenterY -80
 	box.anchorX=0
 	box.anchorY=0
@@ -503,7 +503,7 @@ local function createText(case)
 	chestText.text = quote
 	chestText.anchorX = 0
 	chestText.anchorY = 0
-	chestText.x = display.contentCenterX/2/2
+	chestText.x = display.contentCenterX/2+80
 	chestText.y = 550
 	chestText.font = fontDir
 end

@@ -9,8 +9,8 @@
 --//yooo
 
 --require "gestioneScene"
---require "dungeon"
-require "gioco15"
+require "dungeon"
+--require "gioco15"
 
 
 -- PARTE DI CODICE PER IL PLATFORM VERTICALE (3 LIVELLO)
