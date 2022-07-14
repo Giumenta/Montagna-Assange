@@ -7,7 +7,7 @@
 -- Your code here
 
 --//yooo
-<<<<<<< HEAD
+
 --require "dungeon"
 require "gioco15"
 
@@ -21,10 +21,5 @@ require "gioco15"
 
 
 --FINE PARTE PROVA CODICE PLATFORM VERTICALE (3 LIVELLO)
-=======
--- require "gioco15"
-require "dungeon"
-<<<<<<< HEAD
-=======
->>>>>>> dfc405413e6052fa2ccf4d42467db88b38dbc63c
->>>>>>> 8b0b65e6ed102ac31d62cf31af6b4eb638c42562
+
+
