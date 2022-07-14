@@ -19,6 +19,9 @@ local passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
 local camera= display.newGroup()
 local control = display.newGroup()
 
+local fontDir = "risorseGrafiche/font/minecraft.ttf"
+local fontCustom = native.newFont(fontDir, 12)
+
 map:scale(scaleFactor,scaleFactor)
 map.x=50
 camera:insert(map)
@@ -483,6 +486,7 @@ local function createText(case)
 	chestText.anchorY = 0
 	chestText.x = 400
 	chestText.y = 600
+	chestText.font = fontCustom
 
 end
 
