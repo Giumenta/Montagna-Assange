@@ -533,7 +533,3 @@ idle:addEventListener("postCollision", idle)
 
 Runtime:addEventListener("enterFrame", gameOver)
 
-
--- aggiungere scudo quando si apre il forziere nascosto, in modo che venga aggiunto solo quando lo si apre la prima volta,
--- aggiungerlo a tabella hearts (???)
--- 
