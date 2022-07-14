@@ -85,7 +85,7 @@ local hero = map:listTypes("hero")
 local idle=map:findObject("idle")
 local bodyShape={-5,-5, -5,5, 5,5, 5,-5}
 function createHero()
-	physics.addBody(idle,"dynamic",{shape=bodyShape,bounce=0})
+	physics.addBody(idle,"dynamic",{bounce=0})
 	idle.isFixedRotation=true
 	local i
 	for i=2,5 do 
@@ -498,7 +498,7 @@ local function createText(case)
 		quote = "???: Giovane Padawan ora sei pronto per muovere\n i tuoi primi passi. XD"
 			
 	elseif case == 2 then
-		quote = "???: Prendi sta vita e vai. Sisghè"
+		quote = "???: Sei fortunato,\n prendi questa vita extra ma non sarà facile uscire da questa montagna"
 	elseif case == 3 then
 		quote = "???: Hai trovato una chiave misteriosa. Pog" 
 	elseif case == 4 then
