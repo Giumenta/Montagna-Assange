@@ -369,8 +369,8 @@ local function activateBat()
 	local bats = map:listTypes("bat")
 	local values = {4, 2, 6, 1}
 	for i=1,#bats do
-		local velX = 0.7 * math.sin(values[i]*math.pi*math.random(0.3, 0.5)) + 2
-		local velY = 0.6*math.cos(values[((i+1)%4) +1]*math.pi*math.random(0.3, 0.5)) + 3
+		local velX = 0.7 * math.sin(values[i]*math.pi*math.random(0.3, 0.5)) + 0.75
+		local velY = 0.6*math.cos(values[((i+1)%4) +1]*math.pi*math.random(0.3, 0.5)) + 0.75
 		bats[i]:scale(0.75, 0.75)
 		physics.addBody(bats[i],"dynamic", {bounce = 1})
 		bats[i].isFixedRotation = true
