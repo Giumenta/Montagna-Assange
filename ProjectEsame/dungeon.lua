@@ -495,17 +495,23 @@ local function createText(case)
 	local quote
 
 	if case == 1 then
-		quote = "???: Giovane Padawan ora sei pronto per muovere\n i tuoi primi passi. XD"
+		quote = "???: Giovane Padawan ora sei finalmente pronto per \n muovere i tuoi primi passi. XD"
 			
 	elseif case == 2 then
-		quote = "???: Sei fortunato,\n prendi questa vita extra ma non sarà facile uscire da questa montagna"
+		quote = "???: Sei fortunato,\n prendi questa vita extra ma non sarà facile \n uscire da questa montagna."
 	elseif case == 3 then
-		quote = "???: Hai trovato una chiave misteriosa. Pog" 
+		quote = "???: Hai trovato una chiave misteriosa. \n Chissà a cosa servirà..." 
 	elseif case == 4 then
 		if key.isVisible == false then
-			quote = "???: Prova ad uscire se ci riesci"
+			quote = "???: Prova ad uscire se ci riesci, \n dimostra di essere degno."
 		else
-			quote = "Mr. B: Posso finalmente dirti chi sono "
+			quote = "Mr. B: Hai trovato la chiave. Posso finalmente dirti chi \n sono. \n Esci dalla montagna e svelerò la mia identità."
+		end
+	elseif case == 5 then
+		if key.isVisible == false then
+			quote = "Idle: La porta è chiusa a chiave..."
+		else
+			quote = "Idle: La chiave funziona! Posso finalmente uscire."
 		end
 	end
 
@@ -568,15 +574,14 @@ end
 local exitDoor = map:findObject("doorExit")
 print(exitDoor)
 local function exit(self, event)
-	--local target = event.target.name
-	local other = event.other.name
-	if other == "idle" then
-		if key.isVisible == true then
-			print("YOU WIN")
-		else
-			print("IT'S LOCKED, FIND THE KEY")
-		end
-	end 
+	if event.phase == "began" then
+		--local target = event.target.name
+		local other = event.other.name
+		createText(5)
+	elseif event.phase == "ended" then
+		transition.fadeOut( box, { time=500 })
+		transition.fadeOut( chestText, { time=500 })
+	end	
 end
 
 exitDoor.collision = exit
