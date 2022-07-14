@@ -479,7 +479,7 @@ local function createText(case)
 			quote = "Mr. B: Posso finalmente dirti chi sono "
 		end
 	end
-	local chestText = display.newText({text="",fontSize=30})
+	local chestText = display.newText({text="",fontSize=30, font = fontDir})
 	chestText:setFillColor(0,0,0)
 	chestText.text = quote
 	chestText.anchorX = 0
@@ -487,7 +487,6 @@ local function createText(case)
 	chestText.x = 400
 	chestText.y = 600
 	chestText.font = fontCustom
-
 end
 
 ------- OPEN THE CHEST ------
