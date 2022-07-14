@@ -18,20 +18,60 @@ local scene = composer.newScene()
 -- -----------------------------------------------------------------------------------
 -- Scene event functions
 -- -----------------------------------------------------------------------------------
- 
+local sfondo = display.newGroup()
+local pp = display.newGroup() 
 local background  -- variable that stores the background image 
 local retry       -- variable that stores the retry image button SERVE? 
+local hero
+local cloud
 
 -- create()
 function scene:create( event )
  
     local sceneGroup = self.view
 	
+	--hero sequence e sheet
+	local opt = { width = 32, height = 32, numFrames = 12}
+	local heroSheet = graphics.newImageSheet("risorseGrafiche/PG/sprite-sheet.png", opt)
+	local heroSeqs = {
+		{
+			name = "front",
+			frames={1,2,3},
+			time = 1000,
+			loopCount = 0,
+			loopDirection ="forward"
+		   },
+		   {
+			name = "left",
+			frames={4,5,6},
+			time = 1000,
+			loopCount = 0,
+			loopDirection ="forward"
+		   },
+		{
+			name = "right",
+			frames={7,8,9},
+			time = 1000,
+			loopCount = 0,
+			loopDirection ="forward"
+		},
+		{
+			name = "back",
+			frames={10,11,12},
+			time = 1000,
+			loopCount = 0,
+			loopDirection ="forward"
+		}
+	}
+	
 	-- Load the background image
-	background =
+	background = display.newImageRect(sfondo, "risorseGrafiche/scenaIntro/sfondoScenaIntro.jpg", display.contentWidth, display.contentHeight)
+	hero =  display.newSprite(heroSheet,heroSeqs)
+	--da sx a dx (quello con la faccia verso dx)
+	-- ci serve anche quello frontale
+	cloud = display.newImageRect(pp,"risorseGrafiche/scenaIntro/nuvolaVoce.png", display.)
 	
-	
-	sceneGroup:insert(background)	  
+	sceneGroup:insert()	  
 end
  
  
@@ -45,8 +85,7 @@ local function restart()
 end
 	 
 -- show()
-function scene:show( event )
- 
+function scene:show( event ) 
     local sceneGroup = self.view
     local phase = event.phase
  
