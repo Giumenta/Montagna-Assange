@@ -364,7 +364,7 @@ local room1_wallUp = map:findObject("wallUp1")
 local room1_wallLeft = map:findObject("wallLeft1")
 local room1_wallRight = map:findObject("wallRight1")
 local room1_wallBottom = map:findObject("wallBottom1")
-
+---aaa
 local function activateBat()
 	local bats = map:listTypes("bat")
 	local values = {4, 2, 6, 1}
