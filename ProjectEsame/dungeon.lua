@@ -13,7 +13,7 @@ local dragable = require "com.ponywolf.plugins.dragable"
 map = dragable.new(map)
 
 --local heroLib=require("herolib")
-local passi = audio.loadSound("RisorseAudio/camminoSuono.mp3")
+local passi = audio.loadSound("RisorseAudio/camminoSuonoMoltoBreve.mp3")
 
 -- create group for non fixed obj (camera) and for fixed obj(control)
 local camera= display.newGroup()
@@ -153,7 +153,7 @@ local function movePg(event)
 			idle:setLinearVelocity(0, 50)
 			--audio.play(passi)
 	   end
-	   audio.play(passi)
+	   audio.play(passi, {loops = -1})
     elseif event.phase == "moved" then
 		if arrow.name == "left" then
 			chooseAnim(5)
@@ -172,7 +172,7 @@ local function movePg(event)
 			idle:setLinearVelocity(0, 50)
 			--audio.play(passi)			 
 	   end
-	   audio.play(passi)
+	   audio.play(passi, {loops = -1})
 	elseif event.phase == "ended" then
 		local i
 		for i=2,5 do
@@ -232,7 +232,7 @@ local function movePg_arrows(event)
 			idle:setLinearVelocity(0, 50)
 			--audio.play(passi)
 	   end
-	   audio.play(passi)
+	   audio.play(passi, {loops = -1})
     elseif event.phase == "up" then
 		local i
 		for i=2,5 do
