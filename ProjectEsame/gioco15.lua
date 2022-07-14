@@ -220,6 +220,7 @@ local function muovitassello_keyboard (event)
 	
 	local newEmptyY = emptyY
 	local newEmptyX = emptyX
+	
 	if event.phase == "down" then
 		if ( event.keyName == "down" ) then -- sposto verso il basso un tassello
 			newEmptyY = emptyY - 1
@@ -243,7 +244,6 @@ arrowLeft:addEventListener("touch", muovitassello)
 arrowRight:addEventListener("touch", muovitassello)
 arrowDown:addEventListener("touch", muovitassello)
 arrowUp:addEventListener("touch", muovitassello)
-
 Runtime:addEventListener( "key", muovitassello_keyboard)
 
 creaGriglia()
