@@ -29,6 +29,7 @@ local textN
 local textTable
 local fontDir
 local fontCustom
+local box
 
 -- create()
 function scene:create( event )
@@ -78,8 +79,8 @@ function scene:create( event )
 	background = display.newImageRect(sfondo, "risorseGrafiche/scenaIntro/sfondoScenaIntro.jpg", display.contentWidth, display.contentHeight)
 	--load hero sprite
 	hero =  display.newSprite(heroSheet,heroSeqs)
-	cloud = display.newImageRect(pp,"risorseGrafiche/scenaIntro/nuvolaVoce.png", 0, display.width - 100)
-	dialogueBox = display.newImageRect(pp, "risorseGrafiche/boxmessaggi.png", display.height - 300, display.contentCenterX)
+	cloud = display.newImageRect(pp,"risorseGrafiche/scenaIntro/nuvolaVoce.png", 0, display.contentWidth - 100)
+	dialogueBox = display.newImageRect(pp, "risorseGrafiche/boxmessaggi.png", display.contentHeight - 300, display.contentCenterX)
 	sceneGroup:insert(sfondo)
 	sceneGroup:insert(pp)	  
 end
@@ -98,9 +99,8 @@ local function moveCloud()
 	cloud.y = -30
 	transition.to(go,{delay=0, time = 600,
                       x = display.contentWidth,
-					  y= -60
+					  y= -60,
 					  alpha = 1})
-	end
 end
 
 local fontDir = "risorseGrafiche/font/minecraft/minecraft.ttf"
@@ -108,13 +108,6 @@ local fontCustom = native.newFont(fontDir, 12)
  
 local function createText(self, event)
 	if textN < #textTable then
-		box.x=0
-		box.y=display.contentCenterY -80
-		box.anchorX=0
-		box.anchorY=0
-		box.alpha=0
-		transition.fadeIn( box, { time=500 })
-
 		chestText = display.newText({text="",fontSize=30, font = fontDir})
 		chestText:setFillColor(0,0,0)
 		chestText.text = textTable[self]
