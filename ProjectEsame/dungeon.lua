@@ -367,10 +367,10 @@ end
 
 local function activateBat()
 	local bats = map:listTypes("bat")
-
+	local values = {4, 2, 6, 1}
 	for i=1,#bats do
-		local velX = math.random(0.5, 1)*0.02
-		local velY = math.random(0.5,1)*0.02 
+		local velX = 0.7 * math.sin(values[i]*math.pi*math.random(0.3, 0.5)) + 2
+		local velY = 0.6*math.cos(values[((i+1)%4) +1]*math.pi*math.random(0.3, 0.5)) + 3
 		bats[i]:scale(0.75, 0.75)
 		physics.addBody(bats[i],"dynamic", {bounce = 1})
 		bats[i].isFixedRotation = true
@@ -378,7 +378,7 @@ local function activateBat()
 		bats[i].preCollision = preCollisionEnemy
 		bats[i]:addEventListener("collision", bats[i])
 		bats[i]:addEventListener("preCollision", bats[i])
-		bats[i]:applyLinearImpulse(velX, velY)
+		bats[i]:applyForce(velX, velY, bats[i].x, bats[i].y)
 	end
 end
 
