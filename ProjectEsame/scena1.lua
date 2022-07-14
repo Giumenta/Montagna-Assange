@@ -24,6 +24,8 @@ local background  -- variable that stores the background image
 local retry       -- variable that stores the retry image button SERVE? 
 local hero
 local cloud
+local dialogueBox
+local textN
 
 -- create()
 function scene:create( event )
@@ -66,43 +68,73 @@ function scene:create( event )
 	
 	-- Load the background image
 	background = display.newImageRect(sfondo, "risorseGrafiche/scenaIntro/sfondoScenaIntro.jpg", display.contentWidth, display.contentHeight)
+	--load hero sprite
 	hero =  display.newSprite(heroSheet,heroSeqs)
-	--da sx a dx (quello con la faccia verso dx)
-	-- ci serve anche quello frontale
-	cloud = display.newImageRect(pp,"risorseGrafiche/scenaIntro/nuvolaVoce.png", display.)
+	cloud = display.newImageRect(pp,"risorseGrafiche/scenaIntro/nuvolaVoce.png", 0, display.width - 100)
+	dialogueBox = display.newImageRect(pp, "risorseGrafiche/boxmessaggi.png", display.height - 300, display.contentCenterX)
+	sceneGroup:insert(sfondo)
+	sceneGroup:insert(pp)	  
+end
+ 
+ 
+local function movePg()
+	hero.x = -20
+	hero.y = display.contentHeight - 2*hero.height
+	transition.to(go,{delay=0, time = 600,
+                      x = display.contentCenterX,
+					  alpha = 1})
+end
+
+local function moveCloud()
+	cloud.x = display.contentWidth
+	cloud.y = -30
+	transition.to(go,{delay=0, time = 600,
+                      x = display.contentWidth,
+					  y= -60
+					  alpha = 1})
+	end
+end
+
+ 
+local function createText(self, event)
+	box.x=0
+	box.y=display.contentCenterY -80
+	box.anchorX=0
+	box.anchorY=0
+	box.alpha=0
+	transition.fadeIn( box, { time=500 })
 	
-	sceneGroup:insert()	  
+	local quote
+
+	--da implementare un sistema che sul touch passa al testo dopo
+
+	chestText = display.newText({text="",fontSize=30, font = fontDir})
+	chestText:setFillColor(0,0,0)
+	chestText.text = quote
+	chestText.anchorX = 0
+	chestText.anchorY = 0
+	chestText.x = display.contentCenterX/2/2
+	chestText.y = 550
+	chestText.font = fontDir
 end
- 
- 
--- restart is a table listener associated with the retry button
--- which is executed when the retry button is tapped 
-local function restart()
-	-- go to the game scene
-	composer.removeScene("game")
-	composer.gotoScene("game")
-	return true
-end
-	 
+
 -- show()
 function scene:show( event ) 
     local sceneGroup = self.view
     local phase = event.phase
  
-    if ( phase == "will" ) then
-        
-		-- place the retry object at the center of the display
-		background.x = display.contentCenterX
-		background.y = display.contentCenterY
-		-- place the retry object at the center of the display
-		retry.x = display.contentCenterX
-		retry.y = display.contentCenterY
-		
+    if ( phase == "will" ) then        
+		sfondo.x = display.contentCenterX
+		sfondo.y = display.contentCenterY
+		textN = 0
+		movePg()
+		moveCloud()
+		createText(text)
  
     elseif ( phase == "did" ) then
         -- activate the tap listener 
-		retry.tap = restart
-		retry:addEventListener("tap", restart)
+		textN.tap = createText
+		textN:addEventListener
     end
 end
  
@@ -117,6 +149,7 @@ function scene:hide( event )
         -- Code here runs when the scene is on screen (but is about to go off screen)
 		-- Remove the tap listener associated with the retry button
 		retry:removeEventListener("tap",replay)
+		
  
     elseif ( phase == "did" ) then
         -- Code here runs immediately after the scene goes entirely off screen
