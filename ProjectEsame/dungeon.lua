@@ -9,8 +9,8 @@ local mapData = json.decodeFile(system.pathForFile("Maptiles/Map2.json",system.R
 local map = tiled.new(mapData, "Maptiles")
 local scaleFactor = 3.5
 
-local dragable = require "com.ponywolf.plugins.dragable"
-map = dragable.new(map)
+--local dragable = require "com.ponywolf.plugins.dragable"
+--map = dragable.new(map)
 
 --local heroLib=require("herolib")
 --local passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
@@ -71,8 +71,8 @@ table.remove(hearts, #hearts)
 print("number of life:".. #hearts)
 -------- OBJECTS IN CHESTS ---------
 local key = display.newImageRect(control,"risorseGrafiche/PG/key.png",128,128)
-key.x = display.contentWidth - 100
-key.y = display.contentHeight - 100
+key.x = display.contentWidth - 130
+key.y = 70
 key.isVisible =false
 
 ----------------- FIND & GIVE BODY/ANIMATION TO THE HERO ---------------------
