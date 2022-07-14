@@ -460,6 +460,12 @@ local function addHeart()
 end
 
 ------- BOX TEXT ---------
+ local function deleteText()
+	display.remove(box)
+	box = nil
+	display.remove(chestText)
+	chestText = nil
+ end
  
 local function createText(case)
 	local box=display.newRect(350,display.contentHeight-200,display.contentWidth-500,200)
@@ -469,7 +475,7 @@ local function createText(case)
 	if case == 1 then
 		quote = "???: Caro Padawan ora sei pronto per muovere i tuoi primi passi. XD"
 	elseif case == 2 then
-		quote = "???: Prendi sta vita e vaffanculo. Sisghè"
+		quote = "???: Prendi sta vita e vai. Sisghè"
 	elseif case == 3 then
 		quote = "???: Hai trovato una chiave misteriosa. Pog" 
 	elseif case == 4 then
@@ -492,31 +498,34 @@ end
 ------- OPEN THE CHEST ------
 local function chestCollision(self, event)
 	print("The trigger of the chest is: " .. event.other.name)
-	
-	if event.target.isChest ~= nil then
-		if event.other.name == "idle" then
-				if self.name == "chest1" then
-					openChest[1].isVisible=true
-					activateAnimation()
-					createText(1)
+	if event.phase == "began" then
+		if event.target.isChest ~= nil then
+			if event.other.name == "idle" then
+					if self.name == "chest1" then
+						openChest[1].isVisible=true
+						activateAnimation()
+						createText(1)
 
-				elseif self.name == "chest2" then
-					openChest[2].isVisible=true
-					print("YOU FIND A KEY")
-					key.isVisible = true
-					createText(3)
+					elseif self.name == "chest2" then
+						openChest[2].isVisible=true
+						print("YOU FIND A KEY")
+						key.isVisible = true
+						createText(3)
 
-				elseif self.name == "chest3" then
-					openChest[3].isVisible=true
-					createText(4)
+					elseif self.name == "chest3" then
+						openChest[3].isVisible=true
+						createText(4)
 
-				elseif self.name == "chest4" then
-					addHeart()
-					openChest[4].isVisible=true	
-					createText(2)				
-				end
-			
+					elseif self.name == "chest4" then
+						addHeart()
+						openChest[4].isVisible=true	
+						createText(2)				
+					end
+				
+			end
 		end
+	elseif event.phase == "ended" then
+		deleteText()
 	end
 end
 

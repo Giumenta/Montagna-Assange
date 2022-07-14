@@ -3,12 +3,12 @@ local riga=1
 local GRID_WIDTH = 4
 local GRID_HEIGHT = 4
 local grid = {} -- creo una griglia 4x4
-for  riga = 1, GRID_HEIGHT do
-	grid[riga] = {}
-	for colonna = 1, GRID_WIDTH do
-		grid[riga][colonna] = ((colonna - 1) * GRID_WIDTH) + riga
+	for  riga = 1, GRID_HEIGHT do
+		grid[riga] = {}
+		for colonna = 1, GRID_WIDTH do
+			grid[riga][colonna] = ((colonna - 1) * GRID_WIDTH) + riga
+		end
 	end
-end
 
 local larghezzaGriglia = display.contentHeight*0.9
 local dimtassello= (display.contentHeight*0.88)/4
@@ -35,52 +35,54 @@ arrowDown.x = 180
 arrowDown.y = display.contentHeight-100
 arrowDown.name = "down"
 --creo una funzione per lo shuffle dei tasselli
+
 local function shuffle(--[[event]] )
-	--if event.phase == "up" then
-		--if ( event.keyName == "space" ) then
-			local moveNumber
-			for moveNumber = 1, 1000 do
-				local emptyX
-				local emptyY
-				
-				for colonna = 1, GRID_HEIGHT do
-					for riga = 1, GRID_WIDTH do
-						if grid[riga][colonna] == nil then
-							emptyX = colonna
-							emptyY = riga
-						end
+
+	local moveNumber
+		for moveNumber = 1, 1000 do
+			local emptyX
+			local emptyY
+			
+			for colonna = 1, GRID_HEIGHT do
+				for riga = 1, GRID_WIDTH do
+					if grid[riga][colonna] == nil then
+						emptyX = colonna
+						emptyY = riga
 					end
 				end
+			end
+			
+			local newEmptyY = emptyY
+			local newEmptyX = emptyX
+			
+			local roll = math.random(4)
 				
-				local newEmptyY = emptyY
-				local newEmptyX = emptyX
-				
-				local roll = math.random(4)
-				if roll == 1 then
-					newEmptyY = emptyY - 1
-				elseif roll == 2 then
-					newEmptyY = emptyY + 1
-				elseif roll == 3 then
-					newEmptyX = emptyX - 1
-				elseif roll == 4 then
-					newEmptyX = emptyX + 1
-				end
-				
+			if roll == 1 then
+				newEmptyY = emptyY - 1
+			elseif roll == 2 then
+				newEmptyY = emptyY + 1
+			elseif roll == 3 then
+				newEmptyX = emptyX - 1
+			elseif roll == 4 then
+				newEmptyX = emptyX + 1
+			end
+			
 				if grid[newEmptyY] and grid[newEmptyY][newEmptyX] then
 					grid[newEmptyY][newEmptyX], grid[emptyY][emptyX] =
 					grid[emptyY][emptyX], grid[newEmptyY][newEmptyX]
 					transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=10})
 				end
-			end
-		--end
-	--end
+		end
 end
+
 --creo i tasselli e li posiziono nella griglia
+
 local function creaGriglia() 
      
     local griglia= display.newRect(display.contentCenterX,display.contentCenterY, larghezzaGriglia,larghezzaGriglia)
 	local background = display.newImageRect( "risorseGrafiche/montagnaGenericoAmbiente/sfondogioco15.jpg", larghezzaGriglia,larghezzaGriglia)
-    background.x = display.contentCenterX
+   
+	background.x = display.contentCenterX
 	background.y = display.contentCenterY
 	
     local colonna=1
@@ -110,8 +112,7 @@ local function creaGriglia()
 			end
 		end
 	end
-	print("---")
-	shuffle()
+	shuffle()--mescolo i tasselli
 end
 
 
@@ -129,7 +130,6 @@ local function isRisolto()
 	while complete and contaCaselle < 17 do
 		if grid[r][c] ~= nil then  
 			if grid[r][c].value == ((r-1)*4 + c) then
-				--print("r: " .. r .. " c: " .. c .. " value: " .. grid[r][c].value)
 				contaCaselle = contaCaselle + 1
 				if (contaCaselle % 4 == 0) then
 					c = 4
@@ -154,9 +154,8 @@ local function isRisolto()
 		print('finito')
 		return true
 	else
-		print("nope")
+		
 	end
-	print("--")
 end
 
 --creo una funzione per spostare i tasselli nella casella libera
@@ -218,10 +217,10 @@ local function muovitassello_keyboard (event)
 			end
 		end
 	end
-	--print('x libera: '..emptyX..', y libera: '..emptyY)--stampo sulla console la posizione del tassello libero
-		
+	
 	local newEmptyY = emptyY
 	local newEmptyX = emptyX
+	
 	if event.phase == "down" then
 		if ( event.keyName == "down" ) then -- sposto verso il basso un tassello
 			newEmptyY = emptyY - 1
@@ -245,8 +244,6 @@ arrowLeft:addEventListener("touch", muovitassello)
 arrowRight:addEventListener("touch", muovitassello)
 arrowDown:addEventListener("touch", muovitassello)
 arrowUp:addEventListener("touch", muovitassello)
-
---Runtime:addEventListener( "key", shuffle )
 Runtime:addEventListener( "key", muovitassello_keyboard)
 
 creaGriglia()
