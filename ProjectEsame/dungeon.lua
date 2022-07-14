@@ -476,13 +476,12 @@ local function createText(case)
 	box.anchorX=0
 	box.anchorY=0
 	box.alpha=0
-	transition.fadeIn( box, { time=2000 })
+	transition.fadeIn( box, { time=500 })
 	local quote
 
 	if case == 1 then
 		quote = "???: Giovane Padawan ora sei pronto per muovere\n i tuoi primi passi. XD"
-			--quote.x=0
-			--quote.y=display.contentCenterY -80
+			
 	elseif case == 2 then
 		quote = "???: Prendi sta vita e vai. Sisghè"
 	elseif case == 3 then
@@ -494,13 +493,14 @@ local function createText(case)
 			quote = "Mr. B: Posso finalmente dirti chi sono "
 		end
 	end
+
 	local chestText = display.newText({text="",fontSize=30, font = fontDir})
 	chestText:setFillColor(0,0,0)
 	chestText.text = quote
 	chestText.anchorX = 0
 	chestText.anchorY = 0
-	chestText.x = display.contentCenterX - chestText.width
-	chestText.y = 600
+	chestText.x = display.contentCenterX/2/2
+	chestText.y = 550
 	chestText.font = fontDir
 end
 
