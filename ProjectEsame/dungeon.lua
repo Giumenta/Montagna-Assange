@@ -534,6 +534,7 @@ local function chestCollision(self, event)
 			end
 		end
 	elseif event.phase == "ended" then
+		createText()
 		deleteText()
 	end
 end
