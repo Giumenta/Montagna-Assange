@@ -222,15 +222,15 @@ local function muovitassello_keyboard (event)
 	local newEmptyX = emptyX
 	
 	if event.phase == "down" then
-		if ( event.keyName == "down" ) then -- sposto verso il basso un tassello
+		if ( event.keyName == "down" ) or( event.keyName == "s" ) then -- sposto verso il basso un tassello
 			newEmptyY = emptyY - 1
-			elseif ( event.keyName == "up" ) then -- sposto verso l'alto un tassello
+			elseif ( event.keyName == "up" ) or( event.keyName == "w" ) then -- sposto verso l'alto un tassello
 				newEmptyY = emptyY + 1
-			elseif ( event.keyName == "left" ) then -- sposto verso sinistra un tassello
+			elseif ( event.keyName == "left" ) or( event.keyName == "a" ) then -- sposto verso sinistra un tassello
 				newEmptyX = emptyX + 1
-			elseif ( event.keyName == "right" ) then -- sposto verso destra un tassello
+			elseif ( event.keyName == "right" )  or( event.keyName == "d" )then -- sposto verso destra un tassello
 				newEmptyX = emptyX - 1
-		end
+			end
 		if grid[newEmptyY] and grid[newEmptyY][newEmptyX] then
 			grid[newEmptyY][newEmptyX], grid[emptyY][emptyX] =
 			grid[emptyY][emptyX], grid[newEmptyY][newEmptyX]
