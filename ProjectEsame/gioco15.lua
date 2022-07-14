@@ -151,7 +151,7 @@ local function isRisolto()
 	end
 
 	if complete and contaCaselle == 16 then
-		print('finito')
+		print('finito') --qua il gioco finisce
 		return true
 	else
 		

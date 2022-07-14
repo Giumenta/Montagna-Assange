@@ -71,8 +71,8 @@ table.remove(hearts, #hearts)
 print("number of life:".. #hearts)
 -------- OBJECTS IN CHESTS ---------
 local key = display.newImageRect(control,"risorseGrafiche/PG/key.png",128,128)
-key.x = display.contentWidth - 100
-key.y = display.contentHeight - 100
+key.x = display.contentWidth - 130
+key.y = 70
 key.isVisible =false
 
 ----------------- FIND & GIVE BODY/ANIMATION TO THE HERO ---------------------
@@ -83,7 +83,7 @@ key.isVisible =false
 --button.name = "button"
 local hero = map:listTypes("hero")
 local idle=map:findObject("idle")
-
+local bodyShape={-5,-5, -5,5, 5,5, 5,-5}
 function createHero()
 	physics.addBody(idle,"dynamic",{bounce=0})
 	idle.isFixedRotation=true
@@ -212,7 +212,16 @@ local function movePg_noAnim(event)
 			idle:setLinearVelocity(0,-50)            
         elseif arrow.name == "down" then
 			idle:setLinearVelocity(0, 50)			 
-	   end
+		end
+	elseif event.phase == "ended" then
+		local i
+		for i=2,5 do
+			hero[i].isVisible=false
+		end
+			idle:setLinearVelocity(0,0)
+			hero[1].isVisible = true
+			idle.isVisible=true		
+			 
 	end
 end
 
@@ -369,10 +378,12 @@ local function activateBat()
 	local bats = map:listTypes("bat")
 	local values = {4, 2, 6, 1}
 	for i=1,#bats do
-		local velX = 0.7 * math.sin(values[i]*math.pi*math.random(0.3, 0.5)) + 2
-		local velY = 0.6*math.cos(values[((i+1)%4) +1]*math.pi*math.random(0.3, 0.5)) + 3
+		--local velX = 0.7 * math.sin(values[i]*math.pi*math.random(0.3, 0.5)) + 0.75
+		--local velY = 0.6 * math.cos(values[((i+1)%4) +1]*math.pi*math.random(0.3, 0.5)) + 0.75
+		local velY = math.random(0.75,1)*0.01 +0.1
+		local velX = math.random(0.75, 1)*0.01 +0.1
 		bats[i]:scale(0.75, 0.75)
-		physics.addBody(bats[i],"dynamic", {bounce = 1})
+		physics.addBody(bats[i],"dynamic", {shape=bodyShape,bounce = 1})
 		bats[i].isFixedRotation = true
 		bats[i].collision = collisionEnemy
 		bats[i].preCollision = preCollisionEnemy
@@ -387,9 +398,9 @@ local function activateSkeleton()
 
 	for i=1,#skeletons do
 		--local velX = math.random(0.5, 1)*0.02
-		local velY = math.random(1,2)*0.01 -- se cambio qualcosa alcuni nemici smettono di muoversi e altri che prima non si muovevano si muovono
+		local velY = math.random(0.75,1)*0.01 -- se cambio qualcosa alcuni nemici smettono di muoversi e altri che prima non si muovevano si muovono
 
-		physics.addBody(skeletons[i],"dynamic", {bounce = 1})
+		physics.addBody(skeletons[i],"dynamic", {shape=bodyShape,bounce = 1})
 		skeletons[i].isFixedRotation = true
 		skeletons[i]:applyLinearImpulse(0, velY)
 	end
@@ -399,10 +410,10 @@ local function activateDemons()
 	local demons = map:listTypes("demon")
 
 	for i=1,#demons do
-		local velX = math.random(1, 2)*0.01
+		local velX = math.random(0.75, 1)*0.01
 		--local velY = math.random(0.5,1)*0.02
 
-		physics.addBody(demons[i],"dynamic", {bounce = 1})
+		physics.addBody(demons[i],"dynamic", {shape=bodyShape,bounce = 1})
 		demons[i].isFixedRotation = true
 		demons[i]:applyLinearImpulse(velX, 0)
 	end
@@ -487,7 +498,7 @@ local function createText(case)
 		quote = "???: Giovane Padawan ora sei pronto per muovere\n i tuoi primi passi. XD"
 			
 	elseif case == 2 then
-		quote = "???: Prendi sta vita e vai. Sisghè"
+		quote = "???: Sei fortunato,\n prendi questa vita extra ma non sarà facile uscire da questa montagna"
 	elseif case == 3 then
 		quote = "???: Hai trovato una chiave misteriosa. Pog" 
 	elseif case == 4 then
