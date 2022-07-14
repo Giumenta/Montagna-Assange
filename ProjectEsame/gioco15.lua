@@ -75,6 +75,7 @@ local function shuffle(--[[event]] )
 		--end
 	--end
 end
+--creo i tasselli e li posiziono nella griglia
 local function creaGriglia() 
      
     local griglia= display.newRect(display.contentCenterX,display.contentCenterY, larghezzaGriglia,larghezzaGriglia)
