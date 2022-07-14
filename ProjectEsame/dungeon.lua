@@ -368,18 +368,18 @@ local room1_wallBottom = map:findObject("wallBottom1")
 local function activateBat()
 	local bats = map:listTypes("bat")
 	local values = {4, 2, 6, 1}
-	--for i=1,#bats do
-	--	local velX = 0.7 * math.sin(values[i]*math.pi*math.random(0.3, 0.5)) + 2
-	--	local velY = 0.6*math.cos(values[((i+1)%4) +1]*math.pi*math.random(0.3, 0.5)) + 3
-	--	bats[i]:scale(0.75, 0.75)
-	--	physics.addBody(bats[i],"dynamic", {bounce = 1})
-	--	bats[i].isFixedRotation = true
-	--	bats[i].collision = collisionEnemy
-	--	bats[i].preCollision = preCollisionEnemy
-	--	bats[i]:addEventListener("collision", bats[i])
-	--	bats[i]:addEventListener("preCollision", bats[i])
-	--	bats[i]:applyForce(velX, velY, bats[i].x, bats[i].y)
-	--end
+	for i=1,#bats do
+		local velX = 0.7 * math.sin(values[i]*math.pi*math.random(0.3, 0.5)) + 2
+		local velY = 0.6*math.cos(values[((i+1)%4) +1]*math.pi*math.random(0.3, 0.5)) + 3
+		bats[i]:scale(0.75, 0.75)
+		physics.addBody(bats[i],"dynamic", {bounce = 1})
+		bats[i].isFixedRotation = true
+		bats[i].collision = collisionEnemy
+		bats[i].preCollision = preCollisionEnemy
+		bats[i]:addEventListener("collision", bats[i])
+		bats[i]:addEventListener("preCollision", bats[i])
+		bats[i]:applyForce(velX, velY, bats[i].x, bats[i].y)
+	end
 end
 
 local function activateSkeleton()
@@ -469,8 +469,8 @@ end
 	chestText = nil
  end
  ]]
- local box
- local chestText
+local box
+local chestText
  
 local function createText(case)
 	box=display.newImageRect("risorseGrafiche/boxmessaggi.png",display.contentHeight*2-125,display.contentWidth/2)
