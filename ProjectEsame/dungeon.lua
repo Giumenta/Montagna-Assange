@@ -13,7 +13,7 @@ local dragable = require "com.ponywolf.plugins.dragable"
 map = dragable.new(map)
 
 --local heroLib=require("herolib")
-local passi = audio.loadSound("RisorseAudio/camminoSuonoMoltoBreve.mp3")
+local passi = audio.loadStream("RisorseAudio/walkingdead.wav")
 
 -- create group for non fixed obj (camera) and for fixed obj(control)
 local camera= display.newGroup()
