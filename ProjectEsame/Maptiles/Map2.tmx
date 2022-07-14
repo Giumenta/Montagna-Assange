@@ -2124,12 +2124,12 @@
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="142" type="bat" gid="684" x="287.389" y="387.568" width="24.3029" height="24.3029">
+  <object id="142" type="bat" gid="684" x="218.065" y="332.686" width="24.3029" height="24.3029">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="143" type="bat" gid="684" x="378.478" y="431.021" width="24.3029" height="24.3029">
+  <object id="143" type="bat" gid="684" x="462.967" y="488.069" width="24.3029" height="24.3029">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
@@ -2154,12 +2154,12 @@
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="175" type="bat" gid="684" x="382.537" y="369.737" width="24.3029" height="24.3029">
+  <object id="175" type="bat" gid="684" x="463.415" y="332.909" width="24.3029" height="24.3029">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="176" type="bat" gid="684" x="309.866" y="447.848" width="24.3029" height="24.3029">
+  <object id="176" type="bat" gid="684" x="218.878" y="486.843" width="24.3029" height="24.3029">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
