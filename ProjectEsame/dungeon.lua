@@ -71,8 +71,8 @@ table.remove(hearts, #hearts)
 print("number of life:".. #hearts)
 -------- OBJECTS IN CHESTS ---------
 local key = display.newImageRect(control,"risorseGrafiche/PG/key.png",128,128)
-key.x = display.contentWidth - 100
-key.y = display.contentHeight - 100
+key.x = display.contentWidth - 130
+key.y = 70
 key.isVisible =false
 
 ----------------- FIND & GIVE BODY/ANIMATION TO THE HERO ---------------------
