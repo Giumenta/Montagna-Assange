@@ -9,8 +9,8 @@ local mapData = json.decodeFile(system.pathForFile("Maptiles/Map2.json",system.R
 local map = tiled.new(mapData, "Maptiles")
 local scaleFactor = 3.5
 
-local dragable = require "com.ponywolf.plugins.dragable"
-map = dragable.new(map)
+--local dragable = require "com.ponywolf.plugins.dragable"
+--map = dragable.new(map)
 
 --local heroLib=require("herolib")
 --local passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
