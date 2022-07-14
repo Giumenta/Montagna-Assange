@@ -19,7 +19,7 @@ local passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
 local camera= display.newGroup()
 local control = display.newGroup()
 
-local fontDir = "risorseGrafiche/font/minecraft.ttf"
+local fontDir = "risorseGrafiche/font/minecraft/minecraft.ttf"
 local fontCustom = native.newFont(fontDir, 12)
 
 map:scale(scaleFactor,scaleFactor)
@@ -61,6 +61,7 @@ for i=1, 4 do
 	hearts[i] = display.newImageRect(control,"risorseGrafiche/PG/heart.png",128,128)
 	hearts[i].x = i * 100
 	hearts[i].y = 50
+	hearts[i]:scale(0.5, 0.5)
 	life:insert(hearts[i])
 end
 --togliamo il cuore bonus che troverà poi nella stanza segreta
@@ -473,7 +474,7 @@ local function createText(case)
 	box.anchorY=0
 	local quote
 	if case == 1 then
-		quote = "???: Caro Padawan ora sei pronto per muovere i tuoi primi passi. XD"
+		quote = "???: Caro Padawan ora sei pronto per muovere\n i tuoi primi passi. XD"
 	elseif case == 2 then
 		quote = "???: Prendi sta vita e vai. Sisghè"
 	elseif case == 3 then
@@ -490,9 +491,9 @@ local function createText(case)
 	chestText.text = quote
 	chestText.anchorX = 0
 	chestText.anchorY = 0
-	chestText.x = 400
+	chestText.x = display.contentCenterX - chestText.width
 	chestText.y = 600
-	chestText.font = fontCustom
+	chestText.font = fontDir
 end
 
 ------- OPEN THE CHEST ------
