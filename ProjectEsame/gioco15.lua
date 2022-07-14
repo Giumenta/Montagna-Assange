@@ -35,7 +35,7 @@ arrowDown.x = 180
 arrowDown.y = display.contentHeight-100
 arrowDown.name = "down"
 --creo una funzione per lo shuffle dei tasselli
-local function shuffle( )
+local function shuffle(--[[event]] )
 	--if event.phase == "up" then
 		--if ( event.keyName == "space" ) then
 			local moveNumber
@@ -75,7 +75,7 @@ local function shuffle( )
 		--end
 	--end
 end
-
+--creo i tasselli e li posiziono nella griglia
 local function creaGriglia() 
      
     local griglia= display.newRect(display.contentCenterX,display.contentCenterY, larghezzaGriglia,larghezzaGriglia)
@@ -159,7 +159,7 @@ local function isRisolto()
 	print("--")
 end
 
---creo una funzione per verificare la posizione di un tassello libero
+--creo una funzione per spostare i tasselli nella casella libera
 local function muovitassello (event)
     local emptyX
 	local emptyY
@@ -181,21 +181,21 @@ local function muovitassello (event)
 	local arrow=event.target
 	
 	if event.phase == "began" then
-        if arrow.name == "left" then
+        if arrow.name == "left" then --sposto il tass a sinistra
 			newEmptyX = emptyX + 1
 
-		elseif arrow.name == "right" then
+		elseif arrow.name == "right" then  --sposto il tassello a destra
         	newEmptyX = emptyX - 1
 
-        elseif arrow.name == "up" then
+        elseif arrow.name == "up" then  --sposto il tassello in alto
         	newEmptyY = emptyY + 1
 
-        elseif arrow.name == "down" then
+        elseif arrow.name == "down" then  --sposto il tassello in basso
         	newEmptyY = emptyY - 1
 		end
 		if grid[newEmptyY] and grid[newEmptyY][newEmptyX] then
 			grid[newEmptyY][newEmptyX], grid[emptyY][emptyX] = grid[emptyY][emptyX], grid[newEmptyY][newEmptyX]
-			transition.moveTo(grid[emptyY][emptyX], {x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
+			transition.moveTo(grid[emptyY][emptyX],{x=display.contentWidth/2-(larghezzaGriglia)/2 + (emptyX-1)*dimtassello + emptyX*spaziaturaTasselli, y= display.contentHeight/2-(larghezzaGriglia)/2 + (emptyY-1)*dimtassello + emptyY*spaziaturaTasselli, time=100})
 		end
 		isRisolto()
 	end
