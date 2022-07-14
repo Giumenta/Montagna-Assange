@@ -13,6 +13,7 @@ local dragable = require "com.ponywolf.plugins.dragable"
 map = dragable.new(map)
 
 --local heroLib=require("herolib")
+local passi = audio.loadSound(RisorseAudio/camminoSuono.mp3)
 
 -- create group for non fixed obj (camera) and for fixed obj(control)
 local camera= display.newGroup()
@@ -77,7 +78,7 @@ key.isVisible =false
 --button.y = display.contentCenterY
 --button.name = "button"
 local hero = map:listTypes("hero")
-local idle = map:findObject("idle")
+local idle=map:findObject("idle")
 
 function createHero()
 	physics.addBody(idle,"dynamic",{bounce=0})
@@ -136,31 +137,39 @@ local function movePg(event)
         if arrow.name == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
+			audio.play(passi)
 		elseif arrow.name == "right" then
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
+			audio.play(passi)
 		
         elseif arrow.name == "up" then
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
+			audio.play(passi)
 			 
         elseif arrow.name == "down" then
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
+			audio.play(passi)
 	   end
     elseif event.phase == "moved" then
 		if arrow.name == "left" then
 			chooseAnim(5)
-			idle:setLinearVelocity(-50, 0)	    	 
+			idle:setLinearVelocity(-50, 0)
+			audio.play(passi)	    	 
 		elseif arrow.name == "right" then
 			chooseAnim(4)
-			idle:setLinearVelocity(50, 0)            
+			idle:setLinearVelocity(50, 0)
+			audio.play(passi)            
         elseif arrow.name == "up" then
 			chooseAnim(2)
-			idle:setLinearVelocity(0,-50)            
+			idle:setLinearVelocity(0,-50)
+			audio.play(passi)            
         elseif arrow.name == "down" then
 			chooseAnim(3)
-			idle:setLinearVelocity(0, 50)			 
+			idle:setLinearVelocity(0, 50)
+			audio.play(passi)			 
 	   end
 	
 	elseif event.phase == "ended" then
@@ -207,15 +216,19 @@ local function movePg_arrows(event)
         if arrowKey == "a" or arrowKey == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
+			audio.play(passi)
 		elseif arrowKey == "d" or arrowKey == "right" then
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
+			audio.play(passi)
         elseif arrowKey == "w" or arrowKey == "up" then
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
+			audio.play(passi)
         elseif arrowKey == "s" or arrowKey == "down" then
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
+			audio.play(passi)
 	   end
     elseif event.phase == "up" then
 		local i
@@ -344,41 +357,16 @@ local room1_wallLeft = map:findObject("wallLeft1")
 local room1_wallRight = map:findObject("wallRight1")
 local room1_wallBottom = map:findObject("wallBottom1")
 
-local function collisionEnemy(self, event)
-	if event.phase == "began" then
-		if event.other.name == "idle" then
-			timer.performWithDelay(20, function()
-											event.contact.isEnabled = false
-										end)
-			timer.performWithDelay(700, function()
-											event.contact.isEnabled = true
-										end)
-		end
-	end
-end
-
-local function preCollisionEnemy(self, event)
-	if event.other.isEnemy ~= nil then
-		timer.performWithDelay(20, function()
-										event.contact.isEnabled = false
-									end)
-	end
-end
-
 local function activateBat()
 	local bats = map:listTypes("bat")
 
 	for i=1,#bats do
 		local velX = math.random(0.5, 1)*0.02
-		local velY = math.random(0.5,1)*0.02 
-		bats[i]:scale(0.75, 0.75)
+		local velY = math.random(0.5,1)*0.02
+
 		physics.addBody(bats[i],"dynamic", {bounce = 1})
 		bats[i].isFixedRotation = true
-		bats[i].collision = collisionEnemy
-		bats[i].preCollision = preCollisionEnemy
-		bats[i]:addEventListener("collision", bats[i])
-		bats[i]:addEventListener("preCollision", bats[i])
-		bats[i]:applyLinearImpulse(velX, velY)
+		-- bats[i]:applyLinearImpulse(velX, velY)
 	end
 end
 
@@ -391,10 +379,6 @@ local function activateSkeleton()
 
 		physics.addBody(skeletons[i],"dynamic", {bounce = 1})
 		skeletons[i].isFixedRotation = true
-		skeletons[i].collision = collisionEnemy
-		skeletons[i].preCollision = preCollisionEnemy
-		skeletons[i]:addEventListener("collision", skeletons[i])
-		skeletons[i]:addEventListener("preCollision", skeletons[i])
 		skeletons[i]:applyLinearImpulse(0, velY)
 	end
 end
@@ -408,29 +392,10 @@ local function activateDemons()
 
 		physics.addBody(demons[i],"dynamic", {bounce = 1})
 		demons[i].isFixedRotation = true
-		demons[i].collision = collisionEnemy
-		demons[i].preCollision = preCollisionEnemy
-		demons[i]:addEventListener("preCollision", demons[i])
 		demons[i]:applyLinearImpulse(velX, 0)
 	end
 end
 
---[[
-for i=1,#bats do
-	bats[i].collision = collisionEnemy
-	bats[i]:addEventListener("collision", bats[i])
-end
-
-for i=1,#skeleton do
-	skeleton[i].collision = collisionEnemy
-	skeleton[i]:addEventListener("collision", skeleton[i])
-end
-
-for i=1,#demons do
-	demons[i].collision = collisionEnemy
-	demons[i]:addEventListener("collision", demons[i])
-end
-]]
 local function isInTheRoom(objX, objY, wallTop, wallRight, wallBottom, wallLeft)
 	if(objX < wallLeft.x or objX > wallRight.x) then
 		return false
@@ -461,7 +426,7 @@ for i=1,#invisibleWall_batRoom do
 end
 
 local function activateAnimation(self, event)
-	 arrowLeft:removeEventListener("touch",   movePg_noAnim)
+	 arrowLeft:removeEventListener("touch",    movePg_noAnim)
 	arrowRight:removeEventListener("touch",   movePg_noAnim)
 	 arrowDown:removeEventListener("touch",   movePg_noAnim)
 	   arrowUp:removeEventListener("touch",   movePg_noAnim)
@@ -574,9 +539,10 @@ local function damage(self, event)
 		display.remove(hearts[#hearts])
 		hearts[#hearts] = nil
 		print("The remaining lifes are: " .. #hearts)
+		--table.remove(hearts, #hearts)
+		--hearts[#hearts].isVisible = false
 	end
-	gameOver()
-	
+	Runtime:addEventListener("enterFrame", gameOver)
 end
 
 idle.postCollision = damage
