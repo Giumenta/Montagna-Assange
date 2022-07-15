@@ -604,10 +604,15 @@ local function gameOver()
                                     			y = display.contentCenterY,
 								   				alpha = 1})
 			countGO = countGO + 1
-			audio.stop(BGmusicChannel)
+			audio.stop()
 			audio.play(GO, {loops=0, 
 			duration=2500
 		})
+			arrowLeft:removeEventListener("touch", movePg)
+			arrowRight:removeEventListener("touch", movePg)
+			arrowDown:removeEventListener("touch", movePg)
+			arrowUp:removeEventListener("touch", movePg)
+			Runtime:removeEventListener("key", movePg_arrows)
 		end
 	end
 end
