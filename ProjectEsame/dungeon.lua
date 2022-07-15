@@ -542,27 +542,24 @@ local function chestCollision(self, event)
 						openChest[1].isVisible=true
 						activateAnimation()
 						createText(1)
-						audio.play(aprichest)
 						
 					elseif self.name == "chest2" then
 						openChest[2].isVisible=true
 						key.isVisible = true
 						createText(3)
-						audio.play(aprichest)
 						
 					elseif self.name == "chest3" then
 						openChest[3].isVisible=true
 						createText(4)
-						audio.play(aprichest)
 
 					elseif self.name == "chest4" then
 						addHeart()
 						openChest[4].isVisible=true	
 						createText(2)
-						audio.play(aprichest)
 					end
 				
 			end
+			audio.play(aprichest)
 		end
 	elseif event.phase == "ended" then
 		transition.fadeOut( box, { time=500 })
