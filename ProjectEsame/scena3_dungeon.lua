@@ -415,7 +415,7 @@ local function createText(case)
 		end
 	end
 
-	chestText = display.newText({text="",fontSize=30, font = fontDir})
+	chestText = display.newText({text="",fontSize=25, font = fontDir})
 	chestText:setFillColor(0,0,0)
 	chestText.text = quote
 	chestText.anchorX = 0
@@ -546,7 +546,7 @@ passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
  camera= display.newGroup()
  control = display.newGroup()
 
- fontDir = "risorseGrafiche/font/minecraft/minecraft.ttf"
+ fontDir = "risorseGrafiche/fontfontpixel.ttf"
  fontCustom = native.newFont(fontDir, 12)
 
 map:scale(scaleFactor,scaleFactor)
