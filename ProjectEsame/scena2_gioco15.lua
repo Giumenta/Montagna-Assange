@@ -289,6 +289,11 @@ function scene:show( event )
     elseif ( phase == "did" ) then
 		grid = {}
 		print("scena2, show-will")
+		arrowLeft:addEventListener("touch", muovitassello)
+		arrowRight:addEventListener("touch", muovitassello)
+		arrowDown:addEventListener("touch", muovitassello)
+		arrowUp:addEventListener("touch", muovitassello)
+		Runtime:addEventListener( "key", muovitassello_keyboard)
 		creaGriglia()
     end
 end
@@ -303,7 +308,11 @@ function scene:hide( event )
     if ( phase == "will" ) then
         -- Code here runs when the scene is on screen (but is about to go off screen)
 		-- Remove the tap listener associated with the retry button
-		
+		arrowLeft:removeEventListener("touch", muovitassello)
+		arrowRight:removeEventListener("touch", muovitassello)
+		arrowDown:removeEventListener("touch", muovitassello)
+		arrowUp:removeEventListener("touch", muovitassello)
+		Runtime:removeEventListener( "key", muovitassello_keyboard)
  
     elseif ( phase == "did" ) then
         -- Code here runs immediately after the scene goes entirely off screen
