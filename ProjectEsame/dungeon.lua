@@ -495,7 +495,7 @@ local function createText(case)
 	local quote
 
 	if case == 1 then
-		quote = "???: Giovane Padawan ora sei finalmente pronto per \n muovere i tuoi primi passi. XD"
+		quote = "???: Giovane Padawan, ora sei finalmente pronto per \n muovere i tuoi primi passi. XD"
 			
 	elseif case == 2 then
 		quote = "???: Sei stato fortunato,\n prendi questa vita extra ma non sarà facile \n uscire da questa montagna."
@@ -505,7 +505,7 @@ local function createText(case)
 		if key.isVisible == false then
 			quote = "???: Prova ad uscire se ci riesci, \n dimostra di essere degno."
 		else
-			quote = "Mr. B: Hai trovato la chiave. Posso finalmente dirti chi \n sono. \n Esci dalla montagna e svelerò la mia identità."
+			quote = "Mr. B: Hai trovato la chiave. Posso finalmente dirti chi \n sono. \n Esci dalla montagna per scoprirlo."
 		end
 	elseif case == 5 then
 		if key.isVisible == false then
