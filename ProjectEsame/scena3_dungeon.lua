@@ -546,7 +546,7 @@ passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
  camera= display.newGroup()
  control = display.newGroup()
 
- fontDir = "risorseGrafiche/fontfontpixel.ttf"
+ fontDir = "risorseGrafiche/fontpixel.ttf"
  fontCustom = native.newFont(fontDir, 12)
 
 map:scale(scaleFactor,scaleFactor)
