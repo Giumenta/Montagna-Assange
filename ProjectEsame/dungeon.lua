@@ -12,7 +12,8 @@ local scaleFactor = 3.5
 local dragable = require "com.ponywolf.plugins.dragable"
 map = dragable.new(map)
 
-
+local BG = audio.loadStream("RisorseAudio/POL-misty-dungeon-short.wav")
+audio.play(BG, {loops=-1, fadein=5000})
 --local passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
 
 -- create group for non fixed obj (camera) and for fixed obj(control)

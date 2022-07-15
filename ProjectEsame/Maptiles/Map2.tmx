@@ -2139,7 +2139,7 @@
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="157" type="demon" gid="348" x="838.132" y="288.459" width="16" height="24">
+  <object id="157" type="demon" gid="2147483996" x="838.132" y="288.459" width="16" height="24">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
@@ -2149,7 +2149,7 @@
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="159" type="demon" gid="348" x="849.302" y="175.828" width="16" height="24">
+  <object id="159" type="demon" gid="2147483996" x="849.302" y="175.828" width="16" height="24">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
