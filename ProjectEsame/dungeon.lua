@@ -18,7 +18,8 @@ local GO = audio.loadStream("RisorseAudio/GO.mp3")
 --local BGmusicChannel = audio.play(BG, {channel=1, loops=-1, fadein=5000})
 
 local passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
-
+local danno = audio.loadSound("RisorseAudio/dannopreso.mp3")
+local aprichest = audio.loadSound("RisorseAudio/aprichest.mp3")
 -- create group for non fixed obj (camera) and for fixed obj(control)
 local camera= display.newGroup()
 local control = display.newGroup()
@@ -143,21 +144,21 @@ local function movePg(event)
         if arrow.name == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
-			audio.play(passi,  {loops=-1})
+			local suonopassi=audio.play(passi,  {loops=-1})
 		elseif arrow.name == "right" then
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
-			audio.play(passi,  {loops=-1})
+			local suonopassi=audio.play(passi,  {loops=-1})
 		
         elseif arrow.name == "up" then
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
-			audio.play(passi,  {loops=-1})
+			local suonopassi=audio.play(passi,  {loops=-1})
 			 
         elseif arrow.name == "down" then
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
-			audio.play(passi,  {loops=-1})
+			local suonopassi=audio.play(passi,  {loops=-1})
 	   end
 	   
     elseif event.phase == "moved" then
@@ -187,7 +188,7 @@ local function movePg(event)
 			idle:setLinearVelocity(0,0)
 			hero[1].isVisible = true
 			idle.isVisible=true		
-		audio.pause(passi)	 
+		audio.pause()	 
 	end 	   	 
  	return true
 end
@@ -233,22 +234,22 @@ local function movePg_arrows(event)
         if arrowKey == "a" or arrowKey == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
-			audio.play(passi,  {loops=-1})
+			local suonopassi=audio.play(passi,  {loops=-1})
 			
 		elseif arrowKey == "d" or arrowKey == "right" then
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
-			audio.play(passi,  {loops=-1})
+			local suonopassi=audio.play(passi,  {loops=-1})
 			
         elseif arrowKey == "w" or arrowKey == "up" then
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
-			audio.play(passi,  {loops=-1})
+			local suonopassi=audio.play(passi,  {loops=-1})
 			 
         elseif arrowKey == "s" or arrowKey == "down" then
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
-			audio.play(passi,  {loops=-1})
+			local suonopassi=audio.play(passi,  {loops=-1})
 			 
 	   end
 
@@ -259,7 +260,7 @@ local function movePg_arrows(event)
 		end
 			idle:setLinearVelocity(0,0)
 			idle.isVisible=true
-		audio.pause(passi)	 
+		audio.pause()	 
 	end
  	return true
 end
@@ -541,20 +542,24 @@ local function chestCollision(self, event)
 						openChest[1].isVisible=true
 						activateAnimation()
 						createText(1)
-
+						audio.play(aprichest)
+						
 					elseif self.name == "chest2" then
 						openChest[2].isVisible=true
 						key.isVisible = true
 						createText(3)
-
+						audio.play(aprichest)
+						
 					elseif self.name == "chest3" then
 						openChest[3].isVisible=true
 						createText(4)
+						audio.play(aprichest)
 
 					elseif self.name == "chest4" then
 						addHeart()
 						openChest[4].isVisible=true	
-						createText(2)				
+						createText(2)
+						audio.play(aprichest)
 					end
 				
 			end
@@ -624,6 +629,7 @@ local function damage(self, event)
 		display.remove(hearts[#hearts])
 		hearts[#hearts] = nil
 		print("The remaining lifes are: " .. #hearts)
+		audio.play(danno)
 	end
 	Runtime:addEventListener("enterFrame", gameOver)
 end
