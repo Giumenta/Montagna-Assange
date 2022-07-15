@@ -13,8 +13,8 @@ local dragable = require "com.ponywolf.plugins.dragable"
 map = dragable.new(map)
 
 local BG = audio.loadStream("RisorseAudio/BG.wav")
-local GO = audio.loadStream("RisorseAudio/GO.wav")
-audio.setVolume( 0.2 )
+local GO = audio.loadStream("RisorseAudio/GO.mp3")
+audio.setVolume( 0.2,{channel=BGmusicChannel})
 local BGmusicChannel = audio.play(BG, {loops=-1, fadein=5000})
 --local passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
 
@@ -186,7 +186,7 @@ local function movePg(event)
 			idle:setLinearVelocity(0,0)
 			hero[1].isVisible = true
 			idle.isVisible=true		
-		audio.pause(passi)	 
+		--audio.pause(passi)	 
 	end 	   	 
  	return true
 end
@@ -254,7 +254,7 @@ local function movePg_arrows(event)
 		end
 			idle:setLinearVelocity(0,0)
 			idle.isVisible=true
-		audio.pause(passi)	 
+		--audio.pause(passi)	 
 	end
  	return true
 end
@@ -600,7 +600,9 @@ local function gameOver()
 								   				alpha = 1})
 			countGO = countGO + 1
 			audio.stop(BGmusicChannel)
-			audio.play(GO, {loops=1, duration=2000})
+			audio.play(GO, {loops=0, 
+			duration=2500
+		})
 		end
 	end
 end
