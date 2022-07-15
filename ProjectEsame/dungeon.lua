@@ -12,7 +12,7 @@ local scaleFactor = 3.5
 local dragable = require "com.ponywolf.plugins.dragable"
 map = dragable.new(map)
 
---local heroLib=require("herolib")
+
 --local passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
 
 -- create group for non fixed obj (camera) and for fixed obj(control)
@@ -65,10 +65,8 @@ for i=1, 4 do
 	life:insert(hearts[i])
 end
 --togliamo il cuore bonus che troverà poi nella stanza segreta
-print("number of life:".. #hearts)
 hearts[4].isVisible = false
 table.remove(hearts, #hearts)
-print("number of life:".. #hearts)
 -------- OBJECTS IN CHESTS ---------
 local key = display.newImageRect(control,"risorseGrafiche/PG/key.png",128,128)
 key.x = display.contentWidth - 130
@@ -97,7 +95,7 @@ end
 
 local function moveAnimation()
 	for i=2,5 do
-		--idle.isVisible=false
+		
 		hero[i].x=idle.x
 		hero[i].y=idle.y
 	end 
@@ -157,7 +155,7 @@ local function movePg(event)
 			idle:setLinearVelocity(0, 50)
 			 
 	   end
-	   --audio.play(passi, {loops = -1})
+	   
     elseif event.phase == "moved" then
 		if arrow.name == "left" then
 			chooseAnim(5)
@@ -176,7 +174,7 @@ local function movePg(event)
 			idle:setLinearVelocity(0, 50)
 			 			 
 	   end
-	   --audio.play(passi, {loops = -1})
+	   
 	elseif event.phase == "ended" then
 		local i
 		for i=2,5 do
@@ -245,7 +243,7 @@ local function movePg_arrows(event)
 			idle:setLinearVelocity(0, 50)
 			 
 	   end
-	   --audio.play(passi, {loops = -1})
+
     elseif event.phase == "up" then
 		local i
 		for i=2,5 do
@@ -335,9 +333,9 @@ end
 
 local function testColl(event)
 	if event.other == ladder[1] then
-		print("a")
+		
 	elseif event.other == ladder[2] then
-		print("b")
+		
 	end
 end
 
@@ -358,8 +356,6 @@ ladder[2].collision = waitNTeleport
 ladder[1]:addEventListener("collision",ladder[1])
 ladder[2]:addEventListener("collision",ladder[2])
 
---idle.collision = waitNTeleport
---idle:addEventListener("collision", idle)
 
 --[[
 SE DIMINUISCO VELOCITà PG DIMINUISCE ANCHE LA VELOCITà DEL MOVIMENTO DELLA MAPPA 
@@ -397,7 +393,6 @@ local function activateSkeleton()
 	local skeletons = map:listTypes("skeleton")
 
 	for i=1,#skeletons do
-		--local velX = math.random(0.5, 1)*0.02
 		local velY = math.random(0.75,1)*0.01 -- se cambio qualcosa alcuni nemici smettono di muoversi e altri che prima non si muovevano si muovono
 
 		physics.addBody(skeletons[i],"dynamic", {shape=bodyShape,bounce = 1})
@@ -411,7 +406,6 @@ local function activateDemons()
 
 	for i=1,#demons do
 		local velX = math.random(0.75, 1)*0.01
-		--local velY = math.random(0.5,1)*0.02
 
 		physics.addBody(demons[i],"dynamic", {shape=bodyShape,bounce = 1})
 		demons[i].isFixedRotation = true
@@ -473,13 +467,7 @@ local function addHeart()
 end
 
 ------- BOX TEXT ---------
- --[[local function deleteText()
-	display.remove(box)
-	box = nil
-	display.remove(chestText)
-	chestText = nil
- end
- ]]
+
 local box
 local chestText
  
@@ -527,7 +515,6 @@ end
 
 ------- OPEN THE CHEST ------
 local function chestCollision(self, event)
-	print("The trigger of the chest is: " .. event.other.name)
 	if event.phase == "began" then
 		if event.target.isChest ~= nil then
 			if event.other.name == "idle" then
@@ -538,7 +525,6 @@ local function chestCollision(self, event)
 
 					elseif self.name == "chest2" then
 						openChest[2].isVisible=true
-						print("YOU FIND A KEY")
 						key.isVisible = true
 						createText(3)
 
@@ -572,10 +558,8 @@ end
 
 ---------- EXIT THE DUNGEON -------
 local exitDoor = map:findObject("doorExit")
-print(exitDoor)
 local function exit(self, event)
 	if event.phase == "began" then
-		--local target = event.target.name
 		local other = event.other.name
 		createText(5)
 	elseif event.phase == "ended" then
@@ -593,9 +577,6 @@ local countGO = 0 --TODO: usare un sistema migliore
 local function gameOver()
 	if #hearts == 0 then
 		if countGO == 0 then
-			print("GAME OVER")
-		--hearts:removeSelf()
-		--hearts = nil
 			local go = display.newImageRect("risorseGrafiche/PG/GameOver.png",412,78)
 			go.x = display.contentCenterX
 			go.y = -40
@@ -609,16 +590,12 @@ local function gameOver()
 end
 
 local function damage(self, event)
-	-- print("test")
-	print("Idle collided with: " .. event.other.name)
 	
 	if event.other.isEnemy ~= nil then
 		
 		display.remove(hearts[#hearts])
 		hearts[#hearts] = nil
 		print("The remaining lifes are: " .. #hearts)
-		--table.remove(hearts, #hearts)
-		--hearts[#hearts].isVisible = false
 	end
 	Runtime:addEventListener("enterFrame", gameOver)
 end
