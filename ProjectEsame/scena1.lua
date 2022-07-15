@@ -94,6 +94,7 @@ function scene:create( event )
 	dialogue = display.newText({text="",fontSize=30, font = fontDir})
 	sceneGroup:insert(sfondo)
 	sceneGroup:insert(pp)	  
+	sceneGroup:insert(hero)
 end
  
  
