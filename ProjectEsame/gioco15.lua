@@ -4,7 +4,7 @@ local GRID_WIDTH = 4
 local GRID_HEIGHT = 4
 local grid = {} -- creo una griglia 4x4
 for  riga = 1, GRID_HEIGHT do
-	grid[riga] = {}
+	
 	for colonna = 1, GRID_WIDTH do
 		grid[riga][colonna] = ((colonna - 1) * GRID_WIDTH) + riga
 	end

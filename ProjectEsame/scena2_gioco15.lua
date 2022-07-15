@@ -21,6 +21,7 @@ local arrowLeft
 local arrowRight 
 local arrowUp 
 local arrowDown 
+local grid
 
 --funzioni varie
 
@@ -205,12 +206,18 @@ local function creaGriglia()
     local riga=1
 
 	local tassello
-	
+	for  riga = 1, 4 do
+		grid[riga] = {}
+		for colonna = 1, 4 do
+			grid[riga][colonna] = ((colonna - 1) * GRID_WIDTH) + riga
+		end
+	end
+
 	for riga=1,4 do        
         for colonna=1,4 do
 			
 
-			if grid[riga][colonna] ~= GRID_HEIGHT*GRID_WIDTH then
+			if grid[riga][colonna] ~= 16 then
 				--assegno ad ogni posizione nella griglia un tassello specifico
 				local nTassello = (riga - 1)*4 + colonna 
 				local filePath = "risorseGrafiche/montagnaGenericoAmbiente/tassello" .. nTassello .. ".png"
@@ -239,6 +246,7 @@ function scene:create( event )
     dimtassello= (display.contentHeight*0.88)/4
     spaziaturaTasselli=(larghezzaGriglia-display.contentHeight*0.88)/5
     control = display.newGroup()
+	tasselliGroup = display.newGroup()
     -- create obj arrows and button for interaction
     arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
     arrowLeft.x = 100
@@ -259,7 +267,7 @@ function scene:create( event )
     arrowDown.x = 180
     arrowDown.y = display.contentHeight-100
     arrowDown.name = "down"
-
+	grid = {}
 	sceneGroup:insert(control)
 	sceneGroup:insert(tasselliGroup)
   
@@ -276,19 +284,12 @@ function scene:show( event )
 		colonna=1
 		riga=1
 		GRID_WIDTH = 4
-		GRID_HEIGHT = 4
-		-- place the retry object at the center of the display
-		retry.x = display.contentCenterX
-		retry.y = display.contentCenterY
-		
-    
+		GRID_HEIGHT = 4    
  
     elseif ( phase == "did" ) then
+		grid = {}
 		print("scena2, show-will")
 		creaGriglia()
-        -- activate the tap listener 
-		retry.tap = restart
-		retry:addEventListener("tap", restart)
     end
 end
  
@@ -302,7 +303,7 @@ function scene:hide( event )
     if ( phase == "will" ) then
         -- Code here runs when the scene is on screen (but is about to go off screen)
 		-- Remove the tap listener associated with the retry button
-		retry:removeEventListener("tap",replay)
+		
  
     elseif ( phase == "did" ) then
         -- Code here runs immediately after the scene goes entirely off screen
