@@ -249,23 +249,19 @@ function scene:create( event )
 	tasselliGroup = display.newGroup()
     -- create obj arrows and button for interaction
     arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
-    arrowLeft.x = 100
-    arrowLeft.y = display.contentHeight-150
+    
     arrowLeft.name = "left"
     
     arrowRight = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowRight.png",80,80)
-    arrowRight.x = 260
-    arrowRight.y = display.contentHeight-150
+    
     arrowRight.name = "right"
     
     arrowUp = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowUp.png",80,80)
-    arrowUp.x = 180
-    arrowUp.y = display.contentHeight-200
+    
     arrowUp.name = "up"
     
     arrowDown = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowDown.png",80,80)
-    arrowDown.x = 180
-    arrowDown.y = display.contentHeight-100
+    
     arrowDown.name = "down"
 	grid = {}
 	sceneGroup:insert(control)
@@ -285,15 +281,30 @@ function scene:show( event )
 		riga=1
 		GRID_WIDTH = 4
 		GRID_HEIGHT = 4    
+		arrowRight.x = 260
+    	arrowRight.y = display.contentHeight-150
+		arrowLeft.x = 100
+    	arrowLeft.y = display.contentHeight-150
+		arrowUp.x = 180
+    	arrowUp.y = display.contentHeight-200
+		arrowDown.x = 180
+    	arrowDown.y = display.contentHeight-100
  
     elseif ( phase == "did" ) then
 		grid = {}
-		print("scena2, show-will")
-		arrowLeft:addEventListener("touch", muovitassello)
-		arrowRight:addEventListener("touch", muovitassello)
-		arrowDown:addEventListener("touch", muovitassello)
-		arrowUp:addEventListener("touch", muovitassello)
-		Runtime:addEventListener( "key", muovitassello_keyboard)
+		print("scena2, show-did")
+		print(arrowLeft)		
+		print(arrowDown)
+		print(arrowUp)
+		print(arrowRight)
+		arrowLeft.touch = muovitassello
+		arrowUp.touch = muovitassello
+		arrowDown.touch = muovitassello
+		arrowRight.touch = muovitassello
+		arrowLeft:addEventListener("touch", arrowLeft)
+		arrowUp:addEventListener("touch", arrowUp)
+		arrowDown:addEventListener("touch", arrowDown)
+		arrowRight:addEventListener("touch", arrowRight)
 		creaGriglia()
     end
 end
@@ -301,19 +312,22 @@ end
  
 -- hide()
 function scene:hide( event )
- 
+	
     local sceneGroup = self.view
     local phase = event.phase
  
     if ( phase == "will" ) then
+		print("scena2 hide-will")
         -- Code here runs when the scene is on screen (but is about to go off screen)
-		-- Remove the tap listener associated with the retry button
-		arrowLeft:removeEventListener("touch", muovitassello)
-		arrowRight:removeEventListener("touch", muovitassello)
-		arrowDown:removeEventListener("touch", muovitassello)
-		arrowUp:removeEventListener("touch", muovitassello)
+		print(arrowLeft)		
+		print(arrowDown)
+		print(arrowUp)
+		print(arrowRight)
 		Runtime:removeEventListener( "key", muovitassello_keyboard)
- 
+		arrowLeft:removeEventListener("touch", arrowLeft)
+		arrowUp:removeEventListener("touch", arrowUp)
+		arrowDown:removeEventListener("touch", arrowDown)
+		arrowRight:removeEventListener("touch", arrowRight)
     elseif ( phase == "did" ) then
         -- Code here runs immediately after the scene goes entirely off screen
  
