@@ -26,8 +26,8 @@ local grid
 --funzioni varie
 
 local function goToScene3()
-	composer.removeScene("scene3")
-	composer.gotoScene("scene3", {effect = "zoomInOutFade",	time = 1000})
+	composer.removeScene("scena3_dungeon")
+	composer.gotoScene("scena3_dungeon", {effect = "zoomInOutFade",	time = 1000})
 end
 
 local function isRisolto()
@@ -64,7 +64,7 @@ local function isRisolto()
 	end
 
 	if complete and contaCaselle == 16 then
-		--timer.performWithDelay(3000, goToScene3)
+		timer.performWithDelay(3000, goToScene3)
 	else
 		
 	end
