@@ -187,7 +187,7 @@ local function movePg(event)
 			idle:setLinearVelocity(0,0)
 			hero[1].isVisible = true
 			idle.isVisible=true		
-		audio.pause(passi)	 
+		--audio.pause(passi)	 
 	end 	   	 
  	return true
 end
@@ -259,7 +259,7 @@ local function movePg_arrows(event)
 		end
 			idle:setLinearVelocity(0,0)
 			idle.isVisible=true
-		audio.pause(passi)	 
+		--audio.pause(passi)	 
 	end
  	return true
 end
