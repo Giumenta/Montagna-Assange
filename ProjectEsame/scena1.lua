@@ -89,9 +89,9 @@ function scene:create( event )
 	hero =  display.newSprite(heroSheet,heroSeqs)
 	cloud = display.newImageRect(pp,"risorseGrafiche/scenaIntro/nuvolaVoce.png", 400, 200)
 	dialogueBox = display.newImageRect(pp, "risorseGrafiche/boxmessaggi.png", display.contentWidth + 200, display.contentHeight/3 + 50)
-	local fontDir = "risorseGrafiche/font/minecraft/minecraft.ttf"
+	local fontDir = "risorseGrafiche/font/fontpixel.ttf"
 	local fontCustom = native.newFont(fontDir, 12)
-	dialogue = display.newText({text="",fontSize=30, font = fontDir})
+	dialogue = display.newText({text="",fontSize=25, font = fontDir})
 	sceneGroup:insert(sfondo)
 	sceneGroup:insert(pp)	  
 	sceneGroup:insert(hero)
