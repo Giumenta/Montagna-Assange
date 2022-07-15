@@ -509,7 +509,7 @@ local function createText(case)
 		quote = "???: Hai trovato una chiave misteriosa. \n Chissà a cosa servirà..." 
 	elseif case == 4 then
 		if key.isVisible == false then
-			quote = "???: Prova ad uscire se ci riesci, \n dimostra di essere degno."
+			quote = "???: Prova ad uscire se ci riesci, \n ritorna qua quando sarai degno."
 		else
 			quote = "Mr. B: Hai trovato la chiave. Posso finalmente dirti chi \n sono. \n Esci dalla montagna per scoprirlo."
 		end
