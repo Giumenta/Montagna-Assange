@@ -14,8 +14,9 @@ map = dragable.new(map)
 
 local BG = audio.loadStream("RisorseAudio/BG.wav")
 local GO = audio.loadStream("RisorseAudio/GO.mp3")
-audio.setVolume( 0.2,{channel=BGmusicChannel})
-local BGmusicChannel = audio.play(BG, {loops=-1, fadein=5000})
+audio.setVolume( 0.005,{channel=1})
+local BGmusicChannel = audio.play(BG, {channel=1, loops=-1, fadein=5000})
+
 local passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
 
 -- create group for non fixed obj (camera) and for fixed obj(control)
@@ -142,21 +143,21 @@ local function movePg(event)
         if arrow.name == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
-			 audio.play(passi)
+			audio.play(passi,  {loops=-1})
 		elseif arrow.name == "right" then
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
-			 audio.play(passi)
+			audio.play(passi,  {loops=-1})
 		
         elseif arrow.name == "up" then
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
-			 audio.play(passi)
+			audio.play(passi,  {loops=-1})
 			 
         elseif arrow.name == "down" then
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
-			 audio.play(passi)
+			audio.play(passi,  {loops=-1})
 	   end
 	   
     elseif event.phase == "moved" then
@@ -232,19 +233,23 @@ local function movePg_arrows(event)
         if arrowKey == "a" or arrowKey == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
-			 audio.play(passi)
+			audio.play(passi,  {loops=-1})
+			
 		elseif arrowKey == "d" or arrowKey == "right" then
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
-			 audio.play(passi)
+			audio.play(passi,  {loops=-1})
+			
         elseif arrowKey == "w" or arrowKey == "up" then
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
-			 audio.play(passi)
+			audio.play(passi,  {loops=-1})
+			 
         elseif arrowKey == "s" or arrowKey == "down" then
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
-			 audio.play(passi)
+			audio.play(passi,  {loops=-1})
+			 
 	   end
 
     elseif event.phase == "up" then
@@ -505,7 +510,7 @@ local function createText(case)
 		quote = "???: Hai trovato una chiave misteriosa. \n Chissà a cosa servirà..." 
 	elseif case == 4 then
 		if key.isVisible == false then
-			quote = "???: Prova ad uscire se ci riesci, \n dimostra di essere degno."
+			quote = "???: Prova ad uscire se ci riesci, \n ritorna quando sarai degno."
 		else
 			quote = "Mr. B: Hai trovato la chiave. Posso finalmente dirti chi \n sono. \n Esci dalla montagna per scoprirlo."
 		end

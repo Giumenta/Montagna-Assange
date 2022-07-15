@@ -30,15 +30,16 @@ local textTable
 local fontDir
 local fontCustom
 local box
+local dialogue
 
 -- create()
 function scene:create( event )
- 
+	print("Scena 1, create")
     local sceneGroup = self.view
 	textTable = {
 		"Ciao sono ???",
 		"Prova di fuoco",
-		"STM /n è un bel corso", 
+		"STM \n è un bel corso", 
 		"e così via"
 	}
 	--hero sequence e sheet
@@ -72,6 +73,13 @@ function scene:create( event )
 			time = 1000,
 			loopCount = 0,
 			loopDirection ="forward"
+		},
+		{
+			name = "freeze",
+			frames={2},
+			time = 1000,
+			loopCount = 0,
+			loopDirection ="forward"
 		}
 	}
 	
@@ -79,51 +87,49 @@ function scene:create( event )
 	background = display.newImageRect(sfondo, "risorseGrafiche/scenaIntro/sfondoScenaIntro.jpg", display.contentWidth, display.contentHeight)
 	--load hero sprite
 	hero =  display.newSprite(heroSheet,heroSeqs)
-	cloud = display.newImageRect(pp,"risorseGrafiche/scenaIntro/nuvolaVoce.png", 0, display.contentWidth - 100)
-	dialogueBox = display.newImageRect(pp, "risorseGrafiche/boxmessaggi.png", display.contentHeight , display.contentCenterX)
-		dialogueBox.x=display.contentCenterX/2 +60
-		dialogueBox.y=display.contentCenterY -80
-		dialogueBox.anchorX=0
-		dialogueBox.anchorY=0
+	cloud = display.newImageRect(pp,"risorseGrafiche/scenaIntro/nuvolaVoce.png", 100, 200)
+	dialogueBox = display.newImageRect(pp, "risorseGrafiche/boxmessaggi.png", display.contentWidth + 200, display.contentHeight/3 + 50)
+	local fontDir = "risorseGrafiche/font/minecraft/minecraft.ttf"
+	local fontCustom = native.newFont(fontDir, 12)
+	dialogue = display.newText({text="",fontSize=30, font = fontDir})
 	sceneGroup:insert(sfondo)
 	sceneGroup:insert(pp)	  
 end
  
  
 local function movePg()
-	hero.x = -20
-	hero.y = display.contentHeight - 2*hero.height
-	transition.to(go,{delay=0, time = 600,
-                      x = display.contentCenterX,
-					  alpha = 1})
+	transition.to(hero,{delay=0, time = 6000,
+						x = display.contentCenterX,
+						y = display.contentHeight*3/4,
+					  	alpha = 1})
 end
 
 local function moveCloud()
+	print("move cloud")
 	cloud.x = display.contentWidth
 	cloud.y = -30
-	transition.to(go,{delay=0, time = 600,
-                      x = display.contentWidth,
-					  y= -60,
+	transition.to(cloud,{delay=0, time = 6000,
+						x = display.contentCenterX*4/3,
+						y = 100,
 					  alpha = 1})
+	
 end
 
-local fontDir = "risorseGrafiche/font/minecraft/minecraft.ttf"
-local fontCustom = native.newFont(fontDir, 12)
  
 local function createText(self, event)
 	if textN < #textTable then
-		chestText = display.newText({text="",fontSize=30, font = fontDir})
-		chestText:setFillColor(0,0,0)
-		chestText.text = textTable[self]
-		chestText.anchorX = 0
-		chestText.anchorY = 0
-		chestText.x = display.contentCenterX/2/2
-		chestText.y = 550
-		chestText.font = fontDir
+		
+		dialogue:setFillColor(0,0,0)
+		dialogue.text = textTable[textN]
+		dialogue.anchorX = 0
+		dialogue.anchorY = 0
+		dialogue.x = display.contentCenterX/4
+		dialogue.y = display.contentHeight - 75
+		dialogue.font = fontDir
 		textN = textN + 1 --passa al testo successivo
 	else
-		composer.removeScene("gioco15")
-		composer.gotoScene("gioco15", {effect = "zoomInOutFade",	time = 1000}) 
+		composer.removeScene("scena2_gioco15")
+		composer.gotoScene("scena2_gioco15", {effect = "zoomInOutFade",	time = 1000}) 
 	end
 end
 
@@ -132,15 +138,28 @@ function scene:show( event )
     local sceneGroup = self.view
     local phase = event.phase
  
-    if ( phase == "will" ) then        
+    if ( phase == "will" ) then 
+		print("scena1, show- will")    
 		sfondo.x = display.contentCenterX
-		sfondo.y = display.contentCenterY
+		sfondo.y = display.contentCenterY - 100
 		textN = 0
+		hero.x = 0
+		hero.y = display.contentCenterY
+		-- dialogue.anchorX = 0
+		-- dialogue.anchorY = 0
+		dialogue.x = display.contentCenterX/2
+		dialogue.y = display.contentCenterY
+		dialogueBox.x = display.contentCenterX
+		dialogueBox.y = display.contentHeight - dialogueBox.height/2 + 95
+		hero:scale(3,3)
+		hero:setSequence("right") 
+    elseif ( phase == "did" ) then
+		print("scena1, show-did")
 		movePg()
+		hero:setSequence("freeze")
+		
 		moveCloud()
 		createText(text)
- 
-    elseif ( phase == "did" ) then
         -- activate the tap listener 
 		Runtime:addEventListener("tap", createText)
     end
@@ -154,7 +173,7 @@ function scene:hide( event )
     local phase = event.phase
  
     if ( phase == "will" ) then
-		textN:removeEventListener("tap", textN)
+		Runtime:removeEventListener("tap", textN)
  
     elseif ( phase == "did" ) then
         -- Code here runs immediately after the scene goes entirely off screen

@@ -1,3 +1,7 @@
+local composer = require( "composer" )
+ 
+local scene = composer.newScene()
+
 --tutte le nostre belle variabili
 local colonna
 local riga
@@ -228,30 +232,30 @@ local function creaGriglia()
 end
 
 function scene:create( event )
- 
+	print("scena 2, create")
     local sceneGroup = self.view
 	
-    local larghezzaGriglia = display.contentHeight*0.9
-    local dimtassello= (display.contentHeight*0.88)/4
-    local spaziaturaTasselli=(larghezzaGriglia-display.contentHeight*0.88)/5
-    local control = display.newGroup()
+    larghezzaGriglia = display.contentHeight*0.9
+    dimtassello= (display.contentHeight*0.88)/4
+    spaziaturaTasselli=(larghezzaGriglia-display.contentHeight*0.88)/5
+    control = display.newGroup()
     -- create obj arrows and button for interaction
-    local arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
+    arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
     arrowLeft.x = 100
     arrowLeft.y = display.contentHeight-150
     arrowLeft.name = "left"
     
-    local arrowRight = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowRight.png",80,80)
+    arrowRight = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowRight.png",80,80)
     arrowRight.x = 260
     arrowRight.y = display.contentHeight-150
     arrowRight.name = "right"
     
-    local arrowUp = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowUp.png",80,80)
+    arrowUp = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowUp.png",80,80)
     arrowUp.x = 180
     arrowUp.y = display.contentHeight-200
     arrowUp.name = "up"
     
-    local arrowDown = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowDown.png",80,80)
+    arrowDown = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowDown.png",80,80)
     arrowDown.x = 180
     arrowDown.y = display.contentHeight-100
     arrowDown.name = "down"
@@ -268,6 +272,7 @@ function scene:show( event )
     local phase = event.phase
  
     if ( phase == "will" ) then
+		print("scena2, show-will")
 		colonna=1
 		riga=1
 		GRID_WIDTH = 4
@@ -279,6 +284,7 @@ function scene:show( event )
     
  
     elseif ( phase == "did" ) then
+		print("scena2, show-will")
 		creaGriglia()
         -- activate the tap listener 
 		retry.tap = restart
