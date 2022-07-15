@@ -142,21 +142,21 @@ local function movePg(event)
         if arrow.name == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
-			 audio.play(passi)
+			 audio.play(passi,  {loops=-1})
 		elseif arrow.name == "right" then
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
-			 audio.play(passi)
+			 audio.play(passi,  {loops=-1})
 		
         elseif arrow.name == "up" then
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
-			 audio.play(passi)
+			audio.play(passi,  {loops=-1})
 			 
         elseif arrow.name == "down" then
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
-			 audio.play(passi)
+			audio.play(passi,  {loops=-1})
 	   end
 	   
     elseif event.phase == "moved" then
@@ -232,19 +232,23 @@ local function movePg_arrows(event)
         if arrowKey == "a" or arrowKey == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
-			 audio.play(passi)
+			audio.play(passi,  {loops=-1})
+			
 		elseif arrowKey == "d" or arrowKey == "right" then
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
-			 audio.play(passi)
+			audio.play(passi,  {loops=-1})
+			
         elseif arrowKey == "w" or arrowKey == "up" then
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
-			 audio.play(passi)
+			audio.play(passi,  {loops=-1})
+			 
         elseif arrowKey == "s" or arrowKey == "down" then
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
-			 audio.play(passi)
+			audio.play(passi,  {loops=-1})
+			 
 	   end
 
     elseif event.phase == "up" then
