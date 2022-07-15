@@ -14,7 +14,7 @@ map = dragable.new(map)
 
 local BG = audio.loadStream("RisorseAudio/POL-misty-dungeon-short.wav")
 audio.play(BG, {loops=-1, fadein=5000})
---local passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
+local passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
 
 -- create group for non fixed obj (camera) and for fixed obj(control)
 local camera= display.newGroup()
@@ -140,40 +140,40 @@ local function movePg(event)
         if arrow.name == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
-			 
+			 audio.play(passi)
 		elseif arrow.name == "right" then
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
-			 
+			 audio.play(passi)
 		
         elseif arrow.name == "up" then
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
-			 
+			 audio.play(passi)
 			 
         elseif arrow.name == "down" then
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
-			 
+			 audio.play(passi)
 	   end
 	   
     elseif event.phase == "moved" then
 		if arrow.name == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
-			 	    	 
+			 audio.play(passi)	    	 
 		elseif arrow.name == "right" then
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
-			             
+			  audio.play(passi)           
         elseif arrow.name == "up" then
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
-			             
+			  audio.play(passi)           
         elseif arrow.name == "down" then
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
-			 			 
+			 audio.play(passi)			 
 	   end
 	   
 	elseif event.phase == "ended" then
@@ -184,7 +184,7 @@ local function movePg(event)
 			idle:setLinearVelocity(0,0)
 			hero[1].isVisible = true
 			idle.isVisible=true		
-			 
+		audio.pause(passi)	 
 	end 	   	 
  	return true
 end
@@ -230,19 +230,19 @@ local function movePg_arrows(event)
         if arrowKey == "a" or arrowKey == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
-			 
+			 audio.play(passi)
 		elseif arrowKey == "d" or arrowKey == "right" then
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
-			 
+			 audio.play(passi)
         elseif arrowKey == "w" or arrowKey == "up" then
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
-			 
+			 audio.play(passi)
         elseif arrowKey == "s" or arrowKey == "down" then
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
-			 
+			 audio.play(passi)
 	   end
 
     elseif event.phase == "up" then
@@ -252,7 +252,7 @@ local function movePg_arrows(event)
 		end
 			idle:setLinearVelocity(0,0)
 			idle.isVisible=true
-			 
+		audio.pause(passi)	 
 	end
  	return true
 end
