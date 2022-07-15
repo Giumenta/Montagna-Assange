@@ -397,7 +397,7 @@ local function activateSkeleton()
 		--local velX = math.random(0.5, 1)*0.02
 		local velY = math.random(0.75,1)*0.004 -- se cambio qualcosa alcuni nemici smettono di muoversi e altri che prima non si muovevano si muovono
 =======
-		local velY = math.random(0.75,1)*0.01 -- se cambio qualcosa alcuni nemici smettono di muoversi e altri che prima non si muovevano si muovono
+		--local velY = math.random(0.75,1)*0.01 -- se cambio qualcosa alcuni nemici smettono di muoversi e altri che prima non si muovevano si muovono
 >>>>>>> 703b30dc7fbb518c0018965213aac3cfb0941cdb
 
 		physics.addBody(skeletons[i],"dynamic", {shape=bodyShape,bounce = 1})
@@ -414,7 +414,7 @@ local function activateDemons()
 		local velX = math.random(0.75, 1)*0.005
 		--local velY = math.random(0.5,1)*0.02
 =======
-		local velX = math.random(0.75, 1)*0.01
+		--local velX = math.random(0.75, 1)*0.01
 >>>>>>> 703b30dc7fbb518c0018965213aac3cfb0941cdb
 
 		physics.addBody(demons[i],"dynamic", {shape=bodyShape,bounce = 1})
