@@ -305,6 +305,7 @@ function scene:show( event )
 		arrowUp:addEventListener("touch", arrowUp)
 		arrowDown:addEventListener("touch", arrowDown)
 		arrowRight:addEventListener("touch", arrowRight)
+		Runtime:addEventListener( "key", muovitassello_keyboard)
 		creaGriglia()
     end
 end

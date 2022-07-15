@@ -88,7 +88,7 @@ function scene:create( event )
 	--load hero sprite
 	hero =  display.newSprite(heroSheet,heroSeqs)
 	cloud = display.newImageRect(pp,"risorseGrafiche/scenaIntro/nuvolaVoce.png", 400, 200)
-	dialogueBox = display.newImageRect(pp, "risorseGrafiche/boxmessaggi.png", display.contentWidth + 200, display.contentHeight/3 + 50)
+	dialogueBox = display.newImageRect(pp, "risorseGrafiche/boxmessaggi.png", display.contentWidth +100, display.contentHeight/1.5)
 	local fontDir = "risorseGrafiche/font/fontpixel.ttf"
 	local fontCustom = native.newFont(fontDir, 12)
 	dialogue = display.newText({text="",fontSize=25, font = fontDir})
@@ -125,7 +125,7 @@ local function createText(self, event)
 		dialogue.anchorX = 0
 		dialogue.anchorY = 0
 		dialogue.x = display.contentCenterX/4
-		dialogue.y = display.contentHeight - 75
+		dialogue.y = display.contentHeight - 130
 		dialogue.font = fontDir
 		textN = textN + 1 --passa al testo successivo
 	else
@@ -151,7 +151,7 @@ function scene:show( event )
 		dialogue.x = display.contentCenterX/2
 		dialogue.y = display.contentCenterY
 		dialogueBox.x = display.contentCenterX
-		dialogueBox.y = display.contentHeight - dialogueBox.height/2 + 95
+		dialogueBox.y = display.contentHeight - dialogueBox.height/2 +150
 		hero:scale(3,3)
 		hero:setSequence("right") 
     elseif ( phase == "did" ) then
