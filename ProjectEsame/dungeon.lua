@@ -16,7 +16,7 @@ local BG = audio.loadStream("RisorseAudio/BG.wav")
 local GO = audio.loadStream("RisorseAudio/GO.wav")
 audio.setVolume( 0.2 )
 local BGmusicChannel = audio.play(BG, {loops=-1, fadein=5000})
---local passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
+local passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
 
 -- create group for non fixed obj (camera) and for fixed obj(control)
 local camera= display.newGroup()
@@ -163,19 +163,19 @@ local function movePg(event)
 		if arrow.name == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
-			 audio.play(passi)	    	 
+				    	 
 		elseif arrow.name == "right" then
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
-			  audio.play(passi)           
+			           
         elseif arrow.name == "up" then
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
-			  audio.play(passi)           
+			           
         elseif arrow.name == "down" then
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
-			 audio.play(passi)			 
+					 
 	   end
 	   
 	elseif event.phase == "ended" then
