@@ -394,7 +394,12 @@ local function activateSkeleton()
 
 	for i=1,#skeletons do
 
+<<<<<<< HEAD
 		local velY = math.random(0.75,1)*0.01 -- se cambio qualcosa alcuni nemici smettono di muoversi e altri che prima non si muovevano si muovono
+=======
+		--local velX = math.random(0.5, 1)*0.02
+		local velY = math.random(0.75,1)*0.004 -- se cambio qualcosa alcuni nemici smettono di muoversi e altri che prima non si muovevano si muovono
+>>>>>>> 0d6d61933d8415670a4c0ee0b2f18a5598cef3d8
 
 
 		physics.addBody(skeletons[i],"dynamic", {shape=bodyShape,bounce = 1})
@@ -408,6 +413,7 @@ local function activateDemons()
 
 	for i=1,#demons do
 <<<<<<< HEAD
+<<<<<<< HEAD
 		local velX = math.random(0.75, 1)*0.01
 =======
 <<<<<<< HEAD
@@ -417,6 +423,12 @@ local function activateDemons()
 		--local velX = math.random(0.75, 1)*0.01
 >>>>>>> 703b30dc7fbb518c0018965213aac3cfb0941cdb
 >>>>>>> 68ca3c8e24203a58a6b524649432d24b7a918a19
+=======
+
+		local velX = math.random(0.75, 1)*0.005
+		--local velY = math.random(0.5,1)*0.02
+
+>>>>>>> 0d6d61933d8415670a4c0ee0b2f18a5598cef3d8
 
 		physics.addBody(demons[i],"dynamic", {shape=bodyShape,bounce = 1})
 		demons[i].isFixedRotation = true
