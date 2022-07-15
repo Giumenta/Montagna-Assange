@@ -80,7 +80,11 @@ function scene:create( event )
 	--load hero sprite
 	hero =  display.newSprite(heroSheet,heroSeqs)
 	cloud = display.newImageRect(pp,"risorseGrafiche/scenaIntro/nuvolaVoce.png", 0, display.contentWidth - 100)
-	dialogueBox = display.newImageRect(pp, "risorseGrafiche/boxmessaggi.png", display.contentHeight - 300, display.contentCenterX)
+	dialogueBox = display.newImageRect(pp, "risorseGrafiche/boxmessaggi.png", display.contentHeight , display.contentCenterX)
+		dialogueBox.x=display.contentCenterX/2 +60
+		dialogueBox.y=display.contentCenterY -80
+		dialogueBox.anchorX=0
+		dialogueBox.anchorY=0
 	sceneGroup:insert(sfondo)
 	sceneGroup:insert(pp)	  
 end
