@@ -536,6 +536,7 @@ end
 ------- OPEN THE CHEST ------
 local function chestCollision(self, event)
 	if event.phase == "began" then
+	audio.play(aprichest)
 		if event.target.isChest ~= nil then
 			if event.other.name == "idle" then
 					if self.name == "chest1" then
@@ -559,7 +560,6 @@ local function chestCollision(self, event)
 					end
 				
 			end
-			audio.play(aprichest)
 		end
 	elseif event.phase == "ended" then
 		transition.fadeOut( box, { time=500 })
@@ -606,9 +606,9 @@ local function gameOver()
                                     			y = display.contentCenterY,
 								   				alpha = 1})
 			countGO = countGO + 1
-			audio.stop()
+			
 			audio.play(GO, {loops=0, 
-			duration=2500
+			duration=2800
 		})
 			arrowLeft:removeEventListener("touch", movePg)
 			arrowRight:removeEventListener("touch", movePg)
