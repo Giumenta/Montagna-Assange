@@ -12,10 +12,10 @@ local scaleFactor = 3.5
 local dragable = require "com.ponywolf.plugins.dragable"
 map = dragable.new(map)
 
-local BG = audio.loadStream("RisorseAudio/BG.wav")
+--local BG = audio.loadStream("RisorseAudio/BG.wav")
 local GO = audio.loadStream("RisorseAudio/GO.mp3")
-audio.setVolume( 0.005,{channel=1})
-local BGmusicChannel = audio.play(BG, {channel=1, loops=-1, fadein=5000})
+--audio.setVolume( 0.005,{channel=1})
+--local BGmusicChannel = audio.play(BG, {channel=1, loops=-1, fadein=5000})
 
 local passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
 
@@ -187,7 +187,7 @@ local function movePg(event)
 			idle:setLinearVelocity(0,0)
 			hero[1].isVisible = true
 			idle.isVisible=true		
-		--audio.pause(passi)	 
+		audio.pause(passi)	 
 	end 	   	 
  	return true
 end
@@ -259,7 +259,7 @@ local function movePg_arrows(event)
 		end
 			idle:setLinearVelocity(0,0)
 			idle.isVisible=true
-		--audio.pause(passi)	 
+		audio.pause(passi)	 
 	end
  	return true
 end
