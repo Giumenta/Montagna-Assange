@@ -494,7 +494,7 @@ local function createText(case)
 	local quote
 
 	if case == 1 then
-		quote = "???: Giovane Padawan ora sei finalmente pronto per \n muovere i tuoi primi passi. XD"
+		quote = "???: Giovane Padawan, ora sei finalmente pronto per \n muovere i tuoi primi passi. XD"
 			
 	elseif case == 2 then
 		quote = "???: Sei stato fortunato,\n prendi questa vita extra ma non sarà facile \n uscire da questa montagna."
