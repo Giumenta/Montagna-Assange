@@ -515,7 +515,7 @@ function scene:create( event )
 	 camera= display.newGroup()
 	 control = display.newGroup()
 
-	 fontDir = "risorseGrafiche/fontpixel.ttf"
+	 fontDir = "risorseGrafiche/font/fontpixel.ttf"
 	 fontCustom = native.newFont(fontDir, 12)
 
 	map:scale(scaleFactor,scaleFactor)
