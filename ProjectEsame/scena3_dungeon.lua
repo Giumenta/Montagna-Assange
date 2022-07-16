@@ -516,7 +516,7 @@ function scene:create( event )
 	passi = audio.loadSound("RisorseAudio/footstep04.ogg")
 	danno = audio.loadSound("RisorseAudio/dannopreso.mp3")
 	aprichest = audio.loadSound("RisorseAudio/aprichest.mp3")
-
+	audio.setVolume( 0.05)
 	 camera= display.newGroup()
 	 control = display.newGroup()
 
