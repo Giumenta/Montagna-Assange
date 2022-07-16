@@ -113,8 +113,8 @@ local function moveCloud()
 	cloud.x = display.contentWidth
 	cloud.y = -30
 	transition.to(cloud,{delay=0, time = 6000,
-						x = display.contentCenterX*4/3,
-						y = 100,
+						x = display.contentCenterX*4/3+100,
+						y = 200,
 					  alpha = 1})
 	
 end
@@ -148,13 +148,13 @@ function scene:show( event )
 		sfondo.y = display.contentCenterY - 100
 		textN = 0
 		hero.x = 0
-		hero.y = display.displayHeight
+		hero.y = 500
 		-- dialogue.anchorX = 0
 		-- dialogue.anchorY = 0
 		dialogue.x = display.contentCenterX/2
 		dialogue.y = display.contentCenterY
 		dialogueBox.x = display.contentCenterX
-		dialogueBox.y = display.contentHeight - dialogueBox.height/2 +150
+		dialogueBox.y = display.contentHeight - dialogueBox.height/2 +200
 		hero:scale(3,3)
 		hero:setSequence("right") 
     elseif ( phase == "did" ) then
