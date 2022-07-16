@@ -510,7 +510,7 @@ function scene:create( event )
 
 	GO = audio.loadStream("RisorseAudio/GO.mp3")
 
-	passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
+	passi = audio.loadSound("RisorseAudio/footstep04.ogg")
 
 	 camera= display.newGroup()
 	 control = display.newGroup()

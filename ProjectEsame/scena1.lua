@@ -37,12 +37,12 @@ function scene:create( event )
 	print("Scena 1, create")
     local sceneGroup = self.view
 	textTable = {
-		"???: Salve pellegrino. \n          Cosa ci fai alle porte di questa montagna?",
+		"???: Salve pellegrino. \n Cosa ci fai alle porte di questa montagna?",
 		"Idle: Chi è che parla?",
 		"???: Questo non può essere rivelato al primo che passa.", 
 		"Idle: Mi è stato detto di venire qua per verificare di essere degno.",
 		"???: Benissimo allora! Sei nel posto giusto. Se riuscirai ad uscire dalla \n montagna allora avrai dimostrato le tue capacità e io ti valuterò.",
-		"???: Ma prima di entrare nel cuore della montagna devi risolvere \n questo enigma.",
+		"???: Per entrare nel cuore della montagna devi prima risolvere \n questo enigma.",
 	}
 	--hero sequence e sheet
 	local opt = { width = 32, height = 32, numFrames = 12}
@@ -113,15 +113,15 @@ local function moveCloud()
 	cloud.x = display.contentWidth
 	cloud.y = -30
 	transition.to(cloud,{delay=0, time = 6000,
-						x = display.contentCenterX*4/3,
-						y = 100,
+						x = display.contentCenterX*4/3+100,
+						y = 200,
 					  alpha = 1})
 	
 end
 
  
 local function createText(self, event)
-	if textN < #textTable then
+	if textN <= #textTable then
 		
 		dialogue:setFillColor(0,0,0)
 		dialogue.text = textTable[textN]
@@ -141,20 +141,20 @@ end
 function scene:show( event ) 
     local sceneGroup = self.view
     local phase = event.phase
-	
+
     if ( phase == "will" ) then 
 		print("scena1, show- will")    
 		sfondo.x = display.contentCenterX
 		sfondo.y = display.contentCenterY - 100
 		textN = 0
 		hero.x = 0
-		hero.y = display.contentCenterY
+		hero.y = 500
 		-- dialogue.anchorX = 0
 		-- dialogue.anchorY = 0
 		dialogue.x = display.contentCenterX/2
 		dialogue.y = display.contentCenterY
 		dialogueBox.x = display.contentCenterX
-		dialogueBox.y = display.contentHeight - dialogueBox.height/2 +150
+		dialogueBox.y = display.contentHeight - dialogueBox.height/2 +200
 		hero:scale(3,3)
 		hero:setSequence("right") 
     elseif ( phase == "did" ) then
