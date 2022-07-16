@@ -181,14 +181,15 @@ local function movePg(event)
 	   end
 	   
 	elseif event.phase == "ended" then
-		local i
+	audio.pause()	
+	local i
 		for i=2,5 do
 			hero[i].isVisible=false
 		end
 			idle:setLinearVelocity(0,0)
 			hero[1].isVisible = true
 			idle.isVisible=true		
-		audio.pause()	 
+		 
 	end 	   	 
  	return true
 end
@@ -254,13 +255,14 @@ local function movePg_arrows(event)
 	   end
 
     elseif event.phase == "up" then
+		audio.pause()
 		local i
 		for i=2,5 do
 			hero[i].isVisible=false
 		end
 			idle:setLinearVelocity(0,0)
 			idle.isVisible=true
-		audio.pause()	 
+			 
 	end
  	return true
 end
