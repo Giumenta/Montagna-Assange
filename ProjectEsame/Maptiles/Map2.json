@@ -1220,6 +1220,74 @@
                  "width":73.4551,
                  "x":67.2698,
                  "y":212.6
+                }, 
+                {
+                 "height":45,
+                 "id":178,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"bodyType",
+                         "type":"string",
+                         "value":"static"
+                        }],
+                 "rotation":0,
+                 "type":"invisibleWall",
+                 "visible":true,
+                 "width":1,
+                 "x":653.518971542686,
+                 "y":401.031369612248
+                }, 
+                {
+                 "height":45,
+                 "id":179,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"bodyType",
+                         "type":"string",
+                         "value":"static"
+                        }],
+                 "rotation":0,
+                 "type":"invisibleWall",
+                 "visible":true,
+                 "width":1,
+                 "x":845.314611416209,
+                 "y":616.541437843235
+                }, 
+                {
+                 "height":1,
+                 "id":180,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"bodyType",
+                         "type":"string",
+                         "value":"static"
+                        }],
+                 "rotation":0,
+                 "type":"invisibleWall",
+                 "visible":true,
+                 "width":40,
+                 "x":417.260775503412,
+                 "y":574.054834415044
+                }, 
+                {
+                 "height":1,
+                 "id":181,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"bodyType",
+                         "type":"string",
+                         "value":"static"
+                        }],
+                 "rotation":0,
+                 "type":"invisibleWall",
+                 "visible":true,
+                 "width":40,
+                 "x":763.824263604593,
+                 "y":142.618655350308
                 }],
          "opacity":1,
          "properties":[
@@ -2420,7 +2488,7 @@
          "y":0
         }],
  "nextlayerid":16,
- "nextobjectid":178,
+ "nextobjectid":182,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.7.2",
