@@ -605,6 +605,7 @@ function scene:create( event )
     arrowUp.name = "up"   
     arrowDown = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowDown.png",80,80)
     arrowDown.name = "down"
+	sceneGroup:insert(camera)
 	sceneGroup:insert(control)
 end
  
@@ -613,8 +614,8 @@ end
 -- which is executed when the retry button is tapped 
 local function restart()
 	-- go to the game scene
-	composer.removeScene("game")
-	composer.gotoScene("game")
+	composer.removeScene("scena3_dungeon")
+	composer.gotoScene("scena3_dungeon", {effect = "zoomInOutFade",	time = 1000})
 	return true
 end
 	 
@@ -676,7 +677,6 @@ function scene:hide( event )
     if ( phase == "will" ) then
         -- Code here runs when the scene is on screen (but is about to go off screen)
 		-- Remove the tap listener associated with the retry button
-		retry:removeEventListener("tap",replay)
 		arrowLeft:removeEventListener("touch",    movePg_noAnim)
         arrowRight:removeEventListener("touch",   movePg_noAnim)
         arrowDown:removeEventListener("touch",   movePg_noAnim)
