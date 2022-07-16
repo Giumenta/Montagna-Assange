@@ -21,7 +21,7 @@ local mapData -- da tenere?
 local map    --da tenere?
 local scaleFactor -- da tenere?
 local dragable -- da tenere?
-local GO
+local GO --game over
 local passi
 local camera
 local control
@@ -323,10 +323,6 @@ local function activateDemons()
 	local demons = map:listTypes("demon")
 
 	for i=1,#demons do
-
-
-
-
 		local velX = math.random(0.75, 1)*0.005
 		--local velY = math.random(0.5,1)*0.02
 
@@ -354,10 +350,6 @@ local function invisibleWallPreCollision(self, event)
 	return true
 end
 
-for i=1,#invisibleWall_batRoom do
-	invisibleWall_batRoom[i].preCollision = invisibleWallPreCollision
-	invisibleWall_batRoom[i]:addEventListener("preCollision", invisibleWall_batRoom[i])
-end
 
 local function activateAnimation(self, event)
 	 arrowLeft:removeEventListener("touch",    movePg_noAnim)
@@ -458,7 +450,7 @@ local function chestCollision(self, event)
 	end
 end
 
-local exitDoor = map:findObject("doorExit")
+--local exitDoor = map:findObject("doorExit")
 local function exit(self, event)
 	if event.phase == "began" then
 		local other = event.other.name
@@ -508,130 +500,119 @@ function scene:create( event )
 	background = display.newImageRect("img/backGrass1.png",1920,1080)
 	-- load the retry.png image
     
-arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
-arrowLeft.x = 100
-arrowLeft.y = display.contentHeight-150
-arrowLeft.name = "left"
+	arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
+	
+	
 
-arrowRight = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowRight.png",80,80)
-arrowRight.x = 260
-arrowRight.y = display.contentHeight-150
-arrowRight.name = "right"
+	arrowRight = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowRight.png",80,80)
+	
+	arrowUp = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowUp.png",80,80)
+	
+	
 
-arrowUp = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowUp.png",80,80)
-arrowUp.x = 180
-arrowUp.y = display.contentHeight-200
-arrowUp.name = "up"
+	arrowDown = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowDown.png",80,80)
+	
+	
 
-arrowDown = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowDown.png",80,80)
-arrowDown.x = 180
-arrowDown.y = display.contentHeight-100
-arrowDown.name = "down"
+	physics = require("physics")
+	physics.start()
+	physics.setGravity(0,0)
+	physics.setDrawMode("hybrid")
 
-physics = require("physics")
-physics.start()
-physics.setGravity(0,0)
-physics.setDrawMode("hybrid")
+	tiled = require "com.ponywolf.ponytiled"
+	json = require ("json")
+	mapData = json.decodeFile(system.pathForFile("Maptiles/Map2.json",system.ResourceDirectory))
+	map = tiled.new(mapData, "Maptiles")
+	scaleFactor = 3.5
 
-tiled = require "com.ponywolf.ponytiled"
-json = require ("json")
-mapData = json.decodeFile(system.pathForFile("Maptiles/Map2.json",system.ResourceDirectory))
-map = tiled.new(mapData, "Maptiles")
-scaleFactor = 3.5
+	GO = audio.loadStream("RisorseAudio/GO.mp3")
 
-GO = audio.loadStream("RisorseAudio/GO.mp3")
+	passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
 
-passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
+	 camera= display.newGroup()
+	 control = display.newGroup()
 
- camera= display.newGroup()
- control = display.newGroup()
+	 fontDir = "risorseGrafiche/fontpixel.ttf"
+	 fontCustom = native.newFont(fontDir, 12)
 
- fontDir = "risorseGrafiche/fontpixel.ttf"
- fontCustom = native.newFont(fontDir, 12)
+	map:scale(scaleFactor,scaleFactor)
+	map.x=50
+	camera:insert(map)
 
-map:scale(scaleFactor,scaleFactor)
-map.x=50
-camera:insert(map)
+	mapBorderLeft = 0
+	mapBorderRight = 4480
+	mapBorderTop = 0
+	mapBorderBottom = 2520
 
-mapBorderLeft = 0
-mapBorderRight = 4480
-mapBorderTop = 0
-mapBorderBottom = 2520
+	life=display.newGroup()
+	hearts = {}
 
-life=display.newGroup()
-hearts = {}
+	for i=1, 4 do
+		hearts[i] = display.newImageRect(control,"risorseGrafiche/PG/heart.png",128,128)
+		hearts[i].x = i * 100
+		hearts[i].y = 50
+		hearts[i]:scale(0.5, 0.5)
+		life:insert(hearts[i])
+	end
 
-for i=1, 4 do
-	hearts[i] = display.newImageRect(control,"risorseGrafiche/PG/heart.png",128,128)
-	hearts[i].x = i * 100
-	hearts[i].y = 50
-	hearts[i]:scale(0.5, 0.5)
-	life:insert(hearts[i])
-end
+	hearts[4].isVisible = false
+	table.remove(hearts, #hearts)
 
-hearts[4].isVisible = false
-table.remove(hearts, #hearts)
+	key = display.newImageRect(control,"risorseGrafiche/PG/key.png",128,128)
+	key.x = display.contentWidth - 130
+	key.y = 70
+	key.isVisible =false
 
-key = display.newImageRect(control,"risorseGrafiche/PG/key.png",128,128)
-key.x = display.contentWidth - 130
-key.y = 70
-key.isVisible =false
+	hero = map:listTypes("hero")
+	idle=map:findObject("idle")
+	bodyShape={-5,-5, -5,5, 5,5, 5,-5}
 
-hero = map:listTypes("hero")
-idle=map:findObject("idle")
-bodyShape={-5,-5, -5,5, 5,5, 5,-5}
+	closedChest=map:listTypes("chest")
+	openChest=map:listTypes("openChest")
 
-closedChest=map:listTypes("chest")
-openChest=map:listTypes("openChest")
+	chest1 = map:findObject("chest1")
+	chest2 = map:findObject("chest2")
+	chest3 = map:findObject("chest3")
+	chest4 = map:findObject("chest4")
 
-chest1 = map:findObject("chest1")
-chest2 = map:findObject("chest2")
-chest3 = map:findObject("chest3")
-chest4 = map:findObject("chest4")
+	for i= 1,#openChest do
+		local name = "chest" .. i
+		local chest=map:findObject(name)
+		openChest[i].x = chest.x
+		openChest[i].y = chest.y
+		openChest[i].isVisible=false
+	end
 
-for i= 1,#openChest do
-	local name = "chest" .. i
-	local chest=map:findObject(name)
-	openChest[i].x = chest.x
-	openChest[i].y = chest.y
-	openChest[i].isVisible=false
-end
+	preX = idle.x
+	preY = idle.y
 
-preX = idle.x
-preY = idle.y
+	ladder=map:listTypes("ladder")
 
-ladder=map:listTypes("ladder")
+	createHero()
 
-createHero()
+	room1_wallUp = map:findObject("wallUp1")
+	room1_wallLeft = map:findObject("wallLeft1")
+	room1_wallRight = map:findObject("wallRight1")
+	room1_wallBottom = map:findObject("wallBottom1")
 
-room1_wallUp = map:findObject("wallUp1")
-room1_wallLeft = map:findObject("wallLeft1")
-room1_wallRight = map:findObject("wallRight1")
-room1_wallBottom = map:findObject("wallBottom1")
+	activateBat()
+	activateSkeleton()
+	activateDemons()
 
-activateBat()
-activateSkeleton()
-activateDemons()
+	invisibleWall_batRoom = map:listTypes("invisibleWall")
 
-invisibleWall_batRoom = map:listTypes("invisibleWall")
+	exitDoor = map:findObject("doorExit")
 
-for i=1,#invisibleWall_batRoom do
-	invisibleWall_batRoom[i].preCollision = invisibleWallPreCollision
-	invisibleWall_batRoom[i]:addEventListener("preCollision", invisibleWall_batRoom[i])
-end
+	countGO = 0
 
-exitDoor = map:findObject("doorExit")
-
-countGO = 0
-
-ladder[1].collision = waitNTeleport
-ladder[2].collision = waitNTeleport
-chest1.collision = chestCollision
-chest2.collision = chestCollision
-chest3.collision = chestCollision
-chest4.collision = chestCollision
-exitDoor.collision = exit
-idle.postCollision = damage
+	ladder[1].collision = waitNTeleport
+	ladder[2].collision = waitNTeleport
+	chest1.collision = chestCollision
+	chest2.collision = chestCollision
+	chest3.collision = chestCollision
+	chest4.collision = chestCollision
+	exitDoor.collision = exit
+	idle.postCollision = damage
 
 	sceneGroup:insert(control)
 	sceneGroup:insert(retry)	  
@@ -659,15 +640,20 @@ function scene:show( event )
 		background.x = display.contentCenterX
 		background.y = display.contentCenterY
 		-- place the retry object at the center of the display
-		retry.x = display.contentCenterX
-		retry.y = display.contentCenterY
-		
- 
+		arrowLeft.x = 100
+		arrowLeft.y = display.contentHeight-150
+		arrowRight.x = 260
+		arrowRight.y = display.contentHeight-150
+		arrowUp.x = 180
+		arrowUp.y = display.contentHeight-200
+		arrowDown.x = 180
+		arrowDown.y = display.contentHeight-100
+		arrowLeft.name = "left"
+		arrowRight.name = "right"
+		arrowUp.name = "up"
+		arrowDown.name = "down"
     elseif ( phase == "did" ) then
         -- activate the tap listener 
-		retry.tap = restart
-		retry:addEventListener("tap", restart)
-
         arrowLeft:addEventListener("touch",    movePg_noAnim)
         arrowRight:addEventListener("touch",   movePg_noAnim)
         arrowDown:addEventListener("touch",   movePg_noAnim)
@@ -691,6 +677,10 @@ function scene:show( event )
         chest4:addEventListener("collision",chest4)
                     --Runtime:addEventListener("enterFrame", gameOver)
         idle:addEventListener("postCollision", idle)
+		for i=1,#invisibleWall_batRoom do
+			invisibleWall_batRoom[i].preCollision = invisibleWallPreCollision
+			invisibleWall_batRoom[i]:addEventListener("preCollision", invisibleWall_batRoom[i])
+		end
         Runtime:addEventListener("enterFrame", gameOver)
 		end
 end
@@ -729,6 +719,7 @@ function scene:hide( event )
         chest4:removeEventListener("collision",chest4)
                     --Runtime:removeEventListener("enterFrame", gameOver)
         idle:removeEventListener("postCollision", idle)
+		
         Runtime:removeEventListener("enterFrame", gameOver)
  
     elseif ( phase == "did" ) then
