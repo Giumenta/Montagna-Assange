@@ -26,8 +26,8 @@ local grid
 --funzioni varie
 
 local function goToScene3()
-	composer.removeScene("scena3_dungeon")
-	composer.gotoScene("scena3_dungeon", {effect = "zoomInOutFade",	time = 1000})
+	composer.removeScene("scena2_intermezzo")
+	composer.gotoScene("scena2_intermezzo", {effect = "zoomInOutFade",	time = 1000})
 end
 
 local function isRisolto()
