@@ -85,9 +85,9 @@ function scene:create( event )
 		}
 	}
 	
-	-- Load the background image
+	-- Carica background
 	background = display.newImageRect(sfondo, "risorseGrafiche/scenaIntro/sfondoScenaIntro.jpg", display.contentWidth, display.contentHeight)
-	--load hero sprite
+	-- Carica elementi scena
 	hero =  display.newSprite(heroSheet,heroSeqs)
 	cloud = display.newImageRect(pp,"risorseGrafiche/scenaIntro/nuvolaVoce.png", 400, 200)
 	dialogueBox = display.newImageRect(pp, "risorseGrafiche/boxmessaggi.png", display.contentWidth +100, display.contentHeight/1.5)
@@ -100,7 +100,7 @@ function scene:create( event )
 	sceneGroup:insert(dialogue)
 end
  
- 
+-- Movimento eroe 
 local function movePg()
 	transition.to(hero,{delay=0, time = 6000,
 						x = display.contentCenterX,
@@ -108,6 +108,7 @@ local function movePg()
 					  	alpha = 1})
 end
 
+-- Movimento nuvola
 local function moveCloud()
 	print("move cloud")
 	cloud.x = display.contentWidth
@@ -119,7 +120,7 @@ local function moveCloud()
 	
 end
 
- 
+ -- Creazione e successione del testo 
 local function createText(self, event)
 	if textN <= #textTable then
 		
@@ -173,6 +174,7 @@ end
 -- hide()
 function scene:hide( event )
  
+	-- Gruppi elementi 
     local sceneGroup = self.view
     local phase = event.phase
  
