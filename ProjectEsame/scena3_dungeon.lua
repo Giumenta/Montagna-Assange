@@ -609,9 +609,7 @@ function scene:create( event )
 	sceneGroup:insert(control)
 end
  
- 
--- restart is a table listener associated with the retry button
--- which is executed when the retry button is tapped 
+
 local function restart()
 	-- go to the game scene
 	composer.removeScene("scena3_dungeon")
