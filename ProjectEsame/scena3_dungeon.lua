@@ -495,15 +495,8 @@ end
 function scene:create( event )
  
     local sceneGroup = self.view
-	
-	-- Load the background image
-	background = display.newImageRect("img/backGrass1.png",1920,1080)
-	-- load the retry.png image
     
 	arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
-	
-	
-
 	arrowRight = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowRight.png",80,80)
 	
 	arrowUp = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowUp.png",80,80)
@@ -615,7 +608,6 @@ function scene:create( event )
 	idle.postCollision = damage
 
 	sceneGroup:insert(control)
-	sceneGroup:insert(retry)	  
 end
  
  
@@ -635,11 +627,6 @@ function scene:show( event )
     local phase = event.phase
  
     if ( phase == "will" ) then
-        
-		-- place the retry object at the center of the display
-		background.x = display.contentCenterX
-		background.y = display.contentCenterY
-		-- place the retry object at the center of the display
 		arrowLeft.x = 100
 		arrowLeft.y = display.contentHeight-150
 		arrowRight.x = 260
