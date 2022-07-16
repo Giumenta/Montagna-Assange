@@ -148,7 +148,7 @@ function scene:show( event )
 		sfondo.y = display.contentCenterY - 100
 		textN = 0
 		hero.x = 0
-		hero.y = display.contentCenterY
+		hero.y = display.contentHeightY
 		-- dialogue.anchorX = 0
 		-- dialogue.anchorY = 0
 		dialogue.x = display.contentCenterX/2
