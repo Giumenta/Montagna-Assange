@@ -111,7 +111,8 @@ local function shuffle()
 end
 
 --creo una funzione per spostare i tasselli nella casella libera
-local function muovitassello (event)
+local function muovitassello (self, event)
+	print("STHRONZI STO MUOVENDO UN TASSELLO MA NON LO VEDRETE MAI PERCHE' CRASHO")
     local emptyX
 	local emptyY
 
@@ -130,8 +131,9 @@ local function muovitassello (event)
 	local newEmptyX = emptyX
 	
 	local arrow=event.target
-	
+	print(event.phase)
 	if event.phase == "began" then
+		print(arrow.name)
         if arrow.name == "left" then --sposto il tass a sinistra
 			newEmptyX = emptyX + 1
 
@@ -313,13 +315,19 @@ function scene:hide( event )
     if ( phase == "will" ) then
 		print("scena2 hide-will")
         -- Code here runs when the scene is on screen (but is about to go off screen)
+		
+		
+    elseif ( phase == "did" ) then
+		print("scena2 hide-did")
 		print(arrowLeft)		
 		print(arrowDown)
 		print(arrowUp)
 		print(arrowRight)
+		arrowLeft:removeEventListener("touch", arrowLeft)
+		arrowUp:removeEventListener("touch", arrowUp)
+		arrowDown:removeEventListener("touch", arrowDown)
+		arrowRight:removeEventListener("touch", arrowRight)
 		Runtime:removeEventListener( "key", muovitassello_keyboard)
-		
-    elseif ( phase == "did" ) then
     end
 end
  
@@ -332,10 +340,7 @@ function scene:destroy( event )
 	print(arrowDown)
 	print(arrowUp)
 	print(arrowRight)
-    arrowLeft:removeEventListener("touch", arrowLeft)
-	arrowUp:removeEventListener("touch", arrowUp)
-	arrowDown:removeEventListener("touch", arrowDown)
-	arrowRight:removeEventListener("touch", arrowRight)
+    
  
 end
  

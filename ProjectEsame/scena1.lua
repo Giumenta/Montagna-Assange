@@ -175,7 +175,7 @@ function scene:hide( event )
     local phase = event.phase
  
     if ( phase == "will" ) then
-		Runtime:removeEventListener("tap", textN)
+		Runtime:removeEventListener("tap", createText)
  
     elseif ( phase == "did" ) then
         -- Code here runs immediately after the scene goes entirely off screen
