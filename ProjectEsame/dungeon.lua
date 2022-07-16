@@ -14,7 +14,7 @@ map = dragable.new(map)
 
 --local BG = audio.loadStream("RisorseAudio/BG.wav")
 local GO = audio.loadStream("RisorseAudio/GO.mp3")
---audio.setVolume( 0.005,{channel=1})
+audio.setVolume( 0.05)
 --local BGmusicChannel = audio.play(BG, {channel=1, loops=-1, fadein=5000})
 
 local passi = audio.loadSound("RisorseAudio/footstep04.ogg")

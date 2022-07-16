@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="16" nextobjectid="178">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="16" nextobjectid="182">
  <editorsettings>
   <export target="Map2.json" format="json"/>
  </editorsettings>
@@ -1822,6 +1822,26 @@
    </properties>
   </object>
   <object id="174" x="67.2698" y="212.6" width="73.4551" height="10.7622">
+   <properties>
+    <property name="bodyType" value="static"/>
+   </properties>
+  </object>
+  <object id="178" type="invisibleWall" x="653.519" y="401.031" width="1" height="45">
+   <properties>
+    <property name="bodyType" value="static"/>
+   </properties>
+  </object>
+  <object id="179" type="invisibleWall" x="845.315" y="616.541" width="1" height="45">
+   <properties>
+    <property name="bodyType" value="static"/>
+   </properties>
+  </object>
+  <object id="180" type="invisibleWall" x="417.261" y="574.055" width="40" height="1">
+   <properties>
+    <property name="bodyType" value="static"/>
+   </properties>
+  </object>
+  <object id="181" type="invisibleWall" x="763.824" y="142.619" width="40" height="1">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>

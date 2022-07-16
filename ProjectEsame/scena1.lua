@@ -128,7 +128,7 @@ local function createText(self, event)
 		dialogue.anchorX = 0
 		dialogue.anchorY = 0
 		dialogue.x = display.contentCenterX/4
-		dialogue.y = display.contentHeight - 130
+		dialogue.y = display.contentHeight - 90
 		dialogue.font = fontDir
 		textN = textN + 1 --passa al testo successivo
 	else
