@@ -248,20 +248,13 @@ function scene:create( event )
     control = display.newGroup()
 	tasselliGroup = display.newGroup()
     -- create obj arrows and button for interaction
-    arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
-    
-    arrowLeft.name = "left"
-    
-    arrowRight = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowRight.png",80,80)
-    
-    arrowRight.name = "right"
-    
-    arrowUp = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowUp.png",80,80)
-    
-    arrowUp.name = "up"
-    
+    arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)    
+    arrowLeft.name = "left"    
+    arrowRight = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowRight.png",80,80)    
+    arrowRight.name = "right"    
+    arrowUp = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowUp.png",80,80)    
+    arrowUp.name = "up"   
     arrowDown = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowDown.png",80,80)
-    
     arrowDown.name = "down"
 	grid = {}
 	sceneGroup:insert(control)
@@ -325,13 +318,8 @@ function scene:hide( event )
 		print(arrowUp)
 		print(arrowRight)
 		Runtime:removeEventListener( "key", muovitassello_keyboard)
-		arrowLeft:removeEventListener("touch", arrowLeft)
-		arrowUp:removeEventListener("touch", arrowUp)
-		arrowDown:removeEventListener("touch", arrowDown)
-		arrowRight:removeEventListener("touch", arrowRight)
+		
     elseif ( phase == "did" ) then
-        -- Code here runs immediately after the scene goes entirely off screen
- 
     end
 end
  
@@ -340,7 +328,14 @@ end
 function scene:destroy( event )
  
     local sceneGroup = self.view
-    -- Code here runs prior to the removal of scene's view
+	print(arrowLeft)		
+	print(arrowDown)
+	print(arrowUp)
+	print(arrowRight)
+    arrowLeft:removeEventListener("touch", arrowLeft)
+	arrowUp:removeEventListener("touch", arrowUp)
+	arrowDown:removeEventListener("touch", arrowDown)
+	arrowRight:removeEventListener("touch", arrowRight)
  
 end
  

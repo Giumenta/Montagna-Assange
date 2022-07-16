@@ -95,6 +95,7 @@ function scene:create( event )
 	sceneGroup:insert(sfondo)
 	sceneGroup:insert(pp)	  
 	sceneGroup:insert(hero)
+	sceneGroup:insert(dialogue)
 end
  
  
