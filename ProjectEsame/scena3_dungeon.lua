@@ -475,7 +475,7 @@ local function gameOver()
 			audio.stop(BGmusicChannel)
 			audio.play(GO, {loops=0, 
 			duration=2500
-		})
+			})
 		end
 	end
 end
@@ -495,18 +495,8 @@ end
 function scene:create( event )
  
     local sceneGroup = self.view
-    
-	arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)
-	arrowRight = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowRight.png",80,80)
+    control = display.newGroup()
 	
-	arrowUp = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowUp.png",80,80)
-	
-	
-
-	arrowDown = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowDown.png",80,80)
-	
-	
-
 	physics = require("physics")
 	physics.start()
 	physics.setGravity(0,0)
@@ -607,6 +597,14 @@ function scene:create( event )
 	exitDoor.collision = exit
 	idle.postCollision = damage
 
+	arrowLeft = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowLeft.png",80,80)    
+    arrowLeft.name = "left"    
+    arrowRight = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowRight.png",80,80)    
+    arrowRight.name = "right"    
+    arrowUp = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowUp.png",80,80)    
+    arrowUp.name = "up"   
+    arrowDown = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowDown.png",80,80)
+    arrowDown.name = "down"
 	sceneGroup:insert(control)
 end
  
@@ -635,10 +633,6 @@ function scene:show( event )
 		arrowUp.y = display.contentHeight-200
 		arrowDown.x = 180
 		arrowDown.y = display.contentHeight-100
-		arrowLeft.name = "left"
-		arrowRight.name = "right"
-		arrowUp.name = "up"
-		arrowDown.name = "down"
     elseif ( phase == "did" ) then
         -- activate the tap listener 
         arrowLeft:addEventListener("touch",    movePg_noAnim)
