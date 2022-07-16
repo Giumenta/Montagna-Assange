@@ -465,21 +465,20 @@ local function exit(self, event)
 end
 
 local function gameOver()
+	composer.removeScene("scena3_gameoverDungeon")
+	composer.gotoScene("scena3_gameoverDungeon")
 	if #hearts == 0 then
+		--[[
 		if countGO == 0 then
-			local go = display.newImageRect("risorseGrafiche/PG/GameOver.png",412,78)
-			go.x = display.contentCenterX
-			go.y = -40
-			go.alpha = 0
 			local move_down = transition.to(go,{delay=420, time = 600,
                                     			y = display.contentCenterY,
 								   				alpha = 1})
 			countGO = countGO + 1
-			audio.stop(BGmusicChannel)
+			-- audio.stop(BGmusicChannel)
 			audio.play(GO, {loops=0, 
 			duration=2500
 			})
-		end
+		end]]
 	end
 end
 
