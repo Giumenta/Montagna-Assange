@@ -23,6 +23,8 @@ local scaleFactor -- da tenere?
 local dragable -- da tenere?
 local GO --game over
 local passi
+local danno
+local aprichest
 local camera
 local control
 local fontDir 
@@ -420,6 +422,7 @@ end
 ------- OPEN THE CHEST ------
 local function chestCollision(self, event)
 	if event.phase == "began" then
+		audio.play(aprichest)
 		if event.target.isChest ~= nil then
 			if event.other.name == "idle" then
 					if self.name == "chest1" then
@@ -483,7 +486,7 @@ end
 local function damage(self, event)
 	
 	if event.other.isEnemy ~= nil then
-		
+		audio.play(danno)
 		display.remove(hearts[#hearts])
 		hearts[#hearts] = nil
 		print("The remaining lifes are: " .. #hearts)
@@ -510,12 +513,14 @@ function scene:create( event )
 
 	GO = audio.loadStream("RisorseAudio/GO.mp3")
 
-	passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
+	passi = audio.loadSound("RisorseAudio/footstep04.ogg")
+	danno = audio.loadSound("RisorseAudio/dannopreso.mp3")
+	aprichest = audio.loadSound("RisorseAudio/aprichest.mp3")
 
 	 camera= display.newGroup()
 	 control = display.newGroup()
 
-	 fontDir = "risorseGrafiche/fontpixel.ttf"
+	 fontDir = "risorseGrafiche/font/fontpixel.ttf"
 	 fontCustom = native.newFont(fontDir, 12)
 
 	map:scale(scaleFactor,scaleFactor)
@@ -605,6 +610,7 @@ function scene:create( event )
     arrowUp.name = "up"   
     arrowDown = display.newImageRect(control,"risorseGrafiche/risorseTmp_perTest/arrows/arrowDown.png",80,80)
     arrowDown.name = "down"
+	sceneGroup:insert(camera)
 	sceneGroup:insert(control)
 end
  
@@ -613,8 +619,8 @@ end
 -- which is executed when the retry button is tapped 
 local function restart()
 	-- go to the game scene
-	composer.removeScene("game")
-	composer.gotoScene("game")
+	composer.removeScene("scena3_dungeon")
+	composer.gotoScene("scena3_dungeon", {effect = "zoomInOutFade",	time = 1000})
 	return true
 end
 	 
@@ -676,7 +682,6 @@ function scene:hide( event )
     if ( phase == "will" ) then
         -- Code here runs when the scene is on screen (but is about to go off screen)
 		-- Remove the tap listener associated with the retry button
-		retry:removeEventListener("tap",replay)
 		arrowLeft:removeEventListener("touch",    movePg_noAnim)
         arrowRight:removeEventListener("touch",   movePg_noAnim)
         arrowDown:removeEventListener("touch",   movePg_noAnim)
