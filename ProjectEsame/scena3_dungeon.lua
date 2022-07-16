@@ -23,6 +23,8 @@ local scaleFactor -- da tenere?
 local dragable -- da tenere?
 local GO --game over
 local passi
+local danno
+local aprichest
 local camera
 local control
 local fontDir 
@@ -420,6 +422,7 @@ end
 ------- OPEN THE CHEST ------
 local function chestCollision(self, event)
 	if event.phase == "began" then
+		audio.play(aprichest)
 		if event.target.isChest ~= nil then
 			if event.other.name == "idle" then
 					if self.name == "chest1" then
@@ -483,7 +486,7 @@ end
 local function damage(self, event)
 	
 	if event.other.isEnemy ~= nil then
-		
+		audio.play(danno)
 		display.remove(hearts[#hearts])
 		hearts[#hearts] = nil
 		print("The remaining lifes are: " .. #hearts)
@@ -511,6 +514,8 @@ function scene:create( event )
 	GO = audio.loadStream("RisorseAudio/GO.mp3")
 
 	passi = audio.loadSound("RisorseAudio/footstep04.ogg")
+	danno = audio.loadSound("RisorseAudio/dannopreso.mp3")
+	aprichest = audio.loadSound("RisorseAudio/aprichest.mp3")
 
 	 camera= display.newGroup()
 	 control = display.newGroup()
