@@ -17,7 +17,7 @@ local GO = audio.loadStream("RisorseAudio/GO.mp3")
 --audio.setVolume( 0.005,{channel=1})
 --local BGmusicChannel = audio.play(BG, {channel=1, loops=-1, fadein=5000})
 
-local passi = audio.loadSound("RisorseAudio/walkingdeadmp3.mp3")
+local passi = audio.loadSound("RisorseAudio/footstep04.ogg")
 local danno = audio.loadSound("RisorseAudio/dannopreso.mp3")
 local aprichest = audio.loadSound("RisorseAudio/aprichest.mp3")
 -- create group for non fixed obj (camera) and for fixed obj(control)
