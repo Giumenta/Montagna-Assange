@@ -291,8 +291,8 @@ local function activateBat()
 	for i=1,#bats do
 		--local velX = 0.7 * math.sin(values[i]*math.pi*math.random(0.3, 0.5)) + 0.75
 		--local velY = 0.6 * math.cos(values[((i+1)%4) +1]*math.pi*math.random(0.3, 0.5)) + 0.75
-		local velY = math.random(0.75,1)*0.01 +0.1
-		local velX = math.random(0.75, 1)*0.01 +0.1
+		local velY = math.random(0.75,1)*0.01 +0.15
+		local velX = math.random(0.75, 1)*0.01 +0.15
 		bats[i]:scale(0.75, 0.75)
 		physics.addBody(bats[i],"dynamic", {shape=bodyShape,bounce = 1})
 		bats[i].isFixedRotation = true
