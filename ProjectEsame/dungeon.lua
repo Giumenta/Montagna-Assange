@@ -14,7 +14,10 @@ map = dragable.new(map)
 
 local BG = audio.loadStream("RisorseAudio/BG.mp3")
 local GO = audio.loadStream("RisorseAudio/GO.mp3")
-audio.setVolume( 0.05)
+audio.setVolume(0.05,{channel=1})
+audio.setVolume(0.08,{channel=2})
+audio.setVolume(0.23,{channel=3})
+audio.setVolume(0.2,{channel=4})
 local BGmusicChannel = audio.play(BG, {channel=1, loops=-1, fadein=5000})
 
 local passi = audio.loadSound("RisorseAudio/footstep04.ogg")
@@ -141,7 +144,7 @@ local function movePg(event)
 	local arrow=event.target
 	
 	if event.phase == "began" then
-		local suonopassi = audio.play(passi,  {loops=-1})
+		local suonopassi = audio.play(passi,  {channel =2,loops=-1})
         if arrow.name == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
@@ -182,7 +185,7 @@ local function movePg(event)
 	   end
 	   
 	elseif event.phase == "ended" then
-	audio.stop(suonopassi)	
+	audio.stop({channel=2})	
 	local i
 		for i=2,5 do
 			hero[i].isVisible=false
@@ -552,7 +555,7 @@ end
 ------- OPEN THE CHEST ------
 local function chestCollision(self, event)
 	if event.phase == "began" then
-	audio.play(aprichest)
+	audio.play(aprichest,{channel=2})
 		if event.target.isChest ~= nil then
 			if event.other.name == "idle" then
 					if self.name == "chest1" then
@@ -622,8 +625,10 @@ local function gameOver()
                                     			y = display.contentCenterY,
 								   				alpha = 1})
 			countGO = countGO + 1
-			
-			audio.play(GO, {loops=0, 
+			audio.stop(BGmusicChannel)
+			audio.stop({channel=2})
+			audio.stop({channel=3})
+			audio.play(GO, {channel=4,loops=0, 
 			duration=2800
 		})
 			arrowLeft:removeEventListener("touch", movePg)
@@ -642,7 +647,7 @@ local function damage(self, event)
 		display.remove(hearts[#hearts])
 		hearts[#hearts] = nil
 		print("The remaining lifes are: " .. #hearts)
-		audio.play(danno)
+		audio.play(danno,{channel=3})
 	end
 	Runtime:addEventListener("enterFrame", gameOver)
 end
