@@ -141,24 +141,25 @@ local function movePg(event)
 	local arrow=event.target
 	
 	if event.phase == "began" then
+		audio.play(passi,  {loops=-1})
         if arrow.name == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
-			local suonopassi=audio.play(passi,  {loops=-1})
+			
 		elseif arrow.name == "right" then
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
-			local suonopassi=audio.play(passi,  {loops=-1})
+		
 		
         elseif arrow.name == "up" then
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
-			local suonopassi=audio.play(passi,  {loops=-1})
+		
 			 
         elseif arrow.name == "down" then
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
-			local suonopassi=audio.play(passi,  {loops=-1})
+		
 	   end
 	   
     elseif event.phase == "moved" then
@@ -232,25 +233,22 @@ end
 local function movePg_arrows(event)
 	local arrowKey=event.keyName
 	if event.phase == "down" then
+		audio.play(passi,  {loops=-1})
         if arrowKey == "a" or arrowKey == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
-			local suonopassi=audio.play(passi,  {loops=-1})
 			
 		elseif arrowKey == "d" or arrowKey == "right" then
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
-			local suonopassi=audio.play(passi,  {loops=-1})
 			
         elseif arrowKey == "w" or arrowKey == "up" then
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
-			local suonopassi=audio.play(passi,  {loops=-1})
 			 
         elseif arrowKey == "s" or arrowKey == "down" then
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
-			local suonopassi=audio.play(passi,  {loops=-1})
 			 
 	   end
 
