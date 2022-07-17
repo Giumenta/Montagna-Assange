@@ -387,8 +387,8 @@ local function activateBat()
 	for i=1,#bats do
 		--local velX = 0.7 * math.sin(values[i]*math.pi*math.random(0.3, 0.5)) + 0.75
 		--local velY = 0.6 * math.cos(values[((i+1)%4) +1]*math.pi*math.random(0.3, 0.5)) + 0.75
-		local velY = math.random(0.75,1)*0.01 +0.1
-		local velX = math.random(0.75, 1)*0.01 +0.1
+		local velY = math.random(0.75,1)*0.01 +0.15
+		local velX = math.random(0.75, 1)*0.01 +0.15
 		bats[i]:scale(0.75, 0.75)
 		physics.addBody(bats[i],"dynamic", {shape=bodyShape,bounce = 1})
 		bats[i].isFixedRotation = true
@@ -435,6 +435,21 @@ local function activateDemons()
 	end
 end
 
+local function activateBoss()
+	local boss = map:listTypes("boss")
+
+	for i=1,#boss do
+
+		local velX = math.random(0.75, 1)*0.005
+		--local velY = math.random(0.5,1)*0.02
+
+
+		physics.addBody(boss[i],"dynamic", {shape=bodyShape,bounce = 1})
+		boss[i].isFixedRotation = true
+		boss[i]:applyLinearImpulse(velX, 0)
+	end
+end
+
 local function isInTheRoom(objX, objY, wallTop, wallRight, wallBottom, wallLeft)
 	if(objX < wallLeft.x or objX > wallRight.x) then
 		return false
@@ -448,6 +463,7 @@ end
 activateBat()
 activateSkeleton()
 activateDemons()
+activateBoss()
 --aggancio i muri invisibili della stanza dei pipistrelli
 
 local invisibleWall_batRoom = map:listTypes("invisibleWall")
