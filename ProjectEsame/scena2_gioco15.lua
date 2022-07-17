@@ -112,7 +112,7 @@ end
 
 --creo una funzione per spostare i tasselli nella casella libera
 local function muovitassello (self, event)
-	print("STHRONZI STO MUOVENDO UN TASSELLO MA NON LO VEDRETE MAI PERCHE' CRASHO")
+	
     local emptyX
 	local emptyY
 
@@ -131,9 +131,9 @@ local function muovitassello (self, event)
 	local newEmptyX = emptyX
 	
 	local arrow=event.target
-	print(event.phase)
+	
 	if event.phase == "began" then
-		print(arrow.name)
+		
         if arrow.name == "left" then --sposto il tass a sinistra
 			newEmptyX = emptyX + 1
 
@@ -241,7 +241,7 @@ local function creaGriglia()
 end
 
 function scene:create( event )
-	print("scena 2, create")
+	
     local sceneGroup = self.view
 	
     larghezzaGriglia = display.contentHeight*0.9
@@ -271,7 +271,7 @@ function scene:show( event )
     local phase = event.phase
  
     if ( phase == "will" ) then
-		print("scena2, show-will")
+		
 		colonna=1
 		riga=1
 		GRID_WIDTH = 4
@@ -287,11 +287,8 @@ function scene:show( event )
  
     elseif ( phase == "did" ) then
 		grid = {}
-		print("scena2, show-did")
-		print(arrowLeft)		
-		print(arrowDown)
-		print(arrowUp)
-		print(arrowRight)
+		
+
 		arrowLeft.touch = muovitassello
 		arrowUp.touch = muovitassello
 		arrowDown.touch = muovitassello
@@ -313,16 +310,13 @@ function scene:hide( event )
     local phase = event.phase
  
     if ( phase == "will" ) then
-		print("scena2 hide-will")
+		
         -- Code here runs when the scene is on screen (but is about to go off screen)
 		
 		
     elseif ( phase == "did" ) then
-		print("scena2 hide-did")
-		print(arrowLeft)		
-		print(arrowDown)
-		print(arrowUp)
-		print(arrowRight)
+	
+
 		arrowLeft:removeEventListener("touch", arrowLeft)
 		arrowUp:removeEventListener("touch", arrowUp)
 		arrowDown:removeEventListener("touch", arrowDown)
@@ -336,10 +330,7 @@ end
 function scene:destroy( event )
  
     local sceneGroup = self.view
-	print(arrowLeft)		
-	print(arrowDown)
-	print(arrowUp)
-	print(arrowRight)
+
     
  
 end

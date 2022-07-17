@@ -35,7 +35,7 @@ end
 
 -- create()
 function scene:create( event )
-	print("Scena 1, create")
+	
     local sceneGroup = self.view
 	textTable = {
 		"???: Complimenti, hai superato la prova",
@@ -103,7 +103,7 @@ function scene:show( event )
     local phase = event.phase
 
     if ( phase == "will" ) then 
-		print("scena1, show- will")    
+		    
 		sfondo.x = display.contentCenterX
 		sfondo.y = display.contentCenterY - 100
 		sfondo:scale(0.3, 0.3)
@@ -115,10 +115,10 @@ function scene:show( event )
 		dialogue.x = display.contentCenterX
 		dialogue.y = display.contentCenterY
 		dialogueBox.x = display.contentCenterX
-		dialogueBox.y = display.contentHeight - dialogueBox.height/2 +200
+		dialogueBox.y = display.contentHeight - dialogueBox.height/2 + 160
 		hero:scale(3,3)
     elseif ( phase == "did" ) then
-		print("scena1, show-did")
+		
 		hero:setSequence("freeze")
 		createText(text)
         -- activate the tap listener 
