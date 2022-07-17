@@ -12,10 +12,10 @@ local scaleFactor = 3.5
 local dragable = require "com.ponywolf.plugins.dragable"
 map = dragable.new(map)
 
---local BG = audio.loadStream("RisorseAudio/BG.wav")
+local BG = audio.loadStream("RisorseAudio/BG.mp3")
 local GO = audio.loadStream("RisorseAudio/GO.mp3")
 audio.setVolume( 0.05)
---local BGmusicChannel = audio.play(BG, {channel=1, loops=-1, fadein=5000})
+local BGmusicChannel = audio.play(BG, {channel=1, loops=-1, fadein=5000})
 
 local passi = audio.loadSound("RisorseAudio/footstep04.ogg")
 local danno = audio.loadSound("RisorseAudio/dannopreso.mp3")
@@ -141,7 +141,7 @@ local function movePg(event)
 	local arrow=event.target
 	
 	if event.phase == "began" then
-		audio.play(passi,  {loops=-1})
+		local suonopassi = audio.play(passi,  {loops=-1})
         if arrow.name == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
@@ -182,7 +182,7 @@ local function movePg(event)
 	   end
 	   
 	elseif event.phase == "ended" then
-	audio.pause()	
+	audio.stop(suonopassi)	
 	local i
 		for i=2,5 do
 			hero[i].isVisible=false
@@ -233,7 +233,7 @@ end
 local function movePg_arrows(event)
 	local arrowKey=event.keyName
 	if event.phase == "down" then
-		audio.play(passi,  {loops=-1})
+		audio.play(passi,  {channel=2,loops=-1})
         if arrowKey == "a" or arrowKey == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
@@ -253,7 +253,7 @@ local function movePg_arrows(event)
 	   end
 
     elseif event.phase == "up" then
-		audio.pause()
+		audio.stop({channel=2})
 		local i
 		for i=2,5 do
 			hero[i].isVisible=false
