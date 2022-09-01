@@ -423,9 +423,6 @@ local function activateDemons()
 
 	for i=1,#demons do
 
-
-
-
 		local velX = math.random(0.75, 1)*0.005
 		--local velY = math.random(0.5,1)*0.02
 
@@ -449,6 +446,21 @@ local function activateBoss()
 		boss[i].isFixedRotation = true
 		boss[i]:applyLinearImpulse(velX, 0)
 	end
+end
+
+local function activateBullet()
+	local bullet =map:listTypes("bullet")
+	--for i=1,#bullet do
+
+		--local velX = math.random(0.75, 1)*0.005
+		local velY = math.random(0.5,1)*0.02
+
+
+		physics.addBody(bullet[i],"dynamic", {shape=bodyShape,bounce = 1})
+		bullet[i].isFixedRotation = true
+		bullet[i]:applyLinearImpulse(velY, 0)
+	--end
+
 end
 
 local function isInTheRoom(objX, objY, wallTop, wallRight, wallBottom, wallLeft)
