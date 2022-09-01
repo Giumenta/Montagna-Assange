@@ -456,9 +456,9 @@ local function activateBullet()
 		local velY = math.random(0.5,1)*0.02
 
 
-		physics.addBody(bullet[i],"dynamic", {shape=bodyShape,bounce = 1})
-		bullet[i].isFixedRotation = true
-		bullet[i]:applyLinearImpulse(velY, 0)
+		physics.addBody(bullet,"dynamic", {shape=bodyShape,bounce = 1})
+		bullet.isFixedRotation = true
+		bullet.applyLinearImpulse(0, velY)
 	--end
 
 end

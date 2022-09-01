@@ -2195,7 +2195,11 @@
   </object>
  </objectgroup>
  <objectgroup id="16" name="Bullet">
-  <object id="188" name="bullet" type="bullet" gid="700" x="1112.93" y="493.682" width="11.25" height="11.25"/>
+  <object id="188" type="bullet" gid="700" x="1112.93" y="493.682" width="11.25" height="11.25">
+   <properties>
+    <property name="isEnemy" type="bool" value="true"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="14" name="OpenChest">
   <object id="168" type="openChest" gid="469" x="4.41505" y="398.094" width="16" height="16">
