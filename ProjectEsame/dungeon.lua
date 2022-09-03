@@ -90,6 +90,7 @@ key.isVisible =false
 local hero = map:listTypes("hero")
 local idle=map:findObject("idle")
 local bodyShape={-5,-5, -5,5, 5,5, 5,-5}
+local bulletShape={-1,-1, -1,1, 1,1, 1,-1}
 function createHero()
 	physics.addBody(idle,"dynamic",{bounce=0})
 	idle.isFixedRotation=true
@@ -450,16 +451,16 @@ end
 
 local function activateBullet()
 	local bullet =map:listTypes("bullet")
-	--for i=1,#bullet do
+	for i=1,#bullet do
 
 		--local velX = math.random(0.75, 1)*0.005
 		local velY = math.random(0.5,1)*0.02
 
 
-		physics.addBody(bullet,"dynamic", {shape=bodyShape,bounce = 1})
-		bullet.isFixedRotation = true
-		bullet.applyLinearImpulse(0, velY)
-	--end
+		physics.addBody(bullet,"dynamic", {shape=bulletShape,bounce = 1})
+		bullet[i].isFixedRotation = true
+		bullet[i]:applyLinearImpulse(0, velY)
+	end
 
 end
 
@@ -477,6 +478,7 @@ activateBat()
 activateSkeleton()
 activateDemons()
 activateBoss()
+activateBullet()
 --aggancio i muri invisibili della stanza dei pipistrelli
 
 local invisibleWall_batRoom = map:listTypes("invisibleWall")

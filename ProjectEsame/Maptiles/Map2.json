@@ -1235,8 +1235,8 @@
                  "type":"invisibleWall",
                  "visible":true,
                  "width":1,
-                 "x":653.518971542686,
-                 "y":401.031369612248
+                 "x":653.519,
+                 "y":401.031
                 }, 
                 {
                  "height":45,
@@ -1252,8 +1252,8 @@
                  "type":"invisibleWall",
                  "visible":true,
                  "width":1,
-                 "x":845.314611416209,
-                 "y":616.541437843235
+                 "x":845.315,
+                 "y":616.541
                 }, 
                 {
                  "height":1,
@@ -1269,8 +1269,8 @@
                  "type":"invisibleWall",
                  "visible":true,
                  "width":40,
-                 "x":417.260775503412,
-                 "y":574.054834415044
+                 "x":417.261,
+                 "y":574.055
                 }, 
                 {
                  "height":1,
@@ -1286,8 +1286,8 @@
                  "type":"invisibleWall",
                  "visible":true,
                  "width":40,
-                 "x":763.824263604593,
-                 "y":142.618655350308
+                 "x":763.824,
+                 "y":142.619
                 }],
          "opacity":1,
          "properties":[
@@ -2214,7 +2214,7 @@
                 }, 
                 {
                  "gid":332,
-                 "height":36,
+                 "height":33.1364,
                  "id":155,
                  "name":"",
                  "properties":[
@@ -2226,9 +2226,9 @@
                  "rotation":0,
                  "type":"boss",
                  "visible":true,
-                 "width":32,
-                 "x":1100.89,
-                 "y":501.617
+                 "width":29.4545,
+                 "x":1103.25,
+                 "y":495.299
                 }, 
                 {
                  "gid":684,
@@ -2382,6 +2382,35 @@
         }, 
         {
          "draworder":"topdown",
+         "id":16,
+         "name":"Bullet",
+         "objects":[
+                {
+                 "gid":700,
+                 "height":11.25,
+                 "id":188,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"isEnemy",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"bullet",
+                 "visible":true,
+                 "width":11.25,
+                 "x":1112.93,
+                 "y":493.682
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
          "id":14,
          "name":"OpenChest",
          "objects":[
@@ -2487,8 +2516,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":16,
- "nextobjectid":182,
+ "nextlayerid":17,
+ "nextobjectid":196,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.7.2",
@@ -5525,6 +5554,32 @@
                  "id":13
                 }],
          "tilewidth":32
+        }, 
+        {
+         "columns":2,
+         "firstgid":699,
+         "image":"..\/risorseGrafiche\/bullet\/bullet-spreadsheet.png",
+         "imageheight":16,
+         "imagewidth":32,
+         "margin":0,
+         "name":"bullet-spreadsheet",
+         "spacing":0,
+         "tilecount":2,
+         "tileheight":16,
+         "tiles":[
+                {
+                 "animation":[
+                        {
+                         "duration":140,
+                         "tileid":0
+                        }, 
+                        {
+                         "duration":140,
+                         "tileid":1
+                        }],
+                 "id":1
+                }],
+         "tilewidth":16
         }],
  "tilewidth":16,
  "type":"map",
