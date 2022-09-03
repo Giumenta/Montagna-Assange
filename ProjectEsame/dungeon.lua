@@ -446,24 +446,31 @@ local function activateBoss()
 
 		physics.addBody(boss[i],"dynamic", {shape=bossShape,bounce = 1})
 		boss[i].isFixedRotation = true
-		boss[i]:applyLinearImpulse(velX, 0)
+		boss[i]:applyLinearImpulse(velX)
 	end
+	local function activateBullet()
+		local bullet =map:listTypes("bullet")
+		--bullet.x=boss
+		for i=1,#bullet do
+	
+			--local velX = math.random(0.75, 1)*0.005
+			local velY = 0.0005
+	
+	
+			physics.addBody(bullet[i],"dynamic", {shape=bulletShape,bounce = 1})
+			bullet[i].isFixedRotation = true
+			bullet[i]:applyLinearImpulse(0, velY)
+			bullet[i].collision = collisionEnemy
+			bullet[i].preCollision = preCollisionEnemy
+			bullet[i]:addEventListener("collision", bullet[i])
+			bullet[i]:addEventListener("preCollision", bullet[i])
+		end
+		
+	end
+	activateBullet()
 end
 
-local function activateBullet()
-	local bullet =map:listTypes("bullet")
-	for i=1,#bullet do
 
-		--local velX = math.random(0.75, 1)*0.005
-		local velY = 0.0005
-
-
-		physics.addBody(bullet[i],"dynamic", {shape=bulletShape,bounce = 1})
-		bullet[i].isFixedRotation = true
-		bullet[i]:applyLinearImpulse(0, velY)
-	end
-
-end
 
 local function isInTheRoom(objX, objY, wallTop, wallRight, wallBottom, wallLeft)
 	if(objX < wallLeft.x or objX > wallRight.x) then
@@ -479,7 +486,7 @@ activateBat()
 activateSkeleton()
 activateDemons()
 activateBoss()
-activateBullet()
+
 --aggancio i muri invisibili della stanza dei pipistrelli
 
 local invisibleWall_batRoom = map:listTypes("invisibleWall")
