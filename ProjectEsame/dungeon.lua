@@ -90,7 +90,8 @@ key.isVisible =false
 local hero = map:listTypes("hero")
 local idle=map:findObject("idle")
 local bodyShape={-5,-5, -5,5, 5,5, 5,-5}
-local bulletShape={-1,-1, -1,1, 1,1, 1,-1}
+local bossShape={-8,-8, -8,8, 8,8, 8,-8}
+local bulletShape={-3,-3, -3,3, 3,3, 3,-3}
 function createHero()
 	physics.addBody(idle,"dynamic",{bounce=0})
 	idle.isFixedRotation=true
@@ -443,7 +444,7 @@ local function activateBoss()
 		--local velY = math.random(0.5,1)*0.02
 
 
-		physics.addBody(boss[i],"dynamic", {shape=bodyShape,bounce = 1})
+		physics.addBody(boss[i],"dynamic", {shape=bossShape,bounce = 1})
 		boss[i].isFixedRotation = true
 		boss[i]:applyLinearImpulse(velX, 0)
 	end
@@ -454,10 +455,10 @@ local function activateBullet()
 	for i=1,#bullet do
 
 		--local velX = math.random(0.75, 1)*0.005
-		local velY = math.random(0.5,1)*0.02
+		local velY = 0.0005
 
 
-		physics.addBody(bullet,"dynamic", {shape=bulletShape,bounce = 1})
+		physics.addBody(bullet[i],"dynamic", {shape=bulletShape,bounce = 1})
 		bullet[i].isFixedRotation = true
 		bullet[i]:applyLinearImpulse(0, velY)
 	end
