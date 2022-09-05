@@ -51,17 +51,17 @@ function scene:create( event )
 		
 		{
 			name = "right",
-			--frames={7, 8, 9},
-			start=7,
-			count=2,
-			--time = 100,
+			frames={7, 8, 9},
+			--start=7,
+			--count=2,
+			time = 400,
 			loopCount = 0,
 			--loopDirection ="forward"
 		},
 		{
 			name = "front",
 			frames={1,2,3},
-			time = 1000,
+			time = 400,
 			loopCount = 0,
 			--loopDirection ="forward"
 		   },
@@ -93,7 +93,7 @@ end
 local function movePg()
 	transition.to(hero,{delay=0, time = 6000,
 						x = display.contentCenterX,
-						y = display.contentHeight*3/4,
+						y = 560,
 					  	alpha = 1})
 end
 
@@ -137,8 +137,8 @@ function scene:show( event )
 		sfondo.x = display.contentCenterX
 		sfondo.y = display.contentCenterY - 100
 		textN = 0
-		hero.x = 30
-		hero.y = 500
+		hero.x = -30
+		hero.y = 560
 		-- dialogue.anchorX = 0
 		-- dialogue.anchorY = 0
 		dialogue.x = display.contentCenterX/2
@@ -146,11 +146,18 @@ function scene:show( event )
 		dialogueBox.x = display.contentCenterX
 		dialogueBox.y = display.contentHeight - dialogueBox.height/2 +200
 		hero:scale(3,3)
-		hero:setSequence("right") 
+		hero:play()
+		
+		local function swapSheet()
+			hero:setSequence( "freeze" )
+			hero:play()
+		end
+		timer.performWithDelay( 7000, swapSheet )
+		--hero:setSequence("right") 
     elseif ( phase == "did" ) then
 		print("scena1, show-did")
 		movePg()
-		hero:setSequence("freeze")
+		--hero:setSequence("freeze")
 		
 		moveCloud()
 		createText(text)
