@@ -24,7 +24,7 @@ local function createText(self, event)
 		dialogue.anchorX = 0
 		dialogue.anchorY = 0
 		dialogue.x = display.contentCenterX/4
-		dialogue.y = display.contentHeight - 90
+		dialogue.y = display.contentHeight - 120
 		dialogue.font = fontDir
 		textN = textN + 1 --passa al testo successivo
 	else
@@ -39,8 +39,8 @@ function scene:create( event )
     local sceneGroup = self.view
 	textTable = {
 		"???: Complimenti, hai superato la prova",
-		"???: Riccardo però è stato più veloce. 40 secondi netti.",
-		"???: Mi spiace, ma devi morire"
+		"???: Ora puoi entrare ed esplorare il cuore della montagna",
+		"???: Trova la via d'uscita"
 	}
 	--hero sequence e sheet
 	local opt = { width = 32, height = 32, numFrames = 12}
@@ -53,27 +53,6 @@ function scene:create( event )
 			loopCount = 0,
 			loopDirection ="forward"
 		   },
-		   {
-			name = "left",
-			frames={4,5,6},
-			time = 1000,
-			loopCount = 0,
-			loopDirection ="forward"
-		   },
-		{
-			name = "right",
-			frames={7,8,9},
-			time = 1000,
-			loopCount = 0,
-			loopDirection ="forward"
-		},
-		{
-			name = "back",
-			frames={10,11,12},
-			time = 1000,
-			loopCount = 0,
-			loopDirection ="forward"
-		},
 		{
 			name = "freeze",
 			frames={2},

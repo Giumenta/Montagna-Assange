@@ -39,7 +39,7 @@ function scene:create( event )
 	textTable = {
 		"???: Salve pellegrino. \n Cosa ci fai alle porte di questa montagna?",
 		"Idle: Chi è che parla?",
-		"???: Questo non può essere rivelato al primo che passa.", 
+		"???: Non è una cosa che posso rivelare al primo che passa.", 
 		"Idle: Mi è stato detto di venire qua per verificare di essere degno.",
 		"???: Benissimo allora! Sei nel posto giusto. Se riuscirai ad uscire dalla \n montagna allora avrai dimostrato le tue capacità e io ti valuterò.",
 		"???: Per entrare nel cuore della montagna devi prima risolvere \n questo enigma.",
@@ -48,40 +48,29 @@ function scene:create( event )
 	local opt = { width = 32, height = 32, numFrames = 12}
 	local heroSheet = graphics.newImageSheet("risorseGrafiche/PG/sprite-sheet.png", opt)
 	local heroSeqs = {
+		
+		{
+			name = "right",
+			--frames={7, 8, 9},
+			start=7,
+			count=2,
+			--time = 100,
+			loopCount = 0,
+			--loopDirection ="forward"
+		},
 		{
 			name = "front",
 			frames={1,2,3},
 			time = 1000,
 			loopCount = 0,
-			loopDirection ="forward"
+			--loopDirection ="forward"
 		   },
-		   {
-			name = "left",
-			frames={4,5,6},
-			time = 1000,
-			loopCount = 0,
-			loopDirection ="forward"
-		   },
-		{
-			name = "right",
-			frames={7,8,9},
-			time = 1000,
-			loopCount = 0,
-			loopDirection ="forward"
-		},
-		{
-			name = "back",
-			frames={10,11,12},
-			time = 1000,
-			loopCount = 0,
-			loopDirection ="forward"
-		},
 		{
 			name = "freeze",
 			frames={2},
 			time = 1000,
 			loopCount = 0,
-			loopDirection ="forward"
+		--	loopDirection ="forward"
 		}
 	}
 	
@@ -148,7 +137,7 @@ function scene:show( event )
 		sfondo.x = display.contentCenterX
 		sfondo.y = display.contentCenterY - 100
 		textN = 0
-		hero.x = 0
+		hero.x = 30
 		hero.y = 500
 		-- dialogue.anchorX = 0
 		-- dialogue.anchorY = 0
