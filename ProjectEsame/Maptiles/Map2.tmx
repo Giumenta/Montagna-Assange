@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="17" nextobjectid="196">
+<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="17" nextobjectid="196">
  <editorsettings>
   <export target="Map2.json" format="json"/>
  </editorsettings>
@@ -1788,13 +1788,13 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="80" name="ladder1" type="ladder" x="144.653" y="644.732" width="14.0548" height="7.02741">
+  <object id="80" name="ladder1" class="ladder" x="144.653" y="644.732" width="14.0548" height="7.02741">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="81" name="ladder2" type="ladder" x="1104.1" y="100.276" width="14.0548" height="7.02741">
+  <object id="81" name="ladder2" class="ladder" x="1104.1" y="100.276" width="14.0548" height="7.02741">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
@@ -1805,22 +1805,22 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="160" type="invisibleWall" x="421.67" y="501.722" width="40" height="1">
+  <object id="160" class="invisibleWall" x="421.67" y="501.722" width="40" height="1">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="161" type="invisibleWall" x="491.483" y="401.431" width="1" height="45">
+  <object id="161" class="invisibleWall" x="491.483" y="401.431" width="1" height="45">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="162" type="invisibleWall" x="209.904" y="468.677" width="1" height="23.271">
+  <object id="162" class="invisibleWall" x="209.904" y="468.677" width="1" height="23.271">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="166" type="invisibleWall" x="274.597" y="302.988" width="42.4535" height="1">
+  <object id="166" class="invisibleWall" x="274.597" y="302.988" width="42.4535" height="1">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
@@ -1835,22 +1835,22 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="178" type="invisibleWall" x="653.519" y="401.031" width="1" height="45">
+  <object id="178" class="invisibleWall" x="653.519" y="401.031" width="1" height="45">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="179" type="invisibleWall" x="845.315" y="616.541" width="1" height="45">
+  <object id="179" class="invisibleWall" x="845.315" y="616.541" width="1" height="45">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="180" type="invisibleWall" x="417.261" y="574.055" width="40" height="1">
+  <object id="180" class="invisibleWall" x="417.261" y="574.055" width="40" height="1">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="181" type="invisibleWall" x="763.824" y="142.619" width="40" height="1">
+  <object id="181" class="invisibleWall" x="763.824" y="142.619" width="40" height="1">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
@@ -2003,13 +2003,13 @@
   </object>
  </objectgroup>
  <objectgroup id="11" name="BodyChest">
-  <object id="110" name="chest2" type="chest" x="775.842" y="48.4961" width="13.934" height="11.6117">
+  <object id="110" name="chest2" class="chest" x="775.842" y="48.4961" width="13.934" height="11.6117">
    <properties>
     <property name="bodyType" value="static"/>
     <property name="isChest" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="111" name="chest4" type="chest" x="1168.91" y="59.9938" width="14.3211" height="10.8376">
+  <object id="111" name="chest4" class="chest" x="1168.91" y="59.9938" width="14.3211" height="10.8376">
    <properties>
     <property name="bodyType" value="static"/>
     <property name="isChest" type="bool" value="true"/>
@@ -2025,13 +2025,13 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="138" name="chest3" type="chest" x="1017.06" y="418.956" width="14.881" height="10.3022">
+  <object id="138" name="chest3" class="chest" x="1017.06" y="418.956" width="14.881" height="10.3022">
    <properties>
     <property name="bodyType" value="static"/>
     <property name="isChest" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="172" name="chest1" type="chest" x="79.824" y="225.656" width="15.8625" height="12.2806">
+  <object id="172" name="chest1" class="chest" x="79.824" y="225.656" width="15.8625" height="12.2806">
    <properties>
     <property name="bodyType" value="static"/>
     <property name="isChest" type="bool" value="true"/>
@@ -2088,28 +2088,28 @@
 </data>
  </layer>
  <objectgroup id="8" name="pg">
-  <object id="102" name="front" type="hero" gid="663" x="75.6959" y="16.4444" width="16" height="16">
+  <object id="102" name="front" class="hero" gid="663" x="75.6959" y="16.4444" width="16" height="16">
    <properties>
     <property name="front" type="bool" value="false"/>
     <property name="isVisible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="103" name="left" type="hero" gid="666" x="48.5264" y="16.0389" width="16" height="16">
+  <object id="103" name="left" class="hero" gid="666" x="48.5264" y="16.0389" width="16" height="16">
    <properties>
     <property name="isVisible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="104" name="right" type="hero" gid="669" x="23.79" y="16.0389" width="16" height="16">
+  <object id="104" name="right" class="hero" gid="669" x="23.79" y="16.0389" width="16" height="16">
    <properties>
     <property name="isVisible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="105" name="back" type="hero" gid="672" x="1.89215" y="16.85" width="16" height="16">
+  <object id="105" name="back" class="hero" gid="672" x="1.89215" y="16.85" width="16" height="16">
    <properties>
     <property name="isVisible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="108" name="idle" type="hero" gid="664" x="155.507" y="76.77" width="16" height="16">
+  <object id="108" name="idle" class="hero" gid="664" x="155.507" y="76.77" width="16" height="16">
    <properties>
     <property name="bounce" type="int" value="0"/>
     <property name="isVisible" type="bool" value="true"/>
@@ -2128,22 +2128,22 @@
  </objectgroup>
  <objectgroup id="6" name="Chest">
   <object id="7" gid="467" x="775.547" y="61.1749" width="16" height="16"/>
-  <object id="8" type="chest" gid="467" x="1016.4" y="430.271" width="16" height="16"/>
+  <object id="8" class="chest" gid="467" x="1016.4" y="430.271" width="16" height="16"/>
   <object id="9" gid="467" x="1168.1" y="71.3406" width="16" height="16"/>
   <object id="171" gid="467" x="80.0111" y="238.261" width="16" height="16"/>
  </objectgroup>
  <objectgroup id="7" name="boss">
-  <object id="152" type="skeleton" gid="2147484323" x="502.397" y="606.471" width="16" height="16">
+  <object id="152" class="skeleton" gid="2147484323" x="502.397" y="606.471" width="16" height="16">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="153" type="skeleton" gid="2147484323" x="639.877" y="639.552" width="16" height="16">
+  <object id="153" class="skeleton" gid="2147484323" x="639.877" y="639.552" width="16" height="16">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="154" type="skeleton" gid="2147484323" x="770.34" y="689.07" width="16" height="16">
+  <object id="154" class="skeleton" gid="2147484323" x="770.34" y="689.07" width="16" height="16">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
@@ -2153,71 +2153,71 @@
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="142" type="bat" gid="684" x="218.065" y="332.686" width="24.3029" height="24.3029">
+  <object id="142" class="bat" gid="684" x="218.065" y="332.686" width="24.3029" height="24.3029">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="143" type="bat" gid="684" x="462.967" y="488.069" width="24.3029" height="24.3029">
+  <object id="143" class="bat" gid="684" x="462.967" y="488.069" width="24.3029" height="24.3029">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="156" type="demon" gid="348" x="711.538" y="217.715" width="16" height="24">
+  <object id="156" class="demon" gid="348" x="711.538" y="217.715" width="16" height="24">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="157" type="demon" gid="2147483996" x="838.132" y="288.459" width="16" height="24">
+  <object id="157" class="demon" gid="2147483996" x="838.132" y="288.459" width="16" height="24">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="158" type="demon" gid="348" x="712.469" y="348.964" width="16" height="24">
+  <object id="158" class="demon" gid="348" x="712.469" y="348.964" width="16" height="24">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="159" type="demon" gid="2147483996" x="849.302" y="175.828" width="16" height="24">
+  <object id="159" class="demon" gid="2147483996" x="849.302" y="175.828" width="16" height="24">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="175" type="bat" gid="684" x="463.415" y="332.909" width="24.3029" height="24.3029">
+  <object id="175" class="bat" gid="684" x="463.415" y="332.909" width="24.3029" height="24.3029">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="176" type="bat" gid="684" x="218.878" y="486.843" width="24.3029" height="24.3029">
+  <object id="176" class="bat" gid="684" x="218.878" y="486.843" width="24.3029" height="24.3029">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="16" name="Bullet">
-  <object id="188" type="bullet" gid="700" x="1112.93" y="493.682" width="11.25" height="11.25">
+  <object id="188" name="bullet" class="bullet" gid="700" x="1112.93" y="493.682" width="11.25" height="11.25">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="14" name="OpenChest">
-  <object id="168" type="openChest" gid="469" x="4.41505" y="398.094" width="16" height="16">
+  <object id="168" class="openChest" gid="469" x="4.41505" y="398.094" width="16" height="16">
    <properties>
     <property name="isVisible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="169" type="openChest" gid="469" x="36.4328" y="398.747" width="16" height="16">
+  <object id="169" class="openChest" gid="469" x="36.4328" y="398.747" width="16" height="16">
    <properties>
     <property name="isVisible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="170" type="openChest" gid="469" x="67.7971" y="398.094" width="16" height="16">
+  <object id="170" class="openChest" gid="469" x="67.7971" y="398.094" width="16" height="16">
    <properties>
     <property name="isVisible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="177" type="openChest" gid="469" x="99.3437" y="399.224" width="16" height="16">
+  <object id="177" class="openChest" gid="469" x="99.3437" y="399.224" width="16" height="16">
    <properties>
     <property name="isVisible" type="bool" value="false"/>
    </properties>

@@ -90,7 +90,7 @@ key.isVisible =false
 local hero = map:listTypes("hero")
 local idle=map:findObject("idle")
 local bodyShape={-5,-5, -5,5, 5,5, 5,-5}
-local bossShape={-8,-8, -8,8, 8,8, 8,-8}
+local bossShape={-10,-10, -10,10, 10,10, 10,-10}
 local bulletShape={-3,-3, -3,3, 3,3, 3,-3}
 function createHero()
 	physics.addBody(idle,"dynamic",{bounce=0})
@@ -447,6 +447,7 @@ local function bulletBossCollisionAvoidance(self, event)
 	return true
 end
 local function activateBoss()
+<<<<<<< HEAD
 	--lavorato con un ciclo perché se cercato con map:findObject('boss') non sappiamo perché la fisica ritorna errori
 
 	for i=1,#boss do
@@ -456,6 +457,17 @@ local function activateBoss()
 		boss[i].isFixedRotation = true
 		boss[i].preCollision = bulletBossCollisionAvoidance
 		boss[i]:addEventListener("preCollision", boss[i])
+=======
+	for i=1,#boss do
+
+		local velX = math.random(0.75, 1)*0.005
+		--local velY = math.random(0.5,1)*0.02
+
+
+		physics.addBody(boss[i],"dynamic", {shape=bossShape,bounce = 1})
+		boss[i].isFixedRotation = true
+		boss[i]:applyLinearImpulse(velX)
+>>>>>>> de5838b26de7591bb73a100d60f8531508c62674
 	end
 	
 	
@@ -463,14 +475,20 @@ local function activateBoss()
 	for i=1,#bullet do
 		--local velX = math.random(0.75, 1)*0.005
 		--diretto verso il pg
+<<<<<<< HEAD
 		local boss = boss[1]
 		local velX = 0.00006 * math.cos(boss.x - idle.x)
 		local velY = 0.00005 * math.sin(boss.y - idle.y)
+=======
+		local boss = boss[i]
+		--local velX = 0.006 * math.cos(boss.x - idle.x)
+		local velY = 0.0005 * math.sin(boss.y - idle.y)
+>>>>>>> de5838b26de7591bb73a100d60f8531508c62674
 
 
 		physics.addBody(bullet[i],"dynamic", {shape=bulletShape,bounce = 1})
 		bullet[i].isFixedRotation = true
-		bullet[i]:applyLinearImpulse(velX, velY)
+		bullet[i]:applyLinearImpulse(0, velY)
 		bullet[i].collision = timer.performWithDelay(
 			200,
 			function()
@@ -606,12 +624,21 @@ local function chestCollision(self, event)
 				openChest[1].isVisible=true
 				activateAnimation()
 				createText(1)
+<<<<<<< HEAD
 				
 			elseif self.name == "chest2" then
 				openChest[2].isVisible=true
 				key.isVisible = true
 				createText(3)
 				
+=======
+				
+			elseif self.name == "chest2" then
+				openChest[2].isVisible=true
+				key.isVisible = true
+				createText(3)
+				
+>>>>>>> de5838b26de7591bb73a100d60f8531508c62674
 			elseif self.name == "chest3" then
 				openChest[3].isVisible=true
 				createText(4)
