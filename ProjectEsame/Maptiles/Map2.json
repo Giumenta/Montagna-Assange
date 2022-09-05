@@ -8,7 +8,6 @@
          "name":"BodyWall",
          "objects":[
                 {
-                 "class":"",
                  "height":130.908,
                  "id":12,
                  "name":"",
@@ -19,13 +18,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":18.8511,
                  "y":33.3019
                 }, 
                 {
-                 "class":"",
                  "height":58.3499,
                  "id":13,
                  "name":"",
@@ -36,13 +35,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":140.643,
                  "y":164.5
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":14,
                  "name":"",
@@ -53,13 +52,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":122.297,
                  "x":19.0784,
                  "y":164.5
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":15,
                  "name":"",
@@ -75,13 +74,13 @@
                          "value":false
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":138.44,
                  "x":178.554,
                  "y":164.5
                 }, 
                 {
-                 "class":"",
                  "height":126.554,
                  "id":16,
                  "name":"",
@@ -92,13 +91,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":315.655,
                  "y":37.8523
                 }, 
                 {
-                 "class":"",
                  "height":58.8504,
                  "id":17,
                  "name":"",
@@ -109,13 +108,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":176.388,
                  "y":164.5
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":18,
                  "name":"",
@@ -126,13 +125,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":204.955,
                  "x":65.7985,
                  "y":260.889
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":19,
                  "name":"",
@@ -143,13 +142,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":138.44,
                  "x":177.149,
                  "y":212.393
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":20,
                  "name":"",
@@ -160,13 +159,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":59.0622,
                  "x":212.377,
                  "y":293
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":21,
                  "name":"wallUp1",
@@ -177,13 +176,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":175.956,
                  "x":315.545,
                  "y":293
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":22,
                  "name":"",
@@ -194,13 +193,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":163.832,
                  "x":491.686,
                  "y":389.22
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":23,
                  "name":"",
@@ -211,13 +210,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":159.714,
                  "x":493.287,
                  "y":453.043
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":24,
                  "name":"",
@@ -228,13 +227,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":81.7089,
                  "x":130.711,
                  "y":453.272
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":25,
                  "name":"wallBottom1",
@@ -245,13 +244,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":237.201,
                  "x":177.377,
                  "y":500.852
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":26,
                  "name":"",
@@ -262,13 +261,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":96.1204,
                  "x":36.2358,
                  "y":565
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":27,
                  "name":"",
@@ -279,13 +278,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":91.0878,
                  "x":176.234,
                  "y":565
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":28,
                  "name":"",
@@ -296,13 +295,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":238.863,
                  "x":32.5757,
                  "y":693.464
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":29,
                  "name":"wallUp2",
@@ -313,13 +312,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":384.08,
                  "x":459.484,
                  "y":565.095
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":30,
                  "name":"wallBottom2",
@@ -330,13 +329,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":463.059,
                  "x":384.344,
                  "y":692.856
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":31,
                  "name":"",
@@ -347,13 +346,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":243.648,
                  "x":843.592,
                  "y":613.232
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":32,
                  "name":"",
@@ -364,13 +363,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":307.68,
                  "x":844.032,
                  "y":661.264
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":33,
                  "name":"",
@@ -381,13 +380,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":94.2764,
                  "x":992.641,
                  "y":548.76
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":34,
                  "name":"",
@@ -398,13 +397,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":99.1118,
                  "x":1148.34,
                  "y":549.082
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":35,
                  "name":"wallBottom3",
@@ -415,13 +414,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":260.532,
                  "x":651.754,
                  "y":501.187
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":36,
                  "name":"wallUp3",
@@ -432,13 +431,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":112.301,
                  "x":655.394,
                  "y":133.586
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":37,
                  "name":"",
@@ -449,13 +448,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":107.086,
                  "x":800.568,
                  "y":133.255
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":38,
                  "name":"",
@@ -466,13 +465,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":78.221,
                  "x":688.481,
                  "y":101
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":39,
                  "name":"",
@@ -483,13 +482,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":78.221,
                  "x":801.385,
                  "y":101
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":40,
                  "name":"",
@@ -500,13 +499,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":182.777,
                  "x":692.452,
                  "y":21.0888
                 }, 
                 {
-                 "class":"",
                  "height":91.2753,
                  "id":43,
                  "name":"",
@@ -517,13 +516,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":315.023,
                  "y":212.546
                 }, 
                 {
-                 "class":"",
                  "height":42.8399,
                  "id":44,
                  "name":"",
@@ -534,13 +533,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":269.712,
                  "y":260.961
                 }, 
                 {
-                 "class":"",
                  "height":170.833,
                  "id":45,
                  "name":"wallLeft1",
@@ -551,13 +550,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":210.917,
                  "y":293.19
                 }, 
                 {
-                 "class":"",
                  "height":122.172,
                  "id":46,
                  "name":"",
@@ -568,13 +567,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":130.794,
                  "y":453.566
                 }, 
                 {
-                 "class":"",
                  "height":74.9723,
                  "id":47,
                  "name":"",
@@ -585,13 +584,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":176.418,
                  "y":500.916
                 }, 
                 {
-                 "class":"",
                  "height":136.915,
                  "id":48,
                  "name":"",
@@ -602,13 +601,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":34.334,
                  "y":565.262
                 }, 
                 {
-                 "class":"",
                  "height":136.915,
                  "id":49,
                  "name":"",
@@ -619,13 +618,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":267.606,
                  "y":565.262
                 }, 
                 {
-                 "class":"",
                  "height":74.349,
                  "id":50,
                  "name":"",
@@ -636,13 +635,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":412.736,
                  "y":501.137
                 }, 
                 {
-                 "class":"",
                  "height":136.915,
                  "id":51,
                  "name":"wallLeft2",
@@ -653,13 +652,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":385.922,
                  "y":560.859
                 }, 
                 {
-                 "class":"",
                  "height":74.0888,
                  "id":52,
                  "name":"",
@@ -670,13 +669,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":459.616,
                  "y":501.958
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":55,
                  "name":"",
@@ -687,13 +686,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":35.7636,
                  "x":459.682,
                  "y":501.354
                 }, 
                 {
-                 "class":"",
                  "height":57.965,
                  "id":56,
                  "name":"",
@@ -704,13 +703,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":492.113,
                  "y":453.169
                 }, 
                 {
-                 "class":"",
                  "height":54.8509,
                  "id":57,
                  "name":"",
@@ -721,13 +720,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":2.79082,
                  "x":653.012,
                  "y":453.097
                 }, 
                 {
-                 "class":"",
                  "height":372.947,
                  "id":58,
                  "name":"wallRight3",
@@ -738,13 +737,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":907.472,
                  "y":134.839
                 }, 
                 {
-                 "class":"",
                  "height":255.594,
                  "id":59,
                  "name":"wallLeft3",
@@ -755,13 +754,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":653.799,
                  "y":140.528
                 }, 
                 {
-                 "class":"",
                  "height":43.3228,
                  "id":60,
                  "name":"",
@@ -772,13 +771,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":766.312,
                  "y":101.059
                 }, 
                 {
-                 "class":"",
                  "height":42.9554,
                  "id":61,
                  "name":"",
@@ -789,13 +788,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":800.367,
                  "y":101.045
                 }, 
                 {
-                 "class":"",
                  "height":80.8321,
                  "id":62,
                  "name":"",
@@ -806,13 +805,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":875.436,
                  "y":21.2248
                 }, 
                 {
-                 "class":"",
                  "height":80.8321,
                  "id":63,
                  "name":"",
@@ -823,13 +822,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":690.773,
                  "y":21.2248
                 }, 
                 {
-                 "class":"",
                  "height":164.03,
                  "id":64,
                  "name":"wallLeft4",
@@ -840,13 +839,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":994.898,
                  "y":386.263
                 }, 
                 {
-                 "class":"",
                  "height":163.954,
                  "id":65,
                  "name":"wallRight4",
@@ -857,13 +856,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":1243.66,
                  "y":385.203
                 }, 
                 {
-                 "class":"",
                  "height":112.178,
                  "id":66,
                  "name":"",
@@ -874,13 +873,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":1147.4,
                  "y":549.155
                 }, 
                 {
-                 "class":"",
                  "height":74.0888,
                  "id":67,
                  "name":"",
@@ -891,13 +890,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":1085.57,
                  "y":548.862
                 }, 
                 {
-                 "class":"",
                  "height":31.7738,
                  "id":68,
                  "name":"",
@@ -908,13 +907,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":844.086,
                  "y":661.446
                 }, 
                 {
-                 "class":"",
                  "height":57.3188,
                  "id":69,
                  "name":"wallRight2",
@@ -925,13 +924,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":843.501,
                  "y":565.311
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":71,
                  "name":"",
@@ -942,13 +941,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":28.2658,
                  "x":386.095,
                  "y":565.195
                 }, 
                 {
-                 "class":"",
                  "height":105.858,
                  "id":72,
                  "name":"wallRight1",
@@ -959,13 +958,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":491.764,
                  "y":293.482
                 }, 
                 {
-                 "class":"",
                  "height":14.9425,
                  "id":73,
                  "name":"",
@@ -976,13 +975,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":247.547,
                  "x":997.161,
                  "y":385.516
                 }, 
                 {
-                 "class":"",
                  "height":15.9797,
                  "id":74,
                  "name":"",
@@ -993,13 +992,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":168.335,
                  "x":1091.19,
                  "y":32.7788
                 }, 
                 {
-                 "class":"",
                  "height":102.844,
                  "id":75,
                  "name":"",
@@ -1010,13 +1009,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":3.27788,
                  "x":1088.9,
                  "y":33.5983
                 }, 
                 {
-                 "class":"",
                  "height":102.844,
                  "id":76,
                  "name":"",
@@ -1027,13 +1026,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":3.27788,
                  "x":1259.62,
                  "y":38.66
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":77,
                  "name":"",
@@ -1044,13 +1043,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":172.986,
                  "x":1088.58,
                  "y":133.084
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":78,
                  "name":"",
@@ -1061,13 +1060,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":295.999,
                  "x":20.3392,
                  "y":36.779
                 }, 
                 {
-                 "class":"ladder",
                  "ellipse":true,
                  "height":7.02741,
                  "id":80,
@@ -1079,13 +1078,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"ladder",
                  "visible":true,
                  "width":14.0548,
                  "x":144.653,
                  "y":644.732
                 }, 
                 {
-                 "class":"ladder",
                  "ellipse":true,
                  "height":7.02741,
                  "id":81,
@@ -1097,13 +1096,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"ladder",
                  "visible":true,
                  "width":14.0548,
                  "x":1104.1,
                  "y":100.276
                 }, 
                 {
-                 "class":"",
                  "height":4.7259,
                  "id":151,
                  "name":"doorExit",
@@ -1114,13 +1113,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":29.9307,
                  "x":1105.07,
                  "y":398.551
                 }, 
                 {
-                 "class":"invisibleWall",
                  "height":1,
                  "id":160,
                  "name":"",
@@ -1131,13 +1130,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"invisibleWall",
                  "visible":true,
                  "width":40,
                  "x":421.67,
                  "y":501.722
                 }, 
                 {
-                 "class":"invisibleWall",
                  "height":45,
                  "id":161,
                  "name":"",
@@ -1148,13 +1147,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"invisibleWall",
                  "visible":true,
                  "width":1,
                  "x":491.483,
                  "y":401.431
                 }, 
                 {
-                 "class":"invisibleWall",
                  "height":23.271,
                  "id":162,
                  "name":"",
@@ -1165,13 +1164,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"invisibleWall",
                  "visible":true,
                  "width":1,
                  "x":209.904,
                  "y":468.677
                 }, 
                 {
-                 "class":"invisibleWall",
                  "height":1,
                  "id":166,
                  "name":"",
@@ -1182,13 +1181,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"invisibleWall",
                  "visible":true,
                  "width":42.4535,
                  "x":274.597,
                  "y":302.988
                 }, 
                 {
-                 "class":"",
                  "height":58.3499,
                  "id":173,
                  "name":"",
@@ -1199,13 +1198,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":1.7001,
                  "x":65.1582,
                  "y":207.739
                 }, 
                 {
-                 "class":"",
                  "height":10.7622,
                  "id":174,
                  "name":"",
@@ -1216,13 +1215,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":73.4551,
                  "x":67.2698,
                  "y":212.6
                 }, 
                 {
-                 "class":"invisibleWall",
                  "height":45,
                  "id":178,
                  "name":"",
@@ -1233,13 +1232,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"invisibleWall",
                  "visible":true,
                  "width":1,
                  "x":653.519,
                  "y":401.031
                 }, 
                 {
-                 "class":"invisibleWall",
                  "height":45,
                  "id":179,
                  "name":"",
@@ -1250,13 +1249,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"invisibleWall",
                  "visible":true,
                  "width":1,
                  "x":845.315,
                  "y":616.541
                 }, 
                 {
-                 "class":"invisibleWall",
                  "height":1,
                  "id":180,
                  "name":"",
@@ -1267,13 +1266,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"invisibleWall",
                  "visible":true,
                  "width":40,
                  "x":417.261,
                  "y":574.055
                 }, 
                 {
-                 "class":"invisibleWall",
                  "height":1,
                  "id":181,
                  "name":"",
@@ -1284,6 +1283,7 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"invisibleWall",
                  "visible":true,
                  "width":40,
                  "x":763.824,
@@ -1307,7 +1307,6 @@
          "name":"ColumnHoleBody",
          "objects":[
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":3.75192,
                  "id":114,
@@ -1319,13 +1318,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":689.076,
                  "y":180.94
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":115,
@@ -1337,13 +1336,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":688.718,
                  "y":220.633
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":116,
@@ -1355,13 +1354,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":689.433,
                  "y":300.018
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":117,
@@ -1373,13 +1372,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":752.727,
                  "y":245.307
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":118,
@@ -1391,13 +1390,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":720.901,
                  "y":309.673
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":119,
@@ -1409,13 +1408,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":736.635,
                  "y":357.232
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":120,
@@ -1427,13 +1426,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":689.076,
                  "y":380.476
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":121,
@@ -1445,13 +1444,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":689.076,
                  "y":459.861
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":122,
@@ -1463,13 +1462,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":753.084,
                  "y":437.332
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":123,
@@ -1481,13 +1480,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":817.45,
                  "y":469.158
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":124,
@@ -1499,13 +1498,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":864.652,
                  "y":460.933
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":125,
@@ -1517,13 +1516,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":833.184,
                  "y":388.7
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":126,
@@ -1535,13 +1534,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":865.01,
                  "y":380.833
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":127,
@@ -1553,13 +1552,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":865.367,
                  "y":300.375
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":128,
@@ -1571,13 +1570,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":832.469,
                  "y":244.949
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":129,
@@ -1589,13 +1588,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":865.01,
                  "y":221.706
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":130,
@@ -1607,13 +1606,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":1105.56,
                  "y":77.7049
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":131,
@@ -1625,13 +1624,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":1137.36,
                  "y":76.7089
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":132,
@@ -1643,13 +1642,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":1201.46,
                  "y":76.3643
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":133,
@@ -1661,13 +1660,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":1233.51,
                  "y":76.7089
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":134,
@@ -1679,13 +1678,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":65.3378,
                  "y":605.517
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":135,
@@ -1697,13 +1696,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":65.3378,
                  "y":653.029
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":136,
@@ -1715,13 +1714,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":225.151,
                  "y":605.517
                 }, 
                 {
-                 "class":"",
                  "ellipse":true,
                  "height":7.86698,
                  "id":137,
@@ -1733,6 +1732,7 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":13.5884,
                  "x":225.583,
@@ -1750,7 +1750,6 @@
          "name":"BodyChest",
          "objects":[
                 {
-                 "class":"chest",
                  "height":11.6117,
                  "id":110,
                  "name":"chest2",
@@ -1766,13 +1765,13 @@
                          "value":true
                         }],
                  "rotation":0,
+                 "type":"chest",
                  "visible":true,
                  "width":13.934,
                  "x":775.842,
                  "y":48.4961
                 }, 
                 {
-                 "class":"chest",
                  "height":10.8376,
                  "id":111,
                  "name":"chest4",
@@ -1788,13 +1787,13 @@
                          "value":true
                         }],
                  "rotation":0,
+                 "type":"chest",
                  "visible":true,
                  "width":14.3211,
                  "x":1168.91,
                  "y":59.9938
                 }, 
                 {
-                 "class":"",
                  "height":16.7081,
                  "id":112,
                  "name":"box",
@@ -1805,13 +1804,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":25.7047,
                  "x":43.6981,
                  "y":110.53
                 }, 
                 {
-                 "class":"",
                  "height":17.1365,
                  "id":113,
                  "name":"box",
@@ -1822,13 +1821,13 @@
                          "value":"static"
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":25.7047,
                  "x":256.191,
                  "y":72.8301
                 }, 
                 {
-                 "class":"chest",
                  "height":10.3022,
                  "id":138,
                  "name":"chest3",
@@ -1844,13 +1843,13 @@
                          "value":true
                         }],
                  "rotation":0,
+                 "type":"chest",
                  "visible":true,
                  "width":14.881,
                  "x":1017.06,
                  "y":418.956
                 }, 
                 {
-                 "class":"chest",
                  "height":12.2806,
                  "id":172,
                  "name":"chest1",
@@ -1866,6 +1865,7 @@
                          "value":true
                         }],
                  "rotation":0,
+                 "type":"chest",
                  "visible":true,
                  "width":15.8625,
                  "x":79.824,
@@ -1878,51 +1878,7 @@
          "y":0
         }, 
         {
-         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 265, 168, 168, 168, 168, 265, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 168, 168, 168, 168, 266, 168, 168, 168, 168, 168, 168, 168, 168, 266, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0,
-            0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0,
-            0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0,
-            0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 176, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0,
-            0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0,
-            0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 265, 168, 168, 269, 168, 168, 168, 168, 269, 168, 168, 265, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 189, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 189, 168, 168, 168, 168, 189, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 189, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 189, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 189, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 168, 168, 168, 265, 168, 266, 168, 168, 168, 168, 266, 168, 265, 168, 168, 168, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 189, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 189, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 168, 168, 168, 168, 168, 168, 168, 176, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 265, 168, 168, 168, 168, 265, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 266, 168, 168, 168, 168, 168, 168, 168, 168, 266, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 176, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 265, 168, 168, 269, 168, 168, 168, 168, 269, 168, 168, 265, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 189, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 189, 168, 168, 168, 168, 189, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 189, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 189, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 189, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 168, 168, 168, 265, 168, 266, 168, 168, 168, 168, 266, 168, 265, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 189, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 189, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 176, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":45,
          "id":3,
          "name":"Floor",
@@ -1939,7 +1895,6 @@
          "name":"pg",
          "objects":[
                 {
-                 "class":"hero",
                  "gid":663,
                  "height":16,
                  "id":102,
@@ -1956,13 +1911,13 @@
                          "value":false
                         }],
                  "rotation":0,
+                 "type":"hero",
                  "visible":true,
                  "width":16,
                  "x":75.6959,
                  "y":16.4444
                 }, 
                 {
-                 "class":"hero",
                  "gid":666,
                  "height":16,
                  "id":103,
@@ -1974,13 +1929,13 @@
                          "value":false
                         }],
                  "rotation":0,
+                 "type":"hero",
                  "visible":true,
                  "width":16,
                  "x":48.5264,
                  "y":16.0389
                 }, 
                 {
-                 "class":"hero",
                  "gid":669,
                  "height":16,
                  "id":104,
@@ -1992,13 +1947,13 @@
                          "value":false
                         }],
                  "rotation":0,
+                 "type":"hero",
                  "visible":true,
                  "width":16,
                  "x":23.79,
                  "y":16.0389
                 }, 
                 {
-                 "class":"hero",
                  "gid":672,
                  "height":16,
                  "id":105,
@@ -2010,13 +1965,13 @@
                          "value":false
                         }],
                  "rotation":0,
+                 "type":"hero",
                  "visible":true,
                  "width":16,
                  "x":1.89215,
                  "y":16.85
                 }, 
                 {
-                 "class":"hero",
                  "gid":664,
                  "height":16,
                  "id":108,
@@ -2033,6 +1988,7 @@
                          "value":true
                         }],
                  "rotation":0,
+                 "type":"hero",
                  "visible":true,
                  "width":16,
                  "x":155.507,
@@ -2050,48 +2006,48 @@
          "name":"BoxDown",
          "objects":[
                 {
-                 "class":"",
                  "gid":152,
                  "height":22,
                  "id":1,
                  "name":"",
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":16,
                  "x":42.0469,
                  "y":129.861
                 }, 
                 {
-                 "class":"",
                  "gid":152,
                  "height":22,
                  "id":2,
                  "name":"",
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":16,
                  "x":55.3406,
                  "y":129.861
                 }, 
                 {
-                 "class":"",
                  "gid":152,
                  "height":22,
                  "id":3,
                  "name":"",
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":16,
                  "x":253.964,
                  "y":92
                 }, 
                 {
-                 "class":"",
                  "gid":152,
                  "height":22,
                  "id":4,
                  "name":"",
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":16,
                  "x":268.04,
@@ -2109,24 +2065,24 @@
          "name":"BoxUp",
          "objects":[
                 {
-                 "class":"",
                  "gid":152,
                  "height":22,
                  "id":5,
                  "name":"",
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":16,
                  "x":261.002,
                  "y":81.7244
                 }, 
                 {
-                 "class":"",
                  "gid":152,
                  "height":22,
                  "id":6,
                  "name":"boxUp",
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":16,
                  "x":48.3028,
@@ -2144,48 +2100,48 @@
          "name":"Chest",
          "objects":[
                 {
-                 "class":"",
                  "gid":467,
                  "height":16,
                  "id":7,
                  "name":"",
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":16,
                  "x":775.547,
                  "y":61.1749
                 }, 
                 {
-                 "class":"chest",
                  "gid":467,
                  "height":16,
                  "id":8,
                  "name":"",
                  "rotation":0,
+                 "type":"chest",
                  "visible":true,
                  "width":16,
                  "x":1016.4,
                  "y":430.271
                 }, 
                 {
-                 "class":"",
                  "gid":467,
                  "height":16,
                  "id":9,
                  "name":"",
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":16,
                  "x":1168.1,
                  "y":71.3406
                 }, 
                 {
-                 "class":"",
                  "gid":467,
                  "height":16,
                  "id":171,
                  "name":"",
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":16,
                  "x":80.0111,
@@ -2203,7 +2159,6 @@
          "name":"boss",
          "objects":[
                 {
-                 "class":"skeleton",
                  "gid":2147484323,
                  "height":16,
                  "id":152,
@@ -2215,13 +2170,13 @@
                          "value":true
                         }],
                  "rotation":0,
+                 "type":"skeleton",
                  "visible":true,
                  "width":16,
                  "x":502.397,
                  "y":606.471
                 }, 
                 {
-                 "class":"skeleton",
                  "gid":2147484323,
                  "height":16,
                  "id":153,
@@ -2233,13 +2188,13 @@
                          "value":true
                         }],
                  "rotation":0,
+                 "type":"skeleton",
                  "visible":true,
                  "width":16,
                  "x":639.877,
                  "y":639.552
                 }, 
                 {
-                 "class":"skeleton",
                  "gid":2147484323,
                  "height":16,
                  "id":154,
@@ -2251,13 +2206,13 @@
                          "value":true
                         }],
                  "rotation":0,
+                 "type":"skeleton",
                  "visible":true,
                  "width":16,
                  "x":770.34,
                  "y":689.07
                 }, 
                 {
-                 "class":"boss",
                  "gid":332,
                  "height":33.1364,
                  "id":155,
@@ -2269,13 +2224,13 @@
                          "value":true
                         }],
                  "rotation":0,
+                 "type":"boss",
                  "visible":true,
                  "width":29.4545,
                  "x":1103.25,
                  "y":495.299
                 }, 
                 {
-                 "class":"bat",
                  "gid":684,
                  "height":24.3029,
                  "id":142,
@@ -2287,13 +2242,13 @@
                          "value":true
                         }],
                  "rotation":0,
+                 "type":"bat",
                  "visible":true,
                  "width":24.3029,
                  "x":218.065,
                  "y":332.686
                 }, 
                 {
-                 "class":"bat",
                  "gid":684,
                  "height":24.3029,
                  "id":143,
@@ -2305,13 +2260,13 @@
                          "value":true
                         }],
                  "rotation":0,
+                 "type":"bat",
                  "visible":true,
                  "width":24.3029,
                  "x":462.967,
                  "y":488.069
                 }, 
                 {
-                 "class":"demon",
                  "gid":348,
                  "height":24,
                  "id":156,
@@ -2323,13 +2278,13 @@
                          "value":true
                         }],
                  "rotation":0,
+                 "type":"demon",
                  "visible":true,
                  "width":16,
                  "x":711.538,
                  "y":217.715
                 }, 
                 {
-                 "class":"demon",
                  "gid":2147483996,
                  "height":24,
                  "id":157,
@@ -2341,13 +2296,13 @@
                          "value":true
                         }],
                  "rotation":0,
+                 "type":"demon",
                  "visible":true,
                  "width":16,
                  "x":838.132,
                  "y":288.459
                 }, 
                 {
-                 "class":"demon",
                  "gid":348,
                  "height":24,
                  "id":158,
@@ -2359,13 +2314,13 @@
                          "value":true
                         }],
                  "rotation":0,
+                 "type":"demon",
                  "visible":true,
                  "width":16,
                  "x":712.469,
                  "y":348.964
                 }, 
                 {
-                 "class":"demon",
                  "gid":2147483996,
                  "height":24,
                  "id":159,
@@ -2377,13 +2332,13 @@
                          "value":true
                         }],
                  "rotation":0,
+                 "type":"demon",
                  "visible":true,
                  "width":16,
                  "x":849.302,
                  "y":175.828
                 }, 
                 {
-                 "class":"bat",
                  "gid":684,
                  "height":24.3029,
                  "id":175,
@@ -2395,13 +2350,13 @@
                          "value":true
                         }],
                  "rotation":0,
+                 "type":"bat",
                  "visible":true,
                  "width":24.3029,
                  "x":463.415,
                  "y":332.909
                 }, 
                 {
-                 "class":"bat",
                  "gid":684,
                  "height":24.3029,
                  "id":176,
@@ -2413,6 +2368,7 @@
                          "value":true
                         }],
                  "rotation":0,
+                 "type":"bat",
                  "visible":true,
                  "width":24.3029,
                  "x":218.878,
@@ -2430,11 +2386,10 @@
          "name":"Bullet",
          "objects":[
                 {
-                 "class":"bullet",
                  "gid":700,
                  "height":11.25,
                  "id":188,
-                 "name":"bullet",
+                 "name":"",
                  "properties":[
                         {
                          "name":"isEnemy",
@@ -2442,6 +2397,7 @@
                          "value":true
                         }],
                  "rotation":0,
+                 "type":"bullet",
                  "visible":true,
                  "width":11.25,
                  "x":1112.93,
@@ -2459,7 +2415,6 @@
          "name":"OpenChest",
          "objects":[
                 {
-                 "class":"openChest",
                  "gid":469,
                  "height":16,
                  "id":168,
@@ -2471,13 +2426,13 @@
                          "value":false
                         }],
                  "rotation":0,
+                 "type":"openChest",
                  "visible":true,
                  "width":16,
                  "x":4.41505,
                  "y":398.094
                 }, 
                 {
-                 "class":"openChest",
                  "gid":469,
                  "height":16,
                  "id":169,
@@ -2489,13 +2444,13 @@
                          "value":false
                         }],
                  "rotation":0,
+                 "type":"openChest",
                  "visible":true,
                  "width":16,
                  "x":36.4328,
                  "y":398.747
                 }, 
                 {
-                 "class":"openChest",
                  "gid":469,
                  "height":16,
                  "id":170,
@@ -2507,13 +2462,13 @@
                          "value":false
                         }],
                  "rotation":0,
+                 "type":"openChest",
                  "visible":true,
                  "width":16,
                  "x":67.7971,
                  "y":398.094
                 }, 
                 {
-                 "class":"openChest",
                  "gid":469,
                  "height":16,
                  "id":177,
@@ -2525,6 +2480,7 @@
                          "value":false
                         }],
                  "rotation":0,
+                 "type":"openChest",
                  "visible":true,
                  "width":16,
                  "x":99.3437,
@@ -2537,51 +2493,7 @@
          "y":0
         }, 
         {
-         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 298, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 298, 299, 299, 299, 299, 299, 299, 0, 0, 0, 0, 299, 299, 299, 299, 299, 299, 299, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 285, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 286, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 298, 299, 299, 299, 299, 299, 299, 299, 299, 299, 300, 0,
-            0, 285, 290, 290, 290, 290, 290, 290, 154, 158, 0, 155, 290, 290, 290, 290, 290, 290, 290, 286, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 285, 290, 253, 290, 254, 290, 251, 290, 252, 290, 286, 0,
-            0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0,
-            0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0,
-            0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 283, 299, 299, 299, 300, 0, 0, 298, 299, 299, 299, 284, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0,
-            0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 289, 290, 290, 290, 286, 0, 0, 285, 290, 290, 290, 291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0,
-            0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 296, 299, 299, 299, 299, 299, 299, 284, 0, 0, 283, 299, 299, 299, 299, 299, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 283, 299, 299, 299, 299, 299, 299, 299, 299, 299, 284, 0,
-            0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 290, 290, 290, 290, 290, 290, 291, 0, 0, 289, 290, 290, 290, 290, 290, 286, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 289, 290, 290, 290, 290, 290, 290, 290, 290, 290, 291, 0,
-            0, 283, 299, 299, 299, 299, 299, 299, 300, 0, 0, 298, 299, 299, 299, 299, 299, 299, 299, 284, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 289, 290, 290, 290, 290, 290, 290, 286, 0, 0, 285, 290, 290, 290, 290, 290, 290, 290, 291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 287, 299, 299, 299, 258, 0, 0, 257, 299, 299, 299, 299, 299, 299, 299, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 285, 290, 290, 290, 291, 0, 0, 289, 290, 290, 290, 290, 290, 290, 290, 286, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 283, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 288, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 289, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 286, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 298, 299, 299, 258, 0, 0, 294, 630, 630, 630, 630, 630, 630, 630, 630, 630, 630, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 261, 290, 290, 291, 0, 0, 292, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 286, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 299, 299, 299, 299, 299, 299, 299, 299, 299, 284, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 298, 299, 299, 299, 299, 299, 0, 0, 0, 0, 299, 299, 299, 299, 299, 300, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 292, 290, 290, 290, 290, 290, 290, 290, 290, 290, 291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 285, 290, 290, 290, 290, 290, 153, 0, 0, 0, 290, 290, 290, 290, 290, 286, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 298, 299, 299, 299, 299, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 296, 299, 299, 299, 299, 299, 299, 299, 299, 299, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 261, 290, 290, 290, 290, 293, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 290, 290, 290, 290, 290, 290, 290, 290, 290, 286, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 298, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 300, 0, 0, 296, 299, 258, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 284, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 285, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 286, 0, 0, 294, 290, 291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 292, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 291, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 283, 299, 299, 299, 299, 300, 0, 0, 0, 296, 299, 299, 299, 299, 299, 284, 0, 0,
-            0, 0, 298, 299, 299, 299, 299, 299, 295, 0, 0, 257, 299, 299, 299, 299, 300, 0, 0, 0, 0, 0, 0, 0, 298, 284, 0, 0, 294, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 289, 290, 290, 290, 290, 286, 0, 0, 0, 294, 290, 290, 290, 290, 290, 291, 0, 0,
-            0, 0, 285, 290, 253, 290, 254, 290, 293, 0, 0, 289, 251, 290, 252, 290, 286, 0, 0, 0, 0, 0, 0, 0, 285, 291, 0, 0, 292, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 286, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 284, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 292, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 291, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 296, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 284, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 257, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 284, 0, 0, 0, 0, 0, 0, 0, 283, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 284, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 289, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 291, 0, 0, 0, 0, 0, 0, 0, 289, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 298, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 298, 299, 299, 299, 299, 299, 299, 0, 0, 0, 0, 299, 299, 299, 299, 299, 299, 299, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 285, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 286, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 298, 299, 299, 299, 299, 299, 299, 299, 299, 299, 300, 0, 0, 285, 290, 290, 290, 290, 290, 290, 154, 158, 0, 155, 290, 290, 290, 290, 290, 290, 290, 286, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 285, 290, 253, 290, 254, 290, 251, 290, 252, 290, 286, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 283, 299, 299, 299, 300, 0, 0, 298, 299, 299, 299, 284, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 289, 290, 290, 290, 286, 0, 0, 285, 290, 290, 290, 291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 296, 299, 299, 299, 299, 299, 299, 284, 0, 0, 283, 299, 299, 299, 299, 299, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 283, 299, 299, 299, 299, 299, 299, 299, 299, 299, 284, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 290, 290, 290, 290, 290, 290, 291, 0, 0, 289, 290, 290, 290, 290, 290, 286, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 289, 290, 290, 290, 290, 290, 290, 290, 290, 290, 291, 0, 0, 283, 299, 299, 299, 299, 299, 299, 300, 0, 0, 298, 299, 299, 299, 299, 299, 299, 299, 284, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 289, 290, 290, 290, 290, 290, 290, 286, 0, 0, 285, 290, 290, 290, 290, 290, 290, 290, 291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 287, 299, 299, 299, 258, 0, 0, 257, 299, 299, 299, 299, 299, 299, 299, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 285, 290, 290, 290, 291, 0, 0, 289, 290, 290, 290, 290, 290, 290, 290, 286, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 283, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 288, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 289, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 286, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 298, 299, 299, 258, 0, 0, 294, 630, 630, 630, 630, 630, 630, 630, 630, 630, 630, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 261, 290, 290, 291, 0, 0, 292, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 286, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 299, 299, 299, 299, 299, 299, 299, 299, 299, 284, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 298, 299, 299, 299, 299, 299, 0, 0, 0, 0, 299, 299, 299, 299, 299, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 292, 290, 290, 290, 290, 290, 290, 290, 290, 290, 291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 285, 290, 290, 290, 290, 290, 153, 0, 0, 0, 290, 290, 290, 290, 290, 286, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 298, 299, 299, 299, 299, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 296, 299, 299, 299, 299, 299, 299, 299, 299, 299, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 261, 290, 290, 290, 290, 293, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 290, 290, 290, 290, 290, 290, 290, 290, 290, 286, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 298, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 300, 0, 0, 296, 299, 258, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 284, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 285, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 286, 0, 0, 294, 290, 291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 292, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 291, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 283, 299, 299, 299, 299, 300, 0, 0, 0, 296, 299, 299, 299, 299, 299, 284, 0, 0, 0, 0, 298, 299, 299, 299, 299, 299, 295, 0, 0, 257, 299, 299, 299, 299, 300, 0, 0, 0, 0, 0, 0, 0, 298, 284, 0, 0, 294, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 289, 290, 290, 290, 290, 286, 0, 0, 0, 294, 290, 290, 290, 290, 290, 291, 0, 0, 0, 0, 285, 290, 253, 290, 254, 290, 293, 0, 0, 289, 251, 290, 252, 290, 286, 0, 0, 0, 0, 0, 0, 0, 285, 291, 0, 0, 292, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 286, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 284, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 292, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 291, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 296, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 284, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 0, 0, 0, 0, 0, 0, 0, 295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 294, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 257, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 284, 0, 0, 0, 0, 0, 0, 0, 283, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 299, 284, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 289, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 291, 0, 0, 0, 0, 0, 0, 0, 289, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 290, 291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":45,
          "id":1,
          "name":"Wall",
@@ -2593,51 +2505,7 @@
          "y":0
         }, 
         {
-         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 587, 0, 0, 0, 0, 587, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 609, 0, 0, 0, 0, 0, 0, 0, 0, 609, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 586, 0, 0, 0, 0, 586, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 272, 0, 0, 0, 0, 0, 0, 0, 0, 272, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 481, 0, 481, 0, 0, 0, 481, 0, 481, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 480, 0, 0, 0, 480, 0, 480, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 482, 0, 482, 0, 0, 0, 482, 0, 482, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 587, 0, 0, 609, 0, 0, 0, 0, 609, 0, 0, 587, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 586, 0, 0, 275, 0, 0, 0, 0, 275, 0, 0, 586, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 481, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 481, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 482, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 482, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 481, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 481, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 482, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 482, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 481, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 481, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 587, 0, 278, 0, 0, 0, 0, 278, 0, 587, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 482, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 482, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 586, 0, 272, 0, 0, 0, 0, 272, 0, 586, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 481, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 481, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 482, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 482, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 150, 0, 0, 0, 0, 0, 0, 0, 0, 0, 150, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 149, 0, 0, 0, 0, 0, 0, 0, 0, 0, 149, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 151, 0, 0, 0, 0, 0, 0, 0, 0, 0, 151, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 150, 0, 0, 0, 0, 0, 0, 0, 0, 0, 150, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 149, 0, 0, 0, 0, 0, 0, 0, 0, 0, 149, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 151, 0, 0, 0, 0, 0, 0, 0, 0, 0, 151, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 587, 0, 0, 0, 0, 587, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 609, 0, 0, 0, 0, 0, 0, 0, 0, 609, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 586, 0, 0, 0, 0, 586, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 272, 0, 0, 0, 0, 0, 0, 0, 0, 272, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 481, 0, 481, 0, 0, 0, 481, 0, 481, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 480, 0, 0, 0, 480, 0, 480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 482, 0, 482, 0, 0, 0, 482, 0, 482, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 587, 0, 0, 609, 0, 0, 0, 0, 609, 0, 0, 587, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 586, 0, 0, 275, 0, 0, 0, 0, 275, 0, 0, 586, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 481, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 481, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 482, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 482, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 481, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 481, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 482, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 482, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 481, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 481, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 587, 0, 278, 0, 0, 0, 0, 278, 0, 587, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 482, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 482, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 586, 0, 272, 0, 0, 0, 0, 272, 0, 586, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 481, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 481, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 482, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 482, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 150, 0, 0, 0, 0, 0, 0, 0, 0, 0, 150, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 149, 0, 0, 0, 0, 0, 0, 0, 0, 0, 149, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 151, 0, 0, 0, 0, 0, 0, 0, 0, 0, 151, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 150, 0, 0, 0, 0, 0, 0, 0, 0, 0, 150, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 149, 0, 0, 0, 0, 0, 0, 0, 0, 0, 149, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 151, 0, 0, 0, 0, 0, 0, 0, 0, 0, 151, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":45,
          "id":2,
          "name":"Column",
@@ -2652,7 +2520,7 @@
  "nextobjectid":196,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.9.1",
+ "tiledversion":"1.7.2",
  "tileheight":16,
  "tilesets":[
         {
@@ -3175,8 +3043,7 @@
                  "image":"0x72_DungeonTilesetII_v1.4\/frames\/wall_side_top_right.png",
                  "imageheight":16,
                  "imagewidth":16
-                },
-            
+                }, 
                 {
                  "id":297,
                  "image":"0x72_DungeonTilesetII_v1.4\/frames\/wall_top_left.png",
@@ -3943,8 +3810,7 @@
                  "image":"0x72_DungeonTilesetII_v1.4\/frames\/necromancer_idle_anim_f1.png",
                  "imageheight":20,
                  "imagewidth":16
-                },
-            
+                }, 
                 {
                  "id":80,
                  "image":"0x72_DungeonTilesetII_v1.4\/frames\/necromancer_idle_anim_f2.png",
@@ -4424,8 +4290,7 @@
                  "image":"0x72_DungeonTilesetII_v1.4\/frames\/flask_big_blue.png",
                  "imageheight":16,
                  "imagewidth":16
-                },
-            
+                }, 
                 {
                  "id":160,
                  "image":"0x72_DungeonTilesetII_v1.4\/frames\/flask_big_green.png",
@@ -4905,8 +4770,7 @@
                  "image":"0x72_DungeonTilesetII_v1.4\/frames\/tiny_zombie_idle_anim_f0.png",
                  "imageheight":16,
                  "imagewidth":16
-                },
-            
+                }, 
                 {
                  "id":240,
                  "image":"0x72_DungeonTilesetII_v1.4\/frames\/tiny_zombie_idle_anim_f1.png",
@@ -5386,8 +5250,7 @@
                  "image":"0x72_DungeonTilesetII_v1.4\/frames\/weapon_regular_sword.png",
                  "imageheight":21,
                  "imagewidth":10
-                },
-            
+                }, 
                 {
                  "id":320,
                  "image":"0x72_DungeonTilesetII_v1.4\/frames\/weapon_rusty_sword.png",
@@ -5720,6 +5583,6 @@
         }],
  "tilewidth":16,
  "type":"map",
- "version":"1.9",
+ "version":"1.6",
  "width":80
 }
