@@ -606,21 +606,12 @@ local function chestCollision(self, event)
 				openChest[1].isVisible=true
 				activateAnimation()
 				createText(1)
-<<<<<<< HEAD
 				
 			elseif self.name == "chest2" then
 				openChest[2].isVisible=true
 				key.isVisible = true
 				createText(3)
 				
-=======
-				
-			elseif self.name == "chest2" then
-				openChest[2].isVisible=true
-				key.isVisible = true
-				createText(3)
-				
->>>>>>> de5838b26de7591bb73a100d60f8531508c62674
 			elseif self.name == "chest3" then
 				openChest[3].isVisible=true
 				createText(4)
