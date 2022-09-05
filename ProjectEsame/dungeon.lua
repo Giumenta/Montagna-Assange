@@ -435,39 +435,40 @@ local function activateDemons()
 	end
 end
 
+local boss = map:findObject("boss")
+local bullet =map:listTypes("bullet")
+
 local function activateBoss()
-	local boss = map:listTypes("boss")
+	local velX = math.random(0.75, 1)*0.005
+	--local velY = math.random(0.5,1)*0.02
+	print(boss)
+	physics:addBody(boss,"dynamic", {shape=bossShape,bounce = 1})
+	boss.isFixedRotation = true
+	boss:applyLinearImpulse(velX, 0)
+	
+	--bullet.x=boss
+	for i=1,#bullet do
+		--local velX = math.random(0.75, 1)*0.005
+		--diretto verso il pg
+		local boss = boss[i]
+		local velX = 0.006 * cos(boss.x - idle.x)
+		local velY = 0.005 * sin(boss.y - idle.y)
 
-	for i=1,#boss do
 
-		local velX = math.random(0.75, 1)*0.005
-		--local velY = math.random(0.5,1)*0.02
-
-
-		physics.addBody(boss[i],"dynamic", {shape=bossShape,bounce = 1})
-		boss[i].isFixedRotation = true
-		boss[i]:applyLinearImpulse(velX)
+		physics.addBody(bullet[i],"dynamic", {shape=bulletShape,bounce = 1})
+		bullet[i].isFixedRotation = true
+		bullet[i]:applyLinearImpulse(velX, velY)
+		bullet[i].collision = timer.performWithDelay(
+			200,
+			function()
+				bullet[i].x = boss.x
+				bullet[i].y = boss.y
+			end
+		)
+		bullet[i].preCollision = preCollisionEnemy
+		bullet[i]:addEventListener("collision", bullet[i])
+		-- bullet[i]:addEventListener("preCollision", bullet[i])
 	end
-	local function activateBullet()
-		local bullet =map:listTypes("bullet")
-		--bullet.x=boss
-		for i=1,#bullet do
-	
-			--local velX = math.random(0.75, 1)*0.005
-			local velY = 0.0005
-	
-	
-			physics.addBody(bullet[i],"dynamic", {shape=bulletShape,bounce = 1})
-			bullet[i].isFixedRotation = true
-			bullet[i]:applyLinearImpulse(0, velY)
-			bullet[i].collision = collisionEnemy
-			bullet[i].preCollision = preCollisionEnemy
-			bullet[i]:addEventListener("collision", bullet[i])
-			bullet[i]:addEventListener("preCollision", bullet[i])
-		end
-		
-	end
-	activateBullet()
 end
 
 
@@ -621,10 +622,10 @@ end
 ---------- EXIT THE DUNGEON -------
 local exitDoor = map:findObject("doorExit")
 local function exit(self, event)
-	if event.phase == "began" then
+	if event.phase == "began" and event.other == idle then
 		local other = event.other.name
 		createText(5)
-	elseif event.phase == "ended" then
+	elseif event.phase == "ended" and event.other == idle then
 		transition.fadeOut( box, { time=500 })
 		transition.fadeOut( chestText, { time=500 })
 	end	
