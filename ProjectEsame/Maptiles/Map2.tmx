@@ -2132,7 +2132,7 @@
   <object id="9" gid="467" x="1168.1" y="71.3406" width="16" height="16"/>
   <object id="171" gid="467" x="80.0111" y="238.261" width="16" height="16"/>
  </objectgroup>
- <objectgroup id="7" name="Enemy">
+ <objectgroup id="7" name="boss">
   <object id="152" type="skeleton" gid="2147484323" x="502.397" y="606.471" width="16" height="16">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>

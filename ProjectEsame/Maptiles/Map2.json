@@ -2156,7 +2156,7 @@
         {
          "draworder":"topdown",
          "id":7,
-         "name":"Enemy",
+         "name":"boss",
          "objects":[
                 {
                  "gid":2147484323,
