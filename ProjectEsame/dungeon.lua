@@ -447,7 +447,7 @@ local function activateBoss()
 
 		physics.addBody(boss[i],"dynamic", {shape=bossShape,bounce = 1})
 		boss[i].isFixedRotation = true
-		boss[i]:applyLinearImpulse(velX, 0)
+		boss[i]:applyLinearImpulse(velX)
 	end
 	
 	
@@ -456,13 +456,13 @@ local function activateBoss()
 		--local velX = math.random(0.75, 1)*0.005
 		--diretto verso il pg
 		local boss = boss[i]
-		local velX = 0.006 * math.cos(boss.x - idle.x)
+		--local velX = 0.006 * math.cos(boss.x - idle.x)
 		local velY = 0.005 * math.sin(boss.y - idle.y)
 
 
 		physics.addBody(bullet[i],"dynamic", {shape=bulletShape,bounce = 1})
 		bullet[i].isFixedRotation = true
-		bullet[i]:applyLinearImpulse(velX, velY)
+		bullet[i]:applyLinearImpulse(0, velY)
 		bullet[i].collision = timer.performWithDelay(
 			200,
 			function()
