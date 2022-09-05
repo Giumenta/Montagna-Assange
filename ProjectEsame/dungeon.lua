@@ -435,24 +435,29 @@ local function activateDemons()
 	end
 end
 
-local boss = map:findObject("boss")
+local boss = map:listTypes("boss")
 local bullet =map:listTypes("bullet")
 
 local function activateBoss()
-	local velX = math.random(0.75, 1)*0.005
-	--local velY = math.random(0.5,1)*0.02
-	print(boss)
-	physics:addBody(boss,"dynamic", {shape=bossShape,bounce = 1})
-	boss.isFixedRotation = true
-	boss:applyLinearImpulse(velX, 0)
+	for i=1,#boss do
+
+		local velX = math.random(0.75, 1)*0.005
+		--local velY = math.random(0.5,1)*0.02
+
+
+		physics.addBody(boss[i],"dynamic", {shape=bossShape,bounce = 1})
+		boss[i].isFixedRotation = true
+		boss[i]:applyLinearImpulse(velX, 0)
+	end
+	
 	
 	--bullet.x=boss
 	for i=1,#bullet do
 		--local velX = math.random(0.75, 1)*0.005
 		--diretto verso il pg
 		local boss = boss[i]
-		local velX = 0.006 * cos(boss.x - idle.x)
-		local velY = 0.005 * sin(boss.y - idle.y)
+		local velX = 0.006 * math.cos(boss.x - idle.x)
+		local velY = 0.005 * math.sin(boss.y - idle.y)
 
 
 		physics.addBody(bullet[i],"dynamic", {shape=bulletShape,bounce = 1})
@@ -577,31 +582,30 @@ end
 
 ------- OPEN THE CHEST ------
 local function chestCollision(self, event)
-	if event.phase == "began" then
-	audio.play(aprichest,{channel=4})
+	if event.phase == "began" and event.other.name == "idle" then
+		audio.play(aprichest,{channel=4})
 		if event.target.isChest ~= nil then
-			if event.other.name == "idle" then
-					if self.name == "chest1" then
-						openChest[1].isVisible=true
-						activateAnimation()
-						createText(1)
-						
-					elseif self.name == "chest2" then
-						openChest[2].isVisible=true
-						key.isVisible = true
-						createText(3)
-						
-					elseif self.name == "chest3" then
-						openChest[3].isVisible=true
-						createText(4)
-
-					elseif self.name == "chest4" then
-						addHeart()
-						openChest[4].isVisible=true	
-						createText(2)
-					end
+			
+			if self.name == "chest1" then
+				openChest[1].isVisible=true
+				activateAnimation()
+				createText(1)
 				
+			elseif self.name == "chest2" then
+				openChest[2].isVisible=true
+				key.isVisible = true
+				createText(3)
+				
+			elseif self.name == "chest3" then
+				openChest[3].isVisible=true
+				createText(4)
+			elseif self.name == "chest4" then
+				addHeart()
+				openChest[4].isVisible=true	
+				createText(2)
 			end
+				
+			
 		end
 	elseif event.phase == "ended" then
 		transition.fadeOut( box, { time=500 })
