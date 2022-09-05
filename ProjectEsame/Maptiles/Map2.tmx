@@ -2148,7 +2148,7 @@
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="155" type="boss" gid="332" x="1103.25" y="495.299" width="29.4545" height="33.1364">
+  <object id="155" name="boss" type="boss" gid="332" x="1103.25" y="495.299" width="29.4545" height="33.1364">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>

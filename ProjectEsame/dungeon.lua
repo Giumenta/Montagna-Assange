@@ -18,7 +18,7 @@ audio.setVolume(0.05,{channel=1})
 audio.setVolume(0.08,{channel=2})
 audio.setVolume(0.23,{channel=3})
 audio.setVolume(0.2,{channel=4})
-local BGmusicChannel = audio.play(BG, {channel=1, loops=-1, fadein=5000})
+-- local BGmusicChannel = audio.play(BG, {channel=1, loops=-1, fadein=5000})
 
 local passi = audio.loadSound("RisorseAudio/footstep04.ogg")
 local danno = audio.loadSound("RisorseAudio/dannopreso.mp3")
@@ -435,24 +435,37 @@ local function activateDemons()
 	end
 end
 
-local boss = map:findObject("boss")
+local boss = map:listTypes("boss")
 local bullet =map:listTypes("bullet")
+local function patrolHorizontal(x, offset)
 
+end 
+local function bulletBossCollisionAvoidance(self, event)
+	if event.other.name == "bullet" then
+		event.contact.isEnabled = false
+	end
+	return true
+end
 local function activateBoss()
-	local velX = math.random(0.75, 1)*0.005
-	--local velY = math.random(0.5,1)*0.02
-	print(boss)
-	physics:addBody(boss,"dynamic", {shape=bossShape,bounce = 1})
-	boss.isFixedRotation = true
-	boss:applyLinearImpulse(velX, 0)
+	--lavorato con un ciclo perché se cercato con map:findObject('boss') non sappiamo perché la fisica ritorna errori
+
+	for i=1,#boss do
+		local velX = math.random(0.75, 1)*0.005
+		--local velY = math.random(0.5,1)*0.02
+		physics.addBody(boss[i],"dynamic", {shape=bossShape,bounce = 0})
+		boss[i].isFixedRotation = true
+		boss[i].preCollision = bulletBossCollisionAvoidance
+		boss[i]:addEventListener("preCollision", boss[i])
+	end
+	
 	
 	--bullet.x=boss
 	for i=1,#bullet do
 		--local velX = math.random(0.75, 1)*0.005
 		--diretto verso il pg
-		local boss = boss[i]
-		local velX = 0.006 * cos(boss.x - idle.x)
-		local velY = 0.005 * sin(boss.y - idle.y)
+		local boss = boss[1]
+		local velX = 0.00006 * math.cos(boss.x - idle.x)
+		local velY = 0.00005 * math.sin(boss.y - idle.y)
 
 
 		physics.addBody(bullet[i],"dynamic", {shape=bulletShape,bounce = 1})
@@ -461,13 +474,21 @@ local function activateBoss()
 		bullet[i].collision = timer.performWithDelay(
 			200,
 			function()
+				print('ciao')
 				bullet[i].x = boss.x
 				bullet[i].y = boss.y
-			end
+			end,
+			-1
 		)
-		bullet[i].preCollision = preCollisionEnemy
+		bullet[i].preCollision = timer.performWithDelay(
+			200, 
+			function()
+				bullet[i].isVisible = false
+			end,
+			-1
+		)
 		bullet[i]:addEventListener("collision", bullet[i])
-		-- bullet[i]:addEventListener("preCollision", bullet[i])
+		bullet[i]:addEventListener("preCollision", bullet[i])
 	end
 end
 
@@ -577,31 +598,30 @@ end
 
 ------- OPEN THE CHEST ------
 local function chestCollision(self, event)
-	if event.phase == "began" then
-	audio.play(aprichest,{channel=4})
+	if event.phase == "began" and event.other.name == "idle" then
+		audio.play(aprichest,{channel=4})
 		if event.target.isChest ~= nil then
-			if event.other.name == "idle" then
-					if self.name == "chest1" then
-						openChest[1].isVisible=true
-						activateAnimation()
-						createText(1)
-						
-					elseif self.name == "chest2" then
-						openChest[2].isVisible=true
-						key.isVisible = true
-						createText(3)
-						
-					elseif self.name == "chest3" then
-						openChest[3].isVisible=true
-						createText(4)
-
-					elseif self.name == "chest4" then
-						addHeart()
-						openChest[4].isVisible=true	
-						createText(2)
-					end
+			
+			if self.name == "chest1" then
+				openChest[1].isVisible=true
+				activateAnimation()
+				createText(1)
 				
+			elseif self.name == "chest2" then
+				openChest[2].isVisible=true
+				key.isVisible = true
+				createText(3)
+				
+			elseif self.name == "chest3" then
+				openChest[3].isVisible=true
+				createText(4)
+			elseif self.name == "chest4" then
+				addHeart()
+				openChest[4].isVisible=true	
+				createText(2)
 			end
+				
+			
 		end
 	elseif event.phase == "ended" then
 		transition.fadeOut( box, { time=500 })
