@@ -1288,6 +1288,23 @@
                  "width":40,
                  "x":763.824,
                  "y":142.619
+                }, 
+                {
+                 "height":45,
+                 "id":196,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"bodyType",
+                         "type":"string",
+                         "value":"static"
+                        }],
+                 "rotation":0,
+                 "type":"invisibleWall",
+                 "visible":true,
+                 "width":1,
+                 "x":1084.5,
+                 "y":618.5
                 }],
          "opacity":1,
          "properties":[
@@ -2389,7 +2406,7 @@
                  "gid":700,
                  "height":11.25,
                  "id":188,
-                 "name":"",
+                 "name":"bullet",
                  "properties":[
                         {
                          "name":"isEnemy",
@@ -2517,7 +2534,7 @@
          "y":0
         }],
  "nextlayerid":17,
- "nextobjectid":196,
+ "nextobjectid":197,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.7.2",

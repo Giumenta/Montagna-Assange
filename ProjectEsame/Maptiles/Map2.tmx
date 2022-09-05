@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="17" nextobjectid="196">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="17" nextobjectid="197">
  <editorsettings>
   <export target="Map2.json" format="json"/>
  </editorsettings>
@@ -1855,6 +1855,11 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
+  <object id="196" type="invisibleWall" x="1084.5" y="618.5" width="1" height="45">
+   <properties>
+    <property name="bodyType" value="static"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="13" name="ColumnHoleBody">
   <object id="114" x="689.076" y="180.94" width="13.5884" height="3.75192">
@@ -2195,7 +2200,7 @@
   </object>
  </objectgroup>
  <objectgroup id="16" name="Bullet">
-  <object id="188" type="bullet" gid="700" x="1112.93" y="493.682" width="11.25" height="11.25">
+  <object id="188" name="bullet" type="bullet" gid="700" x="1112.93" y="493.682" width="11.25" height="11.25">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
