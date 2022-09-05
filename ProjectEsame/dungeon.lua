@@ -90,7 +90,7 @@ key.isVisible =false
 local hero = map:listTypes("hero")
 local idle=map:findObject("idle")
 local bodyShape={-5,-5, -5,5, 5,5, 5,-5}
-local bossShape={-8,-8, -8,8, 8,8, 8,-8}
+local bossShape={-10,-10, -10,10, 10,10, 10,-10}
 local bulletShape={-3,-3, -3,3, 3,3, 3,-3}
 function createHero()
 	physics.addBody(idle,"dynamic",{bounce=0})
@@ -457,7 +457,7 @@ local function activateBoss()
 		--diretto verso il pg
 		local boss = boss[i]
 		--local velX = 0.006 * math.cos(boss.x - idle.x)
-		local velY = 0.005 * math.sin(boss.y - idle.y)
+		local velY = 0.0005 * math.sin(boss.y - idle.y)
 
 
 		physics.addBody(bullet[i],"dynamic", {shape=bulletShape,bounce = 1})
