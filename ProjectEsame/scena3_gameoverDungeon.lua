@@ -17,7 +17,26 @@ function scene:create( event )
 	print("Scena 3 gameover, create")
 	--hero sequence e sheet
 	
+	local rect = display.newRect(display.contentCenterX,
+                             display.contentCenterY,display.contentWidth,display.contentHeight)
+							 rect.alpha= 0
+
+rect:setFillColor(1,1,0)
+
+local go = display.newImageRect("img/GameOver.png",412,78)
+go.x = display.contentCenterX
+go.y = -40
+go.alpha = 0
+
+
+
+
+local move_down = transition.to(go,{delay=420, time = 600,
+                                    y = display.contentCenterY,
+								    alpha = 1})
+
 	gameover = display.newImageRect("PG/GameOver.png", 412,78)
+	display.newImage(rect, 412,78)
 	sceneGroup:insert(gameover)
 end
 
