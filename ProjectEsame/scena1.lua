@@ -37,11 +37,13 @@ function scene:create( event )
 	print("Scena 1, create")
     local sceneGroup = self.view
 	textTable = {
+		"Idle: Finalmente sono arrivato al monte STM",
 		"???: Salve pellegrino. \n Cosa ci fai alle porte di questa montagna?",
 		"Idle: Chi è che parla?",
 		"???: Non è una cosa che posso rivelare al primo che passa.", 
 		"Idle: Mi è stato detto di venire qua per verificare di essere degno.",
-		"???: Benissimo allora! Sei nel posto giusto. Se riuscirai ad uscire dalla \n montagna allora avrai dimostrato le tue capacità e io ti valuterò.",
+		"???: Benissimo allora! Sei nel posto giusto.",
+		"???: Se riuscirai ad uscire dalla montagna  \n allora avrai dimostrato le tue capacità e io ti valuterò.",
 		"???: Per entrare nel cuore della montagna devi prima risolvere \n questo enigma.",
 	}
 	--hero sequence e sheet
