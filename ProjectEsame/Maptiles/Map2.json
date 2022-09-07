@@ -2415,7 +2415,7 @@
                         }],
                  "rotation":0,
                  "type":"bullet",
-                 "visible":true,
+                 "visible":false,
                  "width":11.25,
                  "x":1112.93,
                  "y":493.682
