@@ -65,7 +65,7 @@ arrowDown.name = "down"
 local life=display.newGroup()
 local hearts = {}
 
-for i=1, 7 do
+for i=1, 4 do
 	hearts[i] = display.newImageRect(control,"risorseGrafiche/PG/heart.png",128,128)
 	hearts[i].x = i * 100
 	hearts[i].y = 50
