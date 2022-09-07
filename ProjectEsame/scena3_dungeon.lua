@@ -556,7 +556,7 @@ function scene:create( event )
 	danno = audio.loadSound("RisorseAudio/dannopreso.mp3")
 	aprichest = audio.loadSound("RisorseAudio/aprichest.mp3")
 	
-	audio.setVolume(0.05,{channel=1})
+	audio.setVolume(0.025,{channel=1})
 	audio.setVolume(0.08,{channel=2})
 	audio.setVolume(0.23,{channel=3})
 	audio.setVolume(0.2,{channel=4})
