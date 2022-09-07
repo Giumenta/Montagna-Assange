@@ -2176,78 +2176,6 @@
          "name":"boss",
          "objects":[
                 {
-                 "gid":2147484323,
-                 "height":16,
-                 "id":152,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"isEnemy",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":0,
-                 "type":"skeleton",
-                 "visible":true,
-                 "width":16,
-                 "x":502.397,
-                 "y":606.471
-                }, 
-                {
-                 "gid":2147484323,
-                 "height":16,
-                 "id":153,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"isEnemy",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":0,
-                 "type":"skeleton",
-                 "visible":true,
-                 "width":16,
-                 "x":639.877,
-                 "y":639.552
-                }, 
-                {
-                 "gid":2147484323,
-                 "height":16,
-                 "id":154,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"isEnemy",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":0,
-                 "type":"skeleton",
-                 "visible":true,
-                 "width":16,
-                 "x":770.34,
-                 "y":689.07
-                }, 
-                {
-                 "gid":332,
-                 "height":33.1364,
-                 "id":155,
-                 "name":"boss",
-                 "properties":[
-                        {
-                         "name":"isEnemy",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":0,
-                 "type":"boss",
-                 "visible":true,
-                 "width":29.4545,
-                 "x":1103.25,
-                 "y":495.299
-                }, 
-                {
                  "gid":684,
                  "height":24.3029,
                  "id":142,
@@ -2390,6 +2318,78 @@
                  "width":24.3029,
                  "x":218.878,
                  "y":486.843
+                }, 
+                {
+                 "gid":2147484349,
+                 "height":16,
+                 "id":197,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"isEnemy",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"skeleton",
+                 "visible":true,
+                 "width":16,
+                 "x":495.5,
+                 "y":609
+                }, 
+                {
+                 "gid":2147484349,
+                 "height":16,
+                 "id":198,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"isEnemy",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"skeleton",
+                 "visible":true,
+                 "width":16,
+                 "x":639.5,
+                 "y":640.5
+                }, 
+                {
+                 "gid":2147484349,
+                 "height":16,
+                 "id":199,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"isEnemy",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"skeleton",
+                 "visible":true,
+                 "width":16,
+                 "x":768,
+                 "y":688.5
+                }, 
+                {
+                 "gid":709,
+                 "height":36,
+                 "id":200,
+                 "name":"boss",
+                 "properties":[
+                        {
+                         "name":"isEnemy",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"boss",
+                 "visible":true,
+                 "width":32,
+                 "x":1103.5,
+                 "y":493.5
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2534,7 +2534,7 @@
          "y":0
         }],
  "nextlayerid":17,
- "nextobjectid":197,
+ "nextobjectid":201,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.7.2",
@@ -5597,6 +5597,74 @@
                  "id":1
                 }],
          "tilewidth":16
+        }, 
+        {
+         "columns":8,
+         "firstgid":701,
+         "image":"0x72_DungeonTilesetII_v1.4\/hero\/skeleton_idle_anim_spreadsheet.png",
+         "imageheight":16,
+         "imagewidth":128,
+         "margin":0,
+         "name":"skeleton_idle_anim_spreadsheet",
+         "spacing":0,
+         "tilecount":8,
+         "tileheight":16,
+         "tiles":[
+                {
+                 "animation":[
+                        {
+                         "duration":140,
+                         "tileid":0
+                        }, 
+                        {
+                         "duration":140,
+                         "tileid":6
+                        }, 
+                        {
+                         "duration":140,
+                         "tileid":5
+                        }, 
+                        {
+                         "duration":140,
+                         "tileid":7
+                        }],
+                 "id":0
+                }],
+         "tilewidth":16
+        }, 
+        {
+         "columns":8,
+         "firstgid":709,
+         "image":"0x72_DungeonTilesetII_v1.4\/frames\/big_demon_idle_run_anim_spreadsheet.png",
+         "imageheight":36,
+         "imagewidth":256,
+         "margin":0,
+         "name":"big_demon_idle_run_anim_spreadsheet",
+         "spacing":0,
+         "tilecount":8,
+         "tileheight":36,
+         "tiles":[
+                {
+                 "animation":[
+                        {
+                         "duration":120,
+                         "tileid":4
+                        }, 
+                        {
+                         "duration":120,
+                         "tileid":5
+                        }, 
+                        {
+                         "duration":120,
+                         "tileid":6
+                        }, 
+                        {
+                         "duration":120,
+                         "tileid":7
+                        }],
+                 "id":0
+                }],
+         "tilewidth":32
         }],
  "tilewidth":16,
  "type":"map",

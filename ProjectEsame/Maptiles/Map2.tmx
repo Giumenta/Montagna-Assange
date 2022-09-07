@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="17" nextobjectid="197">
- <editorsettings>
-  <export target="Map2.json" format="json"/>
- </editorsettings>
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="17" nextobjectid="201">
  <tileset firstgid="1" name="Tileset" tilewidth="64" tileheight="37" tilecount="114" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="148">
@@ -1473,6 +1470,28 @@
    </animation>
   </tile>
  </tileset>
+ <tileset firstgid="701" name="skeleton_idle_anim_spreadsheet" tilewidth="16" tileheight="16" tilecount="8" columns="8">
+  <image source="0x72_DungeonTilesetII_v1.4/hero/skeleton_idle_anim_spreadsheet.png" width="128" height="16"/>
+  <tile id="0">
+   <animation>
+    <frame tileid="0" duration="140"/>
+    <frame tileid="6" duration="140"/>
+    <frame tileid="5" duration="140"/>
+    <frame tileid="7" duration="140"/>
+   </animation>
+  </tile>
+ </tileset>
+ <tileset firstgid="709" name="big_demon_idle_run_anim_spreadsheet" tilewidth="32" tileheight="36" tilecount="8" columns="8">
+  <image source="0x72_DungeonTilesetII_v1.4/frames/big_demon_idle_run_anim_spreadsheet.png" width="256" height="36"/>
+  <tile id="0">
+   <animation>
+    <frame tileid="4" duration="120"/>
+    <frame tileid="5" duration="120"/>
+    <frame tileid="6" duration="120"/>
+    <frame tileid="7" duration="120"/>
+   </animation>
+  </tile>
+ </tileset>
  <objectgroup id="9" name="BodyWall">
   <properties>
    <property name="bodyType" value="static"/>
@@ -2138,26 +2157,6 @@
   <object id="171" gid="467" x="80.0111" y="238.261" width="16" height="16"/>
  </objectgroup>
  <objectgroup id="7" name="boss">
-  <object id="152" type="skeleton" gid="2147484323" x="502.397" y="606.471" width="16" height="16">
-   <properties>
-    <property name="isEnemy" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="153" type="skeleton" gid="2147484323" x="639.877" y="639.552" width="16" height="16">
-   <properties>
-    <property name="isEnemy" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="154" type="skeleton" gid="2147484323" x="770.34" y="689.07" width="16" height="16">
-   <properties>
-    <property name="isEnemy" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="155" name="boss" type="boss" gid="332" x="1103.25" y="495.299" width="29.4545" height="33.1364">
-   <properties>
-    <property name="isEnemy" type="bool" value="true"/>
-   </properties>
-  </object>
   <object id="142" type="bat" gid="684" x="218.065" y="332.686" width="24.3029" height="24.3029">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
@@ -2194,6 +2193,26 @@
    </properties>
   </object>
   <object id="176" type="bat" gid="684" x="218.878" y="486.843" width="24.3029" height="24.3029">
+   <properties>
+    <property name="isEnemy" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="197" type="skeleton" gid="2147484349" x="495.5" y="609" width="16" height="16">
+   <properties>
+    <property name="isEnemy" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="198" type="skeleton" gid="2147484349" x="639.5" y="640.5" width="16" height="16">
+   <properties>
+    <property name="isEnemy" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="199" type="skeleton" gid="2147484349" x="768" y="688.5" width="16" height="16">
+   <properties>
+    <property name="isEnemy" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="200" name="boss" type="boss" gid="709" x="1103.5" y="493.5" width="32" height="36">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
