@@ -505,8 +505,8 @@ local function exit(self, event)
 end
 
 local function gameOver()
---	composer.removeScene("scena3_gameoverDungeon")
---	composer.gotoScene("scena3_gameoverDungeon")
+	composer.removeScene("scena3_gameoverDungeon")
+	composer.gotoScene("scena3_gameoverDungeon")
 	if #hearts == 0 then
 		--[[
 		if countGO == 0 then
