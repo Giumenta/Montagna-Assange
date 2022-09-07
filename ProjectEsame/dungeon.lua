@@ -496,13 +496,13 @@ local function bossDash()
 	local dist = 100
 	--print("x:" .. distXFromPg .. " y:" .. distYFromPg)
 	if((distXFromPg < dist and distXFromPg > -dist) and (distYFromPg > -dist and distYFromPg < dist)) then
-		local speedX = -distXFromPg
-		local speedY = -distYFromPg
 		timer.performWithDelay(
-			3200, 
+			2000, 
 			function()
+				distXFromPg = boss.x - idle.x
+				distYFromPg = boss.y - idle.y
 				print("attack")
-				boss:setLinearVelocity(speedX, speedY)
+				boss:setLinearVelocity(-distXFromPg, -distYFromPg)
 				timer.performWithDelay(
 					1000, 
 					function()
