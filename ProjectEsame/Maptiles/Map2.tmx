@@ -2200,7 +2200,7 @@
   </object>
  </objectgroup>
  <objectgroup id="16" name="Bullet">
-  <object id="188" name="bullet" type="bullet" gid="700" x="1112.93" y="493.682" width="11.25" height="11.25">
+  <object id="188" name="bullet" type="bullet" gid="700" x="1112.93" y="493.682" width="11.25" height="11.25" visible="0">
    <properties>
     <property name="isEnemy" type="bool" value="true"/>
    </properties>
