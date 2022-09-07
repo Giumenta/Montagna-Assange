@@ -65,7 +65,7 @@ arrowDown.name = "down"
 local life=display.newGroup()
 local hearts = {}
 
-for i=1, 4 do
+for i=1, 7 do
 	hearts[i] = display.newImageRect(control,"risorseGrafiche/PG/heart.png",128,128)
 	hearts[i].x = i * 100
 	hearts[i].y = 50
@@ -435,61 +435,96 @@ local function activateDemons()
 	end
 end
 
-local boss = map:listTypes("boss")
-local bullet =map:listTypes("bullet")
-local function patrolHorizontal(x, offset)
+local boss = map:findObject("boss")
+--local bullet =map:findObject("bullet")
+--physics.addBody(bullet,"dynamic", {shape=bulletShape,bounce = 1})
+--bullet.isFixedRotation = true
+--physics.addBody(bullet,"dynamic", {shape=bulletShape,bounce = 1})
+--bullet.isFixedRotation = true
 
-end 
-local function bulletBossCollisionAvoidance(self, event)
+local function bossCollisionAvoidance(self, event)
+	print(event.other.name)
 	if event.other.name == "bullet" then
 		event.contact.isEnabled = false
 	end
 	return true
 end
+
+local function launchBullet()
+	print("lancio")
+	--local boss = boss[1]
+	local velX = 0.00006 * math.cos(boss.x - idle.x)
+	local velY = 0.00005 * math.sin(boss.y - idle.y)
+
+	
+	if(idle.x > boss.x) then
+		bullet.x = boss.x + 10
+	else
+		bullet.x = boss.x - 10
+	end
+	if(idle.y > boss.y) then
+		bullet.y = boss.y + 10
+	else
+		bullet.y = boss.y - 10
+	end
+
+	bullet:applyLinearImpulse(velX, velY)
+	return true
+end
+
+local function bulletCollision(self, event)
+	print("collided")
+	timer.performWithDelay(
+		1000,
+		launchBullet()
+	)
+end
+
+local function bulletPrecollision(self, event)
+	if event.other.name == "boss" then
+		event.contact.isEnabled = false
+	end
+end
+
+--bullet.preCollision = bulletPrecollision
+--bullet.collision = bulletCollision
+--bullet:addEventListener("collision", bullet)
+--bullet:addEventListener("preCollision", bullet)
+local function bossDash()
+	local distXFromPg = boss.x - idle.x
+	local distYFromPg = boss.y - idle.y
+	local dist = 100
+	--print("x:" .. distXFromPg .. " y:" .. distYFromPg)
+	if((distXFromPg < dist and distXFromPg > -dist) and (distYFromPg > -dist and distYFromPg < dist)) then
+		local speedX = -distXFromPg
+		local speedY = -distYFromPg
+		timer.performWithDelay(
+			3200, 
+			function()
+				print("attack")
+				boss:setLinearVelocity(speedX, speedY)
+				timer.performWithDelay(
+					1000, 
+					function()
+						print("rest")
+						boss:setLinearVelocity(0,0)
+					end
+				)
+			end
+		)
+	end
+end
 local function activateBoss()
 	--lavorato con un ciclo perché se cercato con map:findObject('boss') non sappiamo perché la fisica ritorna errori
-
-	for i=1,#boss do
-		local velX = math.random(0.75, 1)*0.005
-		--local velY = math.random(0.5,1)*0.02
-		physics.addBody(boss[i],"dynamic", {shape=bossShape,bounce = 0})
-		boss[i].isFixedRotation = true
-		boss[i].preCollision = bulletBossCollisionAvoidance
-		boss[i]:addEventListener("preCollision", boss[i])
-	end
-	
-	
-	--bullet.x=boss
-	for i=1,#bullet do
-		--local velX = math.random(0.75, 1)*0.005
-		--diretto verso il pg
-		local boss = boss[1]
-		local velX = 0.00006 * math.cos(boss.x - idle.x)
-		local velY = 0.00005 * math.sin(boss.y - idle.y)
-
-
-		physics.addBody(bullet[i],"dynamic", {shape=bulletShape,bounce = 1})
-		bullet[i].isFixedRotation = true
-		bullet[i]:applyLinearImpulse(0, velY)
-		bullet[i].collision = timer.performWithDelay(
-			200,
-			function()
-				print('ciao')
-				bullet[i].x = boss.x
-				bullet[i].y = boss.y
-			end,
-			-1
-		)
-		bullet[i].preCollision = timer.performWithDelay(
-			200, 
-			function()
-				bullet[i].isVisible = false
-			end,
-			-1
-		)
-		bullet[i]:addEventListener("collision", bullet[i])
-		bullet[i]:addEventListener("preCollision", bullet[i])
-	end
+	--boss = boss[1]
+	print("ciao")
+	local velX = math.random(0.75, 1)*0.005
+	local velY = math.random(0.5,1)*0.02
+	physics.addBody(boss,"dynamic", {shape=bossShape,bounce = 0})
+	boss.isFixedRotation = true
+	--boss.preCollision = bulletBossCollisionAvoidance
+	--boss:addEventListener("preCollision", boss)
+	Runtime:addEventListener("enterFrame", bossDash)	
 end
 
 
