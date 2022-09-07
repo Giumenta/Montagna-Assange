@@ -22,6 +22,8 @@ local map    --da tenere?
 local scaleFactor -- da tenere?
 local dragable -- da tenere?
 local GO --game over
+local BG
+local BGmusicChannel
 local passi
 local danno
 local aprichest
@@ -41,8 +43,10 @@ local life
 local hearts
 local key
 local hero
+local boss
 local idle
 local bodyShape
+local bossShape
 local closedChest
 local openChest
 local chest1
@@ -96,24 +100,21 @@ local function movePg(event)
 	local arrow=event.target
 	
 	if event.phase == "began" then
+		local suonopassi = audio.play(passi,  {channel =2,loops=-1})
         if arrow.name == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
-			audio.play(passi,  {loops=-1})
 		elseif arrow.name == "right" then
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
-			audio.play(passi,  {loops=-1})
 		
         elseif arrow.name == "up" then
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
-			audio.play(passi,  {loops=-1})
 			 
         elseif arrow.name == "down" then
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
-			audio.play(passi,  {loops=-1})
 	   end
 	   
     elseif event.phase == "moved" then
@@ -137,13 +138,14 @@ local function movePg(event)
 	   
 	elseif event.phase == "ended" then
 		local i
+		audio.stop({channel=2})	
+
 		for i=2,5 do
 			hero[i].isVisible=false
 		end
 			idle:setLinearVelocity(0,0)
 			hero[1].isVisible = true
 			idle.isVisible=true		
-		audio.pause(passi)	 
 	end 	   	 
  	return true
 end
@@ -186,36 +188,35 @@ end
 local function movePg_arrows(event)
 	local arrowKey=event.keyName
 	if event.phase == "down" then
+		local suonopassi = audio.play(passi,  {channel =2,loops=-1})
         if arrowKey == "a" or arrowKey == "left" then
 			chooseAnim(5)
 			idle:setLinearVelocity(-50, 0)
-			audio.play(passi,  {loops=-1})
 			
 		elseif arrowKey == "d" or arrowKey == "right" then
 			chooseAnim(4)
 			idle:setLinearVelocity(50, 0)
-			audio.play(passi,  {loops=-1})
 			
         elseif arrowKey == "w" or arrowKey == "up" then
 			chooseAnim(2)
 			idle:setLinearVelocity(0,-50)
-			audio.play(passi,  {loops=-1})
 			 
         elseif arrowKey == "s" or arrowKey == "down" then
 			chooseAnim(3)
 			idle:setLinearVelocity(0, 50)
-			audio.play(passi,  {loops=-1})
 			 
 	   end
 
     elseif event.phase == "up" then
 		local i
+		audio.stop({channel=2})	
+
 		for i=2,5 do
 			hero[i].isVisible=false
 		end
 			idle:setLinearVelocity(0,0)
 			idle.isVisible=true
-		audio.pause(passi)	 
+	 
 	end
  	return true
 end
@@ -291,8 +292,8 @@ local function activateBat()
 	for i=1,#bats do
 		--local velX = 0.7 * math.sin(values[i]*math.pi*math.random(0.3, 0.5)) + 0.75
 		--local velY = 0.6 * math.cos(values[((i+1)%4) +1]*math.pi*math.random(0.3, 0.5)) + 0.75
-		local velY = math.random(0.75,1)*0.01 +0.15
-		local velX = math.random(0.75, 1)*0.01 +0.15
+		local velY = math.random(0.75,1)*0.01 +0.1
+		local velX = math.random(0.75, 1)*0.01 +0.1
 		bats[i]:scale(0.75, 0.75)
 		physics.addBody(bats[i],"dynamic", {shape=bodyShape,bounce = 1})
 		bats[i].isFixedRotation = true
@@ -333,6 +334,45 @@ local function activateDemons()
 		demons[i].isFixedRotation = true
 		demons[i]:applyLinearImpulse(velX, 0)
 	end
+end
+
+
+local function bossDash()
+	local distXFromPg = boss.x - idle.x
+	local distYFromPg = boss.y - idle.y
+	local dist = 100
+	--print("x:" .. distXFromPg .. " y:" .. distYFromPg)
+	if((distXFromPg < dist and distXFromPg > -dist) and (distYFromPg > -dist and distYFromPg < dist)) then
+		timer.performWithDelay(
+			2000, 
+			function()
+				distXFromPg = boss.x - idle.x
+				distYFromPg = boss.y - idle.y
+				print("attack")
+				boss:setLinearVelocity(-distXFromPg, -distYFromPg)
+				timer.performWithDelay(
+					1000, 
+					function()
+						print("rest")
+						boss:setLinearVelocity(0,0)
+					end
+				)
+			end
+		)
+	end
+end
+
+local function activateBoss()
+	--lavorato con un ciclo perché se cercato con map:findObject('boss') non sappiamo perché la fisica ritorna errori
+	--boss = boss[1]
+	print("ciao")
+	local velX = math.random(0.75, 1)*0.005
+	local velY = math.random(0.5,1)*0.02
+	physics.addBody(boss,"dynamic", {shape=bossShape,bounce = 0})
+	boss.isFixedRotation = true
+	--boss.preCollision = bulletBossCollisionAvoidance
+	--boss:addEventListener("preCollision", boss)
+	Runtime:addEventListener("enterFrame", bossDash)	
 end
 
 local function isInTheRoom(objX, objY, wallTop, wallRight, wallBottom, wallLeft)
@@ -422,7 +462,7 @@ end
 ------- OPEN THE CHEST ------
 local function chestCollision(self, event)
 	if event.phase == "began" then
-		audio.play(aprichest)
+		audio.play(aprichest,{channel=4})
 		if event.target.isChest ~= nil then
 			if event.other.name == "idle" then
 					if self.name == "chest1" then
@@ -465,8 +505,8 @@ local function exit(self, event)
 end
 
 local function gameOver()
-	composer.removeScene("scena3_gameoverDungeon")
-	composer.gotoScene("scena3_gameoverDungeon")
+--	composer.removeScene("scena3_gameoverDungeon")
+--	composer.gotoScene("scena3_gameoverDungeon")
 	if #hearts == 0 then
 		--[[
 		if countGO == 0 then
@@ -485,7 +525,7 @@ end
 local function damage(self, event)
 	
 	if event.other.isEnemy ~= nil then
-		audio.play(danno)
+		audio.play(danno,{channel=3})
 		display.remove(hearts[#hearts])
 		hearts[#hearts] = nil
 		print("The remaining lifes are: " .. #hearts)
@@ -511,16 +551,23 @@ function scene:create( event )
 	scaleFactor = 3.5
 
 	GO = audio.loadStream("RisorseAudio/GO.mp3")
-
+	BG = audio.loadStream("RisorseAudio/BG.mp3")
 	passi = audio.loadSound("RisorseAudio/footstep04.ogg")
 	danno = audio.loadSound("RisorseAudio/dannopreso.mp3")
 	aprichest = audio.loadSound("RisorseAudio/aprichest.mp3")
-	audio.setVolume( 0.05)
-	 camera= display.newGroup()
-	 control = display.newGroup()
+	
+	audio.setVolume(0.05,{channel=1})
+	audio.setVolume(0.08,{channel=2})
+	audio.setVolume(0.23,{channel=3})
+	audio.setVolume(0.2,{channel=4})
+	
+	BGmusicChannel = audio.play(BG, {channel=1, loops=-1, fadein=5000})
+	
+	camera= display.newGroup()
+	control = display.newGroup()
 
-	 fontDir = "risorseGrafiche/font/fontpixel.ttf"
-	 fontCustom = native.newFont(fontDir, 12)
+	fontDir = "risorseGrafiche/font/fontpixel.ttf"
+	fontCustom = native.newFont(fontDir, 12)
 
 	map:scale(scaleFactor,scaleFactor)
 	map.x=50
@@ -553,6 +600,7 @@ function scene:create( event )
 	hero = map:listTypes("hero")
 	idle=map:findObject("idle")
 	bodyShape={-5,-5, -5,5, 5,5, 5,-5}
+	bossShape={-10,-10, -10,10, 10,10, 10,-10}
 
 	closedChest=map:listTypes("chest")
 	openChest=map:listTypes("openChest")
@@ -582,9 +630,13 @@ function scene:create( event )
 	room1_wallRight = map:findObject("wallRight1")
 	room1_wallBottom = map:findObject("wallBottom1")
 
+	boss = map:findObject("boss")
+
+
 	activateBat()
 	activateSkeleton()
 	activateDemons()
+	activateBoss()
 
 	invisibleWall_batRoom = map:listTypes("invisibleWall")
 
