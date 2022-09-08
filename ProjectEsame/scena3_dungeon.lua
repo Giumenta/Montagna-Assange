@@ -347,8 +347,8 @@ local function bossDash()
 		timer.performWithDelay(
 			2000, 
 			function()
-				distXFromPg = boss.x - idle.x
-				distYFromPg = boss.y - idle.y
+				distXFromPg = (boss.x - idle.x)*0.9
+				distYFromPg = (boss.y - idle.y)*0.9
 				print("attack")
 				boss:setLinearVelocity(-distXFromPg, -distYFromPg)
 				timer.performWithDelay(
