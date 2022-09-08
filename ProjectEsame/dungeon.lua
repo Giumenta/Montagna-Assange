@@ -708,7 +708,7 @@ local function gameOver()
 			audio.stop({channel=3})
 			audio.play(GO, {channel=4,loops=0, 
 			duration=2800
-		})
+			})
 			arrowLeft:removeEventListener("touch", movePg)
 			arrowRight:removeEventListener("touch", movePg)
 			arrowDown:removeEventListener("touch", movePg)

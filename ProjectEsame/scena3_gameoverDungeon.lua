@@ -4,38 +4,21 @@ local scene = composer.newScene()
 
 local sfondo = display.newGroup()
 local pp = display.newGroup()
-local gameover
+local go
 
 local function tornaAlTuoPaese(event)
     composer.removeScene("scena3_dungeon")
-    composer.gotoScene("scena3_dungeon")
+    composer.gotoScene("scena3_dungeon", {effect = "zoomInOutFade",	time = 1000})
 end
 
 -- create()
 function scene:create(event)
+    local sceneGroup = self.view
     print("Scena 3 gameover, create")
     -- hero sequence e sheet
 
-    local rect = display.newRect(display.contentCenterX, display.contentCenterY, display.contentWidth,
-        display.contentHeight)
-    rect.alpha = 0
-
-    rect:setFillColor(1, 1, 1)
-
-    local go = display.newImageRect("risorseGrafiche/PG/GameOver.png", 412, 78)
-    go.x = display.contentCenterX
-    go.y = -40
-    go.alpha = 0
-    local move_down = transition.to(go, {
-        delay = 420,
-        time = 600,
-        y = display.contentCenterY,
-        alpha = 1
-    })
-    local fade_rect = transition.to(rect, {
-        alpha = 1
-    })
-    sceneGroup:insert(gameover)
+    go = display.newImageRect("risorseGrafiche/PG/GameOver.png",412,78)
+    sceneGroup:insert(go)
 end
 
 -- show()
@@ -45,12 +28,15 @@ function scene:show(event)
 
     if (phase == "will") then
         print("scena3 gamover, show- will")
-        gameover.x = display.contentCenterX
-        gameover.y = display.contentCenterY
+        go.x = display.contentCenterX
+        go.y = display.contentCenterY
+        local move_down = transition.to(go, {
+            delay = 420,
+            time = 600,
+            y = display.contentCenterY
+        })
     elseif (phase == "did") then
-        print("scena1, show-did")
-        hero:setSequence("freeze")
-        createText(text)
+        print("scena3 gameover, show-did")
         -- activate the tap listener 
         Runtime:addEventListener("tap", tornaAlTuoPaese)
     end
