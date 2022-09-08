@@ -13,6 +13,8 @@ local fontDir
 local fontCustom
 local box
 local dialogue
+local BG
+local BGmusicChannel
 
 
 
@@ -28,6 +30,7 @@ local function createText(self, event)
 		dialogue.font = fontDir
 		textN = textN + 1 --passa al testo successivo
 	else
+		audio.stop({channel=1})	
 		composer.removeScene("scena3_dungeon")
 		composer.gotoScene("scena3_dungeon", {effect = "zoomInOutFade",	time = 1000}) 
 	end
@@ -103,6 +106,11 @@ function scene:show( event )
         -- activate the tap listener 
 		Runtime:addEventListener("tap", createText)
     end
+	BG = audio.loadStream("RisorseAudio/BG2.mp3")
+
+	audio.setVolume(0.025,{channel=1})
+
+	BGmusicChannel = audio.play(BG, {channel=1, loops=-1, fadein=5000})
 end
  
  
