@@ -364,6 +364,8 @@ local function bossDash()
 end
 
 local function activateBoss()
+	--lavorato con un ciclo perché se cercato con map:findObject('boss') non sappiamo perché la fisica ritorna errori
+	--boss = boss[1]
 	print("ciao")
 	local velX = math.random(0.75, 1)*0.005
 	local velY = math.random(0.5,1)*0.02
@@ -439,7 +441,6 @@ local function createText(case)
 			quote = "???: Non hai completato il tuo compito."
 		else
 			quote = "Mr. B: Hai trovato la chiave. Posso finalmente dirti chi \n sono. \n Esci dalla montagna per scoprirlo."
-			composer.gotoScene("scena4FineGioco")
 		end
 	elseif case == 5 then
 		if key.isVisible == false then
@@ -504,19 +505,8 @@ local function exit(self, event)
 	end	
 end
 
-
-local function restart()
-	-- go to the game scene
-	composer.removeScene("scena3_dungeon")
-	composer.gotoScene("scena3_dungeon", {effect = "zoomInOutFade",	time = 1000})
-	return true
-end
-
 local function gameOver()
-	
 	if #hearts == 0 then
-		audio.stop({channel=1})	
-
 		print(#hearts)
 		composer.removeScene("scena3_gameoverDungeon")
 		composer.gotoScene("scena3_gameoverDungeon", {effect = "zoomInOutFade",	time = 1000})
@@ -633,6 +623,7 @@ function scene:create( event )
 
 	boss = map:findObject("boss")
 
+
 	activateBat()
 	activateSkeleton()
 	activateDemons()
@@ -665,6 +656,13 @@ function scene:create( event )
 	sceneGroup:insert(control)
 end
  
+
+local function restart()
+	-- go to the game scene
+	composer.removeScene("scena3_dungeon")
+	composer.gotoScene("scena3_dungeon", {effect = "zoomInOutFade",	time = 1000})
+	return true
+end
 	 
 -- show()
 function scene:show( event )

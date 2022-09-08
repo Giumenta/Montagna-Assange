@@ -5,11 +5,9 @@ local scene = composer.newScene()
 local sfondo = display.newGroup()
 local pp = display.newGroup()
 local go
-local GO --game over
-
 
 local function tornaAlTuoPaese(event)
-    composer.removeScene("scena3_dungeon", true)
+    composer.removeScene("scena3_dungeon")
     composer.gotoScene("scena3_dungeon", {effect = "zoomInOutFade",	time = 1000})
 end
 
@@ -18,9 +16,6 @@ function scene:create(event)
     local sceneGroup = self.view
     print("Scena 3 gameover, create")
     -- hero sequence e sheet
-    audio.setVolume(0.2,{channel=4})
-
-    GO = audio.loadStream("RisorseAudio/GO.mp3")
 
     go = display.newImageRect("risorseGrafiche/PG/GameOver.png",412,78)
     sceneGroup:insert(go)
@@ -30,12 +25,11 @@ end
 function scene:show(event)
     local sceneGroup = self.view
     local phase = event.phase
-    
+
     if (phase == "will") then
-        print("scena3 gameover, show- will")
+        print("scena3 gamover, show- will")
         go.x = display.contentCenterX
         go.y = display.contentCenterY
-        audio.play(GO, {channel=4,loops=0,duration=2800})
         local move_down = transition.to(go, {
             delay = 420,
             time = 600,
@@ -43,7 +37,6 @@ function scene:show(event)
         })
     elseif (phase == "did") then
         print("scena3 gameover, show-did")
-
         -- activate the tap listener 
         Runtime:addEventListener("tap", tornaAlTuoPaese)
     end
@@ -65,7 +58,8 @@ function scene:hide(event)
 end
 
 -- destroy()
-function scene:destroy(event)    
+function scene:destroy(event)
+
     local sceneGroup = self.view
 
 end

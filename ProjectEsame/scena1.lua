@@ -31,10 +31,6 @@ local fontDir
 local fontCustom
 local box
 local dialogue
-local passi
-local BG
-local BGmusicChannel
-
 
 -- create()
 function scene:create( event )
@@ -97,7 +93,6 @@ end
  
 -- Movimento eroe 
 local function movePg()
-	local suonopassi = audio.play(passi,  {channel =2,loops=-1})
 	transition.to(hero,{delay=0, time = 6000,
 						x = display.contentCenterX,
 						y = 560,
@@ -129,7 +124,6 @@ local function createText(self, event)
 		dialogue.font = fontDir
 		textN = textN + 1 --passa al testo successivo
 	else
-		audio.stop({channel=1})	
 		composer.removeScene("scena2_gioco15")
 		composer.gotoScene("scena2_gioco15", {effect = "zoomInOutFade",	time = 1000}) 
 	end
@@ -159,8 +153,6 @@ function scene:show( event )
 		local function swapSheet()
 			hero:setSequence( "freeze" )
 			hero:play()
-			audio.stop({channel=2})	
-
 		end
 		timer.performWithDelay( 7000, swapSheet )
 		--hero:setSequence("right") 
@@ -175,17 +167,7 @@ function scene:show( event )
 		Runtime:addEventListener("tap", createText)
     end
 end
-
-BG = audio.loadStream("RisorseAudio/BG2.mp3")
-
-BGmusicChannel = audio.play(BG, {channel=1, loops=-1, fadein=5000})
-
-
-passi = audio.loadSound("RisorseAudio/footstep04.ogg")
-audio.setVolume(0.025,{channel=1})
-
-audio.setVolume(0.08,{channel=2})
-
+ 
  
 -- hide()
 function scene:hide( event )
