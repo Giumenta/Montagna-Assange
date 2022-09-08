@@ -515,6 +515,8 @@ end
 local function gameOver()
 	
 	if #hearts == 0 then
+		audio.stop({channel=1})	
+
 		print(#hearts)
 		composer.removeScene("scena3_gameoverDungeon")
 		composer.gotoScene("scena3_gameoverDungeon", {effect = "zoomInOutFade",	time = 1000})
