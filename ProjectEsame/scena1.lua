@@ -31,6 +31,7 @@ local fontDir
 local fontCustom
 local box
 local dialogue
+local passi
 
 -- create()
 function scene:create( event )

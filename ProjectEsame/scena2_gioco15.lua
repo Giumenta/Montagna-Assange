@@ -22,6 +22,7 @@ local arrowRight
 local arrowUp 
 local arrowDown 
 local grid
+local suonotessere
 
 --funzioni varie
 
@@ -133,7 +134,8 @@ local function muovitassello (self, event)
 	local arrow=event.target
 	
 	if event.phase == "began" then
-		
+		local spostamento = audio.play(suonotessere,  {channel =2})
+
         if arrow.name == "left" then --sposto il tass a sinistra
 			newEmptyX = emptyX + 1
 
@@ -175,6 +177,8 @@ local function muovitassello_keyboard (event)
 	local newEmptyX = emptyX
 	
 	if event.phase == "down" then
+		local spostamento = audio.play(suonotessere,  {channel =2})
+
 		if ( event.keyName == "down" ) or( event.keyName == "s" ) then -- sposto verso il basso un tassello
 			newEmptyY = emptyY - 1
 			elseif ( event.keyName == "up" ) or( event.keyName == "w" ) then -- sposto verso l'alto un tassello
@@ -300,6 +304,10 @@ function scene:show( event )
 		Runtime:addEventListener( "key", muovitassello_keyboard)
 		creaGriglia()
     end
+
+	suonotessere = audio.loadSound("RisorseAudio/footstep06.ogg")
+	audio.setVolume(0.08,{channel=2})
+
 end
  
  
