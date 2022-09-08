@@ -13,7 +13,8 @@ local fontDir
 local fontCustom
 local box
 local dialogue
-
+local BG
+local BGmusicChannel
 
 
 local function createText(self, event)
@@ -28,6 +29,8 @@ local function createText(self, event)
 		dialogue.font = fontDir
 		textN = textN + 1 --passa al testo successivo
 	else
+		audio.stop({channel=1})	
+
 		composer.removeScene("scena3_dungeon")
 		composer.gotoScene("scena3_dungeon", {effect = "zoomInOutFade",	time = 1000}) 
 	end
@@ -40,7 +43,7 @@ function scene:create( event )
 	textTable = {
 		"???: Complimenti, hai superato la prova",
 		"???: Ora puoi entrare ed esplorare il cuore della montagna",
-		"???: Trova la via d'uscita"
+		"???: Evita tutti i nemici e trova la via d'uscita"
 	}
 	--hero sequence e sheet
 	local opt = { width = 32, height = 32, numFrames = 12}
@@ -103,6 +106,11 @@ function scene:show( event )
         -- activate the tap listener 
 		Runtime:addEventListener("tap", createText)
     end
+
+	BG = audio.loadStream("RisorseAudio/BG2.mp3")
+
+	audio.setVolume(0.025,{channel=1})
+	BGmusicChannel = audio.play(BG, {channel=1, loops=-1, fadein=5000})
 end
  
  

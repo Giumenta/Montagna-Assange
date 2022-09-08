@@ -5,8 +5,10 @@ local scene = composer.newScene()
 local sfondo = display.newGroup()
 local pp = display.newGroup()
 local go
+local suonoGO
 
 local function tornaAlTuoPaese(event)
+    audio.stop({channel=4})	
     composer.removeScene("scena3_dungeon", true)
     composer.gotoScene("scena3_dungeon", {effect = "zoomInOutFade",	time = 1000})
 end
@@ -16,6 +18,7 @@ function scene:create(event)
     local sceneGroup = self.view
     print("Scena 3 gameover, create")
     -- hero sequence e sheet
+	suonoGO = audio.loadSound("RisorseAudio/GO.mp3")
 
     go = display.newImageRect("risorseGrafiche/PG/GameOver.png",412,78)
     sceneGroup:insert(go)
@@ -25,7 +28,9 @@ end
 function scene:show(event)
     local sceneGroup = self.view
     local phase = event.phase
-
+    audio.play(suonoGO, {channel=4,loops=0, 
+    duration=2800
+    })
     if (phase == "will") then
         print("scena3 gamover, show- will")
         go.x = display.contentCenterX
