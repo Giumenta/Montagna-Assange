@@ -40,7 +40,7 @@ function scene:create( event )
 	textTable = {
 		"???: Complimenti, hai superato la prova",
 		"???: Ora puoi entrare ed esplorare il cuore della montagna",
-		"???: Trova la via d'uscita"
+		"???: Evita tutti i pericoli e \n trova la via d'uscita"
 	}
 	--hero sequence e sheet
 	local opt = { width = 32, height = 32, numFrames = 12}
