@@ -65,6 +65,8 @@ local box
 local chestText
 local exitDoor
 local countGO
+local restX
+local restY
 --funzioni
 
 function createHero()
@@ -337,7 +339,8 @@ local function activateDemons()
 	end
 end
 
-
+--gestisce l'attacco del boss- si sposta verso il pg se nel range di 50 px, torna alla 
+--pos iniziale se fuori dal range
 local function bossDash()
 	local distXFromPg = boss.x - idle.x
 	local distYFromPg = boss.y - idle.y
@@ -349,12 +352,28 @@ local function bossDash()
 			function()
 				distXFromPg = (boss.x - idle.x)*0.9
 				distYFromPg = (boss.y - idle.y)*0.9
-				print("attack")
+				--print("attack")
 				boss:setLinearVelocity(-distXFromPg, -distYFromPg)
 				timer.performWithDelay(
 					1000, 
 					function()
-						print("rest")
+						boss:setLinearVelocity(0,0)
+					end
+				)
+			end
+		)
+	else
+		--print("rest" .. restX .. ":" .. restY)
+		local distXToRest = restX - boss.x 
+		local distYToRest = restY - boss.y
+
+		timer.performWithDelay(
+			2000, 
+			function()
+				boss:setLinearVelocity(distXToRest, distYToRest )
+				timer.performWithDelay(
+					1000, 
+					function()
 						boss:setLinearVelocity(0,0)
 					end
 				)
@@ -373,6 +392,8 @@ local function activateBoss()
 	boss.isFixedRotation = true
 	--boss.preCollision = bulletBossCollisionAvoidance
 	--boss:addEventListener("preCollision", boss)
+	restX = boss.x 
+	restY = boss.y
 	Runtime:addEventListener("enterFrame", bossDash)	
 end
 
