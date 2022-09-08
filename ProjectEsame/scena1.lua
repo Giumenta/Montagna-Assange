@@ -32,6 +32,8 @@ local fontCustom
 local box
 local dialogue
 local passi
+local BG
+local BGmusicChannel
 
 -- create()
 function scene:create( event )
