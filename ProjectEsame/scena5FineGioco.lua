@@ -1,0 +1,82 @@
+-- Load the composer library 
+local composer = require( "composer" )
+ 
+-- define a new Scene 
+local scene = composer.newScene()
+ 
+
+-- -----------------------------------------------------------------------------------
+-- Code outside of the scene event functions below will only be executed ONCE unless
+-- the scene is removed entirely (not recycled) via "composer.removeScene()"
+-- -----------------------------------------------------------------------------------
+ 
+
+ 
+ 
+-- -----------------------------------------------------------------------------------
+-- Scene event functions
+-- -----------------------------------------------------------------------------------
+ 
+-- create()
+function scene:create( event )
+ 
+   
+end
+
+
+
+ 
+-- show()
+function scene:show( event )
+ 
+    local sceneGroup = self.view
+    local phase = event.phase
+ 
+    if ( phase == "will" ) then
+		
+		
+ 
+    elseif ( phase == "did" ) then
+      
+ 
+    end
+end
+ 
+
+ 
+-- hide()
+function scene:hide( event )
+ 
+    local sceneGroup = self.view
+    local phase = event.phase
+ 
+    if ( phase == "will" ) then
+        -- Code here runs when the scene is on screen (but is about to go off screen)
+		physics.pause()
+ 
+    elseif ( phase == "did" ) then
+        -- Code here runs immediately after the scene goes entirely off screen
+ 
+    end
+end
+ 
+ 
+-- destroy()
+function scene:destroy( event )
+ 
+    local sceneGroup = self.view
+    -- Code here runs prior to the removal of scene's view
+ 
+end
+ 
+ 
+-- -----------------------------------------------------------------------------------
+-- Scene event function listeners
+-- -----------------------------------------------------------------------------------
+scene:addEventListener( "create", scene )
+scene:addEventListener( "show", scene )
+scene:addEventListener( "hide", scene )
+scene:addEventListener( "destroy", scene )
+-- -----------------------------------------------------------------------------------
+ 
+return scene
