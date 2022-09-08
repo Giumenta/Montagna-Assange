@@ -7,7 +7,7 @@ local pp = display.newGroup()
 local go
 
 local function tornaAlTuoPaese(event)
-    composer.removeScene("scena3_dungeon")
+    composer.removeScene("scena3_dungeon", true)
     composer.gotoScene("scena3_dungeon", {effect = "zoomInOutFade",	time = 1000})
 end
 
