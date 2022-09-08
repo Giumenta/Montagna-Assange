@@ -28,8 +28,8 @@ local function createText(self, event)
 		dialogue.font = fontDir
 		textN = textN + 1 --passa al testo successivo
 	else
-		composer.removeScene("scena3_dungeon")
-		composer.gotoScene("scena3_dungeon", {effect = "zoomInOutFade",	time = 1000}) 
+		--composer.removeScene("scena3_dungeon")
+		--composer.gotoScene("scena3_dungeon", {effect = "zoomInOutFade",	time = 1000}) 
 	end
 end
 
@@ -63,7 +63,7 @@ function scene:create( event )
 	}
 	
 	-- Load the background image
-	background = display.newImageRect(sfondo, "risorseGrafiche/PG/holyCrapAmIInHeaven.png", display.contentWidth, display.contentHeight)
+	--background = display.newImageRect(sfondo, "risorseGrafiche/PG/holyCrapAmIInHeaven.png", display.contentWidth, display.contentHeight)
 	--load hero sprite
 	hero =  display.newSprite(heroSheet,heroSeqs)
 	dialogueBox = display.newImageRect(pp, "risorseGrafiche/boxmessaggi.png", display.contentWidth +100, display.contentHeight/1.5)
