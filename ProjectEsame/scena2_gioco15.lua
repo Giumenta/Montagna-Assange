@@ -65,7 +65,7 @@ local function isRisolto()
 	end
 
 	if complete and contaCaselle == 16 then
-		timer.performWithDelay(3000, goToScene3)
+		timer.performWithDelay(1000, goToScene3)
 	else
 		
 	end
