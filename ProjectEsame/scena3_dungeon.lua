@@ -76,6 +76,7 @@ function createHero()
 		hero[i].x=idle.x
 		hero[i].y=idle.y
 	end
+
 end
 
 local function moveAnimation()
@@ -363,8 +364,6 @@ local function bossDash()
 end
 
 local function activateBoss()
-	--lavorato con un ciclo perché se cercato con map:findObject('boss') non sappiamo perché la fisica ritorna errori
-	--boss = boss[1]
 	print("ciao")
 	local velX = math.random(0.75, 1)*0.005
 	local velY = math.random(0.5,1)*0.02
@@ -432,14 +431,15 @@ local function createText(case)
 		quote = "???: Giovane Padawan, ora sei finalmente pronto per \n muovere i tuoi primi passi. XD"
 			
 	elseif case == 2 then
-		quote = "???: Sei stato fortunato,\n prendi questa vita extra ma non sarà facile \n uscire da questa montagna."
+		quote = "???: Sei stato fortunato,\n prendi questa vita extra: non sarà facile \n uscire da questa montagna."
 	elseif case == 3 then
-		quote = "???: Hai trovato una chiave misteriosa. \n Chissà a cosa servirà..." 
+		quote = "???: Si narra che in questo labirinto sia contenuta una chiave misteriosa. \n Chissà a cosa servirà..." 
 	elseif case == 4 then
 		if key.isVisible == false then
-			quote = "???: Prova ad uscire se ci riesci, \n ritorna quando sarai degno."
+			quote = "???: Non hai completato il tuo compito."
 		else
 			quote = "Mr. B: Hai trovato la chiave. Posso finalmente dirti chi \n sono. \n Esci dalla montagna per scoprirlo."
+			composer.gotoScene("scena4FineGioco")
 		end
 	elseif case == 5 then
 		if key.isVisible == false then
@@ -504,7 +504,16 @@ local function exit(self, event)
 	end	
 end
 
+
+local function restart()
+	-- go to the game scene
+	composer.removeScene("scena3_dungeon")
+	composer.gotoScene("scena3_dungeon", {effect = "zoomInOutFade",	time = 1000})
+	return true
+end
+
 local function gameOver()
+	
 	if #hearts == 0 then
 		print(#hearts)
 		composer.removeScene("scena3_gameoverDungeon")
@@ -520,7 +529,7 @@ local function damage(self, event)
 		hearts[#hearts] = nil
 		print("The remaining lifes are: " .. #hearts)
 	end
-	Runtime:addEventListener("enterFrame", gameOver)
+	gameOver()
 end
 
 -- create()
@@ -622,7 +631,6 @@ function scene:create( event )
 
 	boss = map:findObject("boss")
 
-
 	activateBat()
 	activateSkeleton()
 	activateDemons()
@@ -655,13 +663,6 @@ function scene:create( event )
 	sceneGroup:insert(control)
 end
  
-
-local function restart()
-	-- go to the game scene
-	composer.removeScene("scena3_dungeon")
-	composer.gotoScene("scena3_dungeon", {effect = "zoomInOutFade",	time = 1000})
-	return true
-end
 	 
 -- show()
 function scene:show( event )
@@ -707,7 +708,7 @@ function scene:show( event )
 			invisibleWall_batRoom[i].preCollision = invisibleWallPreCollision
 			invisibleWall_batRoom[i]:addEventListener("preCollision", invisibleWall_batRoom[i])
 		end
-        Runtime:addEventListener("enterFrame", gameOver)
+        --Runtime:addEventListener("enterFrame", gameOver)
 		end
 end
  
@@ -742,10 +743,9 @@ function scene:hide( event )
         chest2:removeEventListener("collision",chest2)
         chest3:removeEventListener("collision",chest3)
         chest4:removeEventListener("collision",chest4)
-                    --Runtime:removeEventListener("enterFrame", gameOver)
         idle:removeEventListener("postCollision", idle)
 		
-        Runtime:removeEventListener("enterFrame", gameOver)
+       -- Runtime:removeEventListener("enterFrame", gameOver)
  
     elseif ( phase == "did" ) then
         -- Code here runs immediately after the scene goes entirely off screen

@@ -4,7 +4,7 @@ local scene = composer.newScene()
  
 local sfondo = display.newGroup()
 local pp = display.newGroup() 
-local background  -- variable that stores the background image 
+local background
 local hero
 local dialogueBox
 local textN
@@ -38,9 +38,9 @@ function scene:create( event )
 	
     local sceneGroup = self.view
 	textTable = {
-		"???: Complimenti, hai superato la prova",
-		"???: Ora puoi entrare ed esplorare il cuore della montagna",
-		"???: Evita tutti i pericoli e \n trova la via d'uscita"
+		"???: Complimenti, sei riuscito a superare tutte le prove!",
+		"???: Credo che sia arrivato il momento di svelare la mia identità",
+		"Prof.Ballis: "
 	}
 	--hero sequence e sheet
 	local opt = { width = 32, height = 32, numFrames = 12}
@@ -113,11 +113,7 @@ function scene:hide( event )
     local phase = event.phase
  
     if ( phase == "will" ) then
-		Runtime:removeEventListener("tap", createText)
- 
-    elseif ( phase == "did" ) then
-        -- Code here runs immediately after the scene goes entirely off screen
- 
+		Runtime:removeEventListener("tap", createText) 
     end
 end
  
@@ -140,5 +136,3 @@ scene:addEventListener( "destroy", scene )
 -- -----------------------------------------------------------------------------------
  
 return scene
-
-	

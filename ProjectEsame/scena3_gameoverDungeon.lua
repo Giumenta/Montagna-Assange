@@ -7,7 +7,7 @@ local pp = display.newGroup()
 local go
 
 local function tornaAlTuoPaese(event)
-    composer.removeScene("scena3_dungeon")
+    composer.removeScene("scena3_dungeon", true)
     composer.gotoScene("scena3_dungeon", {effect = "zoomInOutFade",	time = 1000})
 end
 
@@ -25,7 +25,7 @@ end
 function scene:show(event)
     local sceneGroup = self.view
     local phase = event.phase
-
+    
     if (phase == "will") then
         print("scena3 gamover, show- will")
         go.x = display.contentCenterX
@@ -37,6 +37,7 @@ function scene:show(event)
         })
     elseif (phase == "did") then
         print("scena3 gameover, show-did")
+
         -- activate the tap listener 
         Runtime:addEventListener("tap", tornaAlTuoPaese)
     end
@@ -59,7 +60,9 @@ end
 
 -- destroy()
 function scene:destroy(event)
+    composer.removeScene("scena3_gameoverDungeon")
 
+    
     local sceneGroup = self.view
 
 end
