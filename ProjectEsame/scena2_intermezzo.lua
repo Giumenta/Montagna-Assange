@@ -43,7 +43,10 @@ function scene:create( event )
 	textTable = {
 		"???: Complimenti, hai superato la prova",
 		"???: Ora puoi entrare ed esplorare il cuore della montagna",
-		"???: Evita tutti i nemici e trova la via d'uscita"
+		"???: Inizialmente ti sentirai un po' strano \n ma non preoccuparti",
+		"???: Evita tutti i pericoli e trova la via d'uscita",
+		"???: Gli abitanti del cuore della montagna sono molto abitudinari \n non disturbarli, altrimenti per te sarà difficile"
+
 	}
 	--hero sequence e sheet
 	local opt = { width = 32, height = 32, numFrames = 12}
@@ -109,7 +112,7 @@ function scene:show( event )
 
 	BG = audio.loadStream("RisorseAudio/BG2.mp3")
 
-	audio.setVolume(0.025,{channel=1})
+	audio.setVolume(0.07,{channel=1})
 	BGmusicChannel = audio.play(BG, {channel=1, loops=-1, fadein=5000})
 end
  

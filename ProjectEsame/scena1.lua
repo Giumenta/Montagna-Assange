@@ -183,9 +183,9 @@ BG = audio.loadStream("RisorseAudio/BG2.mp3")
 
 
 passi = audio.loadSound("RisorseAudio/footstep04.ogg")
-audio.setVolume(0.025,{channel=1})
+audio.setVolume(0.07,{channel=1})
 
-audio.setVolume(0.08,{channel=2})
+audio.setVolume(0.07,{channel=2})
 BGmusicChannel = audio.play(BG, {channel=1, loops=-1, fadein=5000})
 
  
