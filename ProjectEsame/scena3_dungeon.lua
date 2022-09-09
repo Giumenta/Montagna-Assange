@@ -427,6 +427,7 @@ local function addHeart()
 		hearts[#hearts].y = 50
 		hearts[#hearts]:scale(0.5, 0.5)
 	end
+	hearts[#hearts]:toFront()
 end
 
 local function createText(case)
@@ -464,8 +465,11 @@ local function createText(case)
 			quote = "Idle: La chiave funziona! Posso finalmente uscire."
 			boss:setLinearVelocity(0,0)
 			audio.stop({channel=1})
+			audio.stop({channel=2})
 			Runtime:removeEventListener("enterFrame", bossDash)
 			physics.pause()
+			
+
 			physics.removeBody(boss)
 			
 			composer.removeScene("scena3_gameoverDungeon")
