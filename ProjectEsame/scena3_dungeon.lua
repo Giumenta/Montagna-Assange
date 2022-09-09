@@ -67,6 +67,7 @@ local exitDoor
 local countGO
 local restX
 local restY
+local cuori
 --funzioni
 
 function createHero()
@@ -421,7 +422,7 @@ end
 --vita gratis
 local function addHeart()
 	if openChest[4].isVisible == false then
-		table.insert(hearts, display.newImageRect(control,"risorseGrafiche/PG/heart.png",128,128))
+		table.insert(hearts, display.newImageRect(cuori,"risorseGrafiche/PG/heart.png",128,128))
 		hearts[#hearts].x = #hearts * 100
 		hearts[#hearts].y = 50
 		hearts[#hearts]:scale(0.5, 0.5)
@@ -583,7 +584,7 @@ function scene:create( event )
 	
 	camera= display.newGroup()
 	control = display.newGroup()
-
+	cuori = display.newGroup()
 	fontDir = "risorseGrafiche/font/fontpixel.ttf"
 	fontCustom = native.newFont(fontDir, 12)
 
@@ -601,7 +602,7 @@ function scene:create( event )
 
 	--crea 4 cuori, poi il quarto viene nascosto e mostrato solo alla apertura della chest
 	for i=1, 4 do
-		hearts[i] = display.newImageRect(control,"risorseGrafiche/PG/heart.png",128,128)
+		hearts[i] = display.newImageRect(cuori,"risorseGrafiche/PG/heart.png",128,128)
 		hearts[i].x = i * 100
 		hearts[i].y = 50
 		hearts[i]:scale(0.5, 0.5)
@@ -613,6 +614,7 @@ function scene:create( event )
 	hearts[4].isVisible = false
 	table.remove(hearts, #hearts)
 	
+	sceneGroup:insert(cuori)
 
 	key = display.newImageRect(control,"risorseGrafiche/PG/key.png",128,128)
 	key.x = display.contentWidth - 130
@@ -754,6 +756,9 @@ function scene:hide( event )
 		exitDoor:removeEventListener("collision",exitDoor)
         idle:removeEventListener("postCollision", idle)
 		physics.stop()
+
+	else
+		composer.removeScene("scena3_dungeon")
     end
 end
  
