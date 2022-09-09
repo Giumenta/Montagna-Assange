@@ -72,7 +72,7 @@ function scene:show( event )
     local phase = event.phase
  
     if ( phase == "will" ) then
-       -- composer.removeScene("scena3_dungeon")
+        composer.removeScene("scena3_dungeon")
 
 		sfondo.x = display.contentCenterX
 		sfondo.y = display.contentCenterY - 100
@@ -81,7 +81,7 @@ function scene:show( event )
 		mrb.x = display.contentCenterX
 		mrb.y = display.contentCenterY - 100
         cloud.x = display.contentCenterX
-		cloud.y = display.contentCenterY - 100
+		cloud.y = display.contentCenterY - 130
 		-- dialogue.anchorX = 0
 		-- dialogue.anchorY = 0
 		dialogue.x = display.contentCenterX

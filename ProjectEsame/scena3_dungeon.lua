@@ -469,7 +469,7 @@ local function createText(case)
                 3000, 
                 function()
                     composer.removeScene("scena5FineGioco")
-                    composer.gotoScene("scena5FineGioco", {effect = "zoomInOutFade",    time = 2000}) 
+                    composer.gotoScene("scena5FineGioco", {effect = "fade",    time = 10}) 
                 end
             )
 		end
