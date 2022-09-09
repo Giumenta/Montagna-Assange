@@ -687,6 +687,7 @@ function scene:create( event )
     arrowDown.name = "down"
 	sceneGroup:insert(camera)
 	sceneGroup:insert(control)
+	
 end
 
 	 
@@ -758,7 +759,9 @@ function scene:hide( event )
 		physics.stop()
 
 	else
-		composer.removeScene("scena3_dungeon")
+		for i=1,#hearts do
+			hearts[i] = nil
+		end
     end
 end
  
@@ -768,9 +771,7 @@ function scene:destroy( event )
  
     local sceneGroup = self.view
 	--anche se i cuori sono in control non spariscono, pulizia grezza a mano
-	for i=1,#hearts do
-		hearts[i] = nil
-	end
+	
     -- Code here runs prior to the removal of scene's view
  
 end
