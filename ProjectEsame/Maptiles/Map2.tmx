@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="17" nextobjectid="201">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="17" nextobjectid="203">
  <tileset firstgid="1" name="Tileset" tilewidth="64" tileheight="37" tilecount="114" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="148">
@@ -1824,7 +1824,7 @@
     <property name="bodyType" value="static"/>
    </properties>
   </object>
-  <object id="160" type="invisibleWall" x="421.67" y="501.722" width="40" height="1">
+  <object id="160" type="invisibleWall" x="417.92" y="494.597" width="40" height="1">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
@@ -1875,6 +1875,16 @@
    </properties>
   </object>
   <object id="196" type="invisibleWall" x="1084.5" y="618.5" width="1" height="45">
+   <properties>
+    <property name="bodyType" value="static"/>
+   </properties>
+  </object>
+  <object id="201" type="invisibleWall" x="994.909" y="447.682" width="60.5455" height="1">
+   <properties>
+    <property name="bodyType" value="static"/>
+   </properties>
+  </object>
+  <object id="202" type="invisibleWall" x="1054.55" y="402.227" width="1.45455" height="45.5455">
    <properties>
     <property name="bodyType" value="static"/>
    </properties>
