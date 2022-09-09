@@ -458,9 +458,14 @@ local function createText(case)
 		else
 			--qua oltre al testo un po' di event managing
 			quote = "Idle: La chiave funziona! Posso finalmente uscire."
-			boss:setLinearVelocity(0,0)
-			composer.removeScene("scena5FineGioco")
-			composer.gotoScene("scena5FineGioco", {effect = "zoomInOutFade",	time = 1000}) 
+			timer.performWithDelay(
+				3000, 
+				function()
+					composer.removeScene("scena5FineGioco")
+					composer.gotoScene("scena5FineGioco", {effect = "zoomInOutFade",	time = 1000}) 
+				end
+			)
+			
 		end
 	end
 
