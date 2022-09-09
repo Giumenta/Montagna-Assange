@@ -702,6 +702,8 @@ function scene:show( event )
         chest2:addEventListener("collision",chest2)
         chest3:addEventListener("collision",chest3)
         chest4:addEventListener("collision",chest4)
+		exitDoor:addEventListener("collision",exitDoor)
+
         idle:addEventListener("postCollision", idle)
 		for i=1,#invisibleWall_batRoom do
 			invisibleWall_batRoom[i].preCollision = invisibleWallPreCollision
@@ -733,6 +735,7 @@ function scene:hide( event )
         chest2:removeEventListener("collision",chest2)
         chest3:removeEventListener("collision",chest3)
         chest4:removeEventListener("collision",chest4)
+		exitDoor:removeEventListener("collision",exitDoor)
         idle:removeEventListener("postCollision", idle)
     end
 end
