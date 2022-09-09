@@ -435,6 +435,7 @@ local function createText(case)
 	box.anchorX=0
 	box.anchorY=0
 	box.alpha=0
+	scene.view:insert(box)
 	transition.fadeIn( box, { time=500 })
 	
 	local quote
@@ -459,8 +460,16 @@ local function createText(case)
 			--qua oltre al testo un po' di event managing
 			quote = "Idle: La chiave funziona! Posso finalmente uscire."
 			boss:setLinearVelocity(0,0)
-			composer.removeScene("scena5FineGioco")
-			composer.gotoScene("scena5FineGioco", {effect = "zoomInOutFade",	time = 1000}) 
+			audio.stop({channel=1})
+			Runtime:addEventListener("enterFrame", bossDash)
+			physics.pause()
+			timer.performWithDelay(
+                3000, 
+                function()
+                    composer.removeScene("scena5FineGioco")
+                    composer.gotoScene("scena5FineGioco", {effect = "zoomInOutFade",    time = 1000}) 
+                end
+            )
 		end
 	end
 
@@ -737,6 +746,7 @@ function scene:hide( event )
         chest4:removeEventListener("collision",chest4)
 		exitDoor:removeEventListener("collision",exitDoor)
         idle:removeEventListener("postCollision", idle)
+		physics.stop()
     end
 end
  
@@ -745,6 +755,7 @@ end
 function scene:destroy( event )
  
     local sceneGroup = self.view
+	
     -- Code here runs prior to the removal of scene's view
  
 end

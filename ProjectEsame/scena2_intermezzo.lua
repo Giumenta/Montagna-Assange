@@ -45,7 +45,7 @@ function scene:create( event )
 		"???: Ora puoi entrare ed esplorare il cuore della montagna",
 		"???: Inizialmente ti sentirai un po' strano \n ma non preoccuparti",
 		"???: Evita tutti i pericoli e trova la via d'uscita",
-		"???: Gli abitanti del cuore della montagna sono molto abitudinari \n non disturbarli, altrimenti per te sarà difficile"
+		"???: Gli abitanti del cuore della montagna sono molto abitudinari, \n non disturbarli, altrimenti per te sarà difficile"
 
 	}
 	--hero sequence e sheet
