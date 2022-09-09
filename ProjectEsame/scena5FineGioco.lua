@@ -10,10 +10,12 @@ local background
 local mrb
 local dialogueBox
 local cloud
-
+local reveal
 local function createText(self, event)
 	if textN <= #textTable then
-		
+		if(textN == reveal) then
+            transition.fadeOut( cloud, { time=2000 } )
+        end
 		dialogue:setFillColor(0,0,0)
 		dialogue.text = textTable[textN]
 		dialogue.anchorX = 0
@@ -25,8 +27,8 @@ local function createText(self, event)
 	else
 		audio.stop({channel=1})	
 
-		composer.removeScene("scena3_dungeon")
-		composer.gotoScene("scena3_dungeon", {effect = "zoomInOutFade",	time = 1000}) 
+		-- composer.removeScene("scena3_dungeon")
+		-- composer.gotoScene("scena3_dungeon", {effect = "zoomInOutFade",	time = 1000}) 
 	end
 end
 
@@ -40,21 +42,22 @@ end
 function scene:create( event )
     local sceneGroup = self.view
 	textTable = {
-		"Mr B.: Complimenti, hai superato la prova",
-		"Mr B.: Ora puoi entrare ed esplorare il cuore della montagna",
-		"Mr B.: Evita tutti i nemici e trova la via d'uscita"
+		"Mr B.: Sei riuscito a superare i pericoli del monte STM",
+		"Mr B.: Hai dimostrato di essere degno di portare alto il nome\n del sacro ordine di GP",
+		"Mr B.: Resta un solo mistero da svelarti...",
+        "Mr Ballis: Ecco, ora conosci anche il mio volto.",
+        "Mr Ballis: Ora vai, e porta dentro te il sacro fuoco del monte STM!"
 	}
-
+    reveal = 4
     background = display.newImageRect(sfondo, "risorseGrafiche/PG/holyCrapAmIInHeaven.png", display.contentWidth, display.contentHeight)
-    mrb = display.newImageRect(pp, "risorseGrafiche/RaccoltaDiRoba/b.png", 300, 300)
-    cloud = display.newImageRect(pp,"risorseGrafiche/scenaIntro/nuvolaVoce.png", 400, 200)
+    mrb = display.newImageRect(pp, "risorseGrafiche/collezioneDiRoba/b.png", 600, 600)
+    cloud = display.newImageRect(pp,"risorseGrafiche/scenaIntro/nuvolaVoce.png", 800, 600)
     dialogueBox = display.newImageRect(pp, "risorseGrafiche/boxmessaggi.png", display.contentWidth +100, display.contentHeight/1.5)
 	local fontDir = "risorseGrafiche/font/fontpixel.ttf"
 	local fontCustom = native.newFont(fontDir, 12)
 	dialogue = display.newText({text="",fontSize=25, font = fontDir})
 	sceneGroup:insert(sfondo)
 	sceneGroup:insert(pp)	  
-	sceneGroup:insert(mrb)
 	sceneGroup:insert(dialogue)
 end
 
@@ -70,10 +73,12 @@ function scene:show( event )
     if ( phase == "will" ) then
 		sfondo.x = display.contentCenterX
 		sfondo.y = display.contentCenterY - 100
-		sfondo:scale(0.3, 0.3)
+		sfondo:scale(0.8,0.8)
 		textN = 0
 		mrb.x = display.contentCenterX
 		mrb.y = display.contentCenterY - 100
+        cloud.x = display.contentCenterX
+		cloud.y = display.contentCenterY - 100
 		-- dialogue.anchorX = 0
 		-- dialogue.anchorY = 0
 		dialogue.x = display.contentCenterX
