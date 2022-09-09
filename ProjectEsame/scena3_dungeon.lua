@@ -462,6 +462,10 @@ local function createText(case)
 			boss:setLinearVelocity(0,0)
 			audio.stop({channel=1})
 			Runtime:removeEventListener("enterFrame", bossDash)
+			--anche se i cuori sono in control non spariscono, pulizia grezza a mano
+			for i=1,#hearts do
+				hearts[i] = nil
+			end
 			physics.pause()
 			--transition.fadeOut( chestText, { time=2000 })
 			--transition.fadeOut( box, { time=2000 })
