@@ -445,10 +445,10 @@ local function createText(case)
 	elseif case == 2 then
 		quote = "???: Sei stato fortunato,\n prendi questa vita extra: non è facile \n uscire da questa montagna."
 	elseif case == 3 then
-		quote = "???: Si narra che in questo labirinto sia contenuta una chiave misteriosa. \n Chissà a cosa servirà..." 
+		quote = "???: Si narra che in questo labirinto  sia contenuta \n una chiave misteriosa, chissà a cosa servirà..." 
 	elseif case == 4 then
 		if key.isVisible == false then
-			quote = "???: Non hai completato il tuo compito."
+			quote = "???: Non hai completato il tuo compito.\n Ritorna quando avrai esplorato tutto"
 		else
 			quote = "Mr. B: Hai trovato la chiave. Posso finalmente dirti chi \n sono. \n Esci dalla montagna per scoprirlo."
 		end
@@ -459,10 +459,8 @@ local function createText(case)
 			--qua oltre al testo un po' di event managing
 			quote = "Idle: La chiave funziona! Posso finalmente uscire."
 			boss:setLinearVelocity(0,0)
-			function.performWithDelay(
-				1000, 
-				composer:gotoScene("scena5FineGioco")
-			)
+			composer.removeScene("scena5FineGioco")
+			composer.gotoScene("scena5FineGioco", {effect = "zoomInOutFade",	time = 1000}) 
 		end
 	end
 
@@ -704,6 +702,8 @@ function scene:show( event )
         chest2:addEventListener("collision",chest2)
         chest3:addEventListener("collision",chest3)
         chest4:addEventListener("collision",chest4)
+		exitDoor:addEventListener("collision",exitDoor)
+
         idle:addEventListener("postCollision", idle)
 		for i=1,#invisibleWall_batRoom do
 			invisibleWall_batRoom[i].preCollision = invisibleWallPreCollision
@@ -735,6 +735,7 @@ function scene:hide( event )
         chest2:removeEventListener("collision",chest2)
         chest3:removeEventListener("collision",chest3)
         chest4:removeEventListener("collision",chest4)
+		exitDoor:removeEventListener("collision",exitDoor)
         idle:removeEventListener("postCollision", idle)
     end
 end
