@@ -46,7 +46,7 @@ function scene:create( event )
 		"???: Non è una cosa che posso rivelare al primo che passa.", 
 		"Idle: Mi è stato detto di venire qua per verificare di essere degno.",
 		"???: Benissimo allora! Sei nel posto giusto.",
-		"???: Se riuscirai ad uscire dalla montagna  \n allora avrai dimostrato le tue capacità e io ti valuterò.",
+		"???: Se riuscirai ad uscire dalla montagna allora \n avrai dimostrato le tue capacità e io ti valuterò.",
 		"???: Per entrare nel cuore della montagna devi prima risolvere \n questo enigma.",
 	}
 	--hero sequence e sheet

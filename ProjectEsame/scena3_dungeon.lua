@@ -445,7 +445,7 @@ local function createText(case)
 	elseif case == 2 then
 		quote = "???: Sei stato fortunato,\n prendi questa vita extra: non è facile \n uscire da questa montagna."
 	elseif case == 3 then
-		quote = "???: Si narra che in questo labirinto sia contenuta una chiave misteriosa. \n Chissà a cosa servirà..." 
+		quote = "???: Si narra che in questo labirinto  sia contenuta \n una chiave misteriosa, chissà a cosa servirà..." 
 	elseif case == 4 then
 		if key.isVisible == false then
 			quote = "???: Non hai completato il tuo compito."
@@ -459,10 +459,8 @@ local function createText(case)
 			--qua oltre al testo un po' di event managing
 			quote = "Idle: La chiave funziona! Posso finalmente uscire."
 			boss:setLinearVelocity(0,0)
-			function.performWithDelay(
-				1000, 
-				composer:gotoScene("scena5FineGioco")
-			)
+			--composer.removeScene("scena5FineGioco")
+			--composer.gotoScene("scena5FineGioco", {effect = "zoomInOutFade",	time = 1000}) 
 		end
 	end
 
