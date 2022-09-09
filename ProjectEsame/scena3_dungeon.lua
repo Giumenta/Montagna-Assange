@@ -461,13 +461,15 @@ local function createText(case)
 			quote = "Idle: La chiave funziona! Posso finalmente uscire."
 			boss:setLinearVelocity(0,0)
 			audio.stop({channel=1})
-			Runtime:addEventListener("enterFrame", bossDash)
+			Runtime:removeEventListener("enterFrame", bossDash)
 			physics.pause()
+			--transition.fadeOut( chestText, { time=2000 })
+			--transition.fadeOut( box, { time=2000 })
 			timer.performWithDelay(
                 3000, 
                 function()
                     composer.removeScene("scena5FineGioco")
-                    composer.gotoScene("scena5FineGioco", {effect = "zoomInOutFade",    time = 1000}) 
+                    composer.gotoScene("scena5FineGioco", {effect = "zoomInOutFade",    time = 2000}) 
                 end
             )
 		end
@@ -481,6 +483,8 @@ local function createText(case)
 	chestText.x = display.contentCenterX/2+80
 	chestText.y = 550
 	chestText.font = fontDir
+	scene.view:insert(chestText)
+
 end
 
 ------- OPEN THE CHEST ------
@@ -556,7 +560,7 @@ function scene:create( event )
 	physics = require("physics")
 	physics.start()
 	physics.setGravity(0,0)
-	physics.setDrawMode("hybrid")
+	physics.setDrawMode("normal")
 
 	tiled = require "com.ponywolf.ponytiled"
 	json = require ("json")
@@ -601,16 +605,19 @@ function scene:create( event )
 		hearts[i].x = i * 100
 		hearts[i].y = 50
 		hearts[i]:scale(0.5, 0.5)
+		scene.view:insert(hearts[i])
+
 		life:insert(hearts[i])
 	end
 
 	hearts[4].isVisible = false
 	table.remove(hearts, #hearts)
+	
 
 	key = display.newImageRect(control,"risorseGrafiche/PG/key.png",128,128)
 	key.x = display.contentWidth - 130
 	key.y = 70
-	key.isVisible =false
+	key.isVisible =true
 
 	hero = map:listTypes("hero")
 	idle=map:findObject("idle")
