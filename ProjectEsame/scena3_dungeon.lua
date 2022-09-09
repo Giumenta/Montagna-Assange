@@ -382,9 +382,8 @@ local function bossDash()
 	end
 end
 
+--attiva il boss, gestendo l'event listener che lo fa muovere verso il pg
 local function activateBoss()
-	--lavorato con un ciclo perché se cercato con map:findObject('boss') non sappiamo perché la fisica ritorna errori
-	--boss = boss[1]
 	print("ciao")
 	local velX = math.random(0.75, 1)*0.005
 	local velY = math.random(0.5,1)*0.02
@@ -397,16 +396,7 @@ local function activateBoss()
 	Runtime:addEventListener("enterFrame", bossDash)	
 end
 
-local function isInTheRoom(objX, objY, wallTop, wallRight, wallBottom, wallLeft)
-	if(objX < wallLeft.x or objX > wallRight.x) then
-		return false
-	end
-	if(objY < wallTop.y or objY > wallBottom.y) then
-		return false
-	end
-	return true 
-end
-
+--evita che i muri invisibili blocchino il pg
 local function invisibleWallPreCollision(self, event)
 	if event.other.name == "idle" then
 		event.contact.isEnabled = false
@@ -414,7 +404,7 @@ local function invisibleWallPreCollision(self, event)
 	return true
 end
 
-
+--all'apertura della cassa1 cambia le animazioni associate ai tasti
 local function activateAnimation(self, event)
 	 arrowLeft:removeEventListener("touch",    movePg_noAnim)
 	arrowRight:removeEventListener("touch",   movePg_noAnim)
@@ -428,14 +418,13 @@ local function activateAnimation(self, event)
 	Runtime:addEventListener("key", movePg_arrows)
 end
 
-
+--vita gratis
 local function addHeart()
 	if openChest[4].isVisible == false then
 		table.insert(hearts, display.newImageRect(control,"risorseGrafiche/PG/heart.png",128,128))
 		hearts[#hearts].x = #hearts * 100
 		hearts[#hearts].y = 50
 		hearts[#hearts]:scale(0.5, 0.5)
-		print("Ti è stata donata una nuova vita! Ora hai: " .. #hearts .. "vite")
 	end
 end
 
@@ -451,10 +440,10 @@ local function createText(case)
 	local quote
 
 	if case == 1 then
-		quote = "???: Giovane Padawan, ora sei finalmente pronto per \n muovere i tuoi primi passi. XD"
+		quote = "???: Giovane Padawan, ora sei finalmente pronto\n per muovere i tuoi primi passi."
 			
 	elseif case == 2 then
-		quote = "???: Sei stato fortunato,\n prendi questa vita extra: non sarà facile \n uscire da questa montagna."
+		quote = "???: Sei stato fortunato,\n prendi questa vita extra: non è facile \n uscire da questa montagna."
 	elseif case == 3 then
 		quote = "???: Si narra che in questo labirinto sia contenuta una chiave misteriosa. \n Chissà a cosa servirà..." 
 	elseif case == 4 then
@@ -467,7 +456,13 @@ local function createText(case)
 		if key.isVisible == false then
 			quote = "Idle: La porta è chiusa a chiave..."
 		else
+			--qua oltre al testo un po' di event managing
 			quote = "Idle: La chiave funziona! Posso finalmente uscire."
+			boss:setLinearVelocity(0,0)
+			function.performWithDelay(
+				1000, 
+				composer:gotoScene("scena5FineGioco")
+			)
 		end
 	end
 
@@ -526,7 +521,7 @@ local function exit(self, event)
 	end	
 end
 
-local function gameOver()
+local function isGameOver()
 	if #hearts == 0 then
 		print(#hearts)
 		composer.removeScene("scena3_gameoverDungeon")
@@ -540,14 +535,14 @@ local function damage(self, event)
 		audio.play(danno,{channel=3})
 		display.remove(hearts[#hearts])
 		hearts[#hearts] = nil
-		print("The remaining lifes are: " .. #hearts)
 	end
-	gameOver()
+	--così valuta se far terminare o meno il gioco
+	isGameOver()
 end
 
 -- create()
 function scene:create( event )
- 
+	--tutte le risorse
     local sceneGroup = self.view
     control = display.newGroup()
 	
@@ -593,6 +588,7 @@ function scene:create( event )
 	life=display.newGroup()
 	hearts = {}
 
+	--crea 4 cuori, poi il quarto viene nascosto e mostrato solo alla apertura della chest
 	for i=1, 4 do
 		hearts[i] = display.newImageRect(control,"risorseGrafiche/PG/heart.png",128,128)
 		hearts[i].x = i * 100
@@ -676,14 +672,7 @@ function scene:create( event )
 	sceneGroup:insert(camera)
 	sceneGroup:insert(control)
 end
- 
 
-local function restart()
-	-- go to the game scene
-	composer.removeScene("scena3_dungeon")
-	composer.gotoScene("scena3_dungeon", {effect = "zoomInOutFade",	time = 1000})
-	return true
-end
 	 
 -- show()
 function scene:show( event )
@@ -711,25 +700,15 @@ function scene:show( event )
         Runtime:addEventListener("enterFrame", moveAnimation)
         ladder[1]:addEventListener("collision",ladder[1])
         ladder[2]:addEventListener("collision",ladder[2])
-                    --bats[i]:addEventListener("collision", bats[i])
-                    --bats[i]:addEventListener("preCollision", bats[i])
-                    --invisibleWall_batRoom[i]:addEventListener("preCollision", invisibleWall_batRoom[i])
-                    --arrowLeft:addEventListener("touch", movePg)
-                    --arrowRight:addEventListener("touch", movePg)
-                    --arrowDown:addEventListener("touch", movePg)
-                    --arrowUp:addEventListener("touch", movePg)
-                    --Runtime:addEventListener("key", movePg_arrows)
         chest1:addEventListener("collision",chest1)
         chest2:addEventListener("collision",chest2)
         chest3:addEventListener("collision",chest3)
         chest4:addEventListener("collision",chest4)
-                    --Runtime:addEventListener("enterFrame", gameOver)
         idle:addEventListener("postCollision", idle)
 		for i=1,#invisibleWall_batRoom do
 			invisibleWall_batRoom[i].preCollision = invisibleWallPreCollision
 			invisibleWall_batRoom[i]:addEventListener("preCollision", invisibleWall_batRoom[i])
 		end
-        --Runtime:addEventListener("enterFrame", gameOver)
 		end
 end
  
@@ -752,25 +731,11 @@ function scene:hide( event )
         Runtime:removeEventListener("enterFrame", moveAnimation)
         ladder[1]:removeEventListener("collision",ladder[1])
         ladder[2]:removeEventListener("collision",ladder[2])
-                    --bats[i]:removeEventListener("collision", bats[i])
-                    --bats[i]:removeEventListener("preCollision", bats[i])
-                    --invisibleWall_batRoom[i]:removeEventListener("preCollision", invisibleWall_batRoom[i])
-                    --arrowLeft:removeEventListener("touch", movePg)
-                    --arrowRight:removeEventListener("touch", movePg)
-                    --arrowDown:removeEventListener("touch", movePg)
-                    --arrowUp:removeEventListener("touch", movePg)
-                    --Runtime:removeEventListener("key", movePg_arrows)
         chest1:removeEventListener("collision",chest1)
         chest2:removeEventListener("collision",chest2)
         chest3:removeEventListener("collision",chest3)
         chest4:removeEventListener("collision",chest4)
         idle:removeEventListener("postCollision", idle)
-		
-       -- Runtime:removeEventListener("enterFrame", gameOver)
- 
-    elseif ( phase == "did" ) then
-        -- Code here runs immediately after the scene goes entirely off screen
- 
     end
 end
  
