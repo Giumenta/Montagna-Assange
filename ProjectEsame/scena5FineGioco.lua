@@ -40,6 +40,7 @@ end
  
 -- create()
 function scene:create( event )
+
     local sceneGroup = self.view
 	textTable = {
 		"Mr B.: Sei riuscito a superare i pericoli del monte STM",
@@ -71,6 +72,8 @@ function scene:show( event )
     local phase = event.phase
  
     if ( phase == "will" ) then
+       -- composer.removeScene("scena3_dungeon")
+
 		sfondo.x = display.contentCenterX
 		sfondo.y = display.contentCenterY - 100
 		sfondo:scale(0.8,0.8)
