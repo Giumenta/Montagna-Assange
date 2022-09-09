@@ -466,6 +466,7 @@ local function createText(case)
 			audio.stop({channel=1})
 			Runtime:removeEventListener("enterFrame", bossDash)
 			physics.pause()
+			physics.removeBody(boss)
 			
 			composer.removeScene("scena3_gameoverDungeon")
 
