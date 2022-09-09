@@ -458,17 +458,25 @@ local function createText(case)
 		if key.isVisible == false then
 			quote = "Idle: La porta è chiusa a chiave..."
 		else
+			composer.removeScene("scena3_gameoverDungeon")
+
 			--qua oltre al testo un po' di event managing
 			quote = "Idle: La chiave funziona! Posso finalmente uscire."
 			boss:setLinearVelocity(0,0)
 			audio.stop({channel=1})
 			Runtime:removeEventListener("enterFrame", bossDash)
 			physics.pause()
+			
+			composer.removeScene("scena3_gameoverDungeon")
+
 			--transition.fadeOut( chestText, { time=2000 })
 			--transition.fadeOut( box, { time=2000 })
 			timer.performWithDelay(
                 3000, 
                 function()
+					for i=1,4 do
+						display.remove(hearts[i])
+					end
                     composer.removeScene("scena5FineGioco")
                     composer.gotoScene("scena5FineGioco", {effect = "fade",    time = 10}) 
                 end
@@ -583,7 +591,7 @@ function scene:create( event )
 	BGmusicChannel = audio.play(BG, {channel=1, loops=-1, fadein=5000})
 	
 	camera= display.newGroup()
-	control = display.newGroup()
+	--control = display.newGroup()
 	cuori = display.newGroup()
 	fontDir = "risorseGrafiche/font/fontpixel.ttf"
 	fontCustom = native.newFont(fontDir, 12)
@@ -619,7 +627,7 @@ function scene:create( event )
 	key = display.newImageRect(control,"risorseGrafiche/PG/key.png",128,128)
 	key.x = display.contentWidth - 130
 	key.y = 70
-	key.isVisible =true
+	key.isVisible =false
 
 	hero = map:listTypes("hero")
 	idle=map:findObject("idle")

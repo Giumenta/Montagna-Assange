@@ -11,6 +11,7 @@ local mrb
 local dialogueBox
 local cloud
 local reveal
+local BG
 local function createText(self, event)
 	if textN <= #textTable then
 		if(textN == reveal) then
@@ -50,6 +51,7 @@ function scene:create( event )
         "Mr Ballis: Ora vai, e porta dentro te il sacro fuoco del monte STM!"
 	}
     reveal = 4
+	BG = display.newImageRect(sfondo, "risorseGrafiche/sfondoscenafinale.png", display.contentWidth, display.contentHeight)
     background = display.newImageRect(sfondo, "risorseGrafiche/PG/holyCrapAmIInHeaven.png", display.contentWidth, display.contentHeight)
     mrb = display.newImageRect(pp, "risorseGrafiche/collezioneDiRoba/b.png", 600, 600)
     cloud = display.newImageRect(pp,"risorseGrafiche/scenaIntro/nuvolaVoce.png", 800, 600)
